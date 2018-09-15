@@ -61,4 +61,9 @@ namespace NetCoreSample
             app.UseMvc();
         }
     }
+
+    public class UserModel
+    {
+        private int ID { get; set; }
+    }
 }
