@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace NetCoreSample.Models
 {
-    public class TestClass
+    public class Test2
     {
+        /// <summary>
+        /// 名字
+        /// </summary>
         public string Name { get; set; }
 
-        public string Name3 { get; set; }
     }
 }
