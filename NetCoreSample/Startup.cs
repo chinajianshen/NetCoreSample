@@ -14,6 +14,7 @@ namespace NetCoreSample
 {
     public class Startup
     {
+      //¿ªÊ¼
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
