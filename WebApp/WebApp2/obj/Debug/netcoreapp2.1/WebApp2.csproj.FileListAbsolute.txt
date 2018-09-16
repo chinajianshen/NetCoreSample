@@ -6,7 +6,6 @@ C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\bin\Debug\netcoreapp2.1\WebAp
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.pdb
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.Views.dll
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.Views.pdb
-C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csprojAssemblyReference.cache
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csproj.CoreCompileInputs.cache
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.RazorAssemblyInfo.cache
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.RazorAssemblyInfo.cs
@@ -33,3 +32,4 @@ C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebAp
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.dll
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.pdb
 C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csproj.CopyComplete
+C:\SourceCode\NetCore\NetCoreSample\WebApp\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csprojAssemblyReference.cache

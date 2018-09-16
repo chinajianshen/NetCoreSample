@@ -24,11 +24,11 @@ namespace NineskyStudy.Base
         /// <summary>
         /// 查找
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">栏目ID</param>
         /// <returns></returns>
         public Category Find(int id)
         {
-            return _baseRepository.Find(id);
+            return _baseRepository.Find(new string[] { "General","Page","Link" }, c => c.CategoryId == id);
         }
     }
 }

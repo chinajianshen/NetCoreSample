@@ -8,3 +8,4 @@ C:\SourceCode\NetCore\NetCoreSample\WebApp\ConsoleApp\obj\Debug\netcoreapp2.1\Co
 C:\SourceCode\NetCore\NetCoreSample\WebApp\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfo.cs
 C:\SourceCode\NetCore\NetCoreSample\WebApp\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.dll
 C:\SourceCode\NetCore\NetCoreSample\WebApp\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csprojAssemblyReference.cache

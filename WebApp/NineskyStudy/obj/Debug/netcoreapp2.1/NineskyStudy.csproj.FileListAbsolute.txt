@@ -35,3 +35,5 @@ C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\NineskyStudy.csproj.CopyComplete
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\NineskyStudy.dll
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\NineskyStudy.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ErrorPage.g.cshtml.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy\obj\Debug\netcoreapp2.1\Razor\Views\Category\Page.g.cshtml.cs
