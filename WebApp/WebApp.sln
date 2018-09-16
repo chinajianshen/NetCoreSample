@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{DCA59333-6AA0-4D37-9C90-0E0CB4B27F03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp2", "WebApp2\WebApp2.csproj", "{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{CA81725B-469A-43A9-970B-9704497FA1A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCA59333-6AA0-4D37-9C90-0E0CB4B27F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA59333-6AA0-4D37-9C90-0E0CB4B27F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA59333-6AA0-4D37-9C90-0E0CB4B27F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA59333-6AA0-4D37-9C90-0E0CB4B27F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA81725B-469A-43A9-970B-9704497FA1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA81725B-469A-43A9-970B-9704497FA1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA81725B-469A-43A9-970B-9704497FA1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA81725B-469A-43A9-970B-9704497FA1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACC9B634-0FCD-48F3-83BD-D60BC0C7AEA6}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ConsoleApp\\ConsoleApp.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ConsoleApp\\
+		SccProjectUniqueName2 = WebApp2\\WebApp2.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = WebApp2\\
+		SccProjectUniqueName3 = WebApp\\WebApp.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = WebApp\\
+	EndGlobalSection
+EndGlobal
