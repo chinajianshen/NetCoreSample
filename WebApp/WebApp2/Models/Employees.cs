@@ -11,6 +11,11 @@ namespace WebApp2.Models
         public string Name { get; set; }
 
         public int Flag { get; set; }
+
+        /// <summary>
+        /// 年龄
+        /// </summary>
+        public int Age { get; set; }
     }
 
    

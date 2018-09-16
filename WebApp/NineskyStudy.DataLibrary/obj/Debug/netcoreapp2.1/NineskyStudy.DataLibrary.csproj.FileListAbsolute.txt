@@ -1,0 +1,9 @@
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.deps.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csprojAssemblyReference.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csproj.CoreCompileInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.AssemblyInfoInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.AssemblyInfo.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.pdb
