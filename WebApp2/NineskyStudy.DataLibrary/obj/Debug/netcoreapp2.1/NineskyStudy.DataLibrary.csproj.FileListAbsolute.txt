@@ -21,3 +21,17 @@ E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcore
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csproj.CopyComplete
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.deps.json
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.dll
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.pdb
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.Models.dll
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csprojAssemblyReference.cache
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csproj.CoreCompileInputs.cache
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.AssemblyInfoInputs.cache
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.AssemblyInfo.cs
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.csproj.CopyComplete
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.dll
+E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.DataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.pdb

@@ -2922,11 +2922,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj",
+      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.Models\\NineskyStudy.Models.csproj",
       "projectName": "NineskyStudy.Models",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj",
+      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.Models\\NineskyStudy.Models.csproj",
       "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\obj\\",
+      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup Label="Globals">
-    <SccProjectName>SAK</SccProjectName>
-    <SccProvider>SAK</SccProvider>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -18,9 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NineskyStudy.Base\NineskyStudy.Base.csproj" />
-    <ProjectReference Include="..\NineskyStudy.DataLibrary\NineskyStudy.DataLibrary.csproj" />
     <ProjectReference Include="..\NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj" />
-    <ProjectReference Include="..\NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj" />
     <ProjectReference Include="..\NineskyStudy.Models\NineskyStudy.Models.csproj" />
   </ItemGroup>
 

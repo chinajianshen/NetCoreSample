@@ -2957,11 +2957,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.DataLibrary\\NineskyStudy.DataLibrary.csproj",
+      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.DataLibrary\\NineskyStudy.DataLibrary.csproj",
       "projectName": "NineskyStudy.DataLibrary",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.DataLibrary\\NineskyStudy.DataLibrary.csproj",
+      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.DataLibrary\\NineskyStudy.DataLibrary.csproj",
       "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.DataLibrary\\obj\\",
+      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.DataLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2980,11 +2980,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj": {
-              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj"
+            "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj": {
+              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj"
             },
-            "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj": {
-              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj"
+            "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.Models\\NineskyStudy.Models.csproj": {
+              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.Models\\NineskyStudy.Models.csproj"
             }
           }
         }

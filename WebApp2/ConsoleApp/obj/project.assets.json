@@ -2753,11 +2753,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\ConsoleApp\\ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\ConsoleApp\\obj\\",
+      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

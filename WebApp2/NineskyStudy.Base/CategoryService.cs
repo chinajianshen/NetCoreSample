@@ -4,10 +4,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using NineskyStudy.InterfaceBase;
-using NineskyStudy.InterfaceDataLibrary;
+
 using NineskyStudy.Models;
 
 namespace NineskyStudy.Base
@@ -15,39 +16,67 @@ namespace NineskyStudy.Base
     /// <summary>
     /// 栏目服务类
     /// </summary>
-    public class CategoryService:BaseService<Category>,InterfaceCategoryService
+    public class CategoryService : BaseService<Category>, InterfaceCategoryService
     {
-        //这是刚开始写法，后面一步一步重构
-        //private BaseRepository<Category> _baseRepository;
-        //private CategoryRepository _categoryRepository;
-        //private InterfaceBaseRepository<Category> _categoryRepository;
-        //public InterfaceCategoryService _interfaceCategoryService;
-
-
-        //public CategoryService(DbContext dbContext)
-        //public CategoryService(InterfaceBaseRepository<Category> baseRepository)
-        public CategoryService(InterfaceBaseRepository<Category> interfaceBaseRepository) :base(interfaceBaseRepository)
+        public CategoryService(DbContext dbContext):base(dbContext)
         {
-            // _baseRepository = new BaseRepository<Category>(dbContext);
-            // _categoryRepository = new CategoryRepository(dbContext);
-            //_categoryRepository = new BaseRepository<Category>(dbContext);
-            //_categoryRepository = baseRepository;
-            //_interfaceCategoryService = interfaceCategoryService;
+
         }
 
         /// <summary>
         /// 查找
         /// </summary>
-        /// <param name="id">栏目ID</param>
+        /// <param name="Id">栏目Id</param>
         /// <returns></returns>
-        public Category Find(int id)
+        public override Category Find(int Id)
         {
-            // return _categoryRepository.Find(new string[] { "General", "Page", "Link" }, c => c.CategoryId == id);
-            //return _categoryRepository.Find(id);
+            return _dbContext.Set<Category>()
+                   .Include("General")
+                   .Include("Page")
+                   .Include("Link")
+                   .SingleOrDefault(c => c.CategoryId == Id);
+        }
 
-            //return _categoryRepository.Find(c => c.CategoryId == id);
+        public List<Category> FindTree(CategoryType? categoryType)
+        {
+            var categories = _dbContext.Set<Category>().AsQueryable();
 
-            return base.Find(new string[] { "General", "Page", "Link" }, c => c.CategoryId == id);
+
+            //根据栏目类型分类处理
+            switch (categoryType)
+            {
+                case null:
+                    break;
+                case CategoryType.General:
+                    categories = categories.Where(c => c.Type == categoryType);
+                    break;
+                default:
+                    //默认-Page或Link类型
+                    //Id数组-含本栏目及父栏目
+                    List<int> idArray = new List<int>();
+                    //查找栏目id及父栏目路径
+                    var categoryArray = categories.Where(c => c.Type == categoryType).Select(c => new { CategoryId = c.CategoryId, ParentPath = c.ParentPath });
+                    if (categoryArray != null)
+                    {
+                        //添加栏目ID到
+                        idArray.AddRange(categoryArray.Select(c => c.CategoryId));
+                        foreach (var parentPath in categoryArray.Select(c => c.ParentPath))
+                        {
+                            var parentIdArray = parentPath.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (parentIdArray != null)
+                            {
+                                int parseId = 0;
+                                foreach (var parentId in parentIdArray)
+                                {
+                                    if (int.TryParse(parentId, out parseId)) idArray.Add(parseId);
+                                }
+                            }
+                        }
+                    }
+                    categories = categories.Where(c => idArray.Contains(c.CategoryId));
+                    break;
+            }
+            return categories.OrderBy(c => c.ParentPath).ThenBy(c => c.Order).ToList();
         }
     }
 }

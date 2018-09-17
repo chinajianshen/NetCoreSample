@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj",
+      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj",
       "projectName": "NineskyStudy.InterfaceDataLibrary",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj",
+      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj",
       "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\obj\\",
+      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\NineskyStudy.InterfaceDataLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

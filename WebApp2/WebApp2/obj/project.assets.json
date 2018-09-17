@@ -12690,11 +12690,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\WebApp2\\WebApp2.csproj",
+      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\WebApp2\\WebApp2.csproj",
       "projectName": "WebApp2",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\WebApp2\\WebApp2.csproj",
+      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\WebApp2\\WebApp2.csproj",
       "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\WebApp2\\obj\\",
+      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp2\\WebApp2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

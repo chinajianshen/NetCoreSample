@@ -13,13 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy", "NineskyStud
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Base", "NineskyStudy.Base\NineskyStudy.Base.csproj", "{ACCA0F8F-93D5-44B9-9FBF-2B672F52852C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.DataLibrary", "NineskyStudy.DataLibrary\NineskyStudy.DataLibrary.csproj", "{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Models", "NineskyStudy.Models\NineskyStudy.Models.csproj", "{B8B0E51B-D372-4916-94CE-5863AD60C14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.Models", "NineskyStudy.Models\NineskyStudy.Models.csproj", "{B8B0E51B-D372-4916-94CE-5863AD60C14C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.InterfaceDataLibrary", "NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj", "{8AF712FA-D27A-4A7E-AD7C-540CE2357792}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.InterfaceBase", "NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj", "{A5272340-B37B-4BC5-8502-9595AC4105A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.InterfaceBase", "NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj", "{A5272340-B37B-4BC5-8502-9595AC4105A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,18 +43,10 @@ Global
 		{ACCA0F8F-93D5-44B9-9FBF-2B672F52852C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACCA0F8F-93D5-44B9-9FBF-2B672F52852C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACCA0F8F-93D5-44B9-9FBF-2B672F52852C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8B0E51B-D372-4916-94CE-5863AD60C14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8B0E51B-D372-4916-94CE-5863AD60C14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8B0E51B-D372-4916-94CE-5863AD60C14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8B0E51B-D372-4916-94CE-5863AD60C14C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AF712FA-D27A-4A7E-AD7C-540CE2357792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AF712FA-D27A-4A7E-AD7C-540CE2357792}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AF712FA-D27A-4A7E-AD7C-540CE2357792}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AF712FA-D27A-4A7E-AD7C-540CE2357792}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5272340-B37B-4BC5-8502-9595AC4105A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5272340-B37B-4BC5-8502-9595AC4105A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5272340-B37B-4BC5-8502-9595AC4105A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,27 +57,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACC9B634-0FCD-48F3-83BD-D60BC0C7AEA6}
-	EndGlobalSection
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 7
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ConsoleApp\\ConsoleApp.csproj
-		SccLocalPath1 = .
-		SccProjectFilePathRelativizedFromConnection1 = ConsoleApp\\
-		SccProjectUniqueName2 = WebApp2\\WebApp2.csproj
-		SccLocalPath2 = .
-		SccProjectFilePathRelativizedFromConnection2 = WebApp2\\
-		SccProjectUniqueName3 = WebApp\\WebApp.csproj
-		SccLocalPath3 = .
-		SccProjectFilePathRelativizedFromConnection3 = WebApp\\
-		SccProjectUniqueName4 = NineskyStudy\\NineskyStudy.csproj
-		SccLocalPath4 = .
-		SccProjectFilePathRelativizedFromConnection4 = NineskyStudy\\
-		SccProjectUniqueName5 = NineskyStudy.DataLibrary\\NineskyStudy.DataLibrary.csproj
-		SccLocalPath5 = .
-		SccProjectFilePathRelativizedFromConnection5 = NineskyStudy.DataLibrary\\
-		SccProjectUniqueName6 = NineskyStudy.Base\\NineskyStudy.Base.csproj
-		SccLocalPath6 = .
-		SccProjectFilePathRelativizedFromConnection6 = NineskyStudy.Base\\
 	EndGlobalSection
 EndGlobal

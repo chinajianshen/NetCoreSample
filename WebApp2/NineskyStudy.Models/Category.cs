@@ -82,5 +82,7 @@ namespace NineskyStudy.Models
         //添加的导航属性结束
 
         //public int Tag { get; set; }
+
+        public string ParentPath { get; set; }
     }
 }
