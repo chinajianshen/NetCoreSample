@@ -2014,7 +2014,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "/r4CubyG4AGFQkSC3niivcQM38LK/tEO9gHTuCrdQSUkJcZyIdI9mSVB1h6hGkz5r9XZZkI5GpKcUT++XWZVGQ==",
+      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -2970,23 +2970,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LOVE\\.nuget\\packages\\": {},
+    "C:\\Users\\zl\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Base\\NineskyStudy.Base.csproj",
+      "projectUniqueName": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.Base\\NineskyStudy.Base.csproj",
       "projectName": "NineskyStudy.Base",
-      "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Base\\NineskyStudy.Base.csproj",
-      "packagesPath": "C:\\Users\\LOVE\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Base\\obj\\",
+      "projectPath": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.Base\\NineskyStudy.Base.csproj",
+      "packagesPath": "C:\\Users\\zl\\.nuget\\packages\\",
+      "outputPath": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\LOVE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2994,19 +2994,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceBase\\NineskyStudy.InterfaceBase.csproj": {
-              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceBase\\NineskyStudy.InterfaceBase.csproj"
+            "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceBase\\NineskyStudy.InterfaceBase.csproj": {
+              "projectPath": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceBase\\NineskyStudy.InterfaceBase.csproj"
             },
-            "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj": {
-              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj"
+            "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj": {
+              "projectPath": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj"
             },
-            "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj": {
-              "projectPath": "E:\\GitSourceCode\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj"
+            "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj": {
+              "projectPath": "C:\\SourceCode\\NetCore\\NetCoreSample\\WebApp\\NineskyStudy.Models\\NineskyStudy.Models.csproj"
             }
           }
         }

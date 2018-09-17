@@ -31,3 +31,14 @@ E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\Consol
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfo.cs
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.dll
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.deps.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.runtimeconfig.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.runtimeconfig.dev.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csprojAssemblyReference.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfo.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.pdb

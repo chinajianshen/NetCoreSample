@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Loader;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,10 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NineskyStudy.Base;
-using NineskyStudy.DataLibrary;
 using NineskyStudy.InterfaceBase;
-using NineskyStudy.InterfaceDataLibrary;
 using NineskyStudy.Models;
 
 namespace NineskyStudy
@@ -28,6 +28,10 @@ namespace NineskyStudy
             //ContentRootPath  用于包含应用程序文件如C:\MyApp\
             //WebRootPath 用于包含Web服务性的内容文件C:\MyApp\wwwroot\
             _contentRootPath = env.ContentRootPath;
+
+            var assemblyCollections = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("service.json").Build()
+                .GetSection("AssemblyCollections");//.Get<List<AssemblyItem>>();
         }
 
         public IConfiguration Configuration { get; }
@@ -54,14 +58,33 @@ namespace NineskyStudy
                 options.UseSqlServer(conn);                
             });
             //数据库与接口注入
-            services.AddScoped<DbContext, NineskyDbContext>();          
-            services.AddScoped<InterfaceBaseRepository<Category>, BaseRepository<Category>>();
+            services.AddScoped<DbContext, NineskyDbContext>();
+
+            #region 数据库和业务逻辑服务注入
+            //services.AddScoped<InterfaceBaseRepository<Category>, BaseRepository<Category>>();
 
             //自己添加接口注入
-            services.AddScoped<InterfaceBaseService<Category>, BaseService<Category>>();
-            services.AddScoped<InterfaceCategoryService, CategoryService>();
+            //services.AddScoped<InterfaceBaseService<Category>, BaseService<Category>>();
+            //services.AddScoped<InterfaceCategoryService, CategoryService>();
 
             //services.AddScoped<CategoryService>();
+            #endregion
+
+            #region 配置文件动态注入 参考：https://www.cnblogs.com/mzwhj/p/6224237.html
+            var assemblyCollections = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("service.json").Build().GetSection("AssemblyCollections").Get<List<AssemblyItem>>();
+            foreach (var assembly in assemblyCollections)
+            {
+                //加载接口程序集使用的方法是Assembly.Load(new AssemblyName(assembly.ServiceAssembly))，这是因为项目引用了接口程序集的项目，加载程序集的时候只需要提供程序集的名称就可以
+                var serviceAssembly = Assembly.Load(new AssemblyName(assembly.ServiceAssembly));
+                //加载实现类所在程序集的时候使用的是AssemblyLoadContext.Default.LoadFromAssemblyPath(AppContext.BaseDirectory + "//" + assembly.ImplementationAssembly)。在.Net Core中Assembly没有了LoadFrom方法，仅有一个Load方法加载已引用的程序集。多方搜索资料才找到AssemblyLoadContext中有一个方法可以不需要引用项目可以动态加载Dll，但必须包含Dll的完整路径。
+                var implementationAssembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(AppContext.BaseDirectory + "//" + assembly.ImplementationAssembly);
+                foreach (var service in assembly.DICollections)
+                {
+                    services.Add(new ServiceDescriptor(serviceAssembly.GetType(service.ServiceType),
+                           implementationAssembly.GetType(service.ImplementationType), service.LifeTime));
+                }
+            }
+            #endregion
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

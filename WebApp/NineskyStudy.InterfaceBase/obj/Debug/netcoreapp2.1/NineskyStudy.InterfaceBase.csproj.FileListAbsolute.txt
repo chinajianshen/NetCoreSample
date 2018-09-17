@@ -10,3 +10,15 @@ E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netco
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.csprojAssemblyReference.cache
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.csproj.CopyComplete
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.deps.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.Models.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.csprojAssemblyReference.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.csproj.CoreCompileInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.AssemblyInfoInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.AssemblyInfo.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.csproj.CopyComplete
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceBase\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.pdb

@@ -6,3 +6,12 @@ E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debu
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.AssemblyInfo.cs
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.deps.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.csprojAssemblyReference.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.csproj.CoreCompileInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.AssemblyInfoInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.AssemblyInfo.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb

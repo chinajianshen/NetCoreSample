@@ -19,7 +19,7 @@ namespace NineskyStudy.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NineskyStudy.Base.Category", b =>
+            modelBuilder.Entity("NineskyStudy.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
@@ -37,6 +37,8 @@ namespace NineskyStudy.Migrations
 
                     b.Property<int>("ParentId");
 
+                    b.Property<string>("ParentPath");
+
                     b.Property<string>("Target")
                         .IsRequired()
                         .HasMaxLength(20);
@@ -48,7 +50,7 @@ namespace NineskyStudy.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryGeneral", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryGeneral", b =>
                 {
                     b.Property<int>("GeneralId")
                         .ValueGeneratedOnAdd()
@@ -80,7 +82,7 @@ namespace NineskyStudy.Migrations
                     b.ToTable("CategoryGeneral");
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryLink", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryLink", b =>
                 {
                     b.Property<int>("LinkId")
                         .ValueGeneratedOnAdd()
@@ -100,7 +102,7 @@ namespace NineskyStudy.Migrations
                     b.ToTable("CategoryLink");
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryPage", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryPage", b =>
                 {
                     b.Property<int>("PageId")
                         .ValueGeneratedOnAdd()
@@ -124,27 +126,27 @@ namespace NineskyStudy.Migrations
                     b.ToTable("CategoryPage");
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryGeneral", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryGeneral", b =>
                 {
-                    b.HasOne("NineskyStudy.Base.Category", "Category")
+                    b.HasOne("NineskyStudy.Models.Category", "Category")
                         .WithOne("General")
-                        .HasForeignKey("NineskyStudy.Base.CategoryGeneral", "CategoryId")
+                        .HasForeignKey("NineskyStudy.Models.CategoryGeneral", "CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryLink", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryLink", b =>
                 {
-                    b.HasOne("NineskyStudy.Base.Category")
+                    b.HasOne("NineskyStudy.Models.Category")
                         .WithOne("Link")
-                        .HasForeignKey("NineskyStudy.Base.CategoryLink", "CategoryId")
+                        .HasForeignKey("NineskyStudy.Models.CategoryLink", "CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("NineskyStudy.Base.CategoryPage", b =>
+            modelBuilder.Entity("NineskyStudy.Models.CategoryPage", b =>
                 {
-                    b.HasOne("NineskyStudy.Base.Category", "Category")
+                    b.HasOne("NineskyStudy.Models.Category", "Category")
                         .WithOne("Page")
-                        .HasForeignKey("NineskyStudy.Base.CategoryPage", "CategoryId")
+                        .HasForeignKey("NineskyStudy.Models.CategoryPage", "CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

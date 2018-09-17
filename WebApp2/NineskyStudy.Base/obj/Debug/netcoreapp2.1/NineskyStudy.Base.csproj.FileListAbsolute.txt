@@ -42,3 +42,17 @@ E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1
 E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csproj.CopyComplete
 E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.dll
 E:\GitSourceCode\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.deps.json
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Models.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csprojAssemblyReference.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csproj.CoreCompileInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.AssemblyInfoInputs.cache
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.AssemblyInfo.cs
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csproj.CopyComplete
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp2\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.pdb

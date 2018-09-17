@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Base", "Ninesk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.DataLibrary", "NineskyStudy.DataLibrary\NineskyStudy.DataLibrary.csproj", "{21CB80A8-A2D5-48AD-A9BB-F2B4AD8579EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.Models", "NineskyStudy.Models\NineskyStudy.Models.csproj", "{B8B0E51B-D372-4916-94CE-5863AD60C14C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Models", "NineskyStudy.Models\NineskyStudy.Models.csproj", "{B8B0E51B-D372-4916-94CE-5863AD60C14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.InterfaceDataLibrary", "NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj", "{8AF712FA-D27A-4A7E-AD7C-540CE2357792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.InterfaceDataLibrary", "NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj", "{8AF712FA-D27A-4A7E-AD7C-540CE2357792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.InterfaceBase", "NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj", "{A5272340-B37B-4BC5-8502-9595AC4105A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.InterfaceBase", "NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj", "{A5272340-B37B-4BC5-8502-9595AC4105A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,7 +71,7 @@ Global
 		SolutionGuid = {ACC9B634-0FCD-48F3-83BD-D60BC0C7AEA6}
 	EndGlobalSection
 	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 10
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = ConsoleApp\\ConsoleApp.csproj
 		SccLocalPath1 = .
@@ -91,5 +91,14 @@ Global
 		SccProjectUniqueName6 = NineskyStudy.Base\\NineskyStudy.Base.csproj
 		SccLocalPath6 = .
 		SccProjectFilePathRelativizedFromConnection6 = NineskyStudy.Base\\
+		SccProjectUniqueName7 = NineskyStudy.InterfaceDataLibrary\\NineskyStudy.InterfaceDataLibrary.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = NineskyStudy.InterfaceDataLibrary\\
+		SccProjectUniqueName8 = NineskyStudy.InterfaceBase\\NineskyStudy.InterfaceBase.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = NineskyStudy.InterfaceBase\\
+		SccProjectUniqueName9 = NineskyStudy.Models\\NineskyStudy.Models.csproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = NineskyStudy.Models\\
 	EndGlobalSection
 EndGlobal

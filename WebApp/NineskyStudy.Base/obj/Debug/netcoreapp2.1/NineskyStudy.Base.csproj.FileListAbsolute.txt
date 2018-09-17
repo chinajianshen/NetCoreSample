@@ -1,8 +1,6 @@
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.deps.json
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.dll
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Base.pdb
-C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.dll
-C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.DataLibrary.pdb
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csprojAssemblyReference.cache
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.csproj.CoreCompileInputs.cache
 C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\obj\Debug\netcoreapp2.1\NineskyStudy.Base.AssemblyInfoInputs.cache
@@ -26,3 +24,9 @@ E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.dll
 E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Models.dll
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceBase.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+C:\SourceCode\NetCore\NetCoreSample\WebApp\NineskyStudy.Base\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
