@@ -1,0 +1,62 @@
+﻿
+@model HomePageViewModel
+
+@{
+    ViewData["Title"] = "职工列表";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        margin: 10px auto;
+        text-align: center
+    }
+
+    table {
+        margin: 0 auto;
+        width: 90%
+    }
+
+    table, th, td {
+        border: 1px solid #eee;
+        border-collapse: collapse;
+        border-spacing: 0;
+        padding: 5px;
+        text-align: center
+    }
+
+    .txt-left {
+        text-align: left;
+    }
+</style>
+
+<h1>职工列表</h1>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td class="txt-left">操作</td>
+    </tr>
+    @foreach (var employee in Model.Employees)
+    {
+        <tr>
+            <td>
+                @*<a href="/Home/Detail/@employee.ID">@employee.ID</a>*@
+                @*@Html.ActionLink(employee.ID.ToString(),"Detail",new { id = employee.ID })*@
+                @*<a asp-action="detail" asp-route-id="@employee.ID">@employee.ID</a>*@
+                @employee.ID
+            </td>
+            <td>@employee.Name</td>
+            <td class="txt-left">
+                <a asp-action="detail" asp-route-id="@employee.ID">详情</a> &nbsp;
+                <a asp-controller="home" asp-action="edit" asp-route-id="@employee.ID">编辑</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<br />
+<p><a asp-action="create">新增</a></p>
+
+@*<hr />
+<p><a asp-controller="Account" asp-action="Signup">注册新用户</a></p>*@
