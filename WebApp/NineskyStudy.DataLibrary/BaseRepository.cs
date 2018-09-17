@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NineskyStudy.InterfaceDataLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,33 +12,13 @@ namespace NineskyStudy.DataLibrary
     /// 仓储基类
     /// </summary>
     /// <typeparam name="T"></typeparam>
-   public class BaseRepository<T> where T:class
+   public class BaseRepository<T> : InterfaceBaseRepository<T> where T:class
     {
-        private readonly DbContext _dbContext;
+        protected readonly DbContext _dbContext;
         public BaseRepository(DbContext dbContext)
         {
             _dbContext = dbContext;
-        }
-
-        /// <summary>
-        /// 查询
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public virtual T Find(int id)
-        {
-            return _dbContext.Set<T>().Find(id);
-        }
-
-        /// <summary>
-        /// 查询
-        /// </summary>
-        /// <param name="keyValue">主键</param>
-        /// <returns></returns>
-        public virtual T Find(params object[] keyValue)
-        {
-            return _dbContext.Set<T>().Find(keyValue);
-        }
+        }        
 
         /// <summary>
         /// 查询
@@ -46,7 +27,7 @@ namespace NineskyStudy.DataLibrary
         /// <returns></returns>
         public virtual T Find(Expression<Func<T, bool>> predicate)
         {
-            return Find(null, predicate);
+            return Find(null, predicate);            
         }
 
         /// <summary>
@@ -70,5 +51,27 @@ namespace NineskyStudy.DataLibrary
             return queryable.SingleOrDefault(predicate);
 
         }
+
+        #region 不可用
+        ///// <summary>
+        ///// 查询
+        ///// </summary>
+        ///// <param name="id"></param>
+        ///// <returns></returns>
+        //public virtual T Find(int id)
+        //{
+        //    return _dbContext.Set<T>().Find(id);
+        //}
+
+        ///// <summary>
+        ///// 查询
+        ///// </summary>
+        ///// <param name="keyValue">主键</param>
+        ///// <returns></returns>
+        //public virtual T Find(params object[] keyValue)
+        //{
+        //    return _dbContext.Set<T>().Find(keyValue);
+        //}
+        #endregion
     }
 }

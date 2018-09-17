@@ -1,0 +1,8 @@
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.deps.json
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\bin\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.csproj.CoreCompileInputs.cache
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.AssemblyInfoInputs.cache
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.AssemblyInfo.cs
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.dll
+E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.InterfaceDataLibrary\obj\Debug\netcoreapp2.1\NineskyStudy.InterfaceDataLibrary.pdb

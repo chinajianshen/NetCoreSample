@@ -10,14 +10,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NineskyStudy.Base;
+using NineskyStudy.DataLibrary;
+using NineskyStudy.InterfaceBase;
+using NineskyStudy.InterfaceDataLibrary;
+using NineskyStudy.Models;
 
 namespace NineskyStudy
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private string _contentRootPath = "";
+        public Startup(IConfiguration configuration,IHostingEnvironment env)
         {
             Configuration = configuration;
+
+            //ContentRootPath  用于包含应用程序文件如C:\MyApp\
+            //WebRootPath 用于包含Web服务性的内容文件C:\MyApp\wwwroot\
+            _contentRootPath = env.ContentRootPath;
         }
 
         public IConfiguration Configuration { get; }
@@ -31,11 +41,27 @@ namespace NineskyStudy
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+                        
+            string conn = Configuration.GetConnectionString("DefaultConnection");
+            //数据库连接串 采用附加库形式 https://www.cnblogs.com/chonghanyu/p/5709780.html
+            if (conn.Contains("%CONTENTROOTPATH%"))
+            {
+                conn = conn.Replace("%CONTENTROOTPATH%",_contentRootPath);
+            }
 
             //注入NineskyDbContext 参照 https://www.cnblogs.com/mzwhj/p/6147900.html 第4部分
             services.AddDbContext<NineskyDbContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));                
+                options.UseSqlServer(conn);                
             });
+            //数据库与接口注入
+            services.AddScoped<DbContext, NineskyDbContext>();          
+            services.AddScoped<InterfaceBaseRepository<Category>, BaseRepository<Category>>();
+
+            //自己添加接口注入
+            services.AddScoped<InterfaceBaseService<Category>, BaseService<Category>>();
+            services.AddScoped<InterfaceCategoryService, CategoryService>();
+
+            //services.AddScoped<CategoryService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -59,6 +85,11 @@ namespace NineskyStudy
 
             app.UseMvc(routes =>
             {
+                //注册一个区域
+                routes.MapRoute(
+                    name:"area",
+                    template:"{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

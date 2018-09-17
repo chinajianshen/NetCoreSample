@@ -16,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NineskyStudy.DataLibrary\NineskyStudy.DataLibrary.csproj" />
+    <ProjectReference Include="..\NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj" />
+    <ProjectReference Include="..\NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj" />
+    <ProjectReference Include="..\NineskyStudy.Models\NineskyStudy.Models.csproj" />
   </ItemGroup>
 
 </Project>

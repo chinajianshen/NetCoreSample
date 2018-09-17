@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NineskyStudy.Base;
+using NineskyStudy.Models;
 
 namespace NineskyStudy
 {
