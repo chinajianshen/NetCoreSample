@@ -1,0 +1,10 @@
+﻿@model ErrorModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h2 class="text-danger">@Model.Name</h2>
+<p>
+    @Html.Raw(Model.Description)
+</p>
+

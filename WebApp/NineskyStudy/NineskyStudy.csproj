@@ -18,6 +18,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NineskyStudy.Base\NineskyStudy.Base.csproj" />
+    <ProjectReference Include="..\NineskyStudy.DataLibrary\NineskyStudy.DataLibrary.csproj" />
+    <ProjectReference Include="..\NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj" />
+    <ProjectReference Include="..\NineskyStudy.InterfaceDataLibrary\NineskyStudy.InterfaceDataLibrary.csproj" />
+    <ProjectReference Include="..\NineskyStudy.Models\NineskyStudy.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App_Data\Ninesky.mdf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\Ninesky_log.ldf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\System\Data\" />
+    <Folder Include="Areas\System\Models\" />
   </ItemGroup>
 
 </Project>
