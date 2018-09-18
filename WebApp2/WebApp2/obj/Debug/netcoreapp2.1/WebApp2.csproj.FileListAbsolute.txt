@@ -76,7 +76,6 @@ E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.d
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.pdb
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.Views.dll
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\bin\Debug\netcoreapp2.1\WebApp2.Views.pdb
-E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csprojAssemblyReference.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.csproj.CoreCompileInputs.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.RazorAssemblyInfo.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\WebApp2\obj\Debug\netcoreapp2.1\WebApp2.RazorAssemblyInfo.cs

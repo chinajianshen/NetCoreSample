@@ -25,9 +25,9 @@ E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\Consol
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.runtimeconfig.dev.json
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.dll
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\bin\Debug\netcoreapp2.1\ConsoleApp.pdb
-E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csprojAssemblyReference.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csproj.CoreCompileInputs.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfoInputs.cache
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.AssemblyInfo.cs
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.dll
 E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.pdb
+E:\GitSourceCode\NetCoreSample\WebApp2\ConsoleApp\obj\Debug\netcoreapp2.1\ConsoleApp.csprojAssemblyReference.cache

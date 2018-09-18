@@ -134,7 +134,7 @@ using WebApp2.Models;
             WriteLiteral("</td>\r\n            <td class=\"txt-left\">\r\n                ");
             EndContext();
             BeginContext(1123, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27b76f3a51cd4319af2fb4adf19fe6f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df2e08986f254bdcb37a2aa1bbbd931d", async() => {
                 BeginContext(1174, 2, true);
                 WriteLiteral("详情");
                 EndContext();
@@ -169,7 +169,7 @@ using WebApp2.Models;
             WriteLiteral(" &nbsp;\r\n                ");
             EndContext();
             BeginContext(1205, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c6843917934428d82d2bb37b56fa086", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7c454d5da00e45db98214b35658e0c4c", async() => {
                 BeginContext(1276, 2, true);
                 WriteLiteral("编辑");
                 EndContext();
@@ -214,7 +214,7 @@ using WebApp2.Models;
             WriteLiteral("</table>\r\n\r\n<br />\r\n<p>");
             EndContext();
             BeginContext(1348, 29, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4eb19b79315845c2b6a706916c888e08", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fce868af99148bbb054475d9605a275", async() => {
                 BeginContext(1371, 2, true);
                 WriteLiteral("新增");
                 EndContext();

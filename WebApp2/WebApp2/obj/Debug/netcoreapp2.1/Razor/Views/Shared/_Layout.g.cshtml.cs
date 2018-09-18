@@ -67,7 +67,7 @@ using System.Security.Claims;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(60, 583, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa66b2d9d6474852ae25336c8db2418d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3fc19b4fb674e4ca35ad71088a8dfb9", async() => {
                 BeginContext(66, 72, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
                 EndContext();
@@ -122,7 +122,7 @@ using System.Security.Claims;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(645, 518, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3f97c78fa6a48f5aa134e8f72bc2c6a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "992fb62cb76348f9b65db199807c8405", async() => {
                 BeginContext(651, 13, true);
                 WriteLiteral("\r\n    <div>\r\n");
                 EndContext();
@@ -146,7 +146,7 @@ using System.Security.Claims;
                 WriteLiteral("</div>\r\n            ");
                 EndContext();
                 BeginContext(776, 138, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d375826f3834225b0c3acfd23fa0c7d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9294e0e355c948bbbb005c1879cb6c81", async() => {
                     BeginContext(841, 66, true);
                     WriteLiteral("\r\n                <input type=\"submit\" value=\"登出\" />\r\n            ");
                     EndContext();
@@ -184,7 +184,7 @@ using System.Security.Claims;
                 WriteLiteral("            ");
                 EndContext();
                 BeginContext(964, 53, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "865fc65e6bdc4420977e328c742318ea", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3432c45c11ba4293a2f1a18a4500c521", async() => {
                     BeginContext(1011, 2, true);
                     WriteLiteral("登录");
                     EndContext();
@@ -208,7 +208,7 @@ using System.Security.Claims;
                 WriteLiteral("\r\n            ");
                 EndContext();
                 BeginContext(1031, 54, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e041a482830468d843fc9d18d8bfcbb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "abfb377f3eb6443fb35436e2cbb35258", async() => {
                     BeginContext(1079, 2, true);
                     WriteLiteral("注册");
                     EndContext();
