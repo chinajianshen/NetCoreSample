@@ -1,8 +1,0 @@
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\obj\Debug\netcoreapp2.1\NineskyStudy.Models.csproj.CoreCompileInputs.cache
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\obj\Debug\netcoreapp2.1\NineskyStudy.Models.AssemblyInfoInputs.cache
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\obj\Debug\netcoreapp2.1\NineskyStudy.Models.AssemblyInfo.cs
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\bin\Debug\netcoreapp2.1\NineskyStudy.Models.deps.json
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\bin\Debug\netcoreapp2.1\NineskyStudy.Models.dll
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\bin\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\obj\Debug\netcoreapp2.1\NineskyStudy.Models.dll
-E:\GitSourceCode\NetCoreSample\WebApp\NineskyStudy.Models\obj\Debug\netcoreapp2.1\NineskyStudy.Models.pdb
