@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NineskyStudy.Base;
 using NineskyStudy.InterfaceBase;
 using NineskyStudy.Models;
 
@@ -28,10 +29,30 @@ namespace NineskyStudy
             //ContentRootPath  用于包含应用程序文件如C:\MyApp\
             //WebRootPath 用于包含Web服务性的内容文件C:\MyApp\wwwroot\
             _contentRootPath = env.ContentRootPath;
-
-            var assemblyCollections = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("service.json").Build()
-                .GetSection("AssemblyCollections");//.Get<List<AssemblyItem>>();
+            
+            #region 测试
+            //List<AssemblyItem> items = new List<AssemblyItem>() {
+            //     new AssemblyItem{
+            //          ServiceAssembly =" NineskyStudy.InterfaceBase",
+            //          ImplementationAssembly="NineskyStudy.Base.dll",
+            //          DICollections = new List<ServiceItem>
+            //          {
+            //              new ServiceItem{ ServiceType="NineskyStudy.InterfaceBase.InterfaceCategoryService",
+            //                  ImplementationType ="NineskyStudy.Base.CategoryService",LifeTime= ServiceLifetime.Scoped}
+            //          }
+            //     },
+            //      new AssemblyItem{
+            //          ServiceAssembly =" NineskyStudy.InterfaceBase2",
+            //          ImplementationAssembly="NineskyStudy.Base2.dll",
+            //          DICollections = new List<ServiceItem>
+            //          {
+            //              new ServiceItem{ ServiceType="NineskyStudy.InterfaceBase.InterfaceCategoryService2",
+            //                  ImplementationType ="NineskyStudy.Base.CategoryService2",LifeTime= ServiceLifetime.Scoped}
+            //          }
+            //     }
+            //};
+            //string json = Newtonsoft.Json.JsonConvert.SerializeObject(items);
+            #endregion
         }
 
         public IConfiguration Configuration { get; }
@@ -65,7 +86,7 @@ namespace NineskyStudy
 
             //自己添加接口注入
             //services.AddScoped<InterfaceBaseService<Category>, BaseService<Category>>();
-            //services.AddScoped<InterfaceCategoryService, CategoryService>();
+            //services.AddScoped<InterfaceCategoryService, CategoryService>();           
 
             //services.AddScoped<CategoryService>();
             #endregion
@@ -77,7 +98,7 @@ namespace NineskyStudy
                 //加载接口程序集使用的方法是Assembly.Load(new AssemblyName(assembly.ServiceAssembly))，这是因为项目引用了接口程序集的项目，加载程序集的时候只需要提供程序集的名称就可以
                 var serviceAssembly = Assembly.Load(new AssemblyName(assembly.ServiceAssembly));
                 //加载实现类所在程序集的时候使用的是AssemblyLoadContext.Default.LoadFromAssemblyPath(AppContext.BaseDirectory + "//" + assembly.ImplementationAssembly)。在.Net Core中Assembly没有了LoadFrom方法，仅有一个Load方法加载已引用的程序集。多方搜索资料才找到AssemblyLoadContext中有一个方法可以不需要引用项目可以动态加载Dll，但必须包含Dll的完整路径。
-                var implementationAssembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(AppContext.BaseDirectory + "//" + assembly.ImplementationAssembly);
+                var implementationAssembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(AppContext.BaseDirectory + assembly.ImplementationAssembly);
                 foreach (var service in assembly.DICollections)
                 {
                     services.Add(new ServiceDescriptor(serviceAssembly.GetType(service.ServiceType),
