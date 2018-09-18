@@ -1,0 +1,13 @@
+{
+  "AssemblyCollections": {
+    "ServiceAssembly": " NineskyStudy.InterfaceBase",
+    "ImplementationAssembly": "NineskyStudy.Base.dll",
+    "DICollections": [
+      {
+        "ServiceType": "NineskyStudy.InterfaceBase.InterfaceCategoryService",
+        "ImplementationType": "NineskyStudy.Base.CategoryService",
+        "LifeTime": "Scoped"
+      }
+    ]
+  }
+}
