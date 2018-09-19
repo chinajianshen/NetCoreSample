@@ -26,4 +26,6 @@
     </Content>
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties _1bowerrc__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

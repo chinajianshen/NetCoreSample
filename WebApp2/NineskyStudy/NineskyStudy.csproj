@@ -12,6 +12,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bootstrap-Table" Version="0.4.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.7.2" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" />
   </ItemGroup>

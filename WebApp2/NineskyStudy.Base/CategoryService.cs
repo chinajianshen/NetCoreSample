@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NineskyStudy.InterfaceBase;
 
@@ -35,6 +36,16 @@ namespace NineskyStudy.Base
                    .Include("Page")
                    .Include("Link")
                    .SingleOrDefault(c => c.CategoryId == Id);
+        }
+
+        public IQueryable<Category> FindChildren(int id)
+        {
+            return base.FindList(0, c => c.ParentId == id, c => c.Order, true);
+        }
+
+        public async Task<IQueryable<Category>> FindChildrenAsync(int id)
+        {
+            return await FindListAsync(0, c => c.ParentId == id, c => c.Order, true);
         }
 
         public List<Category> FindTree(CategoryType? categoryType)
@@ -77,6 +88,46 @@ namespace NineskyStudy.Base
                     break;
             }
             return categories.OrderBy(c => c.ParentPath).ThenBy(c => c.Order).ToList();
+        }
+
+        public async Task<IQueryable<Category>> FindTreeAsync(CategoryType? categoryType)
+        {
+            var categories = await FindListAsync();
+            //根据栏目类型分类处理
+            switch (categoryType)
+            {
+                case null:
+                    break;
+                case CategoryType.General:
+                    categories = categories.Where(c => c.Type == categoryType);
+                    break;
+                //默认-Page或Link类型
+                default:
+                    //Id数组-含本栏目及父栏目
+                    List<int> idArray = new List<int>();
+                    //查找栏目id及父栏目路径
+                    var categoryArray = categories.Where(c => c.Type == categoryType).Select(c => new { CategoryId = c.CategoryId, ParentPath = c.ParentPath });
+                    if (categoryArray != null)
+                    {
+                        //添加栏目ID到
+                        idArray.AddRange(categoryArray.Select(c => c.CategoryId));
+                        foreach (var parentPath in categoryArray.Select(c => c.ParentPath))
+                        {
+                            var parentIdArray = parentPath.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (parentIdArray != null)
+                            {
+                                int parseId = 0;
+                                foreach (var parentId in parentIdArray)
+                                {
+                                    if (int.TryParse(parentId, out parseId)) idArray.Add(parseId);
+                                }
+                            }
+                        }
+                    }
+                    categories = categories.Where(c => idArray.Contains(c.CategoryId));
+                    break;
+            }
+            return categories.OrderBy(c => c.ParentPath).ThenBy(C => C.Order);
         }
     }
 }
