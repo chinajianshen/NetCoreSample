@@ -76,7 +76,7 @@
                         <div class="form-group">
                             <label asp-for="Description" class="col-md-2 control-label"></label>
                             <div class="col-md-10">
-                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <textarea asp-for="Description" class="form-control"></textarea>                               
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                         </div>
@@ -133,3 +133,78 @@
         </form>
     </div>
 </div>
+
+@section aside{
+    @Html.Partial("Aside")
+}
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script src="~/lib/ueditor/ueditor.all.js"></script>
+    <script src="~/lib/ueditor/ueditor.config.js"></script>
+    <link href="~/lib/ueditor/themes/iframe.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        var dropdownCategoryTree;
+        var setting = {
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: 0
+                }
+            },
+            async: {
+                enable: true,
+                url: "@Url.Action("ParentTree", "Category")"
+            },
+            callback: {
+                onClick: function (event, treeId, treeNode) {
+                    $("#ParentId").val(treeNode.id);
+                    $("#ParentId-text").val(treeNode.name);
+                    $("#ParentId-dropdown").hide();
+                }
+            }
+        };
+
+
+        function toggleContent() {
+            if ($("#General_ModuleId").selectpicker('val') == "") {
+                $("#General_ContentOrder").empty();
+            }
+            else {
+                $.post("@Url.Action("OrderList","Module")", { id: $('#General_ModuleId').val() }, function (data) {
+                    if (data != undefined) {
+                        $.each(data, function (ndex, element) {
+                            $("#General_ContentOrder").append("<option value='" + element.order + "'>" + element.name + "</option>");
+                        })
+                    }
+                }, 'json');
+
+            }
+        }
+        // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+        $(document).ready(function () {
+            dropdownCategoryTree = $.fn.zTree.init($("#ParentId-dropdown"), setting);
+            dropdownCategoryTree.addNodes(null, { id: 0, name: "无" });
+            $("#ParentId-text").click(function () {
+                $("#ParentId-dropdown").show();
+            });
+            $("#ParentId-btn").click(function () {
+                $("#ParentId-dropdown").show();
+            });
+            toggleContent();
+            $('#General_ModuleId').on('changed.bs.select', function (e) {
+                toggleContent();
+            });
+            //富文本编辑器
+            //var ue = UE.getEditor('Description');
+            //var editor_a = UE.getEditor('Description', { initialFrameHeight: 500 });
+            
+        });
+        var editor_des = UE.getEditor('Description');
+
+    </script>
+}

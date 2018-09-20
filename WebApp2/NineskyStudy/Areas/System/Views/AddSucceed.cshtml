@@ -1,0 +1,23 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "添加栏目";
+}
+
+<ol class="breadcrumb">
+    <li><span class="fa fa-home"></span>  <a asp-controller="Home" asp-action="Index">首页</a></li>
+    <li><a asp-controller="Category" asp-action="Index">栏目管理</a></li>
+    <li class="active">添加栏目</li>
+</ol>
+
+<div class="alert alert-success fade in" role="alert">
+    <h4><i class="fa fa-check"></i> 添加成功 </h4>
+    <p>您已成功添加栏目【@Model.Name】</p>
+    <p>
+        <a href="@Url.Action("Add")" class="btn btn-default">添加栏目</a>
+        <a href="@Url.Action("Details","Category",new {id=Model.CategoryId })" class="btn btn-default">修改栏目</a>
+    </p>
+</div>
+@section aside{
+
+    @Html.Partial("Aside.cshtml")
+}

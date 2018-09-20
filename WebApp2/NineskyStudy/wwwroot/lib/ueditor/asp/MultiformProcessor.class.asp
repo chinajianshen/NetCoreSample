@@ -1,4 +1,4 @@
-﻿<%
+<%
 ' Power by Techird
 ' Processor Usage:
 '   Set p = new MultiformProcessor

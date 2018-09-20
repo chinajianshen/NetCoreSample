@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ using NineskyStudy.Models;
 
 namespace NineskyStudy.Areas.System.Controllers
 {
-     [Area("System")]
+    [Area("System")]
     public class CategoryController : Controller
     {
         private InterfaceCategoryService _categoryService;
@@ -17,17 +17,18 @@ namespace NineskyStudy.Areas.System.Controllers
         {
             _categoryService = categoryService;
         }
-      
+
         public async Task<IActionResult> Add([FromServices]InterfaceModuleService moduleService, CategoryType? categoryType)
         {
             var modules = await moduleService.FindListAsync(true);
-            var moduleArray = modules.Select(m => new SelectListItem { Text = m.Name,Value=m.ModuleId.ToString() }).ToList();
+            var moduleArray = modules.Select(m => new SelectListItem { Text = m.Name, Value = m.ModuleId.ToString() }).ToList();
             moduleArray.Insert(0, new SelectListItem { Text = "无", Value = "0", Selected = true });
             ViewData["Modules"] = moduleArray;
             return View(new Category() { Type = CategoryType.General, ParentId = 0, View = "Index", Order = 0, Target = LinkTarget._self, General = new CategoryGeneral() { ContentView = "Index" } });
 
         }
 
+        [HttpPost]
         public async Task<IActionResult> Add([FromServices]InterfaceModuleService moduleService, Category category)
         {
             if (ModelState.IsValid)
@@ -100,6 +101,51 @@ namespace NineskyStudy.Areas.System.Controllers
             modeleArry.Insert(0, new SelectListItem() { Text = "无", Value = "0", Selected = true });
             ViewData["Modules"] = modeleArry;
             return View(category);
+        }
+
+        /// <summary>
+        /// 父栏目树
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> ParentTree()
+        {
+            var categories = await _categoryService.FindTreeAsync(CategoryType.General);
+            return Json(categories.Select(c => new zTreeNode { id = c.CategoryId, name = c.Name, pId = c.ParentId, iconSkin = "fa fa-folder" }));
+        }
+
+        /// <summary>
+        /// 栏目树
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> Tree()
+        {
+            List<zTreeNode> nodes;
+            var categories = await _categoryService.FindTreeAsync(null);
+            if (categories != null)
+            {
+                nodes = new List<zTreeNode>(categories.Count());
+                foreach (var category in categories)
+                {
+                    var node = new zTreeNode() { id = category.CategoryId, pId = category.ParentId, name = category.Name, url = Url.Action("Details", "Category", new { id = category.CategoryId }) };
+                    switch (category.Type)
+                    {
+                        case CategoryType.General:
+                            node.iconSkin = "fa fa-folder";
+                            node.iconOpen = "fa fa-folder-open";
+                            node.iconClose = "fa fa-folder";
+                            break;
+                        case CategoryType.Page:
+                            node.iconSkin = "fa fa-file";
+                            break;
+                        case CategoryType.Link:
+                            node.iconSkin = "fa fa-link";
+                            break;
+                    }
+                    nodes.Add(node);
+                }
+            }
+            else nodes = new List<zTreeNode>();
+            return Json(nodes);
         }
 
         public IActionResult Index()
