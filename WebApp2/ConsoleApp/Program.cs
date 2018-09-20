@@ -14,7 +14,7 @@ namespace ConsoleApp
             //MessageBusTest();
 
             BinaryTreeArithmetic();
-         
+
             //Console.WriteLine(GetFileContent());
 
             Console.ReadKey();
@@ -92,7 +92,7 @@ namespace ConsoleApp
         private static async Task<string> GetFileContent()
         {
             IFileStorage storage = new InMemoryFileStorage();
-            await storage.SaveFileAsync("test.txt","123456");
+            await storage.SaveFileAsync("test.txt", "123456");
             string content = await storage.GetFileContentsAsync("test.txt");
             return content;
         }
@@ -100,11 +100,11 @@ namespace ConsoleApp
         private static async void MessageBusTest()
         {
             IMessageBus messageBus = new InMemoryMessageBus();
-            messageBus.SubscribeAsync<SimpleMessageA>(msg =>
-            {
-                Console.WriteLine(msg.Data);
-            });
-            await messageBus.PublishAsync(new SimpleMessageA { Data= "hello" });
+            await messageBus.SubscribeAsync<SimpleMessageA>(msg =>
+                        {
+                            Console.WriteLine(msg.Data);
+                        });
+            await messageBus.PublishAsync(new SimpleMessageA { Data = "hello" });
         }
     }
 

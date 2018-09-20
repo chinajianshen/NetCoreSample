@@ -23,7 +23,6 @@ namespace NineskyStudy.Models
         /// <summary>
         /// 栏目地址
         /// </summary>
-        [Required]
         [DataType(DataType.Url)]
         [StringLength(500)]
         [Display(Name = "栏目地址")]

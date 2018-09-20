@@ -17,6 +17,9 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
+    @RenderSection("style",false)
+
     @*网站性能分析组件以后再用*@
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
     @*@Html.Raw(JavaScriptSnippet.FullScript)*@  

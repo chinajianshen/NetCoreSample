@@ -4,19 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>@ViewBag.Title - Ninesky系统管理</title>
+    <title>@ViewData["Title"] - NineskyStudy系统管理</title>
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/Areas/System/css/system.css" />
+        <link rel="stylesheet" href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.css")" />
     </environment>
 
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/Areas/System/css/system.css" asp-append-version="true" />
+              asp-fallback-test-class="sr-only"
+              asp-fallback-test-property="position"
+              asp-fallback-test-value="absolute" />
     </environment>
+
+    @*<link rel="stylesheet" href="~/Areas/System/css/system.css" />*@
+    <link rel="stylesheet" href="~/lib/bootstrap-select/dist/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="~/lib/FontAwesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/lib/ztree/css/metroStyle/metroStyle.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-table/dist/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
+    @*<link rel="stylesheet" href="~/Areas/System/css/system.css" />*@
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 </head>
 <body>
@@ -29,41 +37,58 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-cog"></span> 系统管理</a>
+                <a class="navbar-brand" href="#"> 系统管理</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-controller="Home" asp-action="Index">首页</a></li>
-                    <li><a asp-controller="Category" asp-action="Index">栏目管理</a></li>
+                    <li><a asp-controller="Home" asp-action="Index"><span class="fa fa-home"></span> 首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa fa-list"></span> 栏目管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li> <a asp-controller="Category" asp-action="Add"><span class="fa fa-plus"></span> 添加栏目</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span> 系统配置 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li> <a asp-controller="Module" asp-action="Index"><span class="fa fa-th-large"></span> 模块配置</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
+    <div class="body-content">
+        <div class="row">
+            <aside class="col-md-3" style="padding:20px;">@RenderSection("aside", false)</aside>
+            <div class="col-md-9">@RenderBody()</div>
+        </div>
+
         <hr />
         <footer>
             <p>&copy;Ninesky- By 洞庭夕照</p>
         </footer>
     </div>
-
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/Areas/System/js/site.js" asp-append-version="true"></script>
+        <environment names="Staging,Production">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+        </environment>
     </environment>
-    <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
-        <script src="~/Areas/System/js/site.js" asp-append-version="true"></script>
-    </environment>
-
+    <script src="~/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script src="~/lib/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="~/lib/ztree/js/jquery.ztree.core.min.js"></script>
+    <script src="~/lib/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+    @*<script src="~/Areas/System/js/system.js"></script>*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

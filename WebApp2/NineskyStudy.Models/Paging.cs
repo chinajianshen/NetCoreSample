@@ -8,7 +8,8 @@ namespace NineskyStudy.Models
     {
         public Paging()
         {
-
+            PageIndex = 1;
+            PageSize = 20;
         }
         public List<T> Entities { get; set; }
 

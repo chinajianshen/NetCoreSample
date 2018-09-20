@@ -12,6 +12,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\System\Data\**" />
+    <Compile Remove="Areas\System\Models\**" />
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Areas\System\Data\**" />
+    <Content Remove="Areas\System\Models\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Areas\System\Data\**" />
+    <EmbeddedResource Remove="Areas\System\Models\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Areas\System\Data\**" />
+    <None Remove="Areas\System\Models\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="20180920044009_InitialCreate.cs" />
+    <Compile Remove="20180920044009_InitialCreate.Designer.cs" />
+    <Compile Remove="NineskyDbContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Bootstrap-Table" Version="0.4.0" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.7.2" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
@@ -32,11 +53,6 @@
     <None Update="App_Data\Ninesky_log.ldf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\System\Data\" />
-    <Folder Include="Areas\System\Models\" />
   </ItemGroup>
 
   <ItemGroup>

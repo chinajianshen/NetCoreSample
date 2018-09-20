@@ -21,25 +21,14 @@ namespace NineskyStudy.Models
         public int CategoryId { get; set; }
 
         /// <summary>
-        /// 栏目视图
+        /// 模块id[大于0时有效]
         /// </summary>
-        [Required]
-        [StringLength(200)]
-        [Display(Name = "栏目视图")]
-        public string View { get; set; }
-
-        /// <summary>
-        /// 模块名称
-        /// </summary>
-        [Required]
-        [StringLength(50)]
-        [Display(Name = "模块名称")]
-        public string Module { get; set; }
+        [Display(Name = "内容模块")]
+        public int? ModuleId { get; set; }
 
         /// <summary>
         /// 内容视图
         /// </summary>
-        [Required]
         [StringLength(200)]
         [Display(Name = "内容视图")]
         public string ContentView { get; set; }
@@ -47,8 +36,6 @@ namespace NineskyStudy.Models
         /// <summary>
         /// 内容排序
         /// </summary>
-        [Required]
-        [StringLength(200)]
         [Display(Name = "内容排序")]
         public int? ContentOrder { get; set; }
 

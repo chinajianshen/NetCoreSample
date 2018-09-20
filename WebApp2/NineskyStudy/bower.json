@@ -2,6 +2,11 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "bootstrap-table": "1.12.1"
+    "bootstrap-table": "1.12.1",
+    "bootstrap3-dialog": "v1.35.4",
+    "bootstrap-select": "v1.12.2",
+    "Font-Awesome": "fontawesome#5.3.1",
+    "ueditor": "v1.4.3.3",
+    "ztree": "3.5.0"
   }
 }
