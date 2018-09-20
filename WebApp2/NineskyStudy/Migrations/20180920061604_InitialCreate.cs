@@ -14,15 +14,33 @@ namespace NineskyStudy.Migrations
                     CategoryId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
+                    View = table.Column<string>(maxLength: 200, nullable: false),
                     Type = table.Column<int>(nullable: false),
                     ParentId = table.Column<int>(nullable: false),
+                    ParentPath = table.Column<string>(nullable: true),
                     Order = table.Column<int>(nullable: false),
-                    Target = table.Column<string>(maxLength: 20, nullable: false),
-                    Description = table.Column<string>(maxLength: 1000, nullable: false)
+                    Target = table.Column<int>(nullable: false),
+                    Description = table.Column<string>(maxLength: 1000, nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.CategoryId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Modules",
+                columns: table => new
+                {
+                    ModuleId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(maxLength: 50, nullable: false),
+                    Controller = table.Column<string>(maxLength: 50, nullable: true),
+                    Description = table.Column<string>(maxLength: 1000, nullable: true),
+                    Enabled = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Modules", x => x.ModuleId);
                 });
 
             migrationBuilder.CreateTable(
@@ -32,10 +50,9 @@ namespace NineskyStudy.Migrations
                     GeneralId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CategoryId = table.Column<int>(nullable: false),
-                    View = table.Column<string>(maxLength: 200, nullable: false),
-                    Module = table.Column<string>(maxLength: 50, nullable: false),
-                    ContentView = table.Column<string>(maxLength: 200, nullable: false),
-                    ContentOrder = table.Column<int>(maxLength: 200, nullable: false)
+                    ModuleId = table.Column<int>(nullable: true),
+                    ContentView = table.Column<string>(maxLength: 200, nullable: true),
+                    ContentOrder = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -55,7 +72,7 @@ namespace NineskyStudy.Migrations
                     LinkId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CategoryId = table.Column<int>(nullable: false),
-                    Url = table.Column<string>(maxLength: 500, nullable: false)
+                    Url = table.Column<string>(maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -75,8 +92,7 @@ namespace NineskyStudy.Migrations
                     PageId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CategoryId = table.Column<int>(nullable: false),
-                    Content = table.Column<string>(maxLength: 10000, nullable: false),
-                    View = table.Column<string>(maxLength: 200, nullable: false)
+                    Content = table.Column<string>(maxLength: 10000, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -86,6 +102,27 @@ namespace NineskyStudy.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ModuleOrder",
+                columns: table => new
+                {
+                    ModuleOrderId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ModuleId = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(maxLength: 50, nullable: false),
+                    Order = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ModuleOrder", x => x.ModuleOrderId);
+                    table.ForeignKey(
+                        name: "FK_ModuleOrder_Modules_ModuleId",
+                        column: x => x.ModuleId,
+                        principalTable: "Modules",
+                        principalColumn: "ModuleId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -106,6 +143,11 @@ namespace NineskyStudy.Migrations
                 table: "CategoryPage",
                 column: "CategoryId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ModuleOrder_ModuleId",
+                table: "ModuleOrder",
+                column: "ModuleId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -120,7 +162,13 @@ namespace NineskyStudy.Migrations
                 name: "CategoryPage");
 
             migrationBuilder.DropTable(
+                name: "ModuleOrder");
+
+            migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Modules");
         }
     }
 }

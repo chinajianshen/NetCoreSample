@@ -79,7 +79,7 @@ namespace NineskyStudy
                 options.UseSqlServer(conn);                
             });
             //数据库与接口注入
-            services.AddScoped<DbContext, NineskyDbContext>();
+            services.AddScoped<DbContext, NineskyDbContext>();          
 
             #region 数据库和业务逻辑服务注入
             //services.AddScoped<InterfaceBaseRepository<Category>, BaseRepository<Category>>();
@@ -138,6 +138,9 @@ namespace NineskyStudy
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //初始化数据库
+            //Models.DbInitializer.Initialize();
         }
     }
 }

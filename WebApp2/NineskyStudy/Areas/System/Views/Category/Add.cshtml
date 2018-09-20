@@ -1,0 +1,135 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "添加栏目";
+}
+
+<ol class="breadcrumb">
+    <li><span class="fa fa-home"></span>  <a asp-controller="Home" asp-action="Index">首页</a></li>
+    <li><a asp-controller="Category" asp-action="Index">栏目管理</a></li>
+    <li class="active">添加常规栏目</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form asp-action="Add">
+            <div class="form-horizontal">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#base" role="tab" data-toggle="tab">基本信息</a></li>
+                    <li role="presentation"><a href="#general" role="tab" data-toggle="tab">常规栏目</a></li>
+                    <li role="presentation"><a href="#page" role="tab" data-toggle="tab">单页栏目</a></li>
+                    <li role="presentation"><a href="#link" role="tab" data-toggle="tab">链接栏目</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="base">
+                        <div class="form-group">
+                            <label asp-for="ParentId" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <div class="input-group" style="width:280px;">
+                                    <input id="ParentId-text" type="text" class="form-control" readonly value="无" />
+                                    <ul id="ParentId-dropdown" class="dropdown-menu dropdown-menu-left ztree"></ul>
+                                    <div class="input-group-btn">
+                                        <button id="ParentId-btn" type="button" class="btn btn-default"><span class="caret"></span></button>
+                                    </div>
+                                    <input asp-for="ParentId" class="form-control" style="width:0; visibility:hidden; position:absolute;padding:0" />
+                                </div>
+                                <span asp-validation-for="ParentId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Type" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <select asp-for="Type" asp-items="Html.GetEnumSelectList<CategoryType>()" class="selectpicker form-control" data-style="btn-dropdown"></select>
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Name" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="View" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="View" class="form-control" />
+                                <span asp-validation-for="View" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Order" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="Order" class="form-control" />
+                                <span asp-validation-for="Order" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Target" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <select asp-for="Target" asp-items="Html.GetEnumSelectList<LinkTarget>()" class="selectpicker form-control" data-style="btn-dropdown"></select>
+                                <span asp-validation-for="Target" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="general">
+                        <div class="form-group">
+                            <label asp-for="General.ModuleId" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <select asp-for="General.ModuleId" asp-items="@ViewData["Modules"] as List<SelectListItem>" class="selectpicker form-control" data-style="btn-dropdown"></select>
+                                <span asp-validation-for="General.ModuleId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="General.ContentView" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="General.ContentView" class="form-control" />
+                                <span asp-validation-for="General.ContentView" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="General.ContentOrder" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <select asp-for="General.ContentOrder" class="form-control"></select>
+                                <span asp-validation-for="General.ContentOrder" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="page">
+                        <div class="form-group">
+                            <label asp-for="Page.Content" class="control-label"></label>
+
+                            <textarea asp-for="Page.Content"></textarea>
+                            <span asp-validation-for="Page.Content" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="link">
+                        <div class="form-group">
+                            <label asp-for="Link.Url" class="col-md-2 control-label"></label>
+                            <div class="col-md-10">
+                                <input asp-for="Link.Url" class="form-control" />
+                                <span asp-validation-for="Link.Url" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="添加" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

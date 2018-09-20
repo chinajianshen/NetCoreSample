@@ -26,7 +26,6 @@ namespace NineskyStudy.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(1000);
 
                     b.Property<string>("Name")
@@ -39,11 +38,13 @@ namespace NineskyStudy.Migrations
 
                     b.Property<string>("ParentPath");
 
-                    b.Property<string>("Target")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<int>("Target");
 
                     b.Property<int>("Type");
+
+                    b.Property<string>("View")
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.HasKey("CategoryId");
 
@@ -58,21 +59,12 @@ namespace NineskyStudy.Migrations
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<int?>("ContentOrder")
-                        .IsRequired()
-                        .HasMaxLength(200);
+                    b.Property<int?>("ContentOrder");
 
                     b.Property<string>("ContentView")
-                        .IsRequired()
                         .HasMaxLength(200);
 
-                    b.Property<string>("Module")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<string>("View")
-                        .IsRequired()
-                        .HasMaxLength(200);
+                    b.Property<int?>("ModuleId");
 
                     b.HasKey("GeneralId");
 
@@ -91,7 +83,6 @@ namespace NineskyStudy.Migrations
                     b.Property<int>("CategoryId");
 
                     b.Property<string>("Url")
-                        .IsRequired()
                         .HasMaxLength(500);
 
                     b.HasKey("LinkId");
@@ -111,12 +102,7 @@ namespace NineskyStudy.Migrations
                     b.Property<int>("CategoryId");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasMaxLength(10000);
-
-                    b.Property<string>("View")
-                        .IsRequired()
-                        .HasMaxLength(200);
 
                     b.HasKey("PageId");
 
@@ -124,6 +110,50 @@ namespace NineskyStudy.Migrations
                         .IsUnique();
 
                     b.ToTable("CategoryPage");
+                });
+
+            modelBuilder.Entity("NineskyStudy.Models.Module", b =>
+                {
+                    b.Property<int>("ModuleId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Controller")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000);
+
+                    b.Property<bool>("Enabled");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.HasKey("ModuleId");
+
+                    b.ToTable("Modules");
+                });
+
+            modelBuilder.Entity("NineskyStudy.Models.ModuleOrder", b =>
+                {
+                    b.Property<int>("ModuleOrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ModuleId");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<int>("Order");
+
+                    b.HasKey("ModuleOrderId");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("ModuleOrder");
                 });
 
             modelBuilder.Entity("NineskyStudy.Models.CategoryGeneral", b =>
@@ -147,6 +177,14 @@ namespace NineskyStudy.Migrations
                     b.HasOne("NineskyStudy.Models.Category", "Category")
                         .WithOne("Page")
                         .HasForeignKey("NineskyStudy.Models.CategoryPage", "CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("NineskyStudy.Models.ModuleOrder", b =>
+                {
+                    b.HasOne("NineskyStudy.Models.Module", "Module")
+                        .WithMany("ModuleOrders")
+                        .HasForeignKey("ModuleId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

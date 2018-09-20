@@ -8,6 +8,11 @@
           "ServiceType": "NineskyStudy.InterfaceBase.InterfaceCategoryService",
           "ImplementationType": "NineskyStudy.Base.CategoryService",
           "LifeTime": "Scoped"
+        },
+        {
+          "ServiceType": "NineskyStudy.InterfaceBase.InterfaceModuleService",
+          "ImplementationType": "NineskyStudy.Base.ModuleService",
+          "LifeTime": "Scoped"
         }
       ]
     }
