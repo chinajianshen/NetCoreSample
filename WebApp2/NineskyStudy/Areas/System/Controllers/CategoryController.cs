@@ -152,5 +152,10 @@ namespace NineskyStudy.Areas.System.Controllers
         {
             return View();
         }
+
+        public IActionResult UEaditor()
+        {
+            return View();
+        }
     }
 }

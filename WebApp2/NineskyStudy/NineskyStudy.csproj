@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" />
+    <PackageReference Include="UEditor.Core" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,10 +29,14 @@
     <Content Update="service.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Update="ueditor.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="upload\image\" />
   </ItemGroup>
 
 </Project>

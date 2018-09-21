@@ -76,8 +76,9 @@
                         <div class="form-group">
                             <label asp-for="Description" class="col-md-2 control-label"></label>
                             <div class="col-md-10">
-                                <textarea asp-for="Description" class="form-control"></textarea>                               
-                                <span asp-validation-for="Description" class="text-danger"></span>
+                                @*<textarea asp-for="Description" class="form-control"></textarea>*@
+                                @*<span asp-validation-for="Description" class="text-danger"></span>*@
+                                <textarea id="Description"></textarea>
                             </div>
                         </div>
 
@@ -140,12 +141,13 @@
 
 @section Scripts{
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
-
-    <script src="~/lib/ueditor/ueditor.all.js"></script>
     <script src="~/lib/ueditor/ueditor.config.js"></script>
-    <link href="~/lib/ueditor/themes/iframe.css" rel="stylesheet" />
+    <script src="~/lib/ueditor/ueditor.all.js"></script>
+    <script src="~/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
 
     <script type="text/javascript">
+        var ue = UE.getEditor("Description");
+
         var dropdownCategoryTree;
         var setting = {
             data: {
@@ -202,9 +204,8 @@
             //富文本编辑器
             //var ue = UE.getEditor('Description');
             //var editor_a = UE.getEditor('Description', { initialFrameHeight: 500 });
-            
+
         });
-        var editor_des = UE.getEditor('Description');
 
     </script>
 }

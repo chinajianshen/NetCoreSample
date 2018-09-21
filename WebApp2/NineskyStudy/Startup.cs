@@ -13,23 +13,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using NineskyStudy.Base;
+using NineskyStudy.Hubs;
 using NineskyStudy.InterfaceBase;
 using NineskyStudy.Models;
+using UEditor.Core;
 
 namespace NineskyStudy
 {
     public class Startup
     {
         private string _contentRootPath = "";
-        public Startup(IConfiguration configuration,IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
 
             //ContentRootPath  用于包含应用程序文件如C:\MyApp\
             //WebRootPath 用于包含Web服务性的内容文件C:\MyApp\wwwroot\
             _contentRootPath = env.ContentRootPath;
-            
+
             #region 测试
             //List<AssemblyItem> items = new List<AssemblyItem>() {
             //     new AssemblyItem{
@@ -66,20 +69,21 @@ namespace NineskyStudy
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-                        
+
             string conn = Configuration.GetConnectionString("DefaultConnection");
             //数据库连接串 采用附加库形式 https://www.cnblogs.com/chonghanyu/p/5709780.html
             if (conn.Contains("%CONTENTROOTPATH%"))
             {
-                conn = conn.Replace("%CONTENTROOTPATH%",_contentRootPath);
+                conn = conn.Replace("%CONTENTROOTPATH%", _contentRootPath);
             }
 
             //注入NineskyDbContext 参照 https://www.cnblogs.com/mzwhj/p/6147900.html 第4部分
-            services.AddDbContext<NineskyDbContext>(options => {
-                options.UseSqlServer(conn);                
+            services.AddDbContext<NineskyDbContext>(options =>
+            {
+                options.UseSqlServer(conn);
             });
             //数据库与接口注入
-            services.AddScoped<DbContext, NineskyDbContext>();          
+            services.AddScoped<DbContext, NineskyDbContext>();
 
             #region 数据库和业务逻辑服务注入
             //services.AddScoped<InterfaceBaseRepository<Category>, BaseRepository<Category>>();
@@ -107,7 +111,13 @@ namespace NineskyStudy
             }
             #endregion
 
+            //注册百度uEdtior编辑器
+            services.AddUEditorService();          
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //注册SingalR服务
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -121,18 +131,41 @@ namespace NineskyStudy
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
-            }
+            }           
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+
+            //配置TypeScript创建SignalR Web应用  https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-2.1&tabs=visual-studio
+            app.UseDefaultFiles();
+
+            //app.UseStaticFiles();
+            //配置uEdtior编辑器
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                     Path.Combine(Directory.GetCurrentDirectory(), "upload")),
+                RequestPath = "/upload",
+                OnPrepareResponse = ctx =>
+                {
+                    ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=36000");
+                }
+            });           
+
             app.UseCookiePolicy();
+
+            //
+            app.UseSignalR(routes =>
+            {
+                //routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<ChatHub>("/hub");
+            });
 
             app.UseMvc(routes =>
             {
                 //注册一个区域
                 routes.MapRoute(
-                    name:"area",
-                    template:"{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                    name: "area",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapRoute(
                     name: "default",
