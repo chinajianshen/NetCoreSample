@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -167,10 +168,16 @@ namespace NineskyStudy
                     name: "area",
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
+                //routes.MapRoute("blog", "blog/{*article}", defaults: new { controller="Blog",action="Article" });
+                               
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("", 2, 3);
 
             //初始化数据库
             //Models.DbInitializer.Initialize();

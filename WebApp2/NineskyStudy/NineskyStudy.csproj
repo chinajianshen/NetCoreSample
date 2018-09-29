@@ -5,6 +5,7 @@
     <SccProvider></SccProvider>
     <SccAuxPath></SccAuxPath>
     <SccLocalPath></SccLocalPath>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup>

@@ -106,6 +106,15 @@ namespace ConsoleApp
                         });
             await messageBus.PublishAsync(new SimpleMessageA { Data = "hello" });
         }
+
+        private static Task<string> GehHere()
+        {
+            return Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(1000);
+                return "HERE";
+            });
+        }        
     }
 
     public class SimpleMessageA
