@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using NineskyStudy.Infrastructure;
 using NineskyStudy.InterfaceBase;
 using NineskyStudy.Models;
 
@@ -13,11 +16,14 @@ namespace NineskyStudy.Controllers
     {
         private readonly InterfaceModuleService _moduleService;
         private readonly InterfaceCategoryService _categoryService;
+        private readonly IOptions<AppOptions> _options;
 
-        public HomeController(InterfaceModuleService moduleService,InterfaceCategoryService categoryService)
+
+        public HomeController(InterfaceModuleService moduleService,InterfaceCategoryService categoryService, IOptions<AppOptions> options)
         {
             _moduleService = moduleService;
             _categoryService = categoryService;
+            _options = options;
         }
 
         public IActionResult Index()
@@ -59,7 +65,7 @@ namespace NineskyStudy.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
+            
             return View();
         }
 

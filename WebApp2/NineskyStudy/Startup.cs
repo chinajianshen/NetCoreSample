@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -17,6 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using NineskyStudy.Base;
 using NineskyStudy.Hubs;
+using NineskyStudy.Infrastructure;
 using NineskyStudy.InterfaceBase;
 using NineskyStudy.Models;
 using UEditor.Core;
@@ -57,6 +59,13 @@ namespace NineskyStudy
             //};
             //string json = Newtonsoft.Json.JsonConvert.SerializeObject(items);
             #endregion
+
+            // 构造函数注入IConfiguration，相当于下面操作
+            //var builder = new ConfigurationBuilder()
+            //              .SetBasePath(env.ContentRootPath)
+            //              .AddJsonFile("");
+            //Configuration = builder.Build();
+
         }
 
         public IConfiguration Configuration { get; }
@@ -119,11 +128,15 @@ namespace NineskyStudy
 
             //注册SingalR服务
             services.AddSignalR();
+
+            //注册自定义筛选服务（执行顺序 中间件处理前后）
+            services.AddTransient<IStartupFilter, RequestSetOptionsStartupFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            //顺序1
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -134,11 +147,13 @@ namespace NineskyStudy
                 app.UseHsts();
             }           
 
+            //程序2
             app.UseHttpsRedirection();
 
+            //顺序3
             //配置TypeScript创建SignalR Web应用  https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-2.1&tabs=visual-studio
             app.UseDefaultFiles();
-
+           
             //app.UseStaticFiles();
             //配置uEdtior编辑器
             app.UseStaticFiles(new StaticFileOptions
@@ -152,6 +167,7 @@ namespace NineskyStudy
                 }
             });           
 
+            //顺序4
             app.UseCookiePolicy();
 
             //
@@ -161,6 +177,15 @@ namespace NineskyStudy
                 routes.MapHub<ChatHub>("/hub");
             });
 
+            //顺序5
+            //app.UseAuthentication();
+
+            //app.Map("/map1", HandleMapTest1);
+            //app.Map("/map2", HandleMapTest2);
+            //app.MapWhen(context => context.Request.Query.ContainsKey("branch"),HandlerBranch);
+
+
+            //顺序6
             app.UseMvc(routes =>
             {
                 //注册一个区域
@@ -176,11 +201,57 @@ namespace NineskyStudy
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            StringBuilder sb = new StringBuilder();
-            sb.Append("", 2, 3);
+
+            #region 配置自定义中间件
+            //直接Use定义中间件 设置当前请求区域性
+            //app.Use(async (context, next) =>
+            //{
+            //    await next.Invoke();               
+            //});
+
+            //app.Use((context,next) => {
+            //    var cultureQuery = context.Request.Query["culture"];
+            //    if (!string.IsNullOrWhiteSpace(cultureQuery))
+            //    {
+            //        var culture = new CultureInfo(cultureQuery);
+            //        CultureInfo.CurrentCulture = culture;
+            //        CultureInfo.CurrentUICulture = culture;
+            //    }
+
+            //    return next();
+            //});
+
+            //app.UseRequestCultrue();
+            #endregion
 
             //初始化数据库
             //Models.DbInitializer.Initialize();
         }
+
+        #region 测试
+        private static void HandleMapTest1(IApplicationBuilder app)
+        {
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Map Test 1");
+            });
+        }
+
+        private static void HandleMapTest2(IApplicationBuilder app)
+        {
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Map Test 2");
+            });
+        }
+
+        private static void HandlerBranch(IApplicationBuilder app)
+        {
+            app.Run(async context => {
+                var branchVer = context.Request.Query["branch"];
+                await context.Response.WriteAsync($"Branch used={branchVer}");
+            });
+        }
+        #endregion
     }
 }
