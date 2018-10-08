@@ -18,6 +18,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" />
+    <PackageReference Include="SimpleInjector" Version="4.3.0" />
     <PackageReference Include="UEditor.Core" Version="1.0.6" />
   </ItemGroup>
 

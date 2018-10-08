@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace NineskyStudy.Infrastructure
 {
+    /// <summary>
+    /// 每个应用程序生存期构造一次中间件。 如果需要与请求中的中间件共享服务，请参阅按请求依赖项部分
+    /// https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.1#per-request-dependencies
+    /// </summary>
     public class RequestCultureMiddleware
     {
         private readonly RequestDelegate _next;
