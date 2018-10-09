@@ -87,22 +87,28 @@ namespace NineskyStudy
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //自定义视图路径方法1 .AddRazorOptions（）中设置 (此方法只在应用程序启动后初始化一次)
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-                             //.AddRazorOptions(opt =>
-                             //{
-                             //    opt.ViewLocationFormats.Clear();//清空默认列表
-                             //    opt.ViewLocationFormats.Add("~/Views /{ 1}/{ 0}.cshtml");
-                             //    opt.ViewLocationFormats.Add("~/Views/Shared/{0}.cshtml");
-                             //    opt.ViewLocationFormats.Add("~/Views/{1}/Template/{0}.cshtml");
+            //.AddRazorOptions(opt =>
+            //{
+            //    opt.ViewLocationFormats.Clear();//清空默认列表
+            //    opt.ViewLocationFormats.Add("~/Views/{1}/{0}.cshtml");
+            //    opt.ViewLocationFormats.Add("~/Views/Shared/{0}.cshtml");
+            //    opt.ViewLocationFormats.Add("~/Views/{1}/Template/{0}.cshtml");
 
-                             //    opt.AreaViewLocationFormats.Clear();
-                             //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/{1}/{0}.cshtml");
-                             //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/Shared/{0}.cshtml");
-                             //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/{1}/Template/{0}.cshtml");
-                             //});
+            //    opt.AreaViewLocationFormats.Clear();
+            //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/{1}/{0}.cshtml");
+            //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/Shared/{0}.cshtml");
+            //    opt.AreaViewLocationFormats.Add("~/Areas/{2}/Views/{1}/Template/{0}.cshtml");
+            //});
 
-         //services.Configure<RazorViewEngineOptions>
-                             
+            //自定义视图路径方法2 （此方法每次视图页面执行都会执行 性能会有影响）
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.ViewLocationExpanders.Add(new TemplateViewLocationExPander());
+                //options.AreaViewLocationFormats.Add();
+            });
+
 
             #region Simple Injector第三方DI容器替换原有的     
             //https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/middleware/extensibility-third-party-container?view=aspnetcore-2.1

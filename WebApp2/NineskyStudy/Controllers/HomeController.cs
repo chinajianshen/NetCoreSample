@@ -28,10 +28,16 @@ namespace NineskyStudy.Controllers
 
         public IActionResult Index()
         {
+            var routeData = ControllerContext.RouteData;
             //数据库初始化
             DbInitializer.InitializeModule(_moduleService);
             DbInitializer.InitializeCategory(_categoryService);
 
+            return View();
+        }
+
+        public IActionResult T_List()
+        {
             return View();
         }
 
