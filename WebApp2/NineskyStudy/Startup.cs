@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.EntityFrameworkCore;
@@ -342,16 +343,40 @@ namespace NineskyStudy
            });
 
             var route = routeBuilder.Build();          
-            app.UseRouter(route);           
-          
+            app.UseRouter(route);
+
             #endregion
 
-            //初始化数据库
-            //Models.DbInitializer.Initialize();
+            #region URL重写中间件(后面那几个方法不对)
+            using (StreamReader apacheModRewriteStreamReader = File.OpenText("ApacheModRewrite.txt"))
+            using (StreamReader iisUrlRewriteStreamReader = File.OpenText("IISUrlRewrite.xml"))
+            {
+                var options = new RewriteOptions()
+                    .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+                    .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&var2=$2", skipRemainingRules: true)
+                    .AddApacheModRewrite(apacheModRewriteStreamReader)
+                    .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+                    .AddRedirectToHttps(301);//端口默认为443
+                //.Add(MethodRules.RedirectXMLRequests)
+                //.Add(new RedirectImageRequests(".png", "/png-images"))
+                //.Add(new RedirectImageRequests(".jpg", "/jpg-images"));
 
-            //app.Run(async context => {
-            //    await context.Response.WriteAsync("Hello,World!");
-            //});
+                //    app.UseRewriter(options);
+                //}
+
+                #endregion
+
+                //初始化数据库
+                //Models.DbInitializer.Initialize();
+
+                //app.Run(async context => {
+                //    await context.Response.WriteAsync("Hello,World!");
+                //});
+            }
+
+            private void MethodRules(RewriteContext obj)
+        {
+            throw new NotImplementedException();
         }
 
         #region 测试
