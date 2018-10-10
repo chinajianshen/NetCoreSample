@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,6 +22,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using NineskyStudy.AutoMapperConfig;
 using NineskyStudy.Base;
 using NineskyStudy.Hubs;
 using NineskyStudy.Infrastructure;
@@ -87,6 +89,9 @@ namespace NineskyStudy
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            //注册AutoMapper服务
+            services.AddAutoMapper();
 
             //自定义视图路径方法1 .AddRazorOptions（）中设置 (此方法只在应用程序启动后初始化一次)
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -195,7 +200,7 @@ namespace NineskyStudy
             services.AddDirectoryBrowser();
 
             //注册路由中间件 必须在 Startup.Configure 方法中配置路由
-            services.AddRouting();
+            services.AddRouting();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -221,18 +226,18 @@ namespace NineskyStudy
             app.UseDefaultFiles();
 
             //静态文件在wwwroot
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
             //配置uEdtior编辑器
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                     Path.Combine(Directory.GetCurrentDirectory(), "upload")),
-                RequestPath = "/upload",
-                OnPrepareResponse = ctx =>
-                {
-                    ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=36000");
-                }
-            });
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //         Path.Combine(Directory.GetCurrentDirectory(), "upload")),
+            //    RequestPath = "/upload",
+            //    OnPrepareResponse = ctx =>
+            //    {
+            //        ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=36000");
+            //    }
+            //});
 
             //启用目录浏览（安全考虑，目录浏览默认处于禁用状态）
             app.UseDirectoryBrowser(new DirectoryBrowserOptions
@@ -273,9 +278,12 @@ namespace NineskyStudy
                     name: "area",
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
+                //routes.MapRoute(
+                //    name: "default",
+                //    template: "{controller=Home}/{action=Index}/{id?}");    
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");                
+                   name: "default",
+                   template: "{controller=BootStrap}/{action=Index}/{id?}");
 
                 #region 路由测试
                 //模板  /Blog/All-About-Routing/Introduction 
@@ -295,6 +303,9 @@ namespace NineskyStudy
                 //      constraints:new { id = new IntRouteConstraint() },
                 //      dataTokens:new { locale = "en-US"});            
                 #endregion
+
+                //注册AutoMapper自定义的实体关系映射
+                Mappings.RegisterMapping();
             });
 
 
@@ -348,35 +359,32 @@ namespace NineskyStudy
             #endregion
 
             #region URL重写中间件(后面那几个方法不对)
-            using (StreamReader apacheModRewriteStreamReader = File.OpenText("ApacheModRewrite.txt"))
-            using (StreamReader iisUrlRewriteStreamReader = File.OpenText("IISUrlRewrite.xml"))
-            {
-                var options = new RewriteOptions()
-                    .AddRedirect("redirect-rule/(.*)", "redirected/$1")
-                    .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&var2=$2", skipRemainingRules: true)
-                    .AddApacheModRewrite(apacheModRewriteStreamReader)
-                    .AddIISUrlRewrite(iisUrlRewriteStreamReader)
-                    .AddRedirectToHttps(301);//端口默认为443
-                //.Add(MethodRules.RedirectXMLRequests)
-                //.Add(new RedirectImageRequests(".png", "/png-images"))
-                //.Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+            //using (StreamReader apacheModRewriteStreamReader = File.OpenText("ApacheModRewrite.txt"))
+            //using (StreamReader iisUrlRewriteStreamReader = File.OpenText("IISUrlRewrite.xml"))
+            //{
+            //    var options = new RewriteOptions()
+            //        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            //        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&var2=$2", skipRemainingRules: true)
+            //        .AddApacheModRewrite(apacheModRewriteStreamReader)
+            //        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            //        .AddRedirectToHttps(301);//端口默认为443
+            //    //.Add(MethodRules.RedirectXMLRequests)
+            //    //.Add(new RedirectImageRequests(".png", "/png-images"))
+            //    //.Add(new RedirectImageRequests(".jpg", "/jpg-images"));
 
-                //    app.UseRewriter(options);
-                //}
+            //    //    app.UseRewriter(options);
+            //    //}
 
-                #endregion
+            //    #endregion
 
-                //初始化数据库
-                //Models.DbInitializer.Initialize();
+            //    //初始化数据库
+            //    //Models.DbInitializer.Initialize();
 
-                //app.Run(async context => {
-                //    await context.Response.WriteAsync("Hello,World!");
-                //});
-            }
-
-            private void MethodRules(RewriteContext obj)
-        {
-            throw new NotImplementedException();
+            //    //app.Run(async context => {
+            //    //    await context.Response.WriteAsync("Hello,World!");
+            //    //});
+            //}
+            #endregion
         }
 
         #region 测试

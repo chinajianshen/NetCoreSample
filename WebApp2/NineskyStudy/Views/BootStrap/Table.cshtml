@@ -1,0 +1,21 @@
+﻿@model List<Category>
+@{
+    ViewData["Title"] = "Table表格学习";
+}
+
+<table class="table table-bordered table-striped table-hover">
+    @foreach (var item in Model)
+    {
+    <tr class="@item.Type">
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+    </tr>
+    }
+</table>
