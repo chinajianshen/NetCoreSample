@@ -200,7 +200,20 @@ namespace NineskyStudy
             services.AddDirectoryBrowser();
 
             //注册路由中间件 必须在 Startup.Configure 方法中配置路由
-            services.AddRouting();            
+            services.AddRouting();
+
+            //注册Session服务 InMemoryCache
+            //services.AddDistributedMemoryCache();
+            //services.AddSession();
+
+            //注册Session服务 SqlServerCache
+            services.AddDistributedSqlServerCache(option =>
+            {
+                option.ConnectionString = "server=.;database=Ninesky;uid=sa;pwd=sa.;min pool size=10;max pool size=300;Connection Timeout=10;";
+                option.SchemaName = "dbo";
+                option.TableName = "Sessions";
+            });
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -266,6 +279,8 @@ namespace NineskyStudy
             //app.Map("/map2", HandleMapTest2);
             //app.MapWhen(context => context.Request.Query.ContainsKey("branch"),HandlerBranch);
 
+            //Session中间件必须在UseMvc之前
+            app.UseSession();
 
             //顺序6
             app.UseMvc(routes =>

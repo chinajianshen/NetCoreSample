@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using NineskyStudy.Models;
 using NineskyStudy.InterfaceBase;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 
 namespace NineskyStudy.Controllers
 {
@@ -20,7 +21,8 @@ namespace NineskyStudy.Controllers
             _mapper = mapper;
         }
         public IActionResult Index()
-        {
+        {            
+            HttpContext.Session.SetString("SessionStartedTime", "Session started time:" + DateTime.Now.ToString());
             return View();
         }
 

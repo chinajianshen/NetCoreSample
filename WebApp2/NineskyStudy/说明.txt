@@ -1,2 +1,21 @@
 ﻿本程序主要对 https://www.cnblogs.com/mzwhj/ 资料实现
 实现1- 2.3、项目架构调整-控制反转和依赖注入的使用
+
+
+作用SqlSessionCache
+1 Microsoft.AspNetCore.Session
+2 Microsoft.Extensions.Caching.SqlConfig.Tools
+3 在PM下运行命令创建一个Session所需表
+dotnet sql-cache create "server=.;database=Ninesky;uid=sa;pwd=sa.;min pool size=10;max pool size=300;Connection Timeout=10;" dbo Sessions
+4 ConfigureServeces()
+services.AddDistributedSqlServerCache(o =>
+{
+  o.ConnectionString = "Server=.;Database=ASPNET5SessionState;Trusted_Connection=True;";
+  o.SchemaName = "dbo";
+  o.TableName = "Sessions";
+});
+services.AddSession();
+
+5 Configure()
+ //Session中间件必须在UseMvc之前
+ app.UseSession();

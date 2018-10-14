@@ -1,7 +1,9 @@
-﻿
+﻿@using Microsoft.AspNetCore.Http;
 @{
     ViewData["Title"] = "Index";
+
 }
 
 <h2>Index</h2>
 
+<h3>Session值：@Context.Session.GetString("SessionStartedTime")</h3>
