@@ -1,9 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Http;
+@using NineskyStudy.Infrastructure
 @{
     ViewData["Title"] = "Index";
-
+    //var cateModel = Context.Session.Get<CategoryViewModel>("CateModel");
 }
 
 <h2>Index</h2>
 
 <h3>Session值：@Context.Session.GetString("SessionStartedTime")</h3>
+@*<h3>Session实体：@cateModel.Name - @cateModel.Description</h3>*@

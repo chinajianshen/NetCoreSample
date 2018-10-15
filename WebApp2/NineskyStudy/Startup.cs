@@ -83,15 +83,33 @@ namespace NineskyStudy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            //Session丢失是因为里面这个两个选项问题，注销掉里面两句
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+            //    options.CheckConsentNeeded = context => true;
+            //    options.MinimumSameSitePolicy = SameSiteMode.None;
+            //});
 
             //注册AutoMapper服务
-            services.AddAutoMapper();
+            services.AddAutoMapper();         
+
+            //注册Session服务 InMemoryCache
+            //services.AddDistributedMemoryCache();
+            services.AddSession(option =>
+            {
+                option.IdleTimeout = TimeSpan.FromSeconds(60);
+                option.IOTimeout = TimeSpan.FromSeconds(60);
+            });
+
+            //注册Session服务 SqlServerCache
+            //services.AddDistributedSqlServerCache(option =>
+            //{
+            //    option.ConnectionString = "server=.;database=Ninesky;uid=sa;pwd=sa.;min pool size=10;max pool size=300;Connection Timeout=10;";
+            //    option.SchemaName = "dbo";
+            //    option.TableName = "Sessions";
+            //});
+            //services.AddSession();
 
             //自定义视图路径方法1 .AddRazorOptions（）中设置 (此方法只在应用程序启动后初始化一次)
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -200,20 +218,7 @@ namespace NineskyStudy
             services.AddDirectoryBrowser();
 
             //注册路由中间件 必须在 Startup.Configure 方法中配置路由
-            services.AddRouting();
-
-            //注册Session服务 InMemoryCache
-            //services.AddDistributedMemoryCache();
-            //services.AddSession();
-
-            //注册Session服务 SqlServerCache
-            services.AddDistributedSqlServerCache(option =>
-            {
-                option.ConnectionString = "server=.;database=Ninesky;uid=sa;pwd=sa.;min pool size=10;max pool size=300;Connection Timeout=10;";
-                option.SchemaName = "dbo";
-                option.TableName = "Sessions";
-            });
-            services.AddSession();
+            services.AddRouting();           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -262,7 +267,9 @@ namespace NineskyStudy
             //压缩响应文件（注意顺序 只压缩其下面的内容）
             //app.UseResponseCompression();
 
-            //顺序4
+
+            //顺序4  Session保存后，其他地面获取不到值（解决办法 ）
+            //new CookiePolicyOptions { CheckConsentNeeded = contex => true, MinimumSameSitePolicy = SameSiteMode.None } //解决不了
             app.UseCookiePolicy();
 
             //

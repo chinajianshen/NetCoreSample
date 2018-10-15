@@ -7,6 +7,7 @@ using NineskyStudy.Models;
 using NineskyStudy.InterfaceBase;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using NineskyStudy.Infrastructure;
 
 namespace NineskyStudy.Controllers
 {
@@ -23,11 +24,15 @@ namespace NineskyStudy.Controllers
         public IActionResult Index()
         {            
             HttpContext.Session.SetString("SessionStartedTime", "Session started time:" + DateTime.Now.ToString());
+            HttpContext.Session.Set<CategoryViewModel>("CateModel", new CategoryViewModel { Description = "123", Name = "张三" });
             return View();
         }
 
         public IActionResult Grid()
         {
+            var model = HttpContext.Session.Get<CategoryViewModel>("CateModel");
+            var time = HttpContext.Session.GetString("SessionStartedTime");
+
             return View();
         }
 
