@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NineskyStudy;
 
 namespace NineskyStudy.Migrations
 {
     [DbContext(typeof(NineskyDbContext))]
-    partial class NineskyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181016035017_InitialCreateEfValues")]
+    partial class InitialCreateEfValues
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

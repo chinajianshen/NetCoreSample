@@ -1,11 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Http;
 @using NineskyStudy.Infrastructure
+@using Microsoft.Extensions.Configuration
+@using Microsoft.Extensions.Options
+@inject IConfiguration Configuration
+@inject IOptions<MyOptions> _myOptionAccessor
+
 @{
     ViewData["Title"] = "Index";
-    //var cateModel = Context.Session.Get<CategoryViewModel>("CateModel");
+    var cateModel = Context.Session.Get<CategoryViewModel>("CateModel");
 }
 
 <h2>Index</h2>
 
 <h3>Session值：@Context.Session.GetString("SessionStartedTime")</h3>
-@*<h3>Session实体：@cateModel.Name - @cateModel.Description</h3>*@
+<h3>Session实体：@cateModel.Name - @cateModel.Description</h3>
+<h3>页面inject方式读取配置：@Configuration["quote2"]</h3>
+<h3>页面inject方式读取option模式：@_myOptionAccessor.Value.Option1</h3>

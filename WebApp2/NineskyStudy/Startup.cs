@@ -6,6 +6,8 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
@@ -22,6 +24,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.WebEncoders;
 using NineskyStudy.AutoMapperConfig;
 using NineskyStudy.Base;
 using NineskyStudy.Hubs;
@@ -41,6 +44,26 @@ namespace NineskyStudy
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+
+            #region 获取配置中的内容方法
+            //JSON层次读取后是这样组织的
+            //section0: key0
+            //section0:key1
+            //section1:key0
+            //section1:key1
+            //section2:subsection0: key0
+            //section2:subsection0: key1
+            //section2:subsection1: key0
+            //section2:subsection1: key1
+
+
+            //configuration.GetValue<int>("section0", 99); // 获取配置的值，为空则返回99
+            //configuration.GetSection("section1");
+            //configuration.GetSection("section2:subsection0");
+
+            //configuration.GetSection("section2").GetChildren(); 
+            //configuration.GetSection("section2:subsection2").Exists(); //判断是否存在
+            #endregion
 
             //ContentRootPath  用于包含应用程序文件如C:\MyApp\
             //WebRootPath 用于包含Web服务性的内容文件C:\MyApp\wwwroot\
@@ -92,7 +115,7 @@ namespace NineskyStudy
             //});
 
             //注册AutoMapper服务
-            services.AddAutoMapper();         
+            services.AddAutoMapper();
 
             //注册Session服务 InMemoryCache
             //services.AddDistributedMemoryCache();
@@ -186,7 +209,8 @@ namespace NineskyStudy
             //services.AddScoped<CategoryService>();
             #endregion
 
-            #region 配置文件动态注入 参考：https://www.cnblogs.com/mzwhj/p/6224237.html
+            #region 配置文件动态注入 参考：https://www.cnblogs.com/mzwhj/p/6224237.html      
+
             var assemblyCollections = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("service.json").Build().GetSection("AssemblyCollections").Get<List<AssemblyItem>>();
             foreach (var assembly in assemblyCollections)
             {
@@ -218,7 +242,32 @@ namespace NineskyStudy
             services.AddDirectoryBrowser();
 
             //注册路由中间件 必须在 Startup.Configure 方法中配置路由
-            services.AddRouting();           
+            services.AddRouting();
+
+            //解决中文乱码 (并没有解决从JSON文件读取汉字乱码问题)
+            //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //解决不了乱码问题
+            //services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.All));
+            //services.Configure<WebEncoderOptions>(options =>
+            //{
+            //    options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
+            //});
+            //services.Configure<WebEncoderOptions>(options =>
+            //         options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.BasicLatin,UnicodeRanges.CjkUnifiedIdeographs));
+
+
+            #region  Option选项模式
+            //直接绑定类 如果配置文件JSON中有对应的项，直接绑定
+            services.Configure<MyOptions>(Configuration);
+
+            //services.Configure<MyOptions>(Configuration.GetSection("MyOpton"));
+            
+            //通过委托配置简单选项
+            services.Configure<MyOptionsWithDelegateConfig>(myOptions =>
+            {
+                myOptions.Option1 = "委托给已注册选项添加值";
+                myOptions.Option2 = 10;
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -293,7 +342,7 @@ namespace NineskyStudy
             app.UseMvc(routes =>
             {
                 //添加自定义视图搜索路径
-               
+
 
                 //注册一个区域
                 routes.MapRoute(
@@ -375,7 +424,7 @@ namespace NineskyStudy
                return context.Response.WriteAsync($"Hi,{name}");
            });
 
-            var route = routeBuilder.Build();          
+            var route = routeBuilder.Build();
             app.UseRouter(route);
 
             #endregion
@@ -435,5 +484,31 @@ namespace NineskyStudy
             });
         }
         #endregion
+    }
+
+    public class StartupDevelopment
+    {
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+        }
+
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+
+        }
+    }
+
+    public class StartupProduction
+    {
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+        }
+
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+
+        }
     }
 }
