@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Debug;
 using NineskyStudy.Infrastructure;
 
 namespace NineskyStudy
@@ -62,6 +63,11 @@ namespace NineskyStudy
                        config.AddCommandLine(args);
 
                    })
+                  //日志配置 在代码中配置 或在appsettings.json中配置
+                  //.ConfigureLogging(logging =>                   
+                  //    logging.AddFilter("System",LogLevel.Debug)
+                  //           .AddFilter<DebugLoggerProvider>("Microsoft",LogLevel.Trace)
+                  //)
                   .UseStartup<Startup>();
     }
 }

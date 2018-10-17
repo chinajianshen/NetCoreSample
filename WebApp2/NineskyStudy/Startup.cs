@@ -294,6 +294,18 @@ namespace NineskyStudy
 
             //静态文件在wwwroot
             app.UseStaticFiles();
+
+            //配置状态代码页 (静态文件中间件和 MVC 中间件)
+            //app.UseStatusCodePages(async context => {
+            //    context.HttpContext.Response.ContentType = "text/plain";
+            //    await context.HttpContext.Response.WriteAsync("Status code page, status code: "+context.HttpContext.Response.StatusCode);
+            //});
+            //另一种方法
+            //app.UseStatusCodePages("text/plain", "Status code page, status code: {0}");
+
+            //app.UseStatusCodePagesWithRedirects("/error/{0}"); //错误 重定向次数过多
+            //app.UseStatusCodePagesWithReExecute("/error/{0}"); //
+
             //配置uEdtior编辑器
             //app.UseStaticFiles(new StaticFileOptions
             //{
