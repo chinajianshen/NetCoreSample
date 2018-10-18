@@ -17,4 +17,8 @@
     <PackageReference Include="Foundatio" Version="7.0.1738" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NineskyStudy.Base\NineskyStudy.Base.csproj" />
+  </ItemGroup>
+
 </Project>

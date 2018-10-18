@@ -13,9 +13,24 @@ namespace ConsoleApp
         {
             //MessageBusTest();
 
-            BinaryTreeArithmetic();
+            //BinaryTreeArithmetic();
 
             //Console.WriteLine(GetFileContent());
+
+            #region 反射
+            
+            ReflectionStudy reflectionStudy = new ReflectionStudy();
+            //TestClass2 testClass = new TestClass2();
+            //reflectionStudy.Process(testClass);
+
+            //reflectionStudy.ProcessQuoteAssembly();
+            //reflectionStudy.PorcessDelegate();
+            //reflectionStudy.ProcessAppDomain();
+            //reflectionStudy.LoadAllAssemblyByApp();
+            //reflectionStudy.GetReflectionInfo();
+            //reflectionStudy.InvokeMember();
+            reflectionStudy.TestGenericType();
+            #endregion
 
             Console.ReadKey();
         }
