@@ -10,7 +10,7 @@ using NineskyStudy.ICarModule;
 using System.Linq;
 
 
-namespace ConsoleApp
+namespace CoreConsoleApp.ReflectionDir
 {
     public class ReflectionStudy
     {

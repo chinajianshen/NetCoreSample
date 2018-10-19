@@ -6,18 +6,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoreConsoleApp.FileDir;
+using CoreConsoleApp.ReflectionDir;
+using System.Threading;
 
-namespace ConsoleApp
+namespace CoreConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
+            #region
+
+            #endregion
+
             #region 反射
 
-            //ReflectionStudy reflectionStudy = new ReflectionStudy();
-            //TestClass2 testClass = new TestClass2();
-            //reflectionStudy.Process(testClass);
+            ReflectionStudy reflectionStudy = new ReflectionStudy();
+            TestClass2 testClass = new TestClass2();
+            reflectionStudy.Process(testClass);
 
             //reflectionStudy.ProcessQuoteAssembly();
             //reflectionStudy.PorcessDelegate();
@@ -34,10 +41,10 @@ namespace ConsoleApp
             #endregion
 
             #region 文件操作
-            Console.OutputEncoding = System.Text.Encoding.UTF8;//第一种方式：指定编码
+            //Console.OutputEncoding = System.Text.Encoding.UTF8;//第一种方式：指定编码
             //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//第二种方式 (无效)
-           
-            FileStudy fileStudy = new FileStudy();
+
+            //FileStudy fileStudy = new FileStudy();
 
             //创建并删除 （文件及子目录）
             //fileStudy.DirectoryOperation();
@@ -46,7 +53,7 @@ namespace ConsoleApp
             //fileStudy.GetPath();
             //fileStudy.FileAttributeOperation();
             //fileStudy.MoveFolderOperation();
-            fileStudy.CopyFolderOperation();
+            //fileStudy.CopyFolderOperation();
             #endregion
 
             #region 其它

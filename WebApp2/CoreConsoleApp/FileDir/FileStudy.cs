@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace ConsoleApp
+namespace CoreConsoleApp.FileDir
 {
     /// <summary>
     /// https://www.cnblogs.com/wangshenhe/archive/2012/05/09/2490438.html

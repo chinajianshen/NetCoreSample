@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp2", "WebApp2\WebApp2.csproj", "{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{CA81725B-469A-43A9-970B-9704497FA1A0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy", "NineskyStudy\NineskyStudy.csproj", "{0C40597C-7A47-4888-9379-728511BAFD43}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Base", "NineskyStudy.Base\NineskyStudy.Base.csproj", "{ACCA0F8F-93D5-44B9-9FBF-2B672F52852C}"
@@ -17,11 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.Models", "Nine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.InterfaceBase", "NineskyStudy.InterfaceBase\NineskyStudy.InterfaceBase.csproj", "{A5272340-B37B-4BC5-8502-9595AC4105A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.ICarModule", "NineskyStudy.ICarModule\NineskyStudy.ICarModule.csproj", "{C5E7DBAE-BCC3-45D1-8F8D-92885C880B69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.ICarModule", "NineskyStudy.ICarModule\NineskyStudy.ICarModule.csproj", "{C5E7DBAE-BCC3-45D1-8F8D-92885C880B69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.AudiCarModule", "NineskyStudy.AudiCarModule\NineskyStudy.AudiCarModule.csproj", "{E3AA50E0-F247-42C1-BC15-B39DBE279F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.AudiCarModule", "NineskyStudy.AudiCarModule\NineskyStudy.AudiCarModule.csproj", "{E3AA50E0-F247-42C1-BC15-B39DBE279F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineskyStudy.BenzCarModule", "NineskyStudy.BenzCarModule\NineskyStudy.BenzCarModule.csproj", "{67FB5EA3-164D-4EAC-BD0A-F33999BE6FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineskyStudy.BenzCarModule", "NineskyStudy.BenzCarModule\NineskyStudy.BenzCarModule.csproj", "{67FB5EA3-164D-4EAC-BD0A-F33999BE6FB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "WinFormApp\WinFormApp.csproj", "{EEE17577-32FE-4E1A-A3F9-11142CEDF62E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreConsoleApp", "CoreConsoleApp\CoreConsoleApp.csproj", "{ECE0C716-28B7-484A-AE32-1021DD977160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FclConsoleApp", "FclConsoleApp\FclConsoleApp.csproj", "{C2280BEF-3008-4D82-AEC6-2D67801AB90B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +41,6 @@ Global
 		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9D0525-0FD7-4B4D-B86B-D1F74A881899}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA81725B-469A-43A9-970B-9704497FA1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA81725B-469A-43A9-970B-9704497FA1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA81725B-469A-43A9-970B-9704497FA1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA81725B-469A-43A9-970B-9704497FA1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0C40597C-7A47-4888-9379-728511BAFD43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C40597C-7A47-4888-9379-728511BAFD43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C40597C-7A47-4888-9379-728511BAFD43}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +69,18 @@ Global
 		{67FB5EA3-164D-4EAC-BD0A-F33999BE6FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FB5EA3-164D-4EAC-BD0A-F33999BE6FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FB5EA3-164D-4EAC-BD0A-F33999BE6FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE17577-32FE-4E1A-A3F9-11142CEDF62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE17577-32FE-4E1A-A3F9-11142CEDF62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE17577-32FE-4E1A-A3F9-11142CEDF62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE17577-32FE-4E1A-A3F9-11142CEDF62E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE0C716-28B7-484A-AE32-1021DD977160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE0C716-28B7-484A-AE32-1021DD977160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE0C716-28B7-484A-AE32-1021DD977160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE0C716-28B7-484A-AE32-1021DD977160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2280BEF-3008-4D82-AEC6-2D67801AB90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2280BEF-3008-4D82-AEC6-2D67801AB90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2280BEF-3008-4D82-AEC6-2D67801AB90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2280BEF-3008-4D82-AEC6-2D67801AB90B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
