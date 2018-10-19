@@ -4,6 +4,7 @@ using NineskyStudy.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp
@@ -12,16 +13,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            //MessageBusTest();
-
-            //BinaryTreeArithmetic();
-
-            //Console.WriteLine(GetFileContent());
-            MyGeneric<string> myGeneric = new MyGeneric<string>();
-            myGeneric.GetName("11");
             #region 反射
 
-            ReflectionStudy reflectionStudy = new ReflectionStudy();
+            //ReflectionStudy reflectionStudy = new ReflectionStudy();
             //TestClass2 testClass = new TestClass2();
             //reflectionStudy.Process(testClass);
 
@@ -35,8 +29,32 @@ namespace ConsoleApp
 
 
             //插件实例
-            CarReflectonSample carSample = new CarReflectonSample();
-            carSample.Process();
+            //CarReflectonSample carSample = new CarReflectonSample();
+            //carSample.Process();
+            #endregion
+
+            #region 文件操作
+            Console.OutputEncoding = System.Text.Encoding.UTF8;//第一种方式：指定编码
+            //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//第二种方式 (无效)
+           
+            FileStudy fileStudy = new FileStudy();
+
+            //创建并删除 （文件及子目录）
+            //fileStudy.DirectoryOperation();
+            //fileStudy.ReadFileOperation();
+            //fileStudy.WriteFileOperation();
+            //fileStudy.GetPath();
+            //fileStudy.FileAttributeOperation();
+            //fileStudy.MoveFolderOperation();
+            fileStudy.CopyFolderOperation();
+            #endregion
+
+            #region 其它
+            //MessageBusTest();
+
+            //BinaryTreeArithmetic();
+
+            //Console.WriteLine(GetFileContent());
             #endregion
 
             Console.ReadKey();

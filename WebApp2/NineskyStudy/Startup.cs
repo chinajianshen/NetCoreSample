@@ -245,7 +245,7 @@ namespace NineskyStudy
             services.AddRouting();
 
             //解决中文乱码 (并没有解决从JSON文件读取汉字乱码问题)
-            //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //解决不了乱码问题
+             //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); //解决不了乱码问题
             //services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.All));
             //services.Configure<WebEncoderOptions>(options =>
             //{
