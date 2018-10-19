@@ -1,5 +1,6 @@
 ﻿using Foundatio.Messaging;
 using Foundatio.Storage;
+using NineskyStudy.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,10 @@ namespace ConsoleApp
             //BinaryTreeArithmetic();
 
             //Console.WriteLine(GetFileContent());
-
+            MyGeneric<string> myGeneric = new MyGeneric<string>();
+            myGeneric.GetName("11");
             #region 反射
-            
+
             ReflectionStudy reflectionStudy = new ReflectionStudy();
             //TestClass2 testClass = new TestClass2();
             //reflectionStudy.Process(testClass);
@@ -29,7 +31,12 @@ namespace ConsoleApp
             //reflectionStudy.LoadAllAssemblyByApp();
             //reflectionStudy.GetReflectionInfo();
             //reflectionStudy.InvokeMember();
-            reflectionStudy.TestGenericType();
+            //reflectionStudy.TestGenericType();
+
+
+            //插件实例
+            CarReflectonSample carSample = new CarReflectonSample();
+            carSample.Process();
             #endregion
 
             Console.ReadKey();

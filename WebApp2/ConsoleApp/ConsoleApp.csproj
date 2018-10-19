@@ -18,7 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NineskyStudy.AudiCarModule\NineskyStudy.AudiCarModule.csproj" />
     <ProjectReference Include="..\NineskyStudy.Base\NineskyStudy.Base.csproj" />
+    <ProjectReference Include="..\NineskyStudy.BenzCarModule\NineskyStudy.BenzCarModule.csproj" />
+    <ProjectReference Include="..\NineskyStudy.ICarModule\NineskyStudy.ICarModule.csproj" />
   </ItemGroup>
 
 </Project>

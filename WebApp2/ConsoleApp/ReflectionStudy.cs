@@ -6,6 +6,9 @@ using System.Data;
 using NineskyStudy.Base;
 using static NineskyStudy.Base.TestClass;
 using System.IO;
+using NineskyStudy.ICarModule;
+using System.Linq;
+
 
 namespace ConsoleApp
 {
@@ -177,7 +180,7 @@ namespace ConsoleApp
             Type type = assembly.GetType("NineskyStudy.Base.TestClass");
 
             //创建实例方法1
-            TestClass obj = (TestClass)Activator.CreateInstance(type, new object[] { "jim"});
+            TestClass obj = (TestClass)Activator.CreateInstance(type, new object[] { "jim" });
             //创建实例方法2
             TestClass obj2 = (TestClass)type.InvokeMember("TestClass", BindingFlags.CreateInstance, null, null, new object[] { "jim" });
 
@@ -202,16 +205,54 @@ namespace ConsoleApp
         /// </summary>
         public void TestGenericType()
         {
+            #region 此时不对
             Assembly assembly = Assembly.LoadFrom("NineskyStudy.Base.dll");
-            Type type = assembly.GetType("NineskyStudy.Base.MyGeneric<T>");
-            //检测是否是泛型 type.IsGenericType
-            //为泛型类型参数指定System.String类型，并创建实例
-            MyGeneric<string> genericObj = (MyGeneric<string>)Activator.CreateInstance(type.MakeGenericType(new Type[] { typeof(System.String) }));
+            Type type = assembly.GetType("NineskyStudy.Base.MyGeneric`1"); //得到此类类型 注：（`1） 为占位符 不明确类型
+            //在获取类型时，直接定义泛型类T，则下面调用方法中直接调用，不用设置类型T
+            type = type.MakeGenericType(typeof(string)); //指定泛型类
+            object obj = assembly.CreateInstance(type.FullName); //Assembly.CreateInstance创建实例
+            MethodInfo mi = type.GetMethod("GetName");
 
-            //生成泛型方法
-            MethodInfo m = genericObj.GetType().GetMethod("GetName").MakeGenericMethod(new Type[] { typeof(System.String)});
-            //调用泛型方法
+            //调用泛型方法1
+            string returnValue = (string)mi.Invoke(obj, new object[] { "123" });
+            //调用泛型方法2
+            string returnValue2 = (string)type.InvokeMember("GetName", BindingFlags.InvokeMethod, null, obj, new object[] { "123" });
+
+            //检测是否是泛型 type.IsGenericType                   
+            MyGeneric<System.String> genericObj = (MyGeneric<System.String>)Activator.CreateInstance(type);
+            ////生成泛型方法
+            MethodInfo m = genericObj.GetType().GetMethod("GetName");//.MakeGenericMethod(new Type[] { typeof(System.String) });
+            ////调用泛型方法
             var value = m.Invoke(genericObj, new object[] { "a" });
+
+            //获取类型
+            Assembly assembly00 = Assembly.LoadFrom("NineskyStudy.Base.dll");
+            Type type00 = assembly00.GetType("NineskyStudy.Base.MyGeneric`1").MakeGenericType(typeof(string));
+            Object obj00 = assembly00.CreateInstance(type00.FullName);
+
+            //当调用方法上又定义新的T1 需要设置新T1为具体类型 但InvokeMember没有找到（现在有错误）
+            //type00.InvokeMember("GetName2", BindingFlags.InvokeMethod, null, obj00, new object[] { "a", "T1" });
+
+            //当调用方法上又定义新的T1 需要设置新T1为具体类型
+            MethodInfo m00 = obj00.GetType().GetMethod("GetName2").MakeGenericMethod(new Type[] { typeof(string) });
+            string value00 = (string)m00.Invoke(obj00, new object[] { "a", "T1" });
+            #endregion
+
+            //Type type = typeof(MyGeneric<string>);
+            //object o = Activator.CreateInstance(type);
+            //var result = type.InvokeMember("GetName", BindingFlags.Default | BindingFlags.InvokeMethod, null, o, new object[] { "123" });
+
+            //确定泛型参数类型反射方法
+            Type type1 = typeof(Class1<int>);
+            object o1 = Activator.CreateInstance(type1);
+            type1.InvokeMember("Test", BindingFlags.Default | BindingFlags.InvokeMethod, null, o1, new object[] { 123 });
+
+            //未确定泛型参数类型反射方法
+            Type type2 = typeof(Class1<>).MakeGenericType(new Type[] { typeof(System.String) });
+            object o2 = Activator.CreateInstance(type2);
+            type2.InvokeMember("Test", BindingFlags.Default | BindingFlags.InvokeMethod, null, o2, new object[] { "123" });
+
+
         }
     }
 
@@ -225,6 +266,43 @@ namespace ConsoleApp
         public void GetTest(int id)
         {
             Console.WriteLine("实现ITest接口GetTest（）方法");
+        }
+    }
+
+    public class CarReflectonSample
+    {
+        private static Dictionary<string, ICar> carDict = new Dictionary<string, ICar>();
+        static CarReflectonSample()
+        {
+            carDict.Clear();
+            string[] dllPaths = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.dll")
+                     .Where(fileName => fileName.Contains("CarModule.dll")).ToArray();
+            foreach (var file in dllPaths)
+            {
+                Assembly assembly = Assembly.LoadFile(file);
+                Type[] types = assembly.GetExportedTypes();
+                
+                foreach (var type in types)
+                {
+                    if (type.GetInterface("ICar") != null && !carDict.Keys.Contains(type.Name))
+                    {
+                        //创建实例
+                        ICar car = (ICar)Activator.CreateInstance(type);
+                        carDict.Add(type.Name, car);
+                    }
+                }
+            }
+        }
+
+        public void Process()
+        {
+            foreach (KeyValuePair<string,ICar> keyValue in carDict)
+            {
+                Console.WriteLine($"执行{keyValue.Key}:");
+                Console.WriteLine(keyValue.Value.Owener);
+                keyValue.Value.Run();
+                keyValue.Value.Turn(Direction.East);
+            }
         }
     }
 }

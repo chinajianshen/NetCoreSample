@@ -6,7 +6,7 @@ namespace NineskyStudy.Base
 {
     public delegate string TestDelegate(string value);
     public class TestClass
-    {      
+    {
         private string _value;
 
         public string CustomeField;
@@ -21,7 +21,7 @@ namespace NineskyStudy.Base
 
         }
 
-        [CustomTestAttribue(CustomID =25)]
+        [CustomTestAttribue(CustomID = 25)]
         public string GetTestValue()
         {
             return _value;
@@ -59,7 +59,7 @@ namespace NineskyStudy.Base
     {
         public CustomTestAttribue()
         {
-           
+
         }
 
         public CustomTestAttribue(int cid)
@@ -72,9 +72,22 @@ namespace NineskyStudy.Base
 
     public class MyGeneric<T>
     {
-        public string GetName<T>(T name)
+        public string GetName(T name)
         {
             return "Generic Name：" + name.ToString();
+        }
+
+        public string GetName2<T1>(T name,T1 name2)
+        {
+            return "Generic Name:" + name.ToString() + " T1:" + name2;
+        }
+    }
+
+    public class Class1<T>
+    {
+        public void Test(T t)
+        {
+            Console.WriteLine(t);
         }
     }
 }
