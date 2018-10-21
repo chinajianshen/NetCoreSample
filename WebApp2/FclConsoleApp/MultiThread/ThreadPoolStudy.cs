@@ -66,5 +66,36 @@ namespace FclConsoleApp.MultiThread
             Console.WriteLine($"工作者线程启动成功!,线程ID：{Thread.CurrentThread.ManagedThreadId}");
             Thread.Sleep(2000);
         }
+
+        const int cycleNum = 10;
+        AutoResetEvent myEvent = new AutoResetEvent(false);
+        /// <summary>
+        /// https://www.cnblogs.com/zxtceq/p/7842762.html
+        /// </summary>
+        public void ProcessUseAutoResetEvent()
+        {
+            ThreadPool.SetMinThreads(1, 1);
+            ThreadPool.SetMaxThreads(2, 2); //设置最多有2个工作线程和2个IO线程执行，其他要等到释放才能进入
+            for (int i=1;i<= cycleNum; i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(RunWorkerUseSet), i);
+            }
+            Console.WriteLine("主线程执行！");
+            Console.WriteLine("主线程结束！");
+            Console.WriteLine("阻塞");
+            myEvent.WaitOne();
+            Console.WriteLine("线程池终止！");
+        }
+        private void RunWorkerUseSet(object obj)
+        {
+            Console.WriteLine(string.Format("{0}:第{1}个线程", DateTime.Now.ToString(), obj.ToString()));
+            Thread.Sleep(5000);
+
+            if (obj.ToString() == cycleNum.ToString()) 
+            {
+                Console.WriteLine("终止了");
+                myEvent.Set();//这一句比较重要，设置有信号唤醒主线程阻塞
+            }
+        }
     }
 }

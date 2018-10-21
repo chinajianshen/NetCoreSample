@@ -43,12 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MultiThread\AsyncWebRequestStudy.cs" />
     <Compile Include="MultiThread\AutoRestEventStudy.cs" />
+    <Compile Include="MultiThread\ManualResetEventStudy.cs" />
+    <Compile Include="MultiThread\MultiThreadUseSample.cs" />
+    <Compile Include="MultiThread\MutexStudy.cs" />
+    <Compile Include="MultiThread\ParallelThread\ParallelStudy.cs" />
+    <Compile Include="MultiThread\ReadWriterLock.cs" />
+    <Compile Include="MultiThread\SemaphoreStudy.cs" />
+    <Compile Include="MultiThread\TaskStudy.cs" />
+    <Compile Include="MultiThread\ThreadAsyncDelegate.cs" />
+    <Compile Include="MultiThread\ThreadInterMonitor_Enter_Wait_Pulse_Study.cs" />
     <Compile Include="MultiThread\ThreadInterruptStudy.cs" />
     <Compile Include="MultiThread\ThreadPoolStudy.cs" />
     <Compile Include="MultiThread\ThreadPriorityStudy.cs" />
     <Compile Include="MultiThread\ThreadParamterStudy.cs" />
+    <Compile Include="MultiThread\ThreadSyncBase_Volatile_Study.cs" />
     <Compile Include="MultiThread\ThreadTimerStudy.cs" />
+    <Compile Include="MultiThread\ThreadAsyncIOStudy.cs" />
+    <Compile Include="MultiThread\ThreadUseSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -20,6 +20,18 @@ ReadWriterLock	读写锁
 Semaphore	控制线程的访问数量
      */
 
+    /*
+     AutoResetEvent与ManualResetEvent的区别在于AutoResetEvent 的WaitOne会改变信号量的值为false，让其等待阻塞。
+　　比如说初始信号量为True，如果WaitOne超时信号量将自动变为False，而ManualResetEvent则不会。
+
+　　第二个区别：
+ManualResetEvent：每次可以唤醒一个或多个线程；
+AutoResetEvent：每次只能唤醒一个线程；
+    */
+
+    /// <summary>
+    /// 信号量
+    /// </summary>
     public class AutoResetOperation
     {
        public void Process()
@@ -39,6 +51,29 @@ Semaphore	控制线程的访问数量
             //WaitHandle.WaitAll(autoRest.autoEvents);
 
             autoRest.ShowHappy();
+        }
+
+        AutoResetEvent ar = new AutoResetEvent(true);
+       public void Process2()
+        {
+            Thread t = new Thread(Run);
+            t.Start();
+
+            Console.WriteLine($"当前时间1：{DateTime.Now.ToString()}");
+            bool state = ar.WaitOne(5000);
+            Console.WriteLine("当前的信号量状态:{0}", state);
+            Console.WriteLine($"当前时间2：{DateTime.Now.ToString()}");
+
+            state = ar.WaitOne(1000); //再次调用必须加参数等待时间，否则就无限等待，加上时间参数，到时间会自动执行
+            Console.WriteLine("再次WaitOne后现在的状态是:{0}", state);
+
+            state = ar.WaitOne(1000); //如果不加参数，阻止当前线程等待
+            Console.WriteLine("再次WaitOne后现在的状态是:{0}", state);
+        }
+
+        private void Run()
+        {
+            Console.WriteLine("当前时间" + DateTime.Now.ToString("mm:ss"));
         }
     }
 
