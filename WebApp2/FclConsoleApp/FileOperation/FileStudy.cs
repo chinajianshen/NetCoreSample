@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace CoreConsoleApp.FileDir
+namespace FclConsoleApp.FileOperation
 {
     /// <summary>
     /// https://www.cnblogs.com/wangshenhe/archive/2012/05/09/2490438.html
@@ -40,7 +40,7 @@ namespace CoreConsoleApp.FileDir
             //3.public static IEnumerable<string> ReadLines(string path);
             //4.public static byte[] ReadAllBytes(string path);
             //以上获得内容是一样的，只是返回类型不同罢了，根据自己需要调用。
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             string readFilePath = Path.Combine(CurrDirectoryPath, "ReadFileDir");
             string file1 = Path.Combine(readFilePath, "1.txt");
             string file2 = Path.Combine(readFilePath, "2.docx");

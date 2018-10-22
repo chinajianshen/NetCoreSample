@@ -1,4 +1,5 @@
-﻿using FclConsoleApp.MultiThread;
+﻿using FclConsoleApp.FileOperation;
+using FclConsoleApp.MultiThread;
 using FclConsoleApp.MultiThread.ParallelThread;
 using System;
 using System.Collections.Generic;
@@ -83,9 +84,24 @@ namespace FclConsoleApp
             //multiThreadUseSample.SingleThreadExecute();
             //multiThreadUseSample.MultiThreadExectue();
 
-            //TaskStudy taskStudy = new TaskStudy();
+            //Task_CancellationTokenSourceStudy taskStudy = new Task_CancellationTokenSourceStudy();
             //taskStudy.Process();
+            //taskStudy.TaskCancelMethod();
+            //taskStudy.TaskUnNestMethod();
+            //taskStudy.TaskNestMethod();
 
+            //Task综合示例
+            //taskStudy.TaskSynthesizeSample();
+
+            //taskStudy.TaskDealException();
+            //taskStudy.TaskDeadLock();
+
+            //自旋锁
+            //taskStudy.SpinLock();
+
+            #endregion
+
+            #region 并行编程
             //ParallelStudy parallelStudy = new ParallelStudy();
             //parallelStudy.ParallelInvokeMethod();
             //parallelStudy.ParallelForMethod();
@@ -93,6 +109,37 @@ namespace FclConsoleApp
             //parallelStudy.ParallelForeachMethod();
             //parallelStudy.ParallelBreak();
             //parallelStudy.ParallelCatchException();
+
+            //ParallelEnumerableStudy parallelEnumerableStudy = new ParallelEnumerableStudy();
+            //parallelEnumerableStudy.ListWithParallel_UnSafety();
+            //parallelEnumerableStudy.ConcurrentBagWithPalle();
+            //parallelEnumerableStudy.ConcurrentDictionaryWithPalle();
+            //parallelEnumerableStudy.AsParallelPLinq();
+
+            //并行综合运用小例子
+            //ParallelSample parallelSample = new ParallelSample();
+            //parallelSample.Example_1();
+            //parallelSample.TaskUseCancellationTokenSource();
+            //parallelSample.Example_2();
+            //parallelSample.BarrierExample();
+            #endregion
+
+            #region 文件操作   
+            //FileStudy fileStudy = new FileStudy();
+
+            //创建并删除 （文件及子目录）
+            //fileStudy.DirectoryOperation();
+            //fileStudy.ReadFileOperation();
+            //fileStudy.WriteFileOperation();
+            //fileStudy.GetPath();
+            //fileStudy.FileAttributeOperation();
+            //fileStudy.MoveFolderOperation();
+            //fileStudy.CopyFolderOperation();
+            #endregion
+
+            #region 异步文件操作
+            FileAsyncStudy fileAsyncStudy = new FileAsyncStudy();
+            fileAsyncStudy.FileOperatonAsync();
             #endregion
 
 

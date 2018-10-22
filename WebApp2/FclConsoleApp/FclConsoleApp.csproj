@@ -35,6 +35,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,15 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileOperation\FileAsyncStudy.cs" />
+    <Compile Include="FileOperation\FileStudy.cs" />
     <Compile Include="MultiThread\AsyncWebRequestStudy.cs" />
     <Compile Include="MultiThread\AutoRestEventStudy.cs" />
     <Compile Include="MultiThread\ManualResetEventStudy.cs" />
     <Compile Include="MultiThread\MultiThreadUseSample.cs" />
     <Compile Include="MultiThread\MutexStudy.cs" />
+    <Compile Include="MultiThread\ParallelThread\ParallelEnumerableStudy.cs" />
+    <Compile Include="MultiThread\ParallelThread\ParallelSample.cs" />
     <Compile Include="MultiThread\ParallelThread\ParallelStudy.cs" />
     <Compile Include="MultiThread\ReadWriterLock.cs" />
     <Compile Include="MultiThread\SemaphoreStudy.cs" />
-    <Compile Include="MultiThread\TaskStudy.cs" />
+    <Compile Include="MultiThread\Task_CancellationTokenSourceStudy.cs" />
     <Compile Include="MultiThread\ThreadAsyncDelegate.cs" />
     <Compile Include="MultiThread\ThreadInterMonitor_Enter_Wait_Pulse_Study.cs" />
     <Compile Include="MultiThread\ThreadInterruptStudy.cs" />
@@ -67,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MultiThread\多线程学习.txt" />
