@@ -3,6 +3,7 @@ using FclConsoleApp.MultiThread;
 using FclConsoleApp.MultiThread.ParallelThread;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,15 @@ namespace FclConsoleApp
 {
     class Program
     {
+        private static string CurrDirectoryPath;
+        static Program()
+        {
+            CurrDirectoryPath = Path.Combine(Directory.GetCurrentDirectory(), "FileDirectory");
+            if (!Directory.Exists(CurrDirectoryPath))
+            {
+                Directory.CreateDirectory(CurrDirectoryPath);
+            }
+        }
         static void Main(string[] args)
         {
             #region 多线程
@@ -110,11 +120,14 @@ namespace FclConsoleApp
             //parallelStudy.ParallelBreak();
             //parallelStudy.ParallelCatchException();
 
-            //ParallelEnumerableStudy parallelEnumerableStudy = new ParallelEnumerableStudy();
+            ParallelEnumerableStudy parallelEnumerableStudy = new ParallelEnumerableStudy();
             //parallelEnumerableStudy.ListWithParallel_UnSafety();
-            //parallelEnumerableStudy.ConcurrentBagWithPalle();
-            //parallelEnumerableStudy.ConcurrentDictionaryWithPalle();
+            //parallelEnumerableStudy.ConcurrentBagWithPalle();           
             //parallelEnumerableStudy.AsParallelPLinq();
+            //parallelEnumerableStudy.ConcurrentQueueSample();
+            //parallelEnumerableStudy.ConcurrentStackSample();
+            //parallelEnumerableStudy.ConcurrentDictionaryWithPalle();
+            //parallelEnumerableStudy.BlockingCollectionSample();
 
             //并行综合运用小例子
             //ParallelSample parallelSample = new ParallelSample();
@@ -135,11 +148,21 @@ namespace FclConsoleApp
             //fileStudy.FileAttributeOperation();
             //fileStudy.MoveFolderOperation();
             //fileStudy.CopyFolderOperation();
+
+            string msg = string.Empty;
+            string sourcefile = Path.Combine(CurrDirectoryPath, "1.txt");
+            string destfile = Path.Combine(CurrDirectoryPath, "2.txt");
+            string destfile2 = Path.Combine(CurrDirectoryPath, "3.txt");
+            //bool isSuccess = FileHelper.CopyFile(sourcefile,destfile,out msg,1024*1024);
+            //bool isSuccess2 = FileHelper.CopyFilePlus(sourcefile, destfile2, out msg, 1024*1024);
+            Task<bool> t =  FileHelper.CopyFileAsync(sourcefile, destfile);
+            t.Wait();
+            bool isSuccess3 = t.Result;
             #endregion
 
             #region 异步文件操作
-            FileAsyncStudy fileAsyncStudy = new FileAsyncStudy();
-            fileAsyncStudy.FileOperatonAsync();
+            //FileAsyncStudy fileAsyncStudy = new FileAsyncStudy();
+            //fileAsyncStudy.FileOperatonAsync();
             #endregion
 
 
