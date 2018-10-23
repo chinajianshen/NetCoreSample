@@ -226,7 +226,7 @@ namespace FclConsoleApp.FileOperation
         /// <param name="CompressionLevel">压缩等级（0 无 - 9 最高，默认 5）</param>
         /// <param name="BlockSize">缓存大小（每次写入文件大小，默认 2048）</param>
         /// <param name="IsEncrypt">是否加密（默认 加密）</param>
-        public static void ZipFile(string FileToZip, string ZipedPath, string ZipedFileName = "", int CompressionLevel = 5, int BlockSize = 2048, bool IsEncrypt = true)
+        public static void ZipFile(string FileToZip, string ZipedPath, string ZipedFileName = "", int CompressionLevel = 5, int BlockSize = 2048, bool IsEncrypt = false)
         {
             //如果文件没有找到，则报错
             if (!File.Exists(FileToZip))
@@ -299,15 +299,15 @@ namespace FclConsoleApp.FileOperation
         public static void ZipDirectory(string DirectoryToZip, string ZipedPath, string ZipedFileName = "", bool IsEncrypt = true)
         {
             //如果目录不存在，则报错
-            if (!System.IO.Directory.Exists(DirectoryToZip))
+            if (!Directory.Exists(DirectoryToZip))
             {
-                throw new System.IO.FileNotFoundException("指定的目录: " + DirectoryToZip + " 不存在!");
+                throw new FileNotFoundException("指定的目录: " + DirectoryToZip + " 不存在!");
             }
 
             //文件名称（默认同源文件名称相同）
             string ZipFileName = string.IsNullOrEmpty(ZipedFileName) ? ZipedPath + "\\" + new DirectoryInfo(DirectoryToZip).Name + ".zip" : ZipedPath + "\\" + ZipedFileName + ".zip";
 
-            using (System.IO.FileStream ZipFile = System.IO.File.Create(ZipFileName))
+            using (FileStream ZipFile = File.Create(ZipFileName))
             {
                 using (ZipOutputStream s = new ZipOutputStream(ZipFile))
                 {
@@ -320,6 +320,7 @@ namespace FclConsoleApp.FileOperation
                 }
             }
         }
+       
         /// <summary>
         /// 递归遍历目录
         /// add yuangang by 2016-06-13
@@ -382,12 +383,20 @@ namespace FclConsoleApp.FileOperation
         /// <param name="TargetDirectory">解压到的目录</param>
         /// <param name="Password">解压密码</param>
         /// <param name="OverWrite">是否覆盖已存在的文件</param>
-        public static void UnZip(string ZipFile, string TargetDirectory, string Password, bool OverWrite = true)
+        public static void UnZip(string ZipFile, string TargetDirectory, string Password="", bool OverWrite = true)
         {
             //如果解压到的目录不存在，则报错
-            if (!System.IO.Directory.Exists(TargetDirectory))
+
+            if (!Directory.Exists(TargetDirectory))
             {
-                throw new System.IO.FileNotFoundException("指定的目录: " + TargetDirectory + " 不存在!");
+                try
+                {
+                    Directory.CreateDirectory(TargetDirectory);
+                }
+                catch (Exception ex)
+                {
+                    throw new FileNotFoundException("指定的目录: " + TargetDirectory + $" 不存在!{ex.Message}");
+                }
             }
             //目录结尾
             if (!TargetDirectory.EndsWith("\\")) { TargetDirectory = TargetDirectory + "\\"; }

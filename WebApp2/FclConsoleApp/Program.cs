@@ -1,4 +1,5 @@
-﻿using FclConsoleApp.FileOperation;
+﻿using FclConsoleApp.AccessOperation;
+using FclConsoleApp.FileOperation;
 using FclConsoleApp.MultiThread;
 using FclConsoleApp.MultiThread.ParallelThread;
 using System;
@@ -149,21 +150,29 @@ namespace FclConsoleApp
             //fileStudy.MoveFolderOperation();
             //fileStudy.CopyFolderOperation();
 
-            string msg = string.Empty;
-            string sourcefile = Path.Combine(CurrDirectoryPath, "1.txt");
-            string destfile = Path.Combine(CurrDirectoryPath, "2.txt");
-            string destfile2 = Path.Combine(CurrDirectoryPath, "3.txt");
+            //string msg = string.Empty;
+            //string sourcefile = Path.Combine(CurrDirectoryPath, "1.txt");
+            //string destfile = Path.Combine(CurrDirectoryPath, "2.txt");
+            //string destfile2 = Path.Combine(CurrDirectoryPath, "3.txt");
             //bool isSuccess = FileHelper.CopyFile(sourcefile,destfile,out msg,1024*1024);
             //bool isSuccess2 = FileHelper.CopyFilePlus(sourcefile, destfile2, out msg, 1024*1024);
-            Task<bool> t =  FileHelper.CopyFileAsync(sourcefile, destfile);
-            t.Wait();
-            bool isSuccess3 = t.Result;
+            //Task<bool> t =  FileHelper.CopyFileAsync(sourcefile, destfile);
+            //t.Wait();
+            //bool isSuccess3 = t.Result;
+
+            //FileHelper.ZipFile(sourcefile, CurrDirectoryPath);
+            //FileHelper.UnZip(Path.Combine(CurrDirectoryPath, "1.zip"), Path.Combine(CurrDirectoryPath, "UnZipFloder"));
             #endregion
 
             #region 异步文件操作
             //FileAsyncStudy fileAsyncStudy = new FileAsyncStudy();
             //fileAsyncStudy.FileOperatonAsync();
             #endregion
+
+            #region Access操作
+            AccessHelper.CreateAccessTable("zhang.mdb", "MyTable");
+            #endregion
+
 
 
             Console.ReadKey();
