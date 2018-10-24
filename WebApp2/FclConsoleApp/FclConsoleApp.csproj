@@ -53,6 +53,7 @@
     <Compile Include="AccessOperation\AccessHelper.cs" />
     <Compile Include="DesignPattern\AbstractFactory_4.cs" />
     <Compile Include="DesignPattern\Adapter_7.cs" />
+    <Compile Include="DesignPattern\Bridge_8.cs" />
     <Compile Include="DesignPattern\Builder_5.cs" />
     <Compile Include="DesignPattern\FactoryMethod_3.cs" />
     <Compile Include="DesignPattern\Prototype_6.cs" />
