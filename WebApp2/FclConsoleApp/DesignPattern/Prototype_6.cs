@@ -27,6 +27,7 @@ namespace FclConsoleApp.DesignPattern
     /// 原型模式
     /// 在现实生活中，也有很多原型设计模式的例子，例如，细胞分裂的过程，一个细胞的有丝分裂产生两个相同的细胞；还有西游记中孙悟空变出后孙的本领和火影忍者中鸣人的隐分身忍术等。
     /// 下面就以孙悟空为例子来演示下原型模式的实现
+    /// http://www.cnblogs.com/zhili/p/BuilderPattern.html
     /// </summary>
     public class Prototype_6
     {

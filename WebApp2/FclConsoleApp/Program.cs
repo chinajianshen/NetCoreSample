@@ -174,7 +174,6 @@ namespace FclConsoleApp
             //AccessHelper.CreateAccessTable("zhang.mdb", "MyTable");
             #endregion
 
-
             #region 设计模式
             //单例
             //SingletonSample singletonSample = new SingletonSample();
@@ -203,9 +202,17 @@ namespace FclConsoleApp
             //prototype.MonkeyKingPrototype();
 
             //适配器
-            Adapter_7 adapter = new Adapter_7();
+            //Adapter_7 adapter = new Adapter_7();
             //adapter.ClassAdapterSample();
-            adapter.ObjectAdapterSample();
+            //adapter.ObjectAdapterSample();
+
+            //桥接
+            //Bridge_8 bridge_8 = new Bridge_8();
+            //bridge_8.RemoteControlAndTVSample();
+
+            //装饰者
+            //Decorator_9 decorator = new Decorator_9();
+            //decorator.DecoratorPhone();
             #endregion
 
             Console.ReadKey();

@@ -16,7 +16,7 @@ namespace FclConsoleApp.DesignPattern
 {
     /// <summary>
     /// 适配器模式
-    /// 
+    /// https://www.cnblogs.com/zhili/p/AdapterPattern.html
     /// </summary>
     public class Adapter_7
     {
