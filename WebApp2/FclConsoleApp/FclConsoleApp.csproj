@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -51,6 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessOperation\AccessHelper.cs" />
+    <Compile Include="DesignPattern\AbstractFactory_4.cs" />
+    <Compile Include="DesignPattern\Adapter_7.cs" />
+    <Compile Include="DesignPattern\Builder_5.cs" />
+    <Compile Include="DesignPattern\FactoryMethod_3.cs" />
+    <Compile Include="DesignPattern\Prototype_6.cs" />
+    <Compile Include="DesignPattern\SimpleFactory_2.cs" />
+    <Compile Include="DesignPattern\Singleton_1.cs" />
+    <Compile Include="DesignPattern\说明.cs" />
     <Compile Include="FileOperation\FileAsyncStudy.cs" />
     <Compile Include="FileOperation\FileHelper.cs" />
     <Compile Include="FileOperation\FileStudy.cs" />
@@ -85,25 +93,6 @@
   <ItemGroup>
     <Content Include="MultiThread\多线程学习.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="ADODB">
-      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="ADOX">
-      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

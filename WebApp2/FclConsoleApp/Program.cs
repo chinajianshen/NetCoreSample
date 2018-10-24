@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FclConsoleApp.DesignPattern;
 
 namespace FclConsoleApp
 {
@@ -170,10 +171,42 @@ namespace FclConsoleApp
             #endregion
 
             #region Access操作
-            AccessHelper.CreateAccessTable("zhang.mdb", "MyTable");
+            //AccessHelper.CreateAccessTable("zhang.mdb", "MyTable");
             #endregion
 
 
+            #region 设计模式
+            //单例
+            //SingletonSample singletonSample = new SingletonSample();
+            //singletonSample.Process();
+
+            //简单工厂
+            //SimpleFactory_2 simpleFactoryCustomer = new SimpleFactory_2();
+            //simpleFactoryCustomer.CustomerOrderDishes();
+
+            //工厂方法
+            //FactoryMethod_3 factoryMethodClient = new FactoryMethod_3();
+            //factoryMethodClient.ClientOrderDishes();
+
+            //抽象工厂
+            //AbstractFactory_4 abstractFactory_4 = new AbstractFactory_4();
+            //abstractFactory_4.AastracetFactoryClient();
+
+            //建造者
+            //Builder_5 builder_5 = new Builder_5();
+            //builder_5.BuyComputer();
+            //建造者模式演变
+            //builder_5.BuilderEvolve();
+
+            //原型
+            //Prototype_6 prototype = new Prototype_6();
+            //prototype.MonkeyKingPrototype();
+
+            //适配器
+            Adapter_7 adapter = new Adapter_7();
+            //adapter.ClassAdapterSample();
+            adapter.ObjectAdapterSample();
+            #endregion
 
             Console.ReadKey();
         }
