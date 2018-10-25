@@ -213,6 +213,19 @@ namespace FclConsoleApp
             //装饰者
             //Decorator_9 decorator = new Decorator_9();
             //decorator.DecoratorPhone();
+
+            //组合模式
+            //Composite_10 composite = new Composite_10();
+            //composite.UnSafeComplexGraphicsSample();
+            //composite.SafeComplexGraphics();
+
+            //外观模式
+            //Facade_11 facade = new Facade_11();
+            //facade.StudySelectCourseSystem();
+
+            //享元模式
+            Flyweight_12 flyweight = new Flyweight_12();
+            flyweight.FlyweightWordSample();
             #endregion
 
             Console.ReadKey();

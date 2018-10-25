@@ -57,7 +57,9 @@
     <Compile Include="DesignPattern\Builder_5.cs" />
     <Compile Include="DesignPattern\Composite_10.cs" />
     <Compile Include="DesignPattern\Decorator_9.cs" />
+    <Compile Include="DesignPattern\Facade_11.cs" />
     <Compile Include="DesignPattern\FactoryMethod_3.cs" />
+    <Compile Include="DesignPattern\Flyweight_12.cs" />
     <Compile Include="DesignPattern\Prototype_6.cs" />
     <Compile Include="DesignPattern\SimpleFactory_2.cs" />
     <Compile Include="DesignPattern\Singleton_1.cs" />
