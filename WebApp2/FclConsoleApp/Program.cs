@@ -232,8 +232,8 @@ namespace FclConsoleApp
             //proxy.GoabroadProxyShopping();
 
             //模板方法模式
-            TemplateMethod_14 templateMethod = new TemplateMethod_14();
-            templateMethod.VegetableTemplate();
+            //TemplateMethod_14 templateMethod = new TemplateMethod_14();
+            //templateMethod.VegetableTemplate();
             #endregion
 
             Console.ReadKey();
