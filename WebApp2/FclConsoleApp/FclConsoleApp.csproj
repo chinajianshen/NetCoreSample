@@ -61,8 +61,10 @@
     <Compile Include="DesignPattern\FactoryMethod_3.cs" />
     <Compile Include="DesignPattern\Flyweight_12.cs" />
     <Compile Include="DesignPattern\Prototype_6.cs" />
+    <Compile Include="DesignPattern\Proxy_13.cs" />
     <Compile Include="DesignPattern\SimpleFactory_2.cs" />
     <Compile Include="DesignPattern\Singleton_1.cs" />
+    <Compile Include="DesignPattern\TemplateMethod_14.cs" />
     <Compile Include="DesignPattern\说明.cs" />
     <Compile Include="FileOperation\FileAsyncStudy.cs" />
     <Compile Include="FileOperation\FileHelper.cs" />

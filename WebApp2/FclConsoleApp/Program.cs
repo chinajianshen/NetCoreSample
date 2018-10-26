@@ -224,8 +224,16 @@ namespace FclConsoleApp
             //facade.StudySelectCourseSystem();
 
             //享元模式
-            Flyweight_12 flyweight = new Flyweight_12();
-            flyweight.FlyweightWordSample();
+            //Flyweight_12 flyweight = new Flyweight_12();
+            //flyweight.FlyweightWordSample();
+
+            //代理模式
+            //Proxy_13 proxy = new Proxy_13();
+            //proxy.GoabroadProxyShopping();
+
+            //模板方法模式
+            TemplateMethod_14 templateMethod = new TemplateMethod_14();
+            templateMethod.VegetableTemplate();
             #endregion
 
             Console.ReadKey();
