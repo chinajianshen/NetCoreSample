@@ -1,0 +1,31 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class='search-title'>书名</view>
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input auto-focus="{{true}}" type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text"></view>
+                </label>
+            </view>
+            <view class="smart-search-btn" bindtap="search">搜索</view>
+        </view>
+
+
+
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+          <view wx:for="{{bookList}}" wx:key="BookID" data-id='{{item.BookID}}' data-name="{{item.BookName}}" bindtap='itemSearch' class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+                    <view>{{item.BookName}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>

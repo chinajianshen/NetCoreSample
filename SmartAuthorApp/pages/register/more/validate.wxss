@@ -1,0 +1,40 @@
+.upload-demo{
+  color: #999;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+  border-bottom: 1px solid #999;
+}
+
+.demo-panel{
+  text-align: right;
+  margin-top: 30rpx;
+}
+
+.content-panel{
+  text-align: center;
+}
+
+.img-panel{
+  margin: 10rpx 30rpx;
+  text-align: center;
+}
+.img-panel>image{ 
+  width: 522rpx;
+  height: 320rpx;
+  margin: 30rpx 0 20rpx 0;
+ }
+ .modal-dialog{
+   top: 30%;
+ }
+
+ .modal-title{ font-weight: bold }
+ .modal-dialog image{ width: 95%; margin: 30rpx 0 }
+ .bootom-text{ text-align: center;margin-bottom: 30rpx;color: #1C8EE9; }
+ .image-panel{ text-align: center; }
+ .modal-content { margin-top: -50rpx; }
+ .modal-dialog .modal-content{
+   font-size: 30rpx;
+   color: #999;
+   margin-top: 0;
+   margin-bottom: 30rpx;
+ }

@@ -1,0 +1,52 @@
+<view class="page">
+  <view class='demo-panel'>
+    <text bindtap='showDemo' class='upload-demo'>上传示例</text>
+  </view>
+
+  <view class='content-panel'>
+    <text class='smart-h4'>拍摄/上传您的身份证</text>
+  </view>
+  <view class='img-panel'>
+    <image bindtap='selectFront' mode="aspectFit" src='{{frontSrc}}'></image>
+    <image bindtap='selectBack' mode="aspectFit" src='{{backSrc}}'></image>
+  </view>
+
+  <view class="weui-msg__opr-area">
+    <view class="weui-btn-area">
+      <button bindtap='moreValidate' class="weui-btn" type="{{ frontSelected && backSelected ? 'primary' : 'disabled' }}">确认并提交</button>
+    </view>
+  </view>
+
+  <view class="weui-msg__extra-area">
+    <view class="weui-footer">
+      <view class="weui-footer__text">信息仅用于身份验证，作家邦保障您的信息</view>
+    </view>
+  </view>
+
+  <!--弹窗-->
+  <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">证件上传示例</view>
+
+    <view class='image-panel'><image mode='aspectFit' src='/content/images/exp.png'></image></view>
+    
+    <view class="modal-content">
+      
+
+      <view class='bootom-text'>
+        <text decode='true' bindtap='demoConfirm'>知&nbsp;道&nbsp;了</text>
+      </view>
+    </view>
+  </view>
+
+
+  <!--身份上传完成弹窗-->
+  <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{completeModal}}"></view>
+  <view class="modal-dialog" wx:if="{{completeModal}}">
+    <view class="modal-title">提交成功</view>
+    <text bindtap='closeCompleteModol' class='close-btn'>x</text>
+    <view class="modal-content">
+      <view>恭喜您完成身份认证！我们将在5个工作日内短信通知您审核结果。</view>
+    </view>
+  </view>
+</view>

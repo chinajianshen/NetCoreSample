@@ -1,0 +1,77 @@
+<view class="page">
+
+  <!--顶部banner图-->
+  <view>
+    <image class='benner-img' mode="scaleToFill" src="../../content/images/banner-.png"></image>
+  </view>
+
+  <!--手机图片-->
+  <view style='z-index: 111; margin-top: -220rpx;'>
+    <view class='phone-panel'>
+      <image class='phone-img' mode="scaleToFill" src="../../content/images/phone.png"></image>
+    </view>
+  </view>
+
+  <!--底部文字-->
+  <view class='bootom-txt'>
+    <text>北京开卷\n</text>
+    <text>数据助力内容  数据驱动阅读</text>
+  </view>
+
+  <!--登录注册按钮-->
+  <view class='btn-panel'>
+    <button style='width: 170rpx; hidden: 70rpx;' bindtap='login' class="weui-btn mini-btn btn-login" size="mini">登录</button>
+    <button style='width: 170rpx; hidden: 70rpx;' bindtap='regist' class="weui-btn mini-btn btn-login" size="mini">注册</button>
+  </view>
+
+  <view class='site-text'>
+    <text>
+    开卷咨询电话：（010）64242820-608
+    </text>
+  </view>
+</view>
+
+
+<!--弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">登录</view>
+  <text bindtap='closeModol' class='close-btn'>x</text>
+  <view class="modal-content">
+    <text class='info-msg'>为确保是您本人在登录，需验证手机号</text>
+    <view class="modal-input">
+      <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input bindinput='inputPhoneNum' placeholder-class="phcolor" value='{{phoneNum}}' class="weui-input" placeholder="手机号" />
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input weui-cell_vcode">
+            <view class="weui-cell__bd">
+              <input bindinput='inputSmsCode' placeholder-class="phcolor" value='{{mscode}}' class="weui-input" placeholder="验证码" />
+            </view>
+            <view class="weui-cell__ft">
+              <view style='{{!smsbtnEnabled ? "color: #ccc !important;" : "color: #0594D8 !important;"}}' bindtap='sendMsCode' class="weui-vcode-btn smart-vcode-btn">{{smsbtnText}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-btn-area">
+          <button class="weui-btn smart-regist-btn" type="primary" bindtap="confirmLogin">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!--信息弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showMsgModal}}"></view>
+<view class="modal-dialog" wx:if="{{showMsgModal}}">
+  <view class="modal-title" style='padding-top: 10rpx;'>提示</view>
+  <text bindtap='closeModol' class='close-btn'>x</text>
+  <view class="modal-content" style='text-align: center;'>
+    <text class='info-msg'>{{showMsg}}</text>
+  </view>
+</view>

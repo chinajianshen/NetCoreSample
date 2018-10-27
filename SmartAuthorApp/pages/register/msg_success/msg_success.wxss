@@ -1,0 +1,12 @@
+page{
+    background-color: #FFFFFF;
+}
+
+.weui-btn[type=primary]{
+  background-color: #0594D8 !important;
+}
+
+.ok-img{
+  width: 220rpx;
+  height: 220rpx;
+}

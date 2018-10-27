@@ -1,0 +1,26 @@
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+          <image class='ok-img' src='../../../content/images/ok.png'></image>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">恭喜您完成注册！</view>
+            <view class="weui-msg__desc">我们将在5个工作日内短信通知您审核结果。</view>
+            <view class="weui-msg__desc">如果审核通过，您可以免费试用作家邦1个月。</view>
+            
+            <view style='margin-top: 50rpx;' class="weui-msg__desc">因为涉及您个人的图书信息，为了维护您的权益，请您继续完善资料，以确保为本人登录。</view>
+            <view class="weui-msg__desc">完善后可以继续免费使用一年。</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button bindtap='moreValidate' class="weui-btn" type="primary">继续验证</button>
+                <button bindtap='reback' class="weui-btn" type="default">关闭</button>
+            </view>
+        </view>
+        <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__text">Copyright © {{curyear}} 北京开卷信息技术有限公司</view>
+            </view>
+        </view>
+    </view>
+</view>

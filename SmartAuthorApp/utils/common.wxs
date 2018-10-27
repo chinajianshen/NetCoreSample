@@ -1,0 +1,17 @@
+var limitLength = function(arg, length){
+  if(arg == null){
+    return '-';
+  }
+
+  if(length == undefined){
+    length = 22;
+  }
+
+  if (arg.length < length){
+    return arg;
+  }
+
+  return arg.substr(0, length) + '...';
+}
+
+module.exports = { limitLength: limitLength }

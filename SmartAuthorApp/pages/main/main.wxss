@@ -1,0 +1,46 @@
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.search_bar{
+  padding-left: 0;
+}
+.weui-search-bar__label { text-align: left; margin-left: 20rpx; }
+.weui-icon-search[type=search]{ margin-bottom: 7rpx; }
+.weui-search-bar__label .weui-search-bar__text{ margin-bottom: 7rpx; }
+.search-title{ color: #555; font-size: 35rpx; margin-left: -10rpx; margin-right: 10rpx; }
+.smart-search-btn { color: #555; font-size: 35rpx; margin-left: 15rpx; }
+.weui-search-bar__form { flex: 1; -webkit-flex: 1; }
+.total-count { line-height: 50rpx; float: left; }
+.search-condition { float: right; background-color: #eee; border-radius: 5rpx; margin-left: 20rpx; padding: 4rpx 18rpx; }
+.weui-panel__hd { height: 50rpx; margin-top: 30rpx; }
+.latest-saledate { float: right; font-size: 24rpx; color: #ccc; margin-right: 28rpx; margin-top: 10rpx; }
+.dir-up { color: #E85350; }
+.dir-down { color: #15BE13; }
+.tip-image { width: 47rpx; height: 47rpx; float: right; }
+.weui-media-box__title { margin-top: -10rpx; font-size: 30rpx; }
+.weui-media-box__desc { margin-top: 5rpx; font-size: 24rpx; }
+.weui-media-box__desc view { line-height: 35rpx; }
+.weui-media-box__thumb{ width: 220rpx; height: 220rpx; border: 1px solid #eee; }
+.des-panel { margin-left: 40rpx; }
+.month-sales { color: #15BE13; }
+.history-sales { color: #E85350; }
+.load-more { text-align: center; font-size: 15px; color: #bbb; margin-bottom: 60rpx; margin-top: 40rpx; }
+.weui-panel__bd { height: 960rpx; border: 1px solid red; }
+.market-panel { background-color: #eee; height: 60rpx; font-size: 25rpx; padding: 0 30rpx; }
+.market-panel>text { height: 60rpx; line-height: 60rpx; color: #666; }
+.market-panel>view { display:inline-block; margin-left: 30rpx; background-color: #ccc; color: #666; 
+  padding: 6rpx 12rpx;
+ }
+.market-panel>view.active { background-color: lightblue; }
+.search-condition.active { background-color: lightblue; color: #666; }
+.modal-title { padding-top: 20rpx; }
+.msg-title{ font-weight: bold; }
+.search-bar-input { padding-left: 60rpx; height: 56rpx; line-height: 56rpx; font-size: 28rpx; }
+.price-te { position: absolute; right: 30rpx; }

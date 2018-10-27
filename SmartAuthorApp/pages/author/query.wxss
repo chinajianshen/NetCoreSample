@@ -1,0 +1,16 @@
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+
+.weui-search-bar__label { text-align: left; margin-left: 20rpx; }
+.weui-icon-search[type=search]{ margin-bottom: 7rpx; }
+.weui-search-bar__label .weui-search-bar__text{ margin-bottom: 7rpx; }
+.search-title{ color: #999; font-size: 30rpx; line-height: 60rpx; margin-left: -10rpx; margin-right: 10rpx; }
+.smart-search-btn { color: #555; font-size: 35rpx; margin-left: 15rpx; }

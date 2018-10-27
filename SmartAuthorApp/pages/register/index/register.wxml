@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input placeholder-class="phcolor" bindinput='realNameInput' name="realName" class="weui-input" placeholder="真实姓名" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input placeholder-class="phcolor" bindinput='phoneInput' name="phone" class="weui-input" placeholder="手机号" />
+        </view>
+      </view>
+
+
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__bd">
+          <input placeholder-class="phcolor" bindinput='mscodeInput' name="mscode" class="weui-input" placeholder="验证码" />
+        </view>
+        <view class="weui-cell__ft">
+          <view bindtap='sendMsCode' class="weui-vcode-btn {{sendMsBtn.cls}}">{{sendMsBtn.text}}</view>
+        </view>
+      </view>
+    </view>
+    
+    <view class='weui-btn-area'>
+      <text class='desc-title'>说明：\n</text>
+      <text class='desc-content'>1. 我们根据真实姓名，给您开通作家本人的图书查询功能。（暂不提供查询其他作家图书）\n</text>
+      <text class='desc-content'>2. 5个工作日内，我们会审核并给您短信通知。</text>
+    </view>
+
+    <view class="weui-msg__opr-area">
+      <view class="weui-btn-area">
+          <button bindtap='confirmRegist' class="weui-btn {{postBtn.cls}}">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

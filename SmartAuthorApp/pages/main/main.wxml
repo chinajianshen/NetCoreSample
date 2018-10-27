@@ -1,0 +1,122 @@
+<view class="page">
+  <view class="" style='height: 86rpx;'>
+    <view class="weui-search-bar">
+      <view class='search-title'>图书查询</view>
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box search_bar">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input disabled='disabled' type="text" bindtap='compareSearch' class="search-bar-input" placeholder="书名" value="{{bookTitle}}" />
+          <view class="weui-icon-clear" wx:if="{{bookTitle.length > 0}}">
+            <icon bindtap='clearInput' type="clear" size="14"></icon>
+          </view>
+        </view>
+      </view>
+      <view class="smart-search-btn" bindtap='showAuthorName' bindlongtap='resetAuthor'>
+        <image style='width: 30rpx; height: 30rpx; margin-bottom: -2rpx;' src='/content/images/user.png'></image>
+        {{simpleAuthor}}
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="page__bd market-panel">
+    <text>销售时间</text>
+    <view class='{{cycleType == 1 ? "active" : ""}}' bindtap='selectCycleType' data-cycle='1'>201804月</view>
+    <view class='{{cycleType == 3 ? "active" : ""}}' bindtap='selectCycleType' data-cycle='3'>201821周</view>
+  </view> -->
+
+
+  <view>
+    
+    <view class="weui-panel weui-panel_access">
+      <view class='latest-saledate'>*更新至{{latestDate}}</view>
+      <view class="weui-panel__hd">
+        <view class='total-count'>共{{total}}条</view>
+        <view bindtap='selectOrderType' data-order='2' class='search-condition {{orderType == 2 ? "active" : ""}}'>按总月销量
+          <text class='dir-down'>↓</text>
+        </view>
+        <view bindtap='selectOrderType' data-order='1' class='search-condition {{orderType == 1 ? "active" : ""}}'>按总累计销量
+          <text class='dir-down'>↓</text>
+        </view>
+        <view>
+          <image bindtap='showMsgModol' class='tip-image' src='/content/images/tip.png'></image>
+        </view>
+      </view>
+
+      <movable-area style="height: {{fdheight}}px; width: 100%; position: absolute;">
+          <movable-view class='feedback' x="{{fdx}}" y="{{fdy}}" direction="all">
+            <image class='feedback' bindtap='feedback' src='/content/images/feedback.png'></image>
+          </movable-view>
+      </movable-area>
+
+
+      <scroll-view enable-back-to-top="{{true}}" scroll-y style="height: {{contentHeight}}" scroll-top="{{scrollTop}}">
+        <navigator url="/pages/main/bookdetail?id={{item.BookID}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{bookList}}" wx:for-item="item" wx:key="BookID">
+          <view>
+            <image mode='aspectFit' class="weui-media-box__thumb" src="{{item.BookImage ? item.BookImage : '/content/images/none.png'}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg des-panel">
+            <view class="weui-media-box__title">{{item.Title}}</view>
+            <view class="weui-media-box__desc">
+              <view>
+                <text>首次动销时间：{{item.MarketDate}}</text>
+                <text class='price-te' decode='true'>定价：{{item.Price}}</text>
+              </view>
+              <view>ISBN：{{item.ISBN}}</view>
+              <view>作者：{{item.Author}}</view>
+              <view>出版社：{{item.PublishName}}</view>
+              <view class='history-sales'>总累计销量：{{item.HistorySales_Mix == null ? "-" : item.HistorySales_Mix}}</view>
+              <view class='month-sales'>总月销量：{{item.MonthSales_Mix == null ? "-" : item.MonthSales_Mix}}</view>
+            </view>
+          </view>
+        </navigator>
+
+        
+
+        <view class='load-more'>
+          <text bindtap='loadMore'>{{loadText}}</text>
+        </view>
+      </scroll-view>
+
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">试用到期提醒</view>
+  <text bindtap='closeModol' class='close-btn'>x</text>
+  <view class="modal-content">
+    <view class="modal-input">
+      <view class="page__bd">
+        <view>您好：</view>
+        <view>
+          <text decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 您的账号将于 {{expiredTime}} 结束试用，请完善身份认证，保持继续使用，谢谢！</text>
+        </view>
+
+        <view class="weui-btn-area">
+          <button class="weui-btn smart-regist-btn" type="primary" bindtap="identify">身份认证</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!--信息弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showMsgModal}}"></view>
+<view class="modal-dialog" wx:if="{{showMsgModal}}">
+  <view catchtouchmove="preventTouchMove" class="modal-title">注释</view>
+  <text bindtap='closeMsgModol' class='close-btn'>X</text>
+  <view class="modal-content" style='height: 400rpx; overflow-y: scroll;'>
+    <view class="modal-input">
+      <view class="page__bd">
+        <view>
+          <text decode='true'>
+            <text class='msg-title'>>总销量：</text>指在统计期内开卷所监控的零售销量，仅代表开卷所监控的范围大小，并不等于全国图书零售市场上的实际零售发生额。\r\n<text class='msg-title'>>开卷采样说明：</text>开卷监测系统自1998年7月建立，目前已经覆盖全国1410个县级以上城市的3435家实体书店门市（含超市店56家，校园店23家，专业店225家，机场店161家）、大型电商自营业务、垂直行业电商、第三方平台、社群书店等，共计全国6000多家书店（含实体书店和网上书店），具有良好的连续性、代表性和完整性。\r\n<text class='msg-title'>>首次动销时间：</text>指在开卷监测系统的范围和期限内，一个ISBN首次在零售市场上发生动销的时间。如果多种图书是ISBN、定价均相同的一号多书，则它们的首次动销时间相同，均为其中最早发生动销的一种图书的首次动销时间。
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

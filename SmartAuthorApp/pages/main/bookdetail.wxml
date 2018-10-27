@@ -1,0 +1,111 @@
+<view class="page">
+
+  <view class="page__bd" style="margin-bottom: 50rpx;">
+    <!-- <view class='author'>
+      <text bindtap='showdetail' data-detail="{{infoData.Author}}">{{simpleAuthor}}</text>
+    </view>
+    <view class='booktitle'>
+      <text bindtap='showdetail' data-detail="{{infoData.Title}}">{{simpleTitle}}</text>
+    </view>
+
+    <view class='smart-line'></view> -->
+
+    <movable-area style="height: {{fdheight}}px; width: 100%; position: fixed; pointer-events: none">
+      <movable-view style='pointer-events: auto' class='feedback' x="{{fdx}}" y="{{fdy}}" direction="all">
+        <image class='feedback' bindtap='feedback' src='/content/images/feedback.png'></image>
+      </movable-view>
+    </movable-area>
+
+    <view class='book-info'>
+      <view class='title'>
+        <text class='jbxx'>基本信息</text>
+        <!-- <image class='titletip' src='/content/images/tip.png'></image> -->
+      </view>
+
+
+      <view class="weui-media-box_appmsg">
+        <view>
+          <image style='height: 180rpx; width: 180rpx;' mode='aspectFit' class="weui-media-box__thumb" src="{{infoData.BookImage ? infoData.BookImage : '/content/images/none.png'}}" />
+        </view>
+
+       
+
+        <view style="margin-left: 30rpx;" class="weui-media-box__bd weui-media-box__bd_in-appmsg des-panel">
+          <view class="weui-media-box__desc">
+            <view class='limitlength' bindtap='showdetail' data-detail="{{infoData.Title}}">书名：{{infoData.Title}}</view>
+            <view>ISBN: {{infoData.ISBN}}</view>
+            <view>定价：{{infoData.Price}}</view>
+            <view class='limitlength' bindtap='showdetail' data-detail="{{infoData.Author}}">作者：{{infoData.Author}}</view>
+            <view>首次动销时间：{{infoData.MarketDate}}</view>
+            <view class='limitlength' bindtap='showdetail' data-detail="{{infoData.PublishName}}">出版单位：{{infoData.PublishName}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='smart-line-10'></view>
+
+
+    <view class='book-info'>
+      <view class='title'>
+        <text class='jbxx'>各渠道销售走势（月）</text>
+        <image bindtap='showMsg' data-msg='总体销量是指开卷监控范围内的全国零售市场销量。按渠道进一步细分，可以分成实体店渠道和网店渠道。' class='titletip' src='/content/images/tip.png'></image>
+      </view>
+    </view>
+
+    <view class='container' style='height: 320rpx;'>
+      <canvas canvas-id="lineCanvas" disable-scroll="{{false}}" class="canvas" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+      </canvas>
+    </view>
+
+    <view class='smart-line-10'></view>
+
+    <view class='book-info'>
+      <view class='title'>
+        <text class='jbxx'>实体店各省销售（{{saleDate}}）</text>
+        <image bindtap='showMsg' data-msg='实体店提供单省的地区有安徽，北京，福建，甘肃，广东，广西，贵州，河北，河南，黑龙江，湖北，湖南，吉林，江苏，江西，辽宁，内蒙古，山东，山西，陕西，上海，天津，云南，浙江，重庆，四川，新疆。' class='titletip' src='/content/images/tip.png'></image>
+      </view>
+    </view>
+
+    <view class='container' style='height: 400rpx;'>
+      <canvas canvas-id="columnCanvas" disable-scroll="{{false}}" class="canvas" bindtouchstart="touchHandlerCol" bindtouchmove="moveHandlerCol" bindtouchend="touchEndHandlerCol">
+      </canvas>
+    </view>
+
+    <view class='smart-line-10'></view>
+
+    <view class='book-info'>
+      <view class='title'>
+        <text class='jbxx'>零售渠道在榜排名（{{saleDate}}）</text>
+        <image bindtap='showMsg' data-msg='在榜排名指的是单本图书在零售市场中某个分类榜单中的排名，用来衡量图书的市场畅销程度。' class='titletip' src='/content/images/tip.png'></image>
+      </view>
+    </view>
+
+
+    <view class="page__bd page__bd_spacing">
+
+      <view wx:for="{{rinkingData}}" wx:for-item="item" wx:key="name" class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class='placeholder'>
+              <view class='weui-flex'>
+                <view class='weui-flex__item sort-name'>{{item.name}}</view>
+                <view class='sort-rank'>第{{item.value}}位</view>
+              </view>
+                <view class='weui-flex'>
+                  <view class='weui-flex__item sort-num'>
+                    <span wx:for="{{kindNames}}" wx:for-item="kind" wx:for-index="idx" wx:key="kindName" class="{{kind.kindId == item.id ? 'sort-current-name' : ''}}">{{kind.kindName}}{{idx == kindNames.length - 1 ? "" : ">"}}</span>
+                  </view> 
+                  <view class='sort-num'>共{{item.breed}}个品种</view>              
+                </view> 
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

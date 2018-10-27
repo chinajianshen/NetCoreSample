@@ -1,0 +1,49 @@
+<view class="page">
+  <text class='ques-title'>常见问题：</text>
+
+  <view class="ques-panel">
+    <view data-id='{{item.id}}' data-title='{{item.title}}' bindtap='selectQues' class='{{item.cls}}' bindtap='selectQues' wx:for="{{quesList}}" wx:key="{{xxx}}">{{item.title}}</view>
+  </view>
+
+  <view class='ques-con-panel'>
+    <view class='ques-con-title'>
+      <text>{{quesTitle}}</text>
+      <view class='text-line'></view>
+
+      <view class='ques-con-content-panel'>
+        <textarea bindinput='inputContent' placeholder='请输入问题内容' class='ques-con-content'>{{quesContent}}</textarea>
+      </view>
+
+      <view class='post-panel'>
+        <button bindtap='postForm' class="post-btn">提交</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='msg-panel'>
+    <text class='msg-title'>上传新书目：\n</text>
+    <text class='msg-content'>请把书目信息发送到yn@openbook.com.cn\n</text>
+    <text class='msg-content'>基本字段包括：ISBN、书名、定价、作者、出版社、出版时间、欢迎上传其它相关的图书信息，有利于我们在更多渠道宣传您的图书，发布图书信息：（比如：内容介绍、特殊卖点或亮点、获奖情况、推荐情况，作家或编辑自己推荐等等）\n</text>
+  </view>
+
+  <view class='area-line'></view>
+
+  <view class='msg-panel-bottom'>
+    <text class='msg-title'>您还可以通过以下方式反馈问题：\n</text>
+    <text class='msg-content'>开卷客服电话：（010）64242820-608\n</text>
+    <text class='msg-content'>邮箱：yn@openbook.com.cn\n</text>
+    <text class='msg-content'>客服QQ：2116180005</text>
+  </view>
+
+
+
+  <!--弹窗-->
+  <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">{{stateTitle}}</view>
+    <text bindtap='closeModol' class='close-btn'>x</text>
+    <view class="modal-content">
+      <view>{{stateMsg}}</view>
+    </view>
+  </view>
+</view>

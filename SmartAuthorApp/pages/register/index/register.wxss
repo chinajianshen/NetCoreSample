@@ -1,0 +1,7 @@
+.desc-title{ font-size: 30rpx; color: #999;}
+.desc-content{font-size: 26rpx; color: #999;}
+.phcolor{color: #999;}
+.smart-regist-btn{ background-color: #0594D8 !important; color: white !important; }
+.smart-regist-btn-disabled { background-color: #eee !important; color: white !important; }
+.smart-vcode-btn{color: #0594D8 !important;}
+.smart-vcode-btn-disabled { color: #999 !important; }
