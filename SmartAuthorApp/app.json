@@ -12,7 +12,8 @@
     "pages/register/msg_fail/msg_fail",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/author/query"
+    "pages/author/query",
+    "pages/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
