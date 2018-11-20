@@ -234,6 +234,39 @@ namespace FclConsoleApp
             //模板方法模式
             //TemplateMethod_14 templateMethod = new TemplateMethod_14();
             //templateMethod.VegetableTemplate();
+
+            //命令模式
+            //Command_15 command = new Command_15();
+            //command.LeaderCommand();
+
+            //迭代器模式
+            //Iterator_16 iterator = new Iterator_16();
+            //iterator.IteratorClient();
+
+            //观察者模式
+            //Observer_17 observer = new Observer_17();
+            //observer.ObserverDeduceInit();
+            //observer.ObserverDeduceResult();
+            //observer.ObserverDeduceDelegate();
+
+            //中介者模式
+            //Mediator_18 mediator = new Mediator_18();
+            //mediator.Two_CardPartner();
+            //mediator.Mediator_CardPartner();
+            //mediator.Mediator_State_CardPartner();
+
+            //状态者模式
+            //State_19 state = new State_19();
+            //state.BankAccountState();
+
+            //策略模式
+            //Stragety_20 stragety = new Stragety_20();
+            //stragety.CalculateTax();
+
+            //职责链模式
+            ChainOfResponsibility_21 chainOfResponsibility = new ChainOfResponsibility_21();
+            chainOfResponsibility.PurchaseApprover();
+
             #endregion
 
             Console.ReadKey();
