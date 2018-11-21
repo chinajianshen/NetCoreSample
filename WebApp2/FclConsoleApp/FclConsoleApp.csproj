@@ -64,6 +64,7 @@
     <Compile Include="DesignPattern\Flyweight_12.cs" />
     <Compile Include="DesignPattern\Iterator_16.cs" />
     <Compile Include="DesignPattern\Mediator_18.cs" />
+    <Compile Include="DesignPattern\Memento_23.cs" />
     <Compile Include="DesignPattern\Observer_17.cs" />
     <Compile Include="DesignPattern\Prototype_6.cs" />
     <Compile Include="DesignPattern\Proxy_13.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="DesignPattern\State_19.cs" />
     <Compile Include="DesignPattern\Stragety_20.cs" />
     <Compile Include="DesignPattern\TemplateMethod_14.cs" />
+    <Compile Include="DesignPattern\Vistor_22.cs" />
     <Compile Include="DesignPattern\说明.cs" />
     <Compile Include="FileOperation\FileAsyncStudy.cs" />
     <Compile Include="FileOperation\FileHelper.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="MultiThread\ThreadUseSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FileOperation\DownLoadFileAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

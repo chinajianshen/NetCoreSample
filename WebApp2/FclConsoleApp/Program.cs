@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FclConsoleApp.DesignPattern;
+using FclConsoleApp.FileOperation;
 
 namespace FclConsoleApp
 {
@@ -122,7 +123,7 @@ namespace FclConsoleApp
             //parallelStudy.ParallelBreak();
             //parallelStudy.ParallelCatchException();
 
-            ParallelEnumerableStudy parallelEnumerableStudy = new ParallelEnumerableStudy();
+            //ParallelEnumerableStudy parallelEnumerableStudy = new ParallelEnumerableStudy();
             //parallelEnumerableStudy.ListWithParallel_UnSafety();
             //parallelEnumerableStudy.ConcurrentBagWithPalle();           
             //parallelEnumerableStudy.AsParallelPLinq();
@@ -163,7 +164,11 @@ namespace FclConsoleApp
 
             //FileHelper.ZipFile(sourcefile, CurrDirectoryPath);
             //FileHelper.UnZip(Path.Combine(CurrDirectoryPath, "1.zip"), Path.Combine(CurrDirectoryPath, "UnZipFloder"));
-            #endregion
+
+            //网络异步下载
+            //DownLoadFileAsync downLoadFileAsync = new DownLoadFileAsync();
+            //downLoadFileAsync.WebDownLoadFileAsync("http://www.openbookdata.com.cn/");
+            #endregion          
 
             #region 异步文件操作
             //FileAsyncStudy fileAsyncStudy = new FileAsyncStudy();
@@ -264,8 +269,16 @@ namespace FclConsoleApp
             //stragety.CalculateTax();
 
             //职责链模式
-            ChainOfResponsibility_21 chainOfResponsibility = new ChainOfResponsibility_21();
-            chainOfResponsibility.PurchaseApprover();
+            //ChainOfResponsibility_21 chainOfResponsibility = new ChainOfResponsibility_21();
+            //chainOfResponsibility.PurchaseApprover();
+
+            //访问者模式
+            //Vistor_22 vistor = new Vistor_22();
+            //vistor.ErgodicElement();
+
+            //备忘录模式
+            //Memento_23 memento = new Memento_23();
+            //memento.BackupMobileContact();
 
             #endregion
 
