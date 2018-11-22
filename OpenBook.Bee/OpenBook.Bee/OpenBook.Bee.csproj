@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,14 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AutoFacTestFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AutoFacTestFrm.Designer.cs">
+      <DependentUpon>AutoFacTestFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AutoFacTestFrm.resx">
+      <DependentUpon>AutoFacTestFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +70,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +83,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBook.Bee.Entity\OpenBook.Bee.Entity.csproj">
+      <Project>{593d7c14-eb6d-49a1-8505-a05aa23f094f}</Project>
+      <Name>OpenBook.Bee.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Interface\OpenBook.Bee.Interface.csproj">
+      <Project>{43345458-6e4d-41fc-8b47-17d4fd284e68}</Project>
+      <Name>OpenBook.Bee.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Utils\OpenBook.Bee.Utils.csproj">
+      <Project>{0d55a95a-c81d-4cc6-95ba-f9a68a360813}</Project>
+      <Name>OpenBook.Bee.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

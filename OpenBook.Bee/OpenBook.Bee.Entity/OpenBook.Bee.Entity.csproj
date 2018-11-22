@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBook.Bee.Interface\OpenBook.Bee.Interface.csproj">
+      <Project>{43345458-6e4d-41fc-8b47-17d4fd284e68}</Project>
+      <Name>OpenBook.Bee.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Utils\OpenBook.Bee.Utils.csproj">
+      <Project>{0d55a95a-c81d-4cc6-95ba-f9a68a360813}</Project>
+      <Name>OpenBook.Bee.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
