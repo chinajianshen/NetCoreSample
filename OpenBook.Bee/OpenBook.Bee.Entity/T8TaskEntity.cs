@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace OpenBook.Bee.Entity
 {
-   /// <summary>
-   /// 任务类
-   /// </summary>
-   public class T8TaskEntity
+    /// <summary>
+    /// 任务类
+    /// </summary>
+    [Serializable]
+    public class T8TaskEntity
     {
         /// <summary>
         /// 任务的ID，是一个随机生成的GUID
@@ -44,5 +45,10 @@ namespace OpenBook.Bee.Entity
         /// 执行失败的次数
         /// </summary>
         public int ExecFailureTime { get; set; }
+
+        /// <summary>
+        /// 传8数据文件类
+        /// </summary>
+        public T8FileEntity T8FileEntity { get; set; }
     }
 }

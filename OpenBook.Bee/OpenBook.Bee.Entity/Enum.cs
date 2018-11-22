@@ -99,4 +99,32 @@ namespace OpenBook.Bee.Entity
         /// </summary>
         User =2,
     }
+
+    /// <summary>
+    /// 数据库类型
+    /// </summary>
+    public enum DataBaseType
+    {
+        SqlSever = 1,
+
+        Oracle =2,
+
+        MySql =4
+    }
+
+    /// <summary>
+    /// 数据类型
+    /// </summary>
+    public enum DataType
+    {
+        /// <summary>
+        /// 销售数据
+        /// </summary>
+        SaleData =1,
+
+        /// <summary>
+        /// 在架数据
+        /// </summary>
+        OnShelfData =2
+    }
 }
