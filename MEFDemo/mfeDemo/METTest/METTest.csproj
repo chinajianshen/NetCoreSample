@@ -44,6 +44,8 @@
     <Compile Include="HelloWord.cs" />
     <Compile Include="HelloWordB.cs" />
     <Compile Include="IHelloWord.cs" />
+    <Compile Include="IOpenBook.cs" />
+    <Compile Include="OpenBook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

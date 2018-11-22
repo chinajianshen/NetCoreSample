@@ -13,26 +13,14 @@ using System.Windows.Forms;
 
 namespace OpenBook.Bee
 {
-    public partial class AutoFacTestFrm : Form
+    public partial class AutoFacTestFrm : BaseFrm
     {
-        //在类中定义变量
-        private Autofac.IContainer container;
+      
 
 
         public AutoFacTestFrm()
         {
-            InitializeComponent();
-
-            //构造函数中添加如下代码
-            var builder = new ContainerBuilder();
-
-            builder.RegisterType<FirstModel>().Named<IService>("First");
-            builder.RegisterType<SecondModel>().Named<IService>("Second");
-            builder.RegisterType<SecondModel>().Named<ISecondService>("Second");
-            builder.RegisterType<ThirdModel>();
-            builder.RegisterInstance(this).As<Form>();
-            
-            container = builder.Build();
+            InitializeComponent();           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +30,9 @@ namespace OpenBook.Bee
 
             var second = container.ResolveOptionalNamed<IService>("Second");
             string str2 = second.Do();
+
+            var second2 = container.ResolveOptionalNamed<ISecondService>("Second");
+            string str22 = second2.Do();
 
             var third = container.Resolve<ThirdModel>();
             string str3 = third.Do();

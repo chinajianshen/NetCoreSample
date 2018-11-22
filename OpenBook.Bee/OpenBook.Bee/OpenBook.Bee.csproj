@@ -56,6 +56,12 @@
     <Compile Include="AutoFacTestFrm.Designer.cs">
       <DependentUpon>AutoFacTestFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrm.Designer.cs">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AutoFacTestFrm.resx">

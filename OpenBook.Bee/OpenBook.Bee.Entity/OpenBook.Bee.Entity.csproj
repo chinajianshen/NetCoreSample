@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum.cs" />
     <Compile Include="FirstModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T8FileEntity.cs" />
+    <Compile Include="T8TaskEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenBook.Bee.Interface\OpenBook.Bee.Interface.csproj">

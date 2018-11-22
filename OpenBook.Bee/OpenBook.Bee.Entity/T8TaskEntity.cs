@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OpenBook.Bee.Entity
+{
+   /// <summary>
+   /// 任务类
+   /// </summary>
+   public class T8TaskEntity
+    {
+        /// <summary>
+        /// 任务的ID，是一个随机生成的GUID
+        /// </summary>
+        public string TaskGuid { get; set; }
+
+        /// <summary>
+        /// 任务名称
+        /// </summary>
+        public string TaskTitle { get; set; }
+
+        /// <summary>
+        /// 生成时间
+        /// </summary>
+        public DateTime GenerateTime { get; set; }
+
+        /// <summary>
+        /// 完成时间
+        /// </summary>
+        public DateTime CompleteTime { get; set; }
+
+        /// <summary>
+        /// 任务状态
+        /// </summary>
+         public TaskStatus TaskStatus { get; set; }        
+
+        // 任务源类型
+        /// </summary>
+        public TaskSourceType TaskSourceType { get; set; }
+
+        /// <summary>
+        /// 执行失败的次数
+        /// </summary>
+        public int ExecFailureTime { get; set; }
+    }
+}
