@@ -18,6 +18,21 @@ namespace OpenBook.Bee.Entity
         public string FileName { get; set; }
 
         /// <summary>
+        /// SQL语句
+        /// </summary>
+        public string SqlString { get; set; }
+
+        /// <summary>
+        /// SQL查询开始时间
+        /// </summary>
+        public DateTime SqlStartTime { get; set; }
+
+        /// <summary>
+        /// Sql查询结束时间
+        /// </summary>
+        public DateTime SqlEndTime { get; set; }
+
+        /// <summary>
         /// 生成文件信息
         /// </summary>
         public T8FileInfoEntity FileGenerateInfo { get; set; }

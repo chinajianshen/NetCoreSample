@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.Entity
+namespace OpenBook.Bee.Core
 {
     public class FirstModel : IService
     {

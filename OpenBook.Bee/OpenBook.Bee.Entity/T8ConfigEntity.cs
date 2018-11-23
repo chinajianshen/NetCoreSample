@@ -31,18 +31,25 @@ namespace OpenBook.Bee.Entity
 
         public T8ConfigEntity()
         {
-            _T8ItemDic = new ConcurrentDictionary<DateType, T8ConfigItemEntity>();           
+            _T8ItemDic = new ConcurrentDictionary<DateType, T8ConfigItemEntity>();
+            FtpInfo = new FtpInfoEntity();
+            DataBaseInfo = new DataBaseInfoEntity();
         }        
 
         /// <summary>
         /// 数据库信息
         /// </summary>
-        public DataBaseInfoEntity DataBaseInfo { get; set; }     
+        //public DataBaseInfoEntity DataBaseInfo { get; set; }     
 
         /// <summary>
         /// FTP信息
         /// </summary>
         public FtpInfoEntity FtpInfo { get; set; }
+
+        /// <summary>
+        /// 数据库信息
+        /// </summary>
+        public DataBaseInfoEntity DataBaseInfo { get; set; }
     }
 
     /// <summary>
@@ -59,12 +66,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 数据类型
         /// </summary>
-        public DataType DataType { get; set; }
-
-        /// <summary>
-        /// 数据库信息
-        /// </summary>
-        public DataBaseInfoEntity DataBaseInfo { get; set; }
+        public DataType DataType { get; set; }       
 
         /// <summary>
         /// SQL语句
@@ -81,7 +83,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 定时开始时间
         /// </summary>
-        public DateTime TimingStartTime { get; set; }
+        public DateTime TimingStartTime { get; set; }      
 
         /// <summary>
         ///  定时结束日期点
@@ -91,6 +93,6 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 定时结束时间
         /// </summary>
-        public DateTime TimingEndTime { get; set; }
+        public DateTime TimingEndTime { get; set; }       
     }
 }

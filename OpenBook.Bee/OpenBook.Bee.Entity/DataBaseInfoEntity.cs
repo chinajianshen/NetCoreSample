@@ -13,7 +13,7 @@ namespace OpenBook.Bee.Entity
     public class DataBaseInfoEntity
     {
         /// <summary>
-        /// 数据汉语名称
+        /// 数据库汉语名称
         /// </summary>
         public string DataBaseTitle { get; set; }
 

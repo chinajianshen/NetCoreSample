@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Tester", "Open
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Entity", "OpenBook.Bee.Entity\OpenBook.Bee.Entity.csproj", "{593D7C14-EB6D-49A1-8505-A05AA23F094F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.BLL", "OpenBook.Bee.BLL\OpenBook.Bee.BLL.csproj", "{AEC55985-84ED-41AE-8C92-D2797FB7BE89}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.DAO", "OpenBook.Bee.DAO\OpenBook.Bee.DAO.csproj", "{513E004A-E624-444A-B8E1-2EAB06099A29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Service", "OpenBook.Bee.Service\OpenBook.Bee.Service.csproj", "{8343CEE4-261B-471E-8ACE-5CAD740B9F88}"
@@ -45,10 +43,6 @@ Global
 		{593D7C14-EB6D-49A1-8505-A05AA23F094F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{593D7C14-EB6D-49A1-8505-A05AA23F094F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{593D7C14-EB6D-49A1-8505-A05AA23F094F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEC55985-84ED-41AE-8C92-D2797FB7BE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEC55985-84ED-41AE-8C92-D2797FB7BE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEC55985-84ED-41AE-8C92-D2797FB7BE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEC55985-84ED-41AE-8C92-D2797FB7BE89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{513E004A-E624-444A-B8E1-2EAB06099A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{513E004A-E624-444A-B8E1-2EAB06099A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{513E004A-E624-444A-B8E1-2EAB06099A29}.Release|Any CPU.ActiveCfg = Release|Any CPU

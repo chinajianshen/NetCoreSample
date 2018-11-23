@@ -20,7 +20,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 任务名称
         /// </summary>
-        public string TaskTitle { get; set; }
+        public string TaskTitle { get; set; }        
 
         /// <summary>
         /// 生成时间

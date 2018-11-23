@@ -11,6 +11,8 @@ namespace OpenBook.Bee.Entity
     /// </summary>
     public enum TaskStatus
     {
+        Default =0,
+
         /// <summary>
         /// 新建
         /// </summary>
@@ -37,6 +39,8 @@ namespace OpenBook.Bee.Entity
     /// </summary>
     public enum StepStatus
     {
+        Default = 0,
+
         /// <summary>
         /// 生成文件
         /// </summary>
@@ -109,7 +113,11 @@ namespace OpenBook.Bee.Entity
 
         Oracle =2,
 
-        MySql =4
+        MySql =4,
+        
+        Sybase =8,
+     
+        DB2 = 16,      
     }
 
     /// <summary>
@@ -126,5 +134,42 @@ namespace OpenBook.Bee.Entity
         /// 在架数据
         /// </summary>
         OnShelfData =2
+    }
+
+    public enum LogTypes
+    {
+        /// <summary>
+        /// 数据查询
+        /// </summary>
+        DataSearch = 1,
+        /// <summary>
+        /// 页面浏览
+        /// </summary>
+        PageBrowse = 2,
+        /// <summary>
+        /// 功能使用
+        /// </summary>
+        FunctionUsing = 3,
+        /// <summary>
+        /// 权限变更
+        /// </summary>
+        AuthorityChanged = 4,
+        /// <summary>
+        /// 错误日志
+        /// </summary>
+        SysError = 5,
+        /// <summary>
+        /// 系统日志
+        /// </summary>
+        SysLog = 6,
+        /// <summary>
+        /// 数据导出
+        /// </summary>
+        DataOutput = 7,
+        /// <summary>
+        /// Smart3.0日志
+        /// </summary>
+        PageLogs = 10,
+
     }
 }

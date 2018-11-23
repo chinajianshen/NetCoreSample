@@ -39,6 +39,7 @@ namespace OpenBook.Bee.Utils
             }
             catch (Exception ex)
             {
+                LogUtil.WriteLog(ex);
                 return false;
             }
         }
@@ -71,6 +72,7 @@ namespace OpenBook.Bee.Utils
             }
             catch (Exception ex)
             {
+                LogUtil.WriteLog(ex);
                 return null;
             }          
         }

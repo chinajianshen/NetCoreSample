@@ -42,8 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoFac\FirstModel.cs" />
+    <Compile Include="DataBaseProcess.cs" />
+    <Compile Include="FtpProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="TaskControlCenter.cs" />
+    <Compile Include="TaskFileProcess.cs" />
+    <Compile Include="TaskProcess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBook.Bee.DAO\OpenBook.Bee.DAO.csproj">
+      <Project>{513e004a-e624-444a-b8e1-2eab06099a29}</Project>
+      <Name>OpenBook.Bee.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Entity\OpenBook.Bee.Entity.csproj">
+      <Project>{593d7c14-eb6d-49a1-8505-a05aa23f094f}</Project>
+      <Name>OpenBook.Bee.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Interface\OpenBook.Bee.Interface.csproj">
+      <Project>{43345458-6e4d-41fc-8b47-17d4fd284e68}</Project>
+      <Name>OpenBook.Bee.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
