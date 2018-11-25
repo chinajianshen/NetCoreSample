@@ -32,8 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,9 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoFac\AutoFacConfiguration.cs" />
+    <Compile Include="AutoFac\AutoFacContainer.cs" />
     <Compile Include="AutoFac\FirstModel.cs" />
+    <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="DataBaseProcess.cs" />
     <Compile Include="FtpProcess.cs" />
+    <Compile Include="MEF\HelloWord.cs" />
+    <Compile Include="MEF\MefConfiguration.cs" />
+    <Compile Include="MEF\MefContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskControlCenter.cs" />
     <Compile Include="TaskFileProcess.cs" />
@@ -63,6 +80,14 @@
       <Project>{43345458-6e4d-41fc-8b47-17d4fd284e68}</Project>
       <Name>OpenBook.Bee.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenBook.Bee.Utils\OpenBook.Bee.Utils.csproj">
+      <Project>{0d55a95a-c81d-4cc6-95ba-f9a68a360813}</Project>
+      <Name>OpenBook.Bee.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

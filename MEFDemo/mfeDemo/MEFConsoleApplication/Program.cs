@@ -14,17 +14,17 @@ namespace MEFConsoleApplication
     //[Export] //不用写
     class Program
     {
-       // [ImportMany]
-       //public IEnumerable<IHelloWord> HelloWord { get; set; }
+        [ImportMany]
+        public IEnumerable<IHelloWord> HelloWord { get; set; }
 
-       [Import]
-       public IHelloWord HelloWord { get; set; }
+        //[Import]
+        //public IHelloWord HelloWord { get; set; }
 
-        //[ImportMany]
-        //public IEnumerable<IOpenBook> OpenBook { get; set; }
+        [ImportMany]
+        public IEnumerable<IOpenBook> OpenBook { get; set; }
 
-        [Import]
-        public IOpenBook OpenBook { get; set; }
+        //[Import]
+        //public IOpenBook OpenBook { get; set; }
 
         static void Main(string[] args)
         {
@@ -48,19 +48,21 @@ namespace MEFConsoleApplication
                                          //Console.WriteLine(HelloWord.SayHello("eric"));
                                          //Console.WriteLine(HelloWord.SayWord("_eric"));
 
+          
 
-            //foreach (var item in HelloWord)
-            //{
-            //    Console.WriteLine(item.SayHello("eric"));
-            //}
 
-            //foreach (var item in OpenBook)
-            //{
-            //    Console.WriteLine(item.Department());
-            //}
+            foreach (var item in HelloWord)
+            {
+                Console.WriteLine(item.SayHello("eric"));
+            }
 
-            Console.WriteLine(HelloWord.SayHello("eric"));
-            Console.WriteLine(OpenBook.Department());
+            foreach (var item in OpenBook)
+            {
+                Console.WriteLine(item.Department());
+            }
+
+            //Console.WriteLine(HelloWord.SayHello("eric"));
+            //Console.WriteLine(OpenBook.Department());
 
             Console.Read();
         }

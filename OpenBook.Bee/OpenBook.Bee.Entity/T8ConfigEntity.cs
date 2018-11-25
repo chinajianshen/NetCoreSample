@@ -14,32 +14,37 @@ namespace OpenBook.Bee.Entity
     [Serializable]
     public class T8ConfigEntity
     {
-        private  ConcurrentDictionary<DateType, T8ConfigItemEntity> _T8ItemDic;
+        private  ConcurrentDictionary<DateType, T8ConfigItemContainer> _T8ItemContainerDic;
 
-        public  ConcurrentDictionary<DateType, T8ConfigItemEntity> T8ConfigItemDic
+        public  ConcurrentDictionary<DateType, T8ConfigItemContainer> T8ItemContainerDic
         {
             get
             {
-                return _T8ItemDic;
+                return _T8ItemContainerDic;
             }
 
             set
             {
-                _T8ItemDic = value;
+                _T8ItemContainerDic = value;
             }
         }
 
         public T8ConfigEntity()
         {
-            _T8ItemDic = new ConcurrentDictionary<DateType, T8ConfigItemEntity>();
+            _T8ItemContainerDic = new ConcurrentDictionary<DateType, T8ConfigItemContainer>();
             FtpInfo = new FtpInfoEntity();
             DataBaseInfo = new DataBaseInfoEntity();
-        }        
+        }               
 
         /// <summary>
-        /// 数据库信息
+        /// 商家Pos类型
         /// </summary>
-        //public DataBaseInfoEntity DataBaseInfo { get; set; }     
+        public PosType PosType { get; set; }
+
+        /// <summary>
+        /// 数据库文件类型
+        /// </summary>
+        public DbFileType DbFileType { get; set; }
 
         /// <summary>
         /// FTP信息
@@ -50,6 +55,23 @@ namespace OpenBook.Bee.Entity
         /// 数据库信息
         /// </summary>
         public DataBaseInfoEntity DataBaseInfo { get; set; }
+    }
+
+    /// <summary>
+    /// T8配置项容器类
+    /// </summary>
+    [Serializable]
+    public class T8ConfigItemContainer
+    {
+        /// <summary>
+        /// 销售数据配置项
+        /// </summary>
+        public T8ConfigItemEntity T8ConfigItemSale { get; set; }
+
+        /// <summary>
+        /// 在架数据配置项
+        /// </summary>
+        public T8ConfigItemEntity T8ConfigITemOnSale { get; set; }
     }
 
     /// <summary>
@@ -78,21 +100,21 @@ namespace OpenBook.Bee.Entity
         /// 如 月 15 当月15号
         ///    周 1周一（计算当周具体日期）
         /// </summary>
-        public int TimingStartDate { get; set; }
+        //public int TimingStartDate { get; set; }
 
         /// <summary>
         /// 定时开始时间
         /// </summary>
-        public DateTime TimingStartTime { get; set; }      
+        //public DateTime TimingStartTime { get; set; }      
 
         /// <summary>
         ///  定时结束日期点
         /// </summary>
-        public int TimingEndDate { get; set; }
+        //public int TimingEndDate { get; set; }
 
         /// <summary>
         /// 定时结束时间
         /// </summary>
-        public DateTime TimingEndTime { get; set; }       
+        //public DateTime TimingEndTime { get; set; }       
     }
 }

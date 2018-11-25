@@ -12,6 +12,11 @@ namespace OpenBook.Bee.Entity
     [Serializable]
     public class T8TaskEntity
     {
+        public T8TaskEntity()
+        {
+            this.TaskGuid = Guid.NewGuid().ToString();
+        }
+
         /// <summary>
         /// 任务的ID，是一个随机生成的GUID
         /// </summary>
@@ -35,7 +40,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 任务状态
         /// </summary>
-         public TaskStatus TaskStatus { get; set; }        
+         public T8TaskStatus T8TaskStatus { get; set; }        
 
         // 任务源类型
         /// </summary>

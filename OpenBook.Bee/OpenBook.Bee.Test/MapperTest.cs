@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.Test.AutoMapperTest
+namespace OpenBook.Bee.Test
 {
     public class MapperTest
     {

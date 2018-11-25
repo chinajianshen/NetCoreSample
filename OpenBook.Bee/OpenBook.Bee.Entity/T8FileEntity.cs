@@ -11,11 +11,7 @@ namespace OpenBook.Bee.Entity
     /// </summary>
     [Serializable]
     public class T8FileEntity
-    {
-        /// <summary>
-        /// 文件名
-        /// </summary>
-        public string FileName { get; set; }
+    {       
 
         /// <summary>
         /// SQL语句
@@ -33,21 +29,9 @@ namespace OpenBook.Bee.Entity
         public DateTime SqlEndTime { get; set; }
 
         /// <summary>
-        /// 生成文件信息
+        /// 数据文件类型
         /// </summary>
-        public T8FileInfoEntity FileGenerateInfo { get; set; }
-
-        /// <summary>
-        /// 生成压缩文件信息
-        /// </summary>
-
-        public T8FileInfoEntity FileCompressedInfo { get; set; }
-
-        /// <summary>
-        /// 上传文件备份信息
-        /// </summary>
-
-        public T8FileInfoEntity FileUploadBackInfo { get; set; }      
+        public DbFileType DbFileType { get; set; }
 
         /// <summary>
         /// 步骤状态
@@ -64,6 +48,10 @@ namespace OpenBook.Bee.Entity
         /// </summary>
         public DataType DataType { get; set; }
 
+        // 任务源类型
+        /// </summary>
+        public TaskSourceType TaskSourceType { get; set; }
+
         /// <summary>
         /// Ftp类
         /// </summary>
@@ -73,6 +61,23 @@ namespace OpenBook.Bee.Entity
         /// 数据库信息
         /// </summary>
         public DataBaseInfoEntity DataBaseInfo { get; set; }
+
+        /// <summary>
+        /// 生成文件信息
+        /// </summary>
+        public T8FileInfoEntity GeneralFileInfo { get; set; }
+
+        /// <summary>
+        /// 生成压缩文件信息
+        /// </summary>
+
+        public T8FileInfoEntity CompressFileInfo { get; set; }
+
+        /// <summary>
+        /// 上传文件备份信息
+        /// </summary>
+
+        public T8FileInfoEntity UploadBackFileInfo { get; set; }             
     }
 
     /// <summary>

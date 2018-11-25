@@ -15,7 +15,7 @@ namespace OpenBook.Bee.Utils
    public class T8ConfigHelper
     {
         private static string _T8ConfigFilePath;
-        private static ConcurrentDictionary<DateType, T8ConfigItemEntity> _T8ItemDic;
+        private static ConcurrentDictionary<DateType, T8ConfigItemContainer> _T8ItemContainerDic;
 
         public static T8ConfigEntity T8Config { get; private set; }       
 
@@ -25,7 +25,7 @@ namespace OpenBook.Bee.Utils
             T8Config = SerializableHelper<T8ConfigEntity>.BinaryDeserialize(_T8ConfigFilePath);
             if (T8Config != null)
             {
-                _T8ItemDic = T8Config.T8ConfigItemDic;
+                _T8ItemContainerDic = T8Config.T8ItemContainerDic;
             }
             else
             {
@@ -36,23 +36,45 @@ namespace OpenBook.Bee.Utils
         /// <summary>
         /// 添加配置项
         /// </summary>
+        /// <param name="dateType"></param>
+        /// <param name="dataType"></param>
         /// <param name="item"></param>
-        public static bool AddItem(DateType dateType, T8ConfigItemEntity item)
-        {           
-            if ( _T8ItemDic.TryAdd(dateType, item))
+        /// <returns></returns>
+        public static bool AddItem(DateType dateType,DataType dataType, T8ConfigItemEntity item)
+        {         
+            if (item == null)
             {
-                T8Config.T8ConfigItemDic = _T8ItemDic;
-                if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
-                {
-                    return true;
+                return false;
+            }
+            
+            T8ConfigItemContainer t8ConfigItemContainer;
+            if (T8Config.T8ItemContainerDic.TryGetValue(dateType,out t8ConfigItemContainer))
+            {
+                if (dataType == DataType.SaleData)
+                {                   
+                    t8ConfigItemContainer.T8ConfigItemSale = item;
                 }
                 else
                 {
-                    T8ConfigItemEntity newitem;
-                    _T8ItemDic.TryRemove(dateType, out newitem);
-                    return false;
+                    t8ConfigItemContainer.T8ConfigITemOnSale = item;
+                }
+
+                if (_T8ItemContainerDic.TryAdd(dateType, t8ConfigItemContainer))
+                {
+                    T8Config.T8ItemContainerDic = _T8ItemContainerDic;
+                    if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        //T8ConfigItemContainer newitemContainer;
+                        //_T8ItemContainerDic.TryRemove(dateType, out newitem);
+                        return false;
+                    }
                 }
             }
+           
             return false;
         }
 
@@ -61,19 +83,19 @@ namespace OpenBook.Bee.Utils
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public static bool Remove(DateType dateType)
+        public static bool Remove(DateType dateType,DataType dataType)
         {
-            T8ConfigItemEntity item;
-            if (_T8ItemDic.TryRemove(dateType,out item))
+            T8ConfigItemContainer item;
+            if (_T8ItemContainerDic.TryRemove(dateType,out item))
             {
-                T8Config.T8ConfigItemDic = _T8ItemDic;
+                T8Config.T8ItemContainerDic = _T8ItemContainerDic;
                 if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
                 {
                     return true;
                 }
                 else
-                {                   
-                    _T8ItemDic.TryAdd(dateType, item);
+                {
+                    _T8ItemContainerDic.TryAdd(dateType, item);
                     return false;
                 }
             }

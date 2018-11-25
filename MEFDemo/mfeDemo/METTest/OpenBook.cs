@@ -15,12 +15,12 @@ namespace METTest
         }
     }
 
-    //[Export(typeof(IOpenBook))]
-    //public class OpenBookB : IOpenBook
-    //{
-    //    public string Department()
-    //    {
-    //        return "来自研究部";
-    //    }
-    //}
+    [Export(typeof(IOpenBook))]
+    public class OpenBookB : IOpenBook
+    {
+        public string Department()
+        {
+            return "来自研究部";
+        }
+    }
 }

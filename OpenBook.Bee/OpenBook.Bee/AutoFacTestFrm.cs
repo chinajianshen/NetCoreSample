@@ -1,6 +1,6 @@
 ﻿using Autofac;
+using OpenBook.Bee.Core;
 using OpenBook.Bee.Entity;
-using OpenBook.Bee.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -9,7 +9,7 @@ namespace OpenBook.Bee.Entity
     /// <summary>
     /// 任务状态
     /// </summary>
-    public enum TaskStatus
+    public enum T8TaskStatus
     {
         Default =0,
 
@@ -70,22 +70,12 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 周
         /// </summary>
-        Week=2,
-
-        /// <summary>
-        /// 年
-        /// </summary>
-        Year=4,
-
-        /// <summary>
-        /// 1-N
-        /// </summary>
-        CY=8,
+        Week=2,        
 
         /// <summary>
         /// 天
         /// </summary>
-        Day=16
+        Day=4
     }
 
     /// <summary>
@@ -136,6 +126,30 @@ namespace OpenBook.Bee.Entity
         OnShelfData =2
     }
 
+    /// <summary>
+    /// 数据库文件类型
+    /// </summary>
+    public enum DbFileType
+    {
+        Access =1,
+        SQLite =2
+    }
+
+    /// <summary>
+    /// pos类型
+    /// </summary>
+    public enum PosType
+    {
+        自定义=0,
+        金高=1
+    }
+
+
+
+
+
+
+
     public enum LogTypes
     {
         /// <summary>
@@ -172,4 +186,6 @@ namespace OpenBook.Bee.Entity
         PageLogs = 10,
 
     }
+
+   
 }

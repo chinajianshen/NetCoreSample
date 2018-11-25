@@ -9,7 +9,7 @@ namespace OpenBook.Bee.Utils
     /// <summary>
     /// DateTimes 的摘要说明。
     /// </summary>
-    public abstract class DateTimeMaster
+    public class DateTimeMaster
     {
         public static string DateTimeFormat = "yyyy-MM-dd HH\\:mm\\:ss";
         public static string DateFormat = "yyyy-MM-dd";
@@ -89,7 +89,51 @@ namespace OpenBook.Bee.Utils
         }
 
         /// <summary>
-        /// 本周起始日期
+        /// 今天起始时间  精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime DayBegin(DateTime dt)
+        {
+            DateTime day = dt.Date;
+            return day;
+        }
+
+        /// <summary>
+        /// 今天结束时间  精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime DayEnd(DateTime dt)
+        {
+            DateTime day = dt.Date.AddDays(1).AddSeconds(-1);
+            return day;
+        }
+
+        /// <summary>
+        /// 昨天起始时间  精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime LastDayBegin(DateTime dt)
+        {
+            DateTime lastDay = dt.Date.AddDays(-1);
+            return lastDay;
+        }
+
+        /// <summary>
+        /// 昨天结束时间  精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime LastDayEnd(DateTime dt)
+        {
+            DateTime lastDay = dt.Date.AddSeconds(-1);
+            return lastDay;
+        }
+
+        /// <summary>
+        /// 本周起始日期 精确到秒
         /// </summary>
         /// <param name="dt"></param>
         /// <returns></returns>
@@ -102,7 +146,7 @@ namespace OpenBook.Bee.Utils
             }
             int daydiff = (-1) * (weeknow - 1);
             DateTime dateBegin = dt.AddDays(daydiff);
-            return dateBegin;
+            return dateBegin.Date;
         }
 
         /// <summary>
@@ -118,7 +162,7 @@ namespace OpenBook.Bee.Utils
                 weeknow = 7;
             }
             int dayadd = 7 - weeknow;
-            DateTime dateEnd = dt.AddDays(dayadd);
+            DateTime dateEnd = dt.AddDays(dayadd).AddDays(1).Date.AddSeconds(-1);
             return dateEnd;
         }
 
@@ -152,7 +196,7 @@ namespace OpenBook.Bee.Utils
         public static DateTime LastMonthBegin(DateTime dt)
         {
             DateTime lastMonth = dt.AddMonths(-1);
-            return new DateTime(lastMonth.Year, lastMonth.Month, lastMonth.Day, 0, 0, 0);
+            return new DateTime(lastMonth.Year, lastMonth.Month,1, 0, 0, 0);
         }
 
         /// <summary>
@@ -163,7 +207,8 @@ namespace OpenBook.Bee.Utils
         public static DateTime LastMonthEnd(DateTime dt)
         {
             DateTime lastMonth = dt.AddMonths(-1);
-            return new DateTime(lastMonth.Year, lastMonth.Month, lastMonth.Day, 23, 59, 59);
+            int days = DaysInMonth(lastMonth.Year, lastMonth.Month);
+            return new DateTime(lastMonth.Year, lastMonth.Month, days, 23, 59, 59);
         }
 
         /// <summary>
@@ -503,15 +548,27 @@ namespace OpenBook.Bee.Utils
             //return new DateTime(dt.Year, dt.Month, dt.Day + 1, 0, 0, 0);
         }
 
+        /// <summary>
+        ///  当月开始时间 精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
         public static DateTime MonthBegin(DateTime dt)
         {
             return new DateTime(dt.Year, dt.Month, 1, 0, 0, 0);
         }
+
+        /// <summary>
+        /// 当月结束时间 精确到秒
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
         public static DateTime MonthEnd(DateTime dt)
         {
-            int year = dt.Month + 1 > 12 ? dt.Year + 1 : dt.Year;
-            int month = dt.Month + 1 > 12 ? 1 : dt.Month + 1;
-            return new DateTime(year, month, 1, 0, 0, 0);
+            //int year = dt.Month + 1 > 12 ? dt.Year + 1 : dt.Year;
+            //int month = dt.Month + 1 > 12 ? 1 : dt.Month + 1;
+            int days = DaysInMonth(dt.Year, dt.Month);
+            return new DateTime(dt.Year, dt.Month, days, 23, 59, 59);
         }
         public static DateTime QuarterStart(DateTime dt)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,10 @@ namespace OpenBook.Bee.Test
             if (isNewCreate)
             {
                 T8ConfigEntity t8ConfigEntity = T8ConfigHelper.T8Config;
+                t8ConfigEntity.PosType = PosType.自定义;
+                t8ConfigEntity.DbFileType = DbFileType.SQLite;
 
-
-                t8ConfigEntity.T8ConfigItemDic = new System.Collections.Concurrent.ConcurrentDictionary<DateType, T8ConfigItemEntity>();
+                t8ConfigEntity.T8ItemContainerDic = new ConcurrentDictionary<DateType, T8ConfigItemContainer>();
 
                 t8ConfigEntity.FtpInfo = new FtpInfoEntity
                 {
@@ -44,7 +46,20 @@ namespace OpenBook.Bee.Test
                     SqlString = "select ISBN AS '书号',Title '书名',PublishName '出版社',Price '定价',KindName '分类',SalesCount '销量',Author '作者',SalesDateTime '销售时间',StoreID '仓号' FROM T8_BookInfo where SalesDateTime >= @StartTime and SalesDateTime <= @EndTime ",
 
                 };
-                t8ConfigEntity.T8ConfigItemDic.TryAdd(DateType.Month, t8ConfigItem);
+
+                T8ConfigItemEntity t8ConfigItemOnSale = new T8ConfigItemEntity
+                {
+                    DateType = DateType.Month,
+                    DataType = DataType.OnShelfData,
+                    SqlString = "select ISBN AS '书号',Title '书名',PublishName '出版社',Price '定价',KindName '分类',SalesCount '销量',Author '作者',SalesDateTime '销售时间',StoreID '仓号' FROM T8_BookInfo where SalesDateTime >= @StartTime and SalesDateTime <= @EndTime ",
+
+                };
+
+                T8ConfigItemContainer container = new T8ConfigItemContainer();
+                container.T8ConfigItemSale = t8ConfigItem;
+                container.T8ConfigITemOnSale = t8ConfigItemOnSale;
+
+                t8ConfigEntity.T8ItemContainerDic.TryAdd(DateType.Month, container);
 
                 t8ConfigItem = new T8ConfigItemEntity
                 {
@@ -53,7 +68,20 @@ namespace OpenBook.Bee.Test
                     SqlString = "select ISBN AS '书号',Title '书名',PublishName '出版社',Price '定价',KindName '分类',SalesCount '销量',Author '作者',SalesDateTime '销售时间',StoreID '仓号' FROM T8_BookInfo where SalesDateTime >= @StartTime and SalesDateTime <= @EndTime ",
 
                 };
-                t8ConfigEntity.T8ConfigItemDic.TryAdd(DateType.Week, t8ConfigItem);
+
+                t8ConfigItemOnSale = new T8ConfigItemEntity
+                {
+                    DateType = DateType.Week,
+                    DataType = DataType.OnShelfData,
+                    SqlString = "select ISBN AS '书号',Title '书名',PublishName '出版社',Price '定价',KindName '分类',SalesCount '销量',Author '作者',SalesDateTime '销售时间',StoreID '仓号' FROM T8_BookInfo where SalesDateTime >= @StartTime and SalesDateTime <= @EndTime ",
+
+                };
+
+                container = new T8ConfigItemContainer();
+                container.T8ConfigItemSale = t8ConfigItem;
+                container.T8ConfigITemOnSale = t8ConfigItemOnSale;
+
+                t8ConfigEntity.T8ItemContainerDic.TryAdd(DateType.Week, container);
 
                 T8ConfigHelper.AddT8Config(t8ConfigEntity);
             }

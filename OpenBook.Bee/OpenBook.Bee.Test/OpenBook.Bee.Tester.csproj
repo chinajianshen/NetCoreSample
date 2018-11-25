@@ -53,13 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoFacConfiguration.cs" />
-    <Compile Include="AutoFac\AutoFacTest.cs" />
-    <Compile Include="AutoMapperConfiguration.cs" />
-    <Compile Include="AutoMapperTest\MapperTest.cs" />
+    <Compile Include="AutoFacTest.cs" />
+    <Compile Include="MapperTest.cs" />
     <Compile Include="T8ConfigSetting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T8ServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

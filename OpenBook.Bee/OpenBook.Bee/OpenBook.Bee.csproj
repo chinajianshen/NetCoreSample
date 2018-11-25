@@ -99,6 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Openbook.Bee.Core\OpenBook.Bee.Core.csproj">
+      <Project>{a1502f83-ad51-48e0-8a2b-3a8fbb4353a1}</Project>
+      <Name>OpenBook.Bee.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenBook.Bee.Entity\OpenBook.Bee.Entity.csproj">
       <Project>{593d7c14-eb6d-49a1-8505-a05aa23f094f}</Project>
       <Name>OpenBook.Bee.Entity</Name>

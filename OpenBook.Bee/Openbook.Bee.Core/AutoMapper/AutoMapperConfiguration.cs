@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
 using OpenBook.Bee.Entity.AutoMapper;
-using OpenBook.Bee.Test.AutoMapperTest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.Test
+namespace Openbook.Bee.Core.AutoMapper
 {
     public class AutoMapperConfiguration
     {

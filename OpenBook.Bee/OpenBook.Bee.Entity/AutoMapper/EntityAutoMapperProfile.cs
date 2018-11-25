@@ -11,10 +11,16 @@ namespace OpenBook.Bee.Entity.AutoMapper
     {
         public EntityAutoMapperProfile()
         {
+            InitMapperEntities();
+        }
+
+        private void InitMapperEntities()
+        {
             //Mapper.AssertConfigurationIsValid();
             //自定义解析器 opt.ResolveUsing<CustomResolver>();
             //自定义类型转换器 .ConvertUsing<CustomConverter>()
 
+            #region 测试用例
             //属性名不一致时
             CreateMap<Source, Destination>()
                 .ForMember(dest => dest.Name2, opt => { opt.MapFrom(s => s.Name); }); //opt.Ignore();忽略
@@ -30,7 +36,11 @@ namespace OpenBook.Bee.Entity.AutoMapper
                  .ForMember(dest => dest.EventDate, opt => opt.MapFrom(src => src.Date))
                  .ForMember(dest => dest.EventMinute, opt => opt.MapFrom(src => src.Date.Minute))
                  .ForMember(dest => dest.DisplayTitle, opt => opt.MapFrom(src => src.Title + src.Date.Minute.ToString()));
-            
+            #endregion
+
+            //映射T8配置类到数据文件类
+            CreateMap<T8ConfigEntity, T8FileEntity>();         
+            CreateMap<T8ConfigItemEntity, T8FileEntity>();
         }
     }
 
