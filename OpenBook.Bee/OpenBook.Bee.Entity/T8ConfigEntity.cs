@@ -71,7 +71,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 在架数据配置项
         /// </summary>
-        public T8ConfigItemEntity T8ConfigITemOnSale { get; set; }
+        public T8ConfigItemEntity T8ConfigITemOnShelf { get; set; }
     }
 
     /// <summary>
@@ -80,6 +80,15 @@ namespace OpenBook.Bee.Entity
     [Serializable]
     public class T8ConfigItemEntity
     {
+        public string ConfigItemKey
+        {
+            get
+            {
+                return $"{this.DateType}_{this.DataType}";
+            }
+        }
+       
+
         /// <summary>
         /// 日期类型
         /// </summary>

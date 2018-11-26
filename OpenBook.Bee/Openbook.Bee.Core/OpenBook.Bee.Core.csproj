@@ -56,8 +56,10 @@
     <Compile Include="AutoFac\AutoFacContainer.cs" />
     <Compile Include="AutoFac\FirstModel.cs" />
     <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
+    <Compile Include="BuildInstanceObject.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="DataBaseProcess.cs" />
+    <Compile Include="DbFileProduct.cs" />
     <Compile Include="FtpProcess.cs" />
     <Compile Include="MEF\HelloWord.cs" />
     <Compile Include="MEF\MefConfiguration.cs" />

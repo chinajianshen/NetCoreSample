@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AppPath.cs" />
     <Compile Include="DateTimeMaster.cs" />
+    <Compile Include="DeepCopyUtil.cs" />
     <Compile Include="FtpHelper.cs" />
     <Compile Include="LogUtil.cs" />
     <Compile Include="MD5_HMAC.cs" />

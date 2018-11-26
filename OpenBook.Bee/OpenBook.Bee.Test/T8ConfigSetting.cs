@@ -57,7 +57,7 @@ namespace OpenBook.Bee.Test
 
                 T8ConfigItemContainer container = new T8ConfigItemContainer();
                 container.T8ConfigItemSale = t8ConfigItem;
-                container.T8ConfigITemOnSale = t8ConfigItemOnSale;
+                container.T8ConfigITemOnShelf = t8ConfigItemOnSale;
 
                 t8ConfigEntity.T8ItemContainerDic.TryAdd(DateType.Month, container);
 
@@ -79,7 +79,7 @@ namespace OpenBook.Bee.Test
 
                 container = new T8ConfigItemContainer();
                 container.T8ConfigItemSale = t8ConfigItem;
-                container.T8ConfigITemOnSale = t8ConfigItemOnSale;
+                container.T8ConfigITemOnShelf = t8ConfigItemOnSale;
 
                 t8ConfigEntity.T8ItemContainerDic.TryAdd(DateType.Week, container);
 

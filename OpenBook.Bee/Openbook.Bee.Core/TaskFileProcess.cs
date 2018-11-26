@@ -12,9 +12,9 @@ namespace Openbook.Bee.Core
     /// <summary>
     /// 任务文件处理
     /// </summary>
-   public class TaskFileProcess
+    public class TaskFileProcess
     {
-        
+
     }
 
     #region 生成文件名
@@ -44,7 +44,7 @@ namespace Openbook.Bee.Core
         /// </summary>
         /// <param name="t8FileEntity"></param>
         /// <returns></returns>
-        public  string FileFullName(T8FileEntity t8FileEntity)
+        public string FileFullName(T8FileEntity t8FileEntity)
         {
             return _AFileName.FileFullName(t8FileEntity);
         }
@@ -77,18 +77,25 @@ namespace Openbook.Bee.Core
         /// <returns></returns>
         public abstract string FileFullName(T8FileEntity t8FileEntity);
 
+
         /// <summary>
         /// 得到文件名
         /// </summary>
         /// <param name="t8FileEntity"></param>
+        /// <param name="type">1一般文件目录 2压缩文件目录 3上传备份文件目录</param>
         /// <returns></returns>
-        protected virtual string GetFileName(T8FileEntity t8FileEntity)
+        protected virtual string GetFileName(T8FileEntity t8FileEntity, int type)
         {
+            //t8jyqssd_20181029_20181029_S.mdb.zip
             if (string.IsNullOrEmpty(this.fileName))
             {
                 string suffix = Common.GetDateTypeName(t8FileEntity.DateType) + Common.GetDataTypeName(t8FileEntity.DataType);
                 string extName = Common.GetDBFileExtName(t8FileEntity.DbFileType);
                 fileName = $"{t8FileEntity.FtpInfo.UserName}_{t8FileEntity.SqlStartTime.ToString("yyyyMMdd")}_{t8FileEntity.SqlEndTime.ToString("yyyyMMdd")}_{suffix}{extName}";
+                if (type == 2)
+                {
+                    fileName = fileName + ".zip";
+                }
             }
             return fileName;
         }
@@ -100,7 +107,7 @@ namespace Openbook.Bee.Core
         /// <param name="t8FileEntity"></param>
         /// <param name="type">1一般文件目录 2压缩文件目录 3上传备份文件目录</param>
         /// <returns></returns>
-        public string GetFileFullName(T8FileEntity t8FileEntity,int type)
+        public string GetFileFullName(T8FileEntity t8FileEntity, int type)
         {
             string dbFilePath = Path.Combine(filePath, Common.GetDirName(t8FileEntity.TaskSourceType));
             dbFilePath = Path.Combine(dbFilePath, Common.GetSubDirName(type));
@@ -110,9 +117,14 @@ namespace Openbook.Bee.Core
                 string suffix = Common.GetDateTypeName(t8FileEntity.DateType) + Common.GetDataTypeName(t8FileEntity.DataType);
                 string extName = Common.GetDBFileExtName(t8FileEntity.DbFileType);
                 fileName = $"{t8FileEntity.FtpInfo.UserName}_{t8FileEntity.SqlStartTime.ToString("yyyyMMdd")}_{t8FileEntity.SqlEndTime.ToString("yyyyMMdd")}_{suffix}{extName}";
+                if (type == 2)
+                {
+                    fileName = fileName + ".zip";
+                }
             }
 
             dbFilePath = Path.Combine(dbFilePath, fileName);
+
             return dbFilePath;
         }
     }
@@ -129,7 +141,7 @@ namespace Openbook.Bee.Core
 
         public override string FileName(T8FileEntity t8FileEntity)
         {
-            return base.GetFileName(t8FileEntity);
+            return base.GetFileName(t8FileEntity,1);
         }
     }
 
@@ -140,12 +152,12 @@ namespace Openbook.Bee.Core
     {
         public override string FileFullName(T8FileEntity t8FileEntity)
         {
-            return base.GetFileFullName(t8FileEntity,2);
+            return base.GetFileFullName(t8FileEntity, 2);
         }
 
         public override string FileName(T8FileEntity t8FileEntity)
         {
-            return base.GetFileName(t8FileEntity);
+            return base.GetFileName(t8FileEntity,2);
         }
     }
 
@@ -157,11 +169,11 @@ namespace Openbook.Bee.Core
         public override string FileFullName(T8FileEntity t8FileEntity)
         {
             if (t8FileEntity.CompressFileInfo == null || string.IsNullOrEmpty(t8FileEntity.CompressFileInfo.FileName))
-            {                
+            {
                 throw new Exception("CompressFileInfo.FileName文件名为空");
             }
             string fileFullName = Path.Combine(base.filePath, Common.GetDirName(t8FileEntity.TaskSourceType));
-            fileFullName = Path.Combine(fileFullName, Common.GetSubDirName(3),t8FileEntity.CompressFileInfo.FileName);
+            fileFullName = Path.Combine(fileFullName, Common.GetSubDirName(3), t8FileEntity.CompressFileInfo.FileName);
             return fileFullName;
 
         }
@@ -235,7 +247,7 @@ namespace Openbook.Bee.Core
     /// 月查询起始时间(上月)
     /// </summary>
     public class MonthSqlQueryTime : ISqlQueryTime
-    {  
+    {
         public DateTime EndTime(DateTime basetime)
         {
             return DateTimeMaster.LastMonthEnd(basetime);

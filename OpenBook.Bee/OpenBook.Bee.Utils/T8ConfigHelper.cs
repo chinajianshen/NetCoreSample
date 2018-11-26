@@ -12,25 +12,85 @@ namespace OpenBook.Bee.Utils
     /// <summary>
     /// T8配置帮助类
     /// </summary>
-   public class T8ConfigHelper
+    public class T8ConfigHelper
     {
         private static string _T8ConfigFilePath;
         private static ConcurrentDictionary<DateType, T8ConfigItemContainer> _T8ItemContainerDic;
+        private static ConcurrentDictionary<string, T8ConfigItemEntity> _T8ConfigItemDic;
 
-        public static T8ConfigEntity T8Config { get; private set; }       
+        /// <summary>
+        /// T8配置实体
+        /// </summary>
+        public static T8ConfigEntity T8Config { get; private set; }
+
+        /// <summary>
+        /// T8配置项字典表
+        /// </summary>
+        public static ConcurrentDictionary<string, T8ConfigItemEntity> T8ConfigItemDic
+        {
+            get
+            {
+                if (_T8ConfigItemDic == null || _T8ConfigItemDic.Keys.Count == 0)
+                {
+                    InitT8ConfigItems();
+                }
+                return _T8ConfigItemDic;
+            }
+         }
+
+
+        private static object lockObj = new object();
 
         static T8ConfigHelper()
+        {
+            InitT8Config();
+        }
+
+        private static void InitT8Config()
         {
             _T8ConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "T8.config");
             T8Config = SerializableHelper<T8ConfigEntity>.BinaryDeserialize(_T8ConfigFilePath);
             if (T8Config != null)
             {
                 _T8ItemContainerDic = T8Config.T8ItemContainerDic;
+                InitT8ConfigItems();
             }
             else
             {
                 T8Config = new T8ConfigEntity();
+                _T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
             }
+        }
+
+        /// <summary>
+        /// 初始化T8配置项
+        /// </summary>
+        private static void InitT8ConfigItems()
+        {
+            if (_T8ConfigItemDic == null || _T8ConfigItemDic.Keys.Count == 0)
+            {
+                lock (lockObj)
+                {
+                    if (_T8ConfigItemDic == null || _T8ConfigItemDic.Keys.Count == 0)
+                    {
+                        if (T8Config != null && T8Config.T8ItemContainerDic.Keys.Count > 0)
+                        {
+                            _T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
+                            foreach (var item in T8Config.T8ItemContainerDic.Values)
+                            {
+                                var configItem = item.T8ConfigItemSale;
+                                _T8ConfigItemDic.TryAdd(configItem.ConfigItemKey,configItem);
+                                var configItemOnShelf = item.T8ConfigITemOnShelf;
+                                _T8ConfigItemDic.TryAdd(configItemOnShelf.ConfigItemKey, configItemOnShelf);
+                            }
+                        }
+                        else
+                        {
+                            InitT8Config();
+                        }
+                    }
+                }
+            }           
         }
 
         /// <summary>
@@ -56,7 +116,7 @@ namespace OpenBook.Bee.Utils
                 }
                 else
                 {
-                    t8ConfigItemContainer.T8ConfigITemOnSale = item;
+                    t8ConfigItemContainer.T8ConfigITemOnShelf = item;
                 }
 
                 if (_T8ItemContainerDic.TryAdd(dateType, t8ConfigItemContainer))
@@ -64,6 +124,7 @@ namespace OpenBook.Bee.Utils
                     T8Config.T8ItemContainerDic = _T8ItemContainerDic;
                     if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
                     {
+                        _T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
                         return true;
                     }
                     else
@@ -78,6 +139,8 @@ namespace OpenBook.Bee.Utils
             return false;
         }
 
+      
+
         /// <summary>
         /// 移除项
         /// </summary>
@@ -91,6 +154,7 @@ namespace OpenBook.Bee.Utils
                 T8Config.T8ItemContainerDic = _T8ItemContainerDic;
                 if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
                 {
+                    _T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>() ;
                     return true;
                 }
                 else
@@ -142,10 +206,40 @@ namespace OpenBook.Bee.Utils
             T8Config = t8ConfigEntity;
             if (SerializableHelper<T8ConfigEntity>.BinarySerializeFile(_T8ConfigFilePath, T8Config))
             {
+                _T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
                 return true;
             }
             return false;
         }
 
+       
+        public static T8ConfigEntity CloneT8Config()
+        {
+            if (T8Config != null)
+            {
+                lock (lockObj)
+                {
+                    if (T8Config != null)
+                    {
+                        return DeepCopyUtil.DeepCopyByBin<T8ConfigEntity>(T8Config);
+                    }                   
+                }               
+            }
+            return null;
+        }
+
+        public static ConcurrentDictionary<string, T8ConfigItemEntity> CloneT8ConfigItem() {
+            if (T8ConfigItemDic != null)
+            {
+                lock (lockObj)
+                {
+                    if (T8ConfigItemDic != null)
+                    {
+                        return DeepCopyUtil.DeepCopyByBin<ConcurrentDictionary<string, T8ConfigItemEntity>>(T8ConfigItemDic);
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

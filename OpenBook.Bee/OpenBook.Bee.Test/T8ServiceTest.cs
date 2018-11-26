@@ -74,7 +74,7 @@ namespace OpenBook.Bee.Test
             T8ConfigItemContainer container;           
             t8Config.T8ItemContainerDic.TryGetValue(DateType.Month,out container);
             T8FileEntity t8FileEntity2 = Mapper.Map<T8FileEntity>(container.T8ConfigItemSale);
-            T8FileEntity t8FileEntity22 = Mapper.Map<T8FileEntity>(container.T8ConfigITemOnSale);            
+            T8FileEntity t8FileEntity22 = Mapper.Map<T8FileEntity>(container.T8ConfigITemOnShelf);            
         }
 
         public void CreateTaskEntity_Test()
@@ -91,7 +91,7 @@ namespace OpenBook.Bee.Test
 
             this.GenerateFileNameStragety_Test(t8TaskEntity.T8FileEntity);
 
-            service.InitData(container.T8ConfigITemOnSale, t8Config);
+            service.InitData(container.T8ConfigITemOnShelf, t8Config);
             t8TaskEntity = service.CreateTask();
             this.GenerateFileNameStragety_Test(t8TaskEntity.T8FileEntity);
         }
