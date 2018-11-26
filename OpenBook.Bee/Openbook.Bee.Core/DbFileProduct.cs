@@ -1,41 +1,85 @@
 ﻿using OpenBook.Bee.Entity;
+using OpenBook.Bee.Utils;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Openbook.Bee.Core
 {
+
     /// <summary>
     /// 数据库文件产品
     /// </summary>
     public class DbFileProduct
     {
-        private Dictionary<string, Func<T8TaskEntity, T8TaskEntity>> productParts;
+        private List<Action<T8TaskEntity>> ProductParts { get; set; }
+
         public DbFileProduct()
         {
-            productParts = new Dictionary<string, Func<T8TaskEntity, T8TaskEntity>>();
+            ProductParts = new List<Action<T8TaskEntity>>();
         }
 
-        public void AddPart(string key, Func<T8TaskEntity, T8TaskEntity> func)
+        /// <summary>
+        /// 添加产品组件
+        /// </summary>
+        /// <param name="action"></param>
+        public void AddPart(Action<T8TaskEntity> action)
         {
-            if (!productParts.Keys.Contains(key))
-            {
-                productParts.Add(key, func);
-            }
+            ProductParts.Add(action);
         }
 
         /// <summary>
         /// 执行
         /// </summary>
         /// <param name="t8Task"></param>
-        public void Execute(T8TaskEntity t8Task)
+        public void Execute(T8TaskEntity t8Task, CancellationToken ct)
         {
-            foreach (KeyValuePair<string,Func<T8TaskEntity, T8TaskEntity>> item in productParts)
-            {                
-                t8Task = item.Value(t8Task);
+            foreach (Action<T8TaskEntity> item in ProductParts)
+            {
+                ct.ThrowIfCancellationRequested();
+                try
+                {
+                    item(t8Task);
+                }
+                catch (Exception ex)
+                {
+                    LogUtil.WriteLog($"数据产品构造过程中出现异常：{ex.Message}");
+                    LogUtil.WriteLog(ex);
+                    break;
+                }
             }
+        }
+    }
+
+    /// <summary>
+    /// 构造产品指挥者
+    /// </summary>
+    public class DbFileProductDirector
+    {
+        private ADbFileProductBuilder _builder;
+        /// <summary>
+        /// 产品构造器
+        /// </summary>
+        /// <param name="builder"></param>
+        public void ConstructProduct(ADbFileProductBuilder builder)
+        {
+            this._builder = builder;
+
+            //1生成数据库文件及数据
+            _builder.BuildDbFile();
+
+            //2压缩数据库文件
+            _builder.BuildCompressFile();
+
+            //3上传数据库压缩文件
+            _builder.BuildUploadFile();
+
+            //4备份上传成功文件
+            _builder.BackupDbFile();
         }
     }
 
@@ -46,30 +90,29 @@ namespace Openbook.Bee.Core
     {
         /// <summary>
         /// 新建数据库文件及数据
-        /// </summary>
-        /// <param name="t8Task"></param>
-        public abstract T8TaskEntity BuildDbFile(T8TaskEntity t8Task);
+        /// </summary>       
+        public abstract void BuildDbFile();
 
         /// <summary>
         /// 创建数据库压缩文件
-        /// </summary>
-        /// <param name="t8Task"></param>
+        /// </summary>       
         /// <returns></returns>
-        public abstract T8TaskEntity BuildCompressFile(T8TaskEntity t8Task);
+        public abstract void BuildCompressFile();
 
         /// <summary>
         /// 上传文件
-        /// </summary>
-        /// <param name="t8Task"></param>
+        /// </summary>      
         /// <returns></returns>
-        public abstract T8TaskEntity BuildUploadFile(T8TaskEntity t8Task);
+        public abstract void BuildUploadFile();
 
         /// <summary>
         /// 备份数据库文件
-        /// </summary>
-        /// <param name="t8Task"></param>
+        /// </summary>      
         /// <returns></returns>
-        public abstract T8TaskEntity BackupDbFile(T8TaskEntity t8Task);
+        public abstract void BackupDbFile();
+
+        public abstract DbFileProduct GetDbFileProduct();
+
     }
 
     /// <summary>
@@ -77,32 +120,92 @@ namespace Openbook.Bee.Core
     /// </summary>
     public class DbFileProductBuilder : ADbFileProductBuilder
     {
-        public override T8TaskEntity BackupDbFile(T8TaskEntity t8Task)
+        DbFileProduct product = new DbFileProduct();
+        public override void BackupDbFile()
         {
-            try
+            //备份文件异常不影响程序功能，所以出现异常也会默认任务成功，只是在任务中做个备注
+            Action<T8TaskEntity> action = t8Task =>
             {
+                try
+                {
+                    if (!File.Exists(t8Task.T8FileEntity.CompressFileInfo.FilePath))
+                    {
+                        throw new FileNotFoundException($"上传文件:{t8Task.T8FileEntity.CompressFileInfo.FilePath}不存在");
+                    }
 
-            }
-            catch(Exception ex)
+
+                    GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(3);
+                    T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
+                    fileInfoEntity.FileGenerateTime = DateTime.Now;
+                    fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
+                    fileInfoEntity.FilePath = fileStragety.FileFullName(t8Task.T8FileEntity);
+                    t8Task.T8FileEntity.UploadBackFileInfo = fileInfoEntity;
+
+                    bool isMoveSucess = FileHelper.MoveFile(t8Task.T8FileEntity.CompressFileInfo.FilePath, fileInfoEntity.FilePath);
+                    if (!isMoveSucess)
+                    {
+                        throw new Exception($"压缩文件{t8Task.T8FileEntity.CompressFileInfo.FilePath}备份失败");
+                    }
+
+                    t8Task.T8FileEntity.StepStatus = StepStatus.BackupUploadFile;
+                    t8Task.CompleteTime = DateTime.Now;
+                    t8Task.T8TaskStatus = T8TaskStatus.Complete;
+                }
+                catch (Exception ex)
+                {
+                    t8Task.CompleteTime = DateTime.Now;
+                    t8Task.T8TaskStatus = T8TaskStatus.Complete;
+                    t8Task.Content = ex.Message;
+                    LogUtil.WriteLog(ex.Message);
+                }
+            };
+            product.AddPart(action);
+        }
+
+        public override void BuildCompressFile()
+        {
+            Action<T8TaskEntity> action = t8Task =>
             {
+                try
+                {
+                    if (!File.Exists(t8Task.T8FileEntity.GeneralFileInfo.FilePath))
+                    {
+                        throw new Exception($"数据库文件:{t8Task.T8FileEntity.GeneralFileInfo.FilePath}不存在,出现严重错误");
+                    }
 
-            }
-            throw new NotFiniteNumberException();
+                    GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(2);
+                    T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
+                    fileInfoEntity.FileGenerateTime = DateTime.Now;
+                    fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
+                    fileInfoEntity.FilePath = fileStragety.FileFullName(t8Task.T8FileEntity);
+
+                    FileHelper.ZipFile(t8Task.T8FileEntity.GeneralFileInfo.FilePath, fileInfoEntity.FilePath);
+
+                    t8Task.T8FileEntity.StepStatus = StepStatus.CompressedFile;
+                }
+                catch (Exception ex)
+                {
+                    t8Task.T8TaskStatus = T8TaskStatus.Error;
+                    t8Task.ExecFailureTime = t8Task.ExecFailureTime;
+
+                }
+            };
+            product.AddPart(action);
         }
 
-        public override T8TaskEntity BuildCompressFile(T8TaskEntity t8Task)
+        public override void BuildDbFile()
         {
             throw new NotImplementedException();
         }
 
-        public override T8TaskEntity BuildDbFile(T8TaskEntity t8Task)
+        public override void BuildUploadFile()
         {
             throw new NotImplementedException();
         }
 
-        public override T8TaskEntity BuildUploadFile(T8TaskEntity t8Task)
+        public override DbFileProduct GetDbFileProduct()
         {
-            throw new NotImplementedException();
+            return product;
         }
     }
 }

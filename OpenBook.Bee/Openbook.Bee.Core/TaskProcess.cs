@@ -157,7 +157,12 @@ namespace Openbook.Bee.Core
                         return;
                     }
 
-                                       
+                    //构造数据文件产品并执行
+                    DbFileProductDirector director = new DbFileProductDirector();
+                    ADbFileProductBuilder productBuilder = new DbFileProductBuilder();
+                    director.ConstructProduct(productBuilder);
+                    DbFileProduct product = productBuilder.GetDbFileProduct();
+                    product.Execute(taskEntity,cts.Token);
                 }
                 else
                 {

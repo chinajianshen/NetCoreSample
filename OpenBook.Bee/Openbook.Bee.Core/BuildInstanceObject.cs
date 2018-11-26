@@ -62,7 +62,7 @@ namespace Openbook.Bee.Core
         }
 
         /// <summary>
-        /// 获取文件名
+        /// 获取文件名信息 1一般文件 2压缩文件 3上传备份文件 
         /// </summary>
         /// <param name="type">1一般文件 2压缩文件 3上传备份文件</param>
         /// <returns></returns>

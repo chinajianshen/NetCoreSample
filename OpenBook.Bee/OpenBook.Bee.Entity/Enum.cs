@@ -54,7 +54,12 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 上传文件
         /// </summary>
-        UploadFile =4,        
+        UploadFile =4,    
+        
+        /// <summary>
+        /// 备份上传文件
+        /// </summary>
+        BackupUploadFile = 8
     }
 
     /// <summary>

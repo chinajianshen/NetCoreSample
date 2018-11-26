@@ -52,6 +52,11 @@ namespace OpenBook.Bee.Entity
         public int ExecFailureTime { get; set; }
 
         /// <summary>
+        /// 记录附加信息 如上传成功备份过程中出现错误，并不影响功能可以忽略
+        /// </summary>
+        public string Content { get; set; }
+
+        /// <summary>
         /// 传8数据文件类
         /// </summary>
         public T8FileEntity T8FileEntity { get; set; }

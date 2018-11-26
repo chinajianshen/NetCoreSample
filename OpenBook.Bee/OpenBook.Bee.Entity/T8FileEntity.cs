@@ -71,12 +71,11 @@ namespace OpenBook.Bee.Entity
         /// 生成压缩文件信息
         /// </summary>
 
-        public T8FileInfoEntity CompressFileInfo { get; set; }
+        public T8FileInfoEntity CompressFileInfo { get; set; }        
 
         /// <summary>
         /// 上传文件备份信息
         /// </summary>
-
         public T8FileInfoEntity UploadBackFileInfo { get; set; }             
     }
 

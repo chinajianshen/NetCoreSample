@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\Dlls\log4net.dll</HintPath>
     </Reference>
@@ -53,6 +56,7 @@
     <Compile Include="AppPath.cs" />
     <Compile Include="DateTimeMaster.cs" />
     <Compile Include="DeepCopyUtil.cs" />
+    <Compile Include="FileHelper.cs" />
     <Compile Include="FtpHelper.cs" />
     <Compile Include="LogUtil.cs" />
     <Compile Include="MD5_HMAC.cs" />
@@ -67,6 +71,9 @@
       <Project>{593d7c14-eb6d-49a1-8505-a05aa23f094f}</Project>
       <Name>OpenBook.Bee.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
