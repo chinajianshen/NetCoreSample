@@ -1,5 +1,6 @@
-﻿using OpenBook.Bee.DbInterface.Database;
+﻿using OpenBook.Bee.Database;
 using OpenBook.Bee.Entity;
+using OpenBook.Bee.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.DbInterface
+namespace OpenBook.Bee.Database
 {
     /// <summary>
     /// 数据库工厂类

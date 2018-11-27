@@ -5,17 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.DbInterface
+namespace OpenBook.Bee.Database
 {
    public interface IDatabase
     {
-        IDbConnection Connection { get; }
         string ConnectionString { get; set; }
-
-        void Open();
-        void Close();
-        void Dispose();
-
 
         /// <summary>
         /// 查询数据
@@ -56,22 +50,22 @@ namespace OpenBook.Bee.DbInterface
 
 
         /// <summary>
-        /// 生成Access文件
+        /// 生成Access文件并添加数据
         /// </summary>
-        /// <param name="dbFileFullPath"></param>
+        /// <param name="accessFileFullpath"></param>
         /// <param name="querySql"></param>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
-        void ExecuteDataToAccess(string dbFileFullPath, string querySql, string startTime, string endTime);
+        void ExecuteDataToAccess(string accessFileFullpath, string querySql, string startTime, string endTime);
 
         /// <summary>
-        /// 生成SQLite文件
+        /// 创建SQLite文件并添加数据
         /// </summary>
-        /// <param name="dbFileFullPath"></param>
+        /// <param name="sqliteFileFullpath"></param>
         /// <param name="querySql"></param>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
-        void ExecuteDataToSQLite(string dbFileFullPath, string querySql, string startTime, string endTime);
+        void ExecuteDataToSQLite(string sqliteFileFullpath, string querySql, string startTime, string endTime);
 
     }
 }

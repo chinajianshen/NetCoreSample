@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.DbInterface.Database
+namespace OpenBook.Bee.Database.Database.SqlHelper
 {
     internal sealed class SQlServerHelper
     {
@@ -1089,8 +1089,8 @@ namespace OpenBook.Bee.DbInterface.Database
         #endregion ExecuteScalar
 
         #region GetConnectString(MyConnectStr)
-        private static string _MyConnectStr = System.Configuration.ConfigurationManager.ConnectionStrings["OB_Smart_DB_ConStr"].ConnectionString;
-        private static string _MyConnectStr_Dev = System.Configuration.ConfigurationManager.ConnectionStrings["OB_Smart_DB_ConStr_Dev"].ConnectionString;
+        private static string _MyConnectStr; //System.Configuration.ConfigurationManager.ConnectionStrings["OB_Smart_DB_ConStr"].ConnectionString;
+        private static string _MyConnectStr_Dev; //System.Configuration.ConfigurationManager.ConnectionStrings["OB_Smart_DB_ConStr_Dev"].ConnectionString;
         public static string MyConnectStr
         {
             get
@@ -1101,45 +1101,10 @@ namespace OpenBook.Bee.DbInterface.Database
                  return _MyConnectStr;
 #endif
             }
-            //set { _MyConnectStr = value; }
+            set { _MyConnectStr = value; }
         }
-        #endregion
-
-        #region GetConnectString(MyPortalConnectStr)
-
-        private static string _MyPortalConnectStr = System.Configuration.ConfigurationManager.ConnectionStrings["OB_Portal_DB_ConStr"] == null ? "" : System.Configuration.ConfigurationManager.ConnectionStrings["OB_Portal_DB_ConStr"].ConnectionString;
-
-        public static string MyPortalConnectStr
-        {
-            get { return SQlServerHelper._MyPortalConnectStr; }
-            set { SQlServerHelper._MyPortalConnectStr = value; }
-        }
-
-        #endregion
-
-        #region GetConnectString(MyOBOnlineConnectStr)
-
-        private static string _myOBOnlineConnectStr = System.Configuration.ConfigurationManager.ConnectionStrings["OB_OBOnline_DB_ConStr"] == null ? "" : System.Configuration.ConfigurationManager.ConnectionStrings["OB_OBOnline_DB_ConStr"].ConnectionString;
-
-        public static string MyOBOnlineConnectStr
-        {
-            get { return SQlServerHelper._myOBOnlineConnectStr; }
-            set { SQlServerHelper._myOBOnlineConnectStr = value; }
-        }
-
-        #endregion
-        //连接计算2
-        #region GetConnectString(MyCalcDB2ConnectStr)
-
-        private static string _myCalcDB2ConnectStr = System.Configuration.ConfigurationManager.ConnectionStrings["OB_CalcDB2_ConStr"] == null ? "" : System.Configuration.ConfigurationManager.ConnectionStrings["OB_CalcDB2_ConStr"].ConnectionString;
-
-        public static string MyCalcDB2ConnectStr
-        {
-            get { return SQlServerHelper._myCalcDB2ConnectStr; }
-            set { SQlServerHelper._myCalcDB2ConnectStr = value; }
-        }
-
-        #endregion
+        #endregion      
+        
         #region LockTable
         /// <summary>
         /// 对表枷锁

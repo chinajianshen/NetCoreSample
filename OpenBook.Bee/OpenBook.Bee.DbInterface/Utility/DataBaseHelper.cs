@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.DbInterface
+namespace OpenBook.Bee.Utility
 {
     public class DataBaseHelper
     {
@@ -14,9 +15,6 @@ namespace OpenBook.Bee.DbInterface
 
         public static string CreateConnectionString(DataBaseInfoEntity dataBaseInfo)
         {
-            //判断配置文件是否设置连接字符串(后期处理)
-
-
             return CreateConnectionString(dataBaseInfo.DataBaseType, dataBaseInfo.ServerName, dataBaseInfo.ServerName, dataBaseInfo.UserName, dataBaseInfo.UserPassword);
         }
 
@@ -40,6 +38,8 @@ namespace OpenBook.Bee.DbInterface
 
         public static string CreateSQLServerConnectionString(string dbHost, string dbName, string dbUser, string dbPwd)
         {
+            //优先从配置中读取 后期添加
+
             var sb = new StringBuilder();
             sb.AppendFormat("Data Source={0};Initial Catalog={1};User Id={2};Password={3};", dbHost, dbName, dbUser, dbPwd);
             return sb.ToString();
@@ -47,6 +47,8 @@ namespace OpenBook.Bee.DbInterface
 
         public static string CreateMySQLConnectionString(string dbHost, string dbName, string dbUser, string dbPwd)
         {
+            //优先从配置中读取 后期添加
+
             var sb = new StringBuilder();
             sb.AppendFormat("server={0};database={1};uid={2};pwd={3};", dbHost, dbName, dbUser, dbPwd);
             return sb.ToString();
@@ -54,10 +56,26 @@ namespace OpenBook.Bee.DbInterface
 
         public static string CreateOracleConnectionString(string dbHost, string dbName, string dbUser, string dbPwd)
         {
+            //优先从配置中读取 后期添加
+
             var sb = new StringBuilder();
             sb.AppendFormat("password={0};User ID={1};Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={2})(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME={3})))",
                 dbPwd, dbUser, dbHost, dbName);
             return sb.ToString();
+        }
+
+        public static string CreateAccessFileConnectionString(string accessFileFullpath)
+        {
+            //优先从配置中读取 后期添加
+
+            return $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={accessFileFullpath}";
+        }
+
+        public static string CreateSQLiteFileConnnectionString(string sqliteFileFullpath)
+        {
+            //优先从配置中读取 后期添加
+
+            return $"Data Source={sqliteFileFullpath};Version=3;";
         }
 
         #endregion
@@ -162,5 +180,62 @@ namespace OpenBook.Bee.DbInterface
         }
 
         #endregion
+
+        /// <summary>
+        /// 过滤SQL语句 只留下 如 select * from a
+        /// </summary>
+        /// <param name="querySql"></param>
+        public static string FilterSqlQuery(string querySql)
+        {
+            Regex sqlFilterReg = new Regex(@".*?(?<Sql>select\s*.*?)order? .*?", RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            Match math = sqlFilterReg.Match(querySql);
+
+            string sql = "";
+            if (math.Success)
+            {
+                sql = $"select * from ({math.Groups["Sql"].ToString()}) tab where 1<>1";
+            }
+            else
+            {
+                throw new Exception("SQL正则过滤失败");
+            }
+            return sql;
+        }
+
+        /// <summary>
+        /// 创建参数列表
+        /// </summary>
+        /// <param name="dataFieldTypes"></param>
+        /// <returns></returns>
+        public static List<string> CreateParameterNameList(DataFieldTypeCollection dataFieldTypes)
+        {
+           return  dataFieldTypes.Select(item => "@" + item.FiledName).ToList();           
+        }
+
+        /// <summary>
+        /// 构造Access和Sqlite数据文件 SQL插入语句
+        /// </summary>
+        /// <param name="dataFieldTypes"></param>
+        /// <returns></returns>
+        public static string CreateInsertSql(DataFieldTypeCollection dataFieldTypes)
+        {
+            string fieldString = string.Join(",", dataFieldTypes.Select(item => item.FiledName));
+            string parameterNameString = string.Join(",", dataFieldTypes.Select(item => "@" + item.FiledName));
+            string insertSql = $"insert into [mytable]({fieldString}) values({parameterNameString})";
+            return insertSql;
+        }
+
+        /// <summary>
+        /// 转换成可执行SQL语句
+        /// </summary>
+        /// <param name="querySql"></param>
+        /// <param name="startTime"></param>
+        /// <param name="endTime"></param>
+        /// <returns></returns>
+        public static string CovertedExecuteSql(string querySql, string startTime, string endTime)
+        {
+            return querySql.Replace("@StartTime", $"'{startTime}'").Replace("@EndTime", $"'{endTime}'");
+        }
+
     }
 }
