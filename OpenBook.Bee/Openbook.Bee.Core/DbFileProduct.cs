@@ -38,6 +38,7 @@ namespace Openbook.Bee.Core
         /// <param name="t8Task"></param>
         public void Execute(T8TaskEntity t8Task, CancellationToken ct)
         {
+            t8Task.T8TaskStatus = T8TaskStatus.Executing;
             foreach (Action<T8TaskEntity> item in ProductParts)
             {
                 ct.ThrowIfCancellationRequested();
@@ -121,6 +122,48 @@ namespace Openbook.Bee.Core
     public class DbFileProductBuilder : ADbFileProductBuilder
     {
         DbFileProduct product = new DbFileProduct();
+
+        public override void BuildDbFile()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void BuildCompressFile()
+        {
+            Action<T8TaskEntity> action = t8Task =>
+            {
+                try
+                {
+                    if (!File.Exists(t8Task.T8FileEntity.GeneralFileInfo.FilePath))
+                    {
+                        throw new Exception($"数据库文件:{t8Task.T8FileEntity.GeneralFileInfo.FilePath}不存在,出现严重错误");
+                    }
+
+                    GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(2);
+                    T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
+                    fileInfoEntity.FileGenerateTime = DateTime.Now;
+                    fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
+                    fileInfoEntity.FilePath = fileStragety.FileFullName(t8Task.T8FileEntity);
+
+                    FileHelper.ZipFile(t8Task.T8FileEntity.GeneralFileInfo.FilePath, fileInfoEntity.FilePath);
+
+                    t8Task.T8FileEntity.StepStatus = StepStatus.CompressedFile;
+                }
+                catch (Exception ex)
+                {
+                    t8Task.T8TaskStatus = T8TaskStatus.Error;
+                    t8Task.ExecFailureTime = t8Task.ExecFailureTime + 1;
+
+                }
+            };
+            product.AddPart(action);
+        }
+
+        public override void BuildUploadFile()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void BackupDbFile()
         {
             //备份文件异常不影响程序功能，所以出现异常也会默认任务成功，只是在任务中做个备注
@@ -161,47 +204,7 @@ namespace Openbook.Bee.Core
             };
             product.AddPart(action);
         }
-
-        public override void BuildCompressFile()
-        {
-            Action<T8TaskEntity> action = t8Task =>
-            {
-                try
-                {
-                    if (!File.Exists(t8Task.T8FileEntity.GeneralFileInfo.FilePath))
-                    {
-                        throw new Exception($"数据库文件:{t8Task.T8FileEntity.GeneralFileInfo.FilePath}不存在,出现严重错误");
-                    }
-
-                    GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(2);
-                    T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
-                    fileInfoEntity.FileGenerateTime = DateTime.Now;
-                    fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
-                    fileInfoEntity.FilePath = fileStragety.FileFullName(t8Task.T8FileEntity);
-
-                    FileHelper.ZipFile(t8Task.T8FileEntity.GeneralFileInfo.FilePath, fileInfoEntity.FilePath);
-
-                    t8Task.T8FileEntity.StepStatus = StepStatus.CompressedFile;
-                }
-                catch (Exception ex)
-                {
-                    t8Task.T8TaskStatus = T8TaskStatus.Error;
-                    t8Task.ExecFailureTime = t8Task.ExecFailureTime;
-
-                }
-            };
-            product.AddPart(action);
-        }
-
-        public override void BuildDbFile()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void BuildUploadFile()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public override DbFileProduct GetDbFileProduct()
         {
