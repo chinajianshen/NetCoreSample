@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.BeeAPI", "Open
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Utils", "OpenBook.Bee.Utils\OpenBook.Bee.Utils.csproj", "{0D55A95A-C81D-4CC6-95BA-F9A68A360813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.DataBase", "OpenBook.Bee.DbInterface\OpenBook.Bee.DataBase.csproj", "{D2BE8907-63E2-4119-9CBD-67C223D0F1C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Database", "OpenBook.Bee.DbInterface\OpenBook.Bee.Database.csproj", "{D2BE8907-63E2-4119-9CBD-67C223D0F1C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

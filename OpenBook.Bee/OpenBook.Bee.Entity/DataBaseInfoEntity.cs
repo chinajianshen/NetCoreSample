@@ -15,12 +15,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 数据库汉语名称
         /// </summary>
-        public string DataBaseTitle { get; set; }
-
-        /// <summary>
-        /// 数据库连接串
-        /// </summary>       
-        public string GetConnectionString { get; set; }
+        public string DataBaseTitle { get; set; }       
 
         /// <summary>
         /// 服务器名或服务名
@@ -45,6 +40,6 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 数据库类型
         /// </summary>
-        public DataBaseType DataBaseType { get; set; }
+        public DatabaseType DataBaseType { get; set; }
     }
 }

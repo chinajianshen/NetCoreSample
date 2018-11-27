@@ -35,7 +35,7 @@ namespace OpenBook.Bee.Test
                     DataBaseName = "T8DataTest",
                     UserName = "sa",
                     UserPassword = "sa.",
-                    DataBaseType = DataBaseType.SqlSever
+                    DataBaseType = DatabaseType.SqlServer
                 };
 
 

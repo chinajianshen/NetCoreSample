@@ -102,13 +102,13 @@ namespace OpenBook.Bee.Entity
     /// <summary>
     /// 数据库类型
     /// </summary>
-    public enum DataBaseType
+    public enum DatabaseType
     {
-        SqlSever = 1,
+        SqlServer = 1,
 
         Oracle =2,
 
-        MySql =4,
+        MySQL = 4,
         
         Sybase =8,
      
