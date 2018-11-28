@@ -1,6 +1,9 @@
 ﻿using OpenBook.Bee.Entity;
+using OpenBook.Bee.Utils;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +55,7 @@ namespace Openbook.Bee.Core
                 subDirName = "CompressFileDir";
             }
             else
-            {                
+            {
                 subDirName = "UploadFileBackup";
             }
             return subDirName;
@@ -131,7 +134,7 @@ namespace Openbook.Bee.Core
         /// <param name="dateType"></param>
         /// <param name="dataType"></param>
         /// <returns></returns>
-        public static string GetT8TaskTitle(DateType dateType,DataType dataType)
+        public static string GetT8TaskTitle(DateType dateType, DataType dataType)
         {
             string title = "";
             switch (dateType)
@@ -160,5 +163,99 @@ namespace Openbook.Bee.Core
             }
             return title;
         }
+
+
+        /// <summary>
+        /// 获取任务队列路径
+        /// </summary>
+        /// <param name="taskQueue"></param>
+        /// <returns></returns>
+        public static string GetTaskQueueFileFullpath(TaskQueueType taskQueue)
+        {
+            string fullpath = "";
+            switch (taskQueue)
+            {
+                case TaskQueueType.Completed:
+                    fullpath = Path.Combine(AppPath.App_Root, "Completed_TaskQueue.dat");
+                    break;
+                case TaskQueueType.Processing:
+                    fullpath = Path.Combine(AppPath.App_Root, "Processing_TaskQueue.dat");
+                    break;
+                case TaskQueueType.UserManual:
+                    fullpath = Path.Combine(AppPath.App_Root, "UserManual_TaskQueue.dat");
+                    break;
+                case TaskQueueType.Error:
+                    fullpath = Path.Combine(AppPath.App_Root, "Error_TaskQueue.dat");
+                    break;
+                default:
+                    throw new ArgumentNullException($"获取任务队列路径失败,taskQueue参数为空");
+
+            }
+            return fullpath;
+        }
+
+
+        /// <summary>
+        /// 添加任务到队列
+        /// </summary>
+        /// <param name="queue"></param>
+        /// <param name="t8Task"></param>       
+        /// <returns></returns>
+        public static bool AddTaskToQueue(ConcurrentDictionary<string,T8TaskEntity> queue,T8TaskEntity t8Task, TaskQueueType taskQueue)
+        {
+            if (queue == null) return false;
+            if (queue.TryAdd(t8Task.GenerateTaskQueueKey, t8Task))
+            {
+                string taskQueueFullpath = Common.GetTaskQueueFileFullpath(taskQueue);
+                bool isAdd = SerializableHelper<List<T8TaskEntity>>.BinarySerializeFile(taskQueueFullpath, queue.Values.ToList());
+                if (!isAdd)
+                {
+                    T8TaskEntity tempT8Task;
+                    queue.TryRemove(t8Task.GenerateTaskQueueKey,out tempT8Task);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// 队列中删除队列
+        /// </summary>
+        /// <param name="queue"></param>
+        /// <param name="t8Task"></param>
+        /// <returns></returns>
+        public static bool RemoveTaskFromQueue(ConcurrentDictionary<string,T8TaskEntity> queue, T8TaskEntity t8Task, TaskQueueType taskQueue)
+        {
+            if (queue == null) return false;
+
+            T8TaskEntity tempT8Task;
+            if (queue.TryRemove(t8Task.GenerateTaskQueueKey,out tempT8Task))
+            {
+                string taskQueueFullpath = Common.GetTaskQueueFileFullpath(taskQueue);
+                bool isAdd = SerializableHelper<T8TaskEntity>.BinarySerializeFile(taskQueueFullpath, queue.Values.ToList());
+                if (!isAdd)
+                {                     
+                    queue.TryRemove(t8Task.GenerateTaskQueueKey, out tempT8Task);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        /// <summary>
+        /// 设置任务错误状态
+        /// </summary>
+        /// <param name="t8Task"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        public static void SetTaskErrorStatus(T8TaskEntity t8Task, string msg)
+        {
+            t8Task.T8TaskStatus = T8TaskStatus.Error;
+            t8Task.ExecFailureTime = t8Task.ExecFailureTime + 1;
+            t8Task.Content = !string.IsNullOrEmpty(t8Task.Content) ? t8Task.Content + $"\r\n{msg}" : msg;
+        }        
     }
 }

@@ -60,7 +60,7 @@ namespace Openbook.Bee.Core
 
         public AFileName()
         {
-            filePath = AppDomain.CurrentDomain.BaseDirectory;
+            filePath = AppPath.App_Root;
         }
 
         /// <summary>

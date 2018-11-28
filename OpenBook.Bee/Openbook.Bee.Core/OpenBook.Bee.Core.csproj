@@ -58,15 +58,13 @@
     <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
     <Compile Include="BuildInstanceObject.cs" />
     <Compile Include="Common.cs" />
-    <Compile Include="DataBaseProcess.cs" />
     <Compile Include="DbFileProduct.cs" />
-    <Compile Include="FtpProcess.cs" />
     <Compile Include="MEF\HelloWord.cs" />
     <Compile Include="MEF\MefConfiguration.cs" />
     <Compile Include="MEF\MefContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskFileProcess.cs" />
-    <Compile Include="TaskProcess.cs" />
+    <Compile Include="TaskManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenBook.Bee.DAO\OpenBook.Bee.DAO.csproj">

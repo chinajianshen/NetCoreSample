@@ -14,22 +14,12 @@ namespace OpenBook.Bee.Utils
     public class AppPath
     {
         static AppPath()
-        {
-            //if (!Directory.Exists(PluginFolder))
-            //{
-            //    Directory.CreateDirectory(PluginFolder);
-            //}
+        {   
 
             if (!Directory.Exists(TempFolder))
             {
                 Directory.CreateDirectory(TempFolder);
             }
-
-            //if (!Directory.Exists(RawDataFolder))
-            //{
-            //    Directory.CreateDirectory(RawDataFolder);
-            //}
-
         }
 
 

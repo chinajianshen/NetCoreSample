@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.IO;
 
 namespace Openbook.Bee.Core
 {
@@ -52,11 +53,17 @@ namespace Openbook.Bee.Core
 
         public TaskManager()
         {
-            T8ConfigItemDic = T8ConfigHelper.CloneT8ConfigItem();
-            if (T8ConfigItemDic == null)
+            Task.Factory.StartNew(() =>
             {
-                T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
-            }
+                T8ConfigItemDic = T8ConfigHelper.CloneT8ConfigItem();
+                if (T8ConfigItemDic == null)
+                {
+                    T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
+                }
+            });
+
+            //初始化任务队列
+            InitTaskQueue();
         }
 
         /// <summary>
@@ -131,27 +138,40 @@ namespace Openbook.Bee.Core
                 ct.ThrowIfCancellationRequested();
 
                 ACreateTask createTaskService = AutoFacContainer.ResolveNamed<ACreateTask>(typeof(ServiceCreateTask).Name);
-                T8TaskEntity taskEntity = createTaskService.CreateTask();
-                if (taskEntity != null)
+                T8TaskEntity t8Task = createTaskService.CreateTask();
+                if (t8Task != null)
                 {
                     //获取文件名
                     AFileName aFileNameService = AutoFacContainer.ResolveNamed<AFileName>(typeof(GeneralFileName).Name);
-                    string key = aFileNameService.FileName(taskEntity.T8FileEntity).Replace(".", "_");
+                    t8Task.T8FileEntity.GeneralFileInfo = new T8FileInfoEntity
+                    {
+                        FileName = aFileNameService.FileName(t8Task.T8FileEntity),
+                        FilePath = aFileNameService.FileFullName(t8Task.T8FileEntity)
+                    };
 
                     T8TaskEntity taskEntityQueueItem;
-                    if (Completed_TaskQueue.TryGetValue(key, out taskEntityQueueItem))
+                    if (Completed_TaskQueue.TryGetValue(t8Task.GenerateTaskQueueKey, out taskEntityQueueItem))
                     {
                         return;
                     }
 
-                    if (Processing_TaskQueue.TryGetValue(key, out taskEntityQueueItem))
+                    if (Processing_TaskQueue.TryGetValue(t8Task.GenerateTaskQueueKey, out taskEntityQueueItem))
                     {
                         return;
                     }
 
-                    string errorKey = aFileNameService + DateTime.Now.ToString("yyyyMMdd");
-                    if (Error_TaskQueue.TryGetValue(errorKey,out taskEntityQueueItem))
+                    if (Error_TaskQueue.TryGetValue(t8Task.GenerateTaskQueueKey, out taskEntityQueueItem))
                     {
+                        return;
+                    }
+
+                    //添加到执行中队列   
+                    if (!Common.AddTaskToQueue(Processing_TaskQueue, t8Task, TaskQueueType.Processing))
+                    {
+                        LogUtil.WriteLog($"任务队列[{t8Task.TaskTitle}]添加失败");
+
+                        Common.SetTaskErrorStatus(t8Task, "添加Processing_TaskQueue失败");
+                        Common.AddTaskToQueue(Error_TaskQueue, t8Task, TaskQueueType.Error);
                         return;
                     }
 
@@ -160,7 +180,22 @@ namespace Openbook.Bee.Core
                     ADbFileProductBuilder productBuilder = new DbFileProductBuilder();
                     director.ConstructProduct(productBuilder);
                     DbFileProduct product = productBuilder.GetDbFileProduct();
-                    product.Execute(taskEntity,cts.Token);
+                    product.Execute(t8Task, cts.Token);
+
+                    //任务结束 1从Processing_TaskQueue队列移走 2任务完成，移入Completed_TaskQueue队列 3任务失败，移入
+                    if (Common.RemoveTaskFromQueue(Processing_TaskQueue, t8Task, TaskQueueType.Processing))
+                    {                      
+                        if (t8Task.T8TaskStatus == T8TaskStatus.Complete)
+                        {
+                            Common.AddTaskToQueue(Completed_TaskQueue, t8Task, TaskQueueType.Completed);
+                            LogUtil.WriteLog($"T8任务[{t8Task.TaskTitle}]执行完成，转移到Completed_TaskQueue队列");
+                        }
+                        else
+                        {
+                            Common.AddTaskToQueue(Error_TaskQueue, t8Task, TaskQueueType.Error);
+                            LogUtil.WriteLog($"T8任务[{t8Task.TaskTitle}]执行失败，转移到Error_TaskQueue队列，等待下次重试");
+                        }
+                    }                  
                 }
                 else
                 {
@@ -171,7 +206,7 @@ namespace Openbook.Bee.Core
             {
                 LogUtil.WriteLog(ex);
             }
-        }           
+        }
 
         /// <summary>
         /// 检测T8ConfigItemDic是否为空
@@ -206,7 +241,68 @@ namespace Openbook.Bee.Core
                     }
                 }
             }
-        }       
+        }
+
+        private void InitTaskQueue()
+        {
+            Task task1 = Task.Factory.StartNew(() =>
+             {
+                 Completed_TaskQueue = new ConcurrentDictionary<string, T8TaskEntity>();
+                 string taskQueuePath = Common.GetTaskQueueFileFullpath(TaskQueueType.Completed);
+                 List<T8TaskEntity> taskList = SerializableHelper<List<T8TaskEntity>>.BinaryDeserialize(taskQueuePath);
+                 if (taskList != null && taskList.Count > 0)
+                 {
+                     foreach (T8TaskEntity t8Task in taskList)
+                     {
+                         Completed_TaskQueue.TryAdd(t8Task.GenerateTaskQueueKey, t8Task);
+                     }
+                 }
+             });
+
+            Task task2 = Task.Factory.StartNew(() =>
+              {
+                  Processing_TaskQueue = new ConcurrentDictionary<string, T8TaskEntity>();
+                  string taskQueuePath = Common.GetTaskQueueFileFullpath(TaskQueueType.Processing);
+                  List<T8TaskEntity> taskList = SerializableHelper<List<T8TaskEntity>>.BinaryDeserialize(taskQueuePath);
+                  if (taskList != null && taskList.Count > 0)
+                  {
+                      foreach (T8TaskEntity t8Task in taskList)
+                      {
+                          Completed_TaskQueue.TryAdd(t8Task.GenerateTaskQueueKey, t8Task);
+                      }
+                  }
+              });
+
+            Task task3 = Task.Factory.StartNew(() =>
+              {
+                  Error_TaskQueue = new ConcurrentDictionary<string, T8TaskEntity>();
+                  string taskQueuePath = Common.GetTaskQueueFileFullpath(TaskQueueType.Error);
+                  List<T8TaskEntity> taskList = SerializableHelper<List<T8TaskEntity>>.BinaryDeserialize(taskQueuePath);
+                  if (taskList != null && taskList.Count > 0)
+                  {
+                      foreach (T8TaskEntity t8Task in taskList)
+                      {
+                          Completed_TaskQueue.TryAdd(t8Task.GenerateTaskQueueKey, t8Task);
+                      }
+                  }
+              });
+
+            Task task4 = Task.Factory.StartNew(() =>
+               {
+                   UserManual_TaskQueue = new ConcurrentDictionary<string, T8TaskEntity>();
+                   string taskQueuePath = Common.GetTaskQueueFileFullpath(TaskQueueType.UserManual);
+                   List<T8TaskEntity> taskList = SerializableHelper<List<T8TaskEntity>>.BinaryDeserialize(taskQueuePath);
+                   if (taskList != null && taskList.Count > 0)
+                   {
+                       foreach (T8TaskEntity t8Task in taskList)
+                       {
+                           Completed_TaskQueue.TryAdd(t8Task.GenerateTaskQueueKey, t8Task);
+                       }
+                   }
+               });
+
+            Task.WaitAll(new[] { task1, task2, task3, task4 });
+        }
     }
 
     #region 创建T8任务实体

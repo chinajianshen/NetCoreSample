@@ -149,6 +149,29 @@ namespace OpenBook.Bee.Entity
         金高=1
     }
 
+    /// <summary>
+    /// 任务队列类型
+    /// </summary>
+    public enum TaskQueueType
+    {
+        /// <summary>
+        /// 完成任务队列
+        /// </summary>
+        Completed = 1,
+        /// <summary>
+        /// 正在处理任务队列
+        /// </summary>
+        Processing = 2,
+        /// <summary>
+        /// 错误任务队列
+        /// </summary>
+        Error = 4,
+        /// <summary>
+        /// 用户手工导出队列
+        /// </summary>
+        UserManual = 8
+    }
+
 
 
 

@@ -29,7 +29,7 @@ namespace OpenBook.Bee.Utils
             {
                 lock (lockObj)
                 {
-                    using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
+                    using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
                     {
                         binFormat.Serialize(fStream, item);
                         fStream.Close();
@@ -62,7 +62,7 @@ namespace OpenBook.Bee.Utils
             {
                 lock (lockObj)
                 {
-                    using (FileStream fStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+                    using (FileStream fStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,FileShare.Read))
                     {
                         item = binFormat.Deserialize(fStream) as T;
                         fStream.Close();
@@ -75,6 +75,66 @@ namespace OpenBook.Bee.Utils
                 LogUtil.WriteLog(ex);
                 return null;
             }          
+        }
+
+        /// <summary>
+        /// 二进制序列化文件
+        /// </summary>
+        /// <param name="fileName">全路径文件</param>
+        /// <param name="item">对象</param>
+        /// <returns></returns>
+        public static bool BinarySerializeFile(string fileName, List<T> item)
+        {
+            try
+            {
+                lock (lockObj)
+                {
+                    using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+                    {
+                        binFormat.Serialize(fStream, item);
+                        fStream.Close();
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LogUtil.WriteLog(ex);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 反序列化
+        /// </summary>
+        /// <param name="fileName">全路径文件</param>
+        /// <returns></returns>
+        public static List<T> BinaryDeserializeList(string fileName)
+        {
+            if (!File.Exists(fileName))
+            {
+                return null;
+            }
+
+            List<T> items;
+
+            try
+            {
+                lock (lockObj)
+                {
+                    using (FileStream fStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,FileShare.Read))
+                    {
+                        items = binFormat.Deserialize(fStream) as List<T>;
+                        fStream.Close();
+                    }
+                }
+                return items;
+            }
+            catch (Exception ex)
+            {
+                LogUtil.WriteLog(ex);
+                return null;
+            }
         }
 
     }

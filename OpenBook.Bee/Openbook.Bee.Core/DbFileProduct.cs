@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 
 namespace Openbook.Bee.Core
 {
-
     /// <summary>
     /// 数据库文件产品
     /// </summary>
@@ -43,14 +42,13 @@ namespace Openbook.Bee.Core
             foreach (Action<T8TaskEntity> item in ProductParts)
             {
                 ct.ThrowIfCancellationRequested();
+
                 try
                 {
                     item(t8Task);
                 }
-                catch (Exception ex)
+                catch
                 {
-                    LogUtil.WriteLog($"数据产品构造过程中出现异常：{ex.Message}");
-                    LogUtil.WriteLog(ex);
                     break;
                 }
             }
@@ -138,25 +136,26 @@ namespace Openbook.Bee.Core
                     fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
                     fileInfoEntity.FilePath = fileStragety.FileName(t8Task.T8FileEntity);
                     fileInfoEntity.FileGenerateTime = DateTime.Now;
-                    t8Task.T8FileEntity.GeneralFileInfo = fileInfoEntity;                  
+                    t8Task.T8FileEntity.GeneralFileInfo = fileInfoEntity;
 
 
                     //2创建数据库文件并添加数据
                     IDatabase databaseService = DatabaseFactory.CreateDatabase(t8Task.T8FileEntity.DataBaseInfo);
-                    databaseService.ExecuteDataToDBFile(t8Task.T8FileEntity.DbFileType,fileInfoEntity.FilePath, t8Task.T8FileEntity.SqlString, t8Task.T8FileEntity.SqlStartTime, t8Task.T8FileEntity.SqlEndTime);
-                                      
+                    databaseService.ExecuteDataToDBFile(t8Task.T8FileEntity.DbFileType, fileInfoEntity.FilePath, t8Task.T8FileEntity.SqlString, t8Task.T8FileEntity.SqlStartTime, t8Task.T8FileEntity.SqlEndTime);
+
 
                     t8Task.T8FileEntity.StepStatus = StepStatus.GenerateFile;
                     LogUtil.WriteLog($"数据库文件[{fileInfoEntity.FilePath}]创建并添加数据完成");
                 }
                 catch (Exception ex)
-                {                    
-                    SetTaskErrorStatus(t8Task, $"BuildDbFile()[{ex.Message}]");
+                {
+                    Common.SetTaskErrorStatus(t8Task, $"BuildDbFile()[{ex.Message}]");
                     LogUtil.WriteLog(ex);
-                }       
+                    throw new Exception(ex.Message);
+                }
 
             };
-            product.AddPart(action);                 
+            product.AddPart(action);
         }
 
         public override void BuildCompressFile()
@@ -167,7 +166,7 @@ namespace Openbook.Bee.Core
                 {
                     if (!File.Exists(t8Task.T8FileEntity.GeneralFileInfo.FilePath))
                     {
-                        throw new Exception($"数据库文件:{t8Task.T8FileEntity.GeneralFileInfo.FilePath}不存在,出现严重错误");
+                        throw new Exception($"开始压缩操作，发现数据库文件:{t8Task.T8FileEntity.GeneralFileInfo.FilePath}不存在");
                     }
 
                     GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(2);
@@ -184,8 +183,9 @@ namespace Openbook.Bee.Core
                 }
                 catch (Exception ex)
                 {
-                    SetTaskErrorStatus(t8Task, $"BuildCompressFile()[{ex.Message}]");
+                    Common.SetTaskErrorStatus(t8Task, $"BuildCompressFile()[{ex.Message}]");
                     LogUtil.WriteLog(ex);
+                    throw new Exception(ex.Message);
                 }
             };
             product.AddPart(action);
@@ -197,12 +197,29 @@ namespace Openbook.Bee.Core
             {
                 try
                 {
+                    if (!File.Exists(t8Task.T8FileEntity.CompressFileInfo.FilePath))
+                    {
+                        throw new Exception($"开始上传FTP服务器，发现数据库文件:{t8Task.T8FileEntity.CompressFileInfo.FilePath}不存在");
+                    }
 
+                    GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(3);
+                    T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
+                    fileInfoEntity.FileGenerateTime = DateTime.Now;
+                    fileInfoEntity.FileName = fileStragety.FileName(t8Task.T8FileEntity);
+                    fileInfoEntity.FilePath = fileStragety.FileFullName(t8Task.T8FileEntity);
+
+                    //FileHelper.ZipFile(t8Task.T8FileEntity.GeneralFileInfo.FilePath, fileInfoEntity.FilePath);
+                    FtpHelper.UploadFile(t8Task.T8FileEntity.FtpInfo, fileInfoEntity);
+
+                    t8Task.T8FileEntity.StepStatus = StepStatus.UploadFile;
+
+                    LogUtil.WriteLog($"压缩数据库文件[{fileInfoEntity.FilePath}]完成");
                 }
                 catch (Exception ex)
                 {
-                    SetTaskErrorStatus(t8Task, $"BuildUploadFile()[{ex.Message}]");
+                    Common.SetTaskErrorStatus(t8Task, $"BuildUploadFile()[{ex.Message}]");
                     LogUtil.WriteLog(ex);
+                    throw new Exception(ex.Message);
                 }
             };
             product.AddPart(action);
@@ -219,7 +236,6 @@ namespace Openbook.Bee.Core
                     {
                         throw new FileNotFoundException($"上传文件:{t8Task.T8FileEntity.CompressFileInfo.FilePath}不存在");
                     }
-
 
                     GenerateFileNameStragety fileStragety = new BuildInstanceObject().GetGenerateFileNameStragety(3);
                     T8FileInfoEntity fileInfoEntity = new T8FileInfoEntity();
@@ -240,26 +256,22 @@ namespace Openbook.Bee.Core
                 }
                 catch (Exception ex)
                 {
+                    t8Task.T8FileEntity.StepStatus = StepStatus.BackupUploadFile;
+
+
                     t8Task.CompleteTime = DateTime.Now;
                     t8Task.T8TaskStatus = T8TaskStatus.Complete;
-                    t8Task.Content = ex.Message;
+                    t8Task.Content = t8Task.Content + (!string.IsNullOrEmpty(t8Task.Content) ? $"\r\n{ex.Message}" : ex.Message);
                     LogUtil.WriteLog(ex.Message);
                 }
             };
             product.AddPart(action);
         }
-       
+
 
         public override DbFileProduct GetDbFileProduct()
         {
             return product;
-        }
-
-        private void SetTaskErrorStatus(T8TaskEntity t8Task,string msg)
-        {
-            t8Task.T8TaskStatus = T8TaskStatus.Error;
-            t8Task.ExecFailureTime = t8Task.ExecFailureTime + 1;
-            t8Task.Content = !string.IsNullOrEmpty(t8Task.Content) ? $"\r\n{msg}" : msg;
         }
     }
 }

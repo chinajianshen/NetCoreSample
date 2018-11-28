@@ -25,7 +25,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 任务名称
         /// </summary>
-        public string TaskTitle { get; set; }        
+        public string TaskTitle { get; set; }
 
         /// <summary>
         /// 生成时间
@@ -40,7 +40,7 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 任务状态 （状态随着执行要更新对应状态）
         /// </summary>
-         public T8TaskStatus T8TaskStatus { get; set; }        
+        public T8TaskStatus T8TaskStatus { get; set; }
 
         // 任务源类型
         /// </summary>
@@ -60,5 +60,29 @@ namespace OpenBook.Bee.Entity
         /// 传8数据文件类
         /// </summary>
         public T8FileEntity T8FileEntity { get; set; }
+
+        /// <summary>
+        /// 生成任务队列Key
+        /// </summary>
+        public string GenerateTaskQueueKey
+        {
+            get
+            {
+                string fileName = "";
+                if (this.T8FileEntity.GeneralFileInfo != null && !string.IsNullOrEmpty(this.T8FileEntity.GeneralFileInfo.FileName))
+                {
+                    fileName = this.T8FileEntity.GeneralFileInfo.FileName;
+                    if (this.T8TaskStatus != T8TaskStatus.Error)
+                    {
+                        fileName = fileName.Replace(".", "_");
+                    }
+                    else
+                    {
+                        fileName = fileName.Replace(".", "_") + "_"+ DateTime.Now.ToString("yyyyMMdd");
+                    }
+                }
+                return fileName;
+            }
+        }
     }
 }
