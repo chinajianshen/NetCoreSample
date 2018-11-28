@@ -20,5 +20,7 @@ namespace OpenBook.Bee.Entity
         public string UserName { get; set; }
 
         public string UserPassword { get; set; }
+
+        public string ServerDirectory { get; set; }
     }
 }

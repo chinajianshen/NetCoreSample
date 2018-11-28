@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBook.BeeDatabase.Utility
+namespace OpenBook.Bee.Database.Utility
 {
     /// <summary>
     /// SQLite帮助类
@@ -64,8 +64,9 @@ namespace OpenBook.BeeDatabase.Utility
             foreach (DataColumn dc in dt.Columns)
             {
                 DataFieldType t = new DataFieldType();
-                t.FiledName = dc.ColumnName.Replace("\r", "").Replace("\n", "");
+                t.FiledName = dc.ColumnName.Trim().Replace("\r", "").Replace("\n", "");
                 t.Length = dc.MaxLength;
+                t.FieldParameterName = $"@{t.FiledName}";
 
                 string dataTypeName = dc.DataType.FullName.ToLower();
                 if (dataTypeName.Contains("int"))
@@ -80,6 +81,7 @@ namespace OpenBook.BeeDatabase.Utility
                 {
                     t.Type = "string";
                 }
+
                 dtc.Add(t);
             }
 

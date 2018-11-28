@@ -1,12 +1,13 @@
 ﻿using OpenBook.Bee.Database;
 using OpenBook.Bee.Entity;
-using OpenBook.Bee.Utility;
+using OpenBook.Bee.Database.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using OpenBook.Bee.Database.Database;
 
 namespace OpenBook.Bee.Database
 {
@@ -15,9 +16,9 @@ namespace OpenBook.Bee.Database
     /// </summary>
     public class DatabaseFactory
     {
-        public static IDatabase CreateDatabase(DatabaseType dbType, DataBaseInfoEntity dataBaseInfo)
+        public static IDatabase CreateDatabase(DataBaseInfoEntity dataBaseInfo)
         {
-            switch (dbType)
+            switch (dataBaseInfo.DataBaseType)
             {
                 case DatabaseType.SqlServer:
                     return CreateDatabaseInstance(typeof(SqlServerDatabase), dataBaseInfo);

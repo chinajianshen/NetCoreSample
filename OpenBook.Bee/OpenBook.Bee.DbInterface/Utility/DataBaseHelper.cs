@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace OpenBook.Bee.Utility
+namespace OpenBook.Bee.Database.Utility
 {
     public class DataBaseHelper
     {
@@ -68,10 +68,11 @@ namespace OpenBook.Bee.Utility
         {
             //优先从配置中读取 后期添加
 
-            return $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={accessFileFullpath}";
+            return $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={accessFileFullpath};";
+            //return $"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={accessFileFullpath};Jet OLEDB:Engine Type=5;";
         }
 
-        public static string CreateSQLiteFileConnnectionString(string sqliteFileFullpath)
+        public static string CreateSQLiteFileConnectionString(string sqliteFileFullpath)
         {
             //优先从配置中读取 后期添加
 
@@ -209,7 +210,7 @@ namespace OpenBook.Bee.Utility
         /// <returns></returns>
         public static List<string> CreateParameterNameList(DataFieldTypeCollection dataFieldTypes)
         {
-           return  dataFieldTypes.Select(item => "@" + item.FiledName).ToList();           
+            return dataFieldTypes.Select(item => "@" + item.FiledName).ToList();
         }
 
         /// <summary>
@@ -220,7 +221,7 @@ namespace OpenBook.Bee.Utility
         public static string CreateInsertSql(DataFieldTypeCollection dataFieldTypes)
         {
             string fieldString = string.Join(",", dataFieldTypes.Select(item => item.FiledName));
-            string parameterNameString = string.Join(",", dataFieldTypes.Select(item => "@" + item.FiledName));
+            string parameterNameString = string.Join(",", dataFieldTypes.Select(item => item.FieldParameterName));
             string insertSql = $"insert into [mytable]({fieldString}) values({parameterNameString})";
             return insertSql;
         }
@@ -232,10 +233,10 @@ namespace OpenBook.Bee.Utility
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <returns></returns>
-        public static string CovertedExecuteSql(string querySql, string startTime, string endTime)
+        public static string CovertedExecuteSql(string querySql, DateTime startTime, DateTime endTime)
         {
-            return querySql.Replace("@StartTime", $"'{startTime}'").Replace("@EndTime", $"'{endTime}'");
-        }
+            return querySql.Replace("@StartTime", $"'{startTime.ToString("yyyy-MM-dd HH:mm:ss")}'").Replace("@EndTime", $"'{endTime.ToString("yyyy-MM-dd HH:mm:ss")}'");
+        }    
 
     }
 }

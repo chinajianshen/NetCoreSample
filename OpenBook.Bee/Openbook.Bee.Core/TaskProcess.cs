@@ -73,8 +73,6 @@ namespace Openbook.Bee.Core
             //迭代T8配置项
             Thread thread = new Thread(new ThreadStart(IteratonT8TaskItems));
             thread.Start();
-
-
         }
 
         /// <summary>

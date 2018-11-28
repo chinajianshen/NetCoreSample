@@ -34,7 +34,7 @@ namespace OpenBook.Bee.Entity
         public DbFileType DbFileType { get; set; }
 
         /// <summary>
-        /// 步骤状态
+        /// 步骤状态 (每步完成需要设置状态)
         /// </summary>
         public StepStatus StepStatus { get; set; }
 

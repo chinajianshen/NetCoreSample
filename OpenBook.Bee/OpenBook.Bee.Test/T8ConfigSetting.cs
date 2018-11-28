@@ -26,7 +26,8 @@ namespace OpenBook.Bee.Test
                 {
                     ServerAddress = "ftp://openbook.cn",
                     UserName = "t8jyqssd",
-                    UserPassword = "t8jyqssd"
+                    UserPassword = "t8jyqssd",
+                    ServerDirectory="upload"
                 };
                 t8ConfigEntity.DataBaseInfo = new DataBaseInfoEntity
                 {

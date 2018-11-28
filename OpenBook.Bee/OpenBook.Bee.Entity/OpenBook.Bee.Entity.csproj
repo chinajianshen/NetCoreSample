@@ -56,7 +56,6 @@
     <Compile Include="AutoMapper\EntityAutoMapperProfile.cs" />
     <Compile Include="AutoMapper\Source.cs" />
     <Compile Include="DataBaseInfoEntity.cs" />
-    <Compile Include="DataFieldType.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="FtpInfoEntity.cs" />
     <Compile Include="JsonObj.cs" />

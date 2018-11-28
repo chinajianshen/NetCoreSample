@@ -1,0 +1,1419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="ded25991-f858-4dc1-9429-615caaf01aa0" Title="Namespaces" Url="html/R_Project.htm">
+    <HelpTOCNode Id="83528d2a-388b-4fdf-b7b1-f8eb046c389f" Title="EnterpriseDT.Net Namespace" Url="html/N_EnterpriseDT_Net.htm">
+      <HelpTOCNode Id="0f0ce904-148a-4e28-844d-fcf252f2c38d" Title="BaseSocket Class" Url="html/T_EnterpriseDT_Net_BaseSocket.htm">
+        <HelpTOCNode Title="BaseSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_BaseSocket.htm" />
+        <HelpTOCNode Id="f31342ec-9881-456d-9c0b-ad7fc0cc25a2" Title="BaseSocket Constructor " Url="html/Overload_EnterpriseDT_Net_BaseSocket__ctor.htm">
+          <HelpTOCNode Title="BaseSocket Constructor " Url="html/M_EnterpriseDT_Net_BaseSocket__ctor.htm" />
+          <HelpTOCNode Title="BaseSocket Constructor (AddressFamily, SocketType, ProtocolType, ILogTag)" Url="html/M_EnterpriseDT_Net_BaseSocket__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="422afcfc-bd8d-4885-9f7e-b6aa3b23febd" Title="BaseSocket Fields" Url="html/Fields_T_EnterpriseDT_Net_BaseSocket.htm">
+          <HelpTOCNode Title="addressFamily Field" Url="html/F_EnterpriseDT_Net_BaseSocket_addressFamily.htm" />
+          <HelpTOCNode Title="log Field" Url="html/F_EnterpriseDT_Net_BaseSocket_log.htm" />
+          <HelpTOCNode Title="logTag Field" Url="html/F_EnterpriseDT_Net_BaseSocket_logTag.htm" />
+          <HelpTOCNode Title="protocolType Field" Url="html/F_EnterpriseDT_Net_BaseSocket_protocolType.htm" />
+          <HelpTOCNode Title="socketType Field" Url="html/F_EnterpriseDT_Net_BaseSocket_socketType.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b90cb2d1-a907-4828-8d0d-7bab85d9ae4f" Title="BaseSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_BaseSocket.htm">
+          <HelpTOCNode Title="Accept Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Accept.htm" />
+          <HelpTOCNode Title="BeginAccept Method " Url="html/M_EnterpriseDT_Net_BaseSocket_BeginAccept.htm" />
+          <HelpTOCNode Title="BeginReceive Method " Url="html/M_EnterpriseDT_Net_BaseSocket_BeginReceive.htm" />
+          <HelpTOCNode Title="Bind Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Bind.htm" />
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Close.htm" />
+          <HelpTOCNode Id="007849b0-8173-4c4a-b057-5135f66615eb" Title="Connect Method " Url="html/Overload_EnterpriseDT_Net_BaseSocket_Connect.htm">
+            <HelpTOCNode Title="Connect Method (EndPoint)" Url="html/M_EnterpriseDT_Net_BaseSocket_Connect.htm" />
+            <HelpTOCNode Title="Connect Method (EndPoint, Int32)" Url="html/M_EnterpriseDT_Net_BaseSocket_Connect_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="EndAccept Method " Url="html/M_EnterpriseDT_Net_BaseSocket_EndAccept.htm" />
+          <HelpTOCNode Title="EndReceive Method " Url="html/M_EnterpriseDT_Net_BaseSocket_EndReceive.htm" />
+          <HelpTOCNode Id="f87edaa5-d3a3-4234-b2e7-d98971f8cfd1" Title="GetStream Method " Url="html/Overload_EnterpriseDT_Net_BaseSocket_GetStream.htm">
+            <HelpTOCNode Title="GetStream Method " Url="html/M_EnterpriseDT_Net_BaseSocket_GetStream.htm" />
+            <HelpTOCNode Title="GetStream Method (Boolean)" Url="html/M_EnterpriseDT_Net_BaseSocket_GetStream_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Listen Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Listen.htm" />
+          <HelpTOCNode Title="Poll Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Poll.htm" />
+          <HelpTOCNode Title="Receive Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Receive.htm" />
+          <HelpTOCNode Id="cea61d42-786f-4b2b-a4f4-af5f7ad3dc23" Title="Send Method " Url="html/Overload_EnterpriseDT_Net_BaseSocket_Send.htm">
+            <HelpTOCNode Title="Send Method (Byte[])" Url="html/M_EnterpriseDT_Net_BaseSocket_Send.htm" />
+            <HelpTOCNode Title="Send Method (Byte[], Int32, Int32, SocketFlags)" Url="html/M_EnterpriseDT_Net_BaseSocket_Send_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="SetSocketOption Method " Url="html/M_EnterpriseDT_Net_BaseSocket_SetSocketOption.htm" />
+          <HelpTOCNode Title="Shutdown Method " Url="html/M_EnterpriseDT_Net_BaseSocket_Shutdown.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="41403520-867f-4cd9-9b0d-850c2513bee6" Title="BaseSocket Properties" Url="html/Properties_T_EnterpriseDT_Net_BaseSocket.htm">
+          <HelpTOCNode Title="AddressFamily Property " Url="html/P_EnterpriseDT_Net_BaseSocket_AddressFamily.htm" />
+          <HelpTOCNode Title="Available Property " Url="html/P_EnterpriseDT_Net_BaseSocket_Available.htm" />
+          <HelpTOCNode Title="Connected Property " Url="html/P_EnterpriseDT_Net_BaseSocket_Connected.htm" />
+          <HelpTOCNode Title="LocalEndPoint Property " Url="html/P_EnterpriseDT_Net_BaseSocket_LocalEndPoint.htm" />
+          <HelpTOCNode Title="RemoteEndPoint Property " Url="html/P_EnterpriseDT_Net_BaseSocket_RemoteEndPoint.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d779d846-b0e6-4524-b83c-803fc9d8aecc" Title="StandardSocket Class" Url="html/T_EnterpriseDT_Net_StandardSocket.htm">
+        <HelpTOCNode Title="StandardSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_StandardSocket.htm" />
+        <HelpTOCNode Id="eeb17e62-8cf3-4b56-91b4-f4bf92922a3f" Title="StandardSocket Constructor " Url="html/Overload_EnterpriseDT_Net_StandardSocket__ctor.htm">
+          <HelpTOCNode Title="StandardSocket Constructor (Socket)" Url="html/M_EnterpriseDT_Net_StandardSocket__ctor_1.htm" />
+          <HelpTOCNode Title="StandardSocket Constructor (AddressFamily, SocketType, ProtocolType, ILogTag)" Url="html/M_EnterpriseDT_Net_StandardSocket__ctor.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="StandardSocket Fields" Url="html/Fields_T_EnterpriseDT_Net_StandardSocket.htm" />
+        <HelpTOCNode Id="51188b25-4b6c-400c-a8a3-fe362257cb47" Title="StandardSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_StandardSocket.htm">
+          <HelpTOCNode Title="Accept Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Accept.htm" />
+          <HelpTOCNode Title="BeginAccept Method " Url="html/M_EnterpriseDT_Net_StandardSocket_BeginAccept.htm" />
+          <HelpTOCNode Title="BeginReceive Method " Url="html/M_EnterpriseDT_Net_StandardSocket_BeginReceive.htm" />
+          <HelpTOCNode Title="Bind Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Bind.htm" />
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Close.htm" />
+          <HelpTOCNode Id="7bc821e0-74c9-4c1d-8425-b10300293f49" Title="Connect Method " Url="html/Overload_EnterpriseDT_Net_StandardSocket_Connect.htm">
+            <HelpTOCNode Title="Connect Method (EndPoint)" Url="html/M_EnterpriseDT_Net_StandardSocket_Connect.htm" />
+            <HelpTOCNode Title="Connect Method (EndPoint, Int32)" Url="html/M_EnterpriseDT_Net_StandardSocket_Connect_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="EndAccept Method " Url="html/M_EnterpriseDT_Net_StandardSocket_EndAccept.htm" />
+          <HelpTOCNode Title="EndReceive Method " Url="html/M_EnterpriseDT_Net_StandardSocket_EndReceive.htm" />
+          <HelpTOCNode Id="70a57223-660d-4a8d-a1e6-f31ba43832de" Title="GetStream Method " Url="html/Overload_EnterpriseDT_Net_StandardSocket_GetStream.htm">
+            <HelpTOCNode Title="GetStream Method " Url="html/M_EnterpriseDT_Net_StandardSocket_GetStream.htm" />
+            <HelpTOCNode Title="GetStream Method (Boolean)" Url="html/M_EnterpriseDT_Net_StandardSocket_GetStream_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Listen Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Listen.htm" />
+          <HelpTOCNode Title="Poll Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Poll.htm" />
+          <HelpTOCNode Title="Receive Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Receive.htm" />
+          <HelpTOCNode Id="926d583a-7736-42c6-ad90-b889786da74c" Title="Send Method " Url="html/Overload_EnterpriseDT_Net_StandardSocket_Send.htm">
+            <HelpTOCNode Title="Send Method (Byte[])" Url="html/M_EnterpriseDT_Net_StandardSocket_Send.htm" />
+            <HelpTOCNode Title="Send Method (Byte[], Int32, Int32, SocketFlags)" Url="html/M_EnterpriseDT_Net_StandardSocket_Send_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="SetSocketOption Method " Url="html/M_EnterpriseDT_Net_StandardSocket_SetSocketOption.htm" />
+          <HelpTOCNode Title="Shutdown Method " Url="html/M_EnterpriseDT_Net_StandardSocket_Shutdown.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="62c16981-50d8-4472-bc68-d3b4d5732592" Title="StandardSocket Properties" Url="html/Properties_T_EnterpriseDT_Net_StandardSocket.htm">
+          <HelpTOCNode Title="Available Property " Url="html/P_EnterpriseDT_Net_StandardSocket_Available.htm" />
+          <HelpTOCNode Title="Connected Property " Url="html/P_EnterpriseDT_Net_StandardSocket_Connected.htm" />
+          <HelpTOCNode Title="LocalEndPoint Property " Url="html/P_EnterpriseDT_Net_StandardSocket_LocalEndPoint.htm" />
+          <HelpTOCNode Title="RemoteEndPoint Property " Url="html/P_EnterpriseDT_Net_StandardSocket_RemoteEndPoint.htm" />
+          <HelpTOCNode Title="Socket Property " Url="html/P_EnterpriseDT_Net_StandardSocket_Socket.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="419563d0-e6ed-4585-9f52-b97de0c08821" Title="EnterpriseDT.Net.Ftp Namespace" Url="html/N_EnterpriseDT_Net_Ftp.htm">
+      <HelpTOCNode Id="fb57a56f-1e7a-4ba4-8078-abf634994723" Title="BandwidthThrottler Class" Url="html/T_EnterpriseDT_Net_Ftp_BandwidthThrottler.htm">
+        <HelpTOCNode Title="BandwidthThrottler Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_BandwidthThrottler.htm" />
+        <HelpTOCNode Title="BandwidthThrottler Constructor " Url="html/M_EnterpriseDT_Net_Ftp_BandwidthThrottler__ctor.htm" />
+        <HelpTOCNode Id="9bd20ae7-098e-4651-b2d8-f91bc0bdec38" Title="BandwidthThrottler Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_BandwidthThrottler.htm">
+          <HelpTOCNode Title="Cancel Method " Url="html/M_EnterpriseDT_Net_Ftp_BandwidthThrottler_Cancel.htm" />
+          <HelpTOCNode Title="Reset Method " Url="html/M_EnterpriseDT_Net_Ftp_BandwidthThrottler_Reset.htm" />
+          <HelpTOCNode Title="ThrottleTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_BandwidthThrottler_ThrottleTransfer.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2516f902-c3ce-4364-92a5-8f28f0923fcd" Title="BandwidthThrottler Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_BandwidthThrottler.htm">
+          <HelpTOCNode Title="Threshold Property " Url="html/P_EnterpriseDT_Net_Ftp_BandwidthThrottler_Threshold.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="2dd269aa-86f3-49fb-91e7-f445883800fd" Title="BytesTransferredEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs.htm">
+        <HelpTOCNode Title="BytesTransferredEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs.htm" />
+        <HelpTOCNode Id="ba9f7d9d-4ca5-4dce-8aa7-391127cd2ac5" Title="BytesTransferredEventArgs Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs__ctor.htm">
+          <HelpTOCNode Title="BytesTransferredEventArgs Constructor (String, Int64, Int64)" Url="html/M_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs__ctor.htm" />
+          <HelpTOCNode Title="BytesTransferredEventArgs Constructor (String, String, Int64, Int64)" Url="html/M_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="BytesTransferredEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs.htm" />
+        <HelpTOCNode Id="aa40e474-d9d2-4424-9f95-c4ca09d9aad0" Title="BytesTransferredEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs.htm">
+          <HelpTOCNode Title="ByteCount Property " Url="html/P_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs_ByteCount.htm" />
+          <HelpTOCNode Title="RemoteDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs_RemoteDirectory.htm" />
+          <HelpTOCNode Title="RemoteFile Property " Url="html/P_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs_RemoteFile.htm" />
+          <HelpTOCNode Title="RemotePath Property " Url="html/P_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs_RemotePath.htm" />
+          <HelpTOCNode Title="ResumeOffset Property " Url="html/P_EnterpriseDT_Net_Ftp_BytesTransferredEventArgs_ResumeOffset.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="BytesTransferredHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_BytesTransferredHandler.htm" />
+      <HelpTOCNode Id="1de2703a-39b8-46b0-98d2-b95b4afd5779" Title="ControlChannelIOException Class" Url="html/T_EnterpriseDT_Net_Ftp_ControlChannelIOException.htm">
+        <HelpTOCNode Title="ControlChannelIOException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_ControlChannelIOException.htm" />
+        <HelpTOCNode Id="595077f0-3bc5-45d8-92da-45f9ff17fe77" Title="ControlChannelIOException Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_ControlChannelIOException__ctor.htm">
+          <HelpTOCNode Title="ControlChannelIOException Constructor " Url="html/M_EnterpriseDT_Net_Ftp_ControlChannelIOException__ctor.htm" />
+          <HelpTOCNode Title="ControlChannelIOException Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_ControlChannelIOException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ControlChannelIOException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_ControlChannelIOException.htm" />
+        <HelpTOCNode Title="ControlChannelIOException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_ControlChannelIOException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4b3c8d80-e37c-41a3-9947-355eaaf261bf" Title="DirectoryEmptyStrings Class" Url="html/T_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings.htm">
+        <HelpTOCNode Title="DirectoryEmptyStrings Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings.htm" />
+        <HelpTOCNode Title="DirectoryEmptyStrings Constructor " Url="html/M_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings__ctor.htm" />
+        <HelpTOCNode Id="9431f239-2b28-4a2b-8755-b8a509f3b20d" Title="DirectoryEmptyStrings Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings.htm">
+          <HelpTOCNode Title="EMPTY_DIR Field" Url="html/F_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings_EMPTY_DIR.htm" />
+          <HelpTOCNode Title="NO_DATA_SETS_FOUND Field" Url="html/F_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings_NO_DATA_SETS_FOUND.htm" />
+          <HelpTOCNode Title="NO_FILES Field" Url="html/F_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings_NO_FILES.htm" />
+          <HelpTOCNode Title="NO_SUCH_FILE_OR_DIR Field" Url="html/F_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings_NO_SUCH_FILE_OR_DIR.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="DirectoryEmptyStrings Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings.htm" />
+        <HelpTOCNode Title="DirectoryEmptyStrings Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_DirectoryEmptyStrings.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="020322c1-e5a5-40fb-b02e-69c96527cf46" Title="FileNotFoundStrings Class" Url="html/T_EnterpriseDT_Net_Ftp_FileNotFoundStrings.htm">
+        <HelpTOCNode Title="FileNotFoundStrings Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FileNotFoundStrings.htm" />
+        <HelpTOCNode Title="FileNotFoundStrings Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FileNotFoundStrings__ctor.htm" />
+        <HelpTOCNode Id="15794e3e-14e9-4b3f-84d3-3c1b62b06488" Title="FileNotFoundStrings Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FileNotFoundStrings.htm">
+          <HelpTOCNode Title="CANNOT_FIND Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_CANNOT_FIND.htm" />
+          <HelpTOCNode Title="CANNOT_FIND_THE_FILE Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_CANNOT_FIND_THE_FILE.htm" />
+          <HelpTOCNode Title="COULD_NOT_GET_FILE Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_COULD_NOT_GET_FILE.htm" />
+          <HelpTOCNode Title="DOES_NOT_EXIST Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_DOES_NOT_EXIST.htm" />
+          <HelpTOCNode Title="FAILED_TO_OPEN_FILE Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_FAILED_TO_OPEN_FILE.htm" />
+          <HelpTOCNode Title="FILE_NOT_FOUND Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_FILE_NOT_FOUND.htm" />
+          <HelpTOCNode Title="NO_SUCH_FILE Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_NO_SUCH_FILE.htm" />
+          <HelpTOCNode Title="NOT_REGULAR_FILE Field" Url="html/F_EnterpriseDT_Net_Ftp_FileNotFoundStrings_NOT_REGULAR_FILE.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FileNotFoundStrings Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FileNotFoundStrings.htm" />
+        <HelpTOCNode Title="FileNotFoundStrings Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FileNotFoundStrings.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1724a5e9-ea61-4df2-b582-0be6ae6d242e" Title="FileTransferException Class" Url="html/T_EnterpriseDT_Net_Ftp_FileTransferException.htm">
+        <HelpTOCNode Title="FileTransferException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FileTransferException.htm" />
+        <HelpTOCNode Id="f973eecd-9621-474d-9aa3-cb5a3a3647b4" Title="FileTransferException Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FileTransferException__ctor.htm">
+          <HelpTOCNode Title="FileTransferException Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_FileTransferException__ctor.htm" />
+          <HelpTOCNode Title="FileTransferException Constructor (String, Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FileTransferException__ctor_1.htm" />
+          <HelpTOCNode Title="FileTransferException Constructor (String, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FileTransferException__ctor_2.htm" />
+          <HelpTOCNode Title="FileTransferException Constructor (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FileTransferException__ctor_3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FileTransferException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FileTransferException.htm" />
+        <HelpTOCNode Id="ac8d3a70-cda1-4141-b138-6b1b6f2edd15" Title="FileTransferException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FileTransferException.htm">
+          <HelpTOCNode Title="Message Property " Url="html/P_EnterpriseDT_Net_Ftp_FileTransferException_Message.htm" />
+          <HelpTOCNode Title="ReplyCode Property " Url="html/P_EnterpriseDT_Net_Ftp_FileTransferException_ReplyCode.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FileTransferProtocol Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_FileTransferProtocol.htm" />
+      <HelpTOCNode Id="e5d9481b-36d7-4b34-bc95-5fdc251eb794" Title="FTPActiveDataSocket Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPActiveDataSocket.htm">
+        <HelpTOCNode Title="FTPActiveDataSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPActiveDataSocket.htm" />
+        <HelpTOCNode Title="FTPActiveDataSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPActiveDataSocket.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ddb3a15d-40be-4c64-b905-57cb95fe8aea" Title="FTPAuthenticationException Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPAuthenticationException.htm">
+        <HelpTOCNode Title="FTPAuthenticationException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPAuthenticationException.htm" />
+        <HelpTOCNode Id="89382d1e-a1d2-4bd9-ba0f-404f6ccae67a" Title="FTPAuthenticationException Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPAuthenticationException__ctor.htm">
+          <HelpTOCNode Title="FTPAuthenticationException Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPAuthenticationException__ctor.htm" />
+          <HelpTOCNode Title="FTPAuthenticationException Constructor (String, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPAuthenticationException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FTPAuthenticationException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPAuthenticationException.htm" />
+        <HelpTOCNode Title="FTPAuthenticationException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPAuthenticationException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e3853b15-0b60-4f5e-8768-07dfd352dba8" Title="FTPCancelableEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs.htm">
+        <HelpTOCNode Title="FTPCancelableEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs.htm" />
+        <HelpTOCNode Title="FTPCancelableEventArgs Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs__ctor.htm" />
+        <HelpTOCNode Title="FTPCancelableEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs.htm" />
+        <HelpTOCNode Id="d70f38ad-39df-4d9c-a1dc-629d84a254ab" Title="FTPCancelableEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs.htm">
+          <HelpTOCNode Title="Cancel Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs_Cancel.htm" />
+          <HelpTOCNode Title="Exception Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs_Exception.htm" />
+          <HelpTOCNode Title="Succeeded Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPCancelableEventArgs_Succeeded.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="6f7170a0-27b0-462b-bd7e-326024ddfd05" Title="FTPClient Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPClient.htm">
+        <HelpTOCNode Title="FTPClient Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPClient.htm" />
+        <HelpTOCNode Id="3e736f9d-5959-44c0-8f6c-6aeaa49f75e4" Title="FTPClient Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient__ctor.htm">
+          <HelpTOCNode Title="FTPClient Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (IPAddress)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_1.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_4.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (IPAddress, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_2.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (String, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_5.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (IPAddress, Int32, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_3.htm" />
+          <HelpTOCNode Title="FTPClient Constructor (String, Int32, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient__ctor_6.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="aa12f6a3-4ef7-47f1-9831-a7f3f4174959" Title="FTPClient Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FTPClient.htm">
+          <HelpTOCNode Title="logTag Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPClient_logTag.htm" />
+          <HelpTOCNode Title="noOperationInterval Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPClient_noOperationInterval.htm" />
+          <HelpTOCNode Title="throttler Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPClient_throttler.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9612f453-1301-4a8d-a887-3253923aeb49" Title="FTPClient Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPClient.htm">
+          <HelpTOCNode Title="Abort Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Abort.htm" />
+          <HelpTOCNode Title="Account Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Account.htm" />
+          <HelpTOCNode Title="CancelResume Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CancelResume.htm" />
+          <HelpTOCNode Title="CancelTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CancelTransfer.htm" />
+          <HelpTOCNode Title="CdUp Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CdUp.htm" />
+          <HelpTOCNode Title="ChDir Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_ChDir.htm" />
+          <HelpTOCNode Id="9bcfc50d-eece-46d6-8616-24198e8d80b3" Title="CloseDataSocket Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient_CloseDataSocket.htm">
+            <HelpTOCNode Title="CloseDataSocket Method (Stream)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CloseDataSocket.htm" />
+            <HelpTOCNode Title="CloseDataSocket Method (StreamReader)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CloseDataSocket_1.htm" />
+            <HelpTOCNode Title="CloseDataSocket Method (StreamWriter)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_CloseDataSocket_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Connect Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Connect.htm" />
+          <HelpTOCNode Title="DebugResponses Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_DebugResponses.htm" />
+          <HelpTOCNode Title="Delete Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Delete.htm" />
+          <HelpTOCNode Id="4bfee4c8-1d94-4257-a932-478ae95267e4" Title="Dir Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient_Dir.htm">
+            <HelpTOCNode Title="Dir Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Dir.htm" />
+            <HelpTOCNode Title="Dir Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Dir_1.htm" />
+            <HelpTOCNode Title="Dir Method (String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Dir_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="acf9adbe-d160-4e97-b859-0670d7a65faf" Title="DirDetails Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient_DirDetails.htm">
+            <HelpTOCNode Title="DirDetails Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_DirDetails.htm" />
+            <HelpTOCNode Title="DirDetails Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_DirDetails_1.htm" />
+            <HelpTOCNode Title="DirDetails Method (String, FTPFileCallback)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_DirDetails_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Exists Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Exists.htm" />
+          <HelpTOCNode Title="Features Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Features.htm" />
+          <HelpTOCNode Id="d929cf14-b6e8-4756-918a-6bc92f4dc070" Title="Get Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient_Get.htm">
+            <HelpTOCNode Title="Get Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Get_1.htm" />
+            <HelpTOCNode Title="Get Method (Stream, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Get.htm" />
+            <HelpTOCNode Title="Get Method (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Get_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetInputStream Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_GetInputStream.htm" />
+          <HelpTOCNode Title="GetOutputStream Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_GetOutputStream.htm" />
+          <HelpTOCNode Title="GetSystem Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_GetSystem.htm" />
+          <HelpTOCNode Title="Help Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Help.htm" />
+          <HelpTOCNode Title="KillControlChannel Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_KillControlChannel.htm" />
+          <HelpTOCNode Title="Login Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Login.htm" />
+          <HelpTOCNode Title="MkDir Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_MkDir.htm" />
+          <HelpTOCNode Title="ModTime Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_ModTime.htm" />
+          <HelpTOCNode Title="NoOperation Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_NoOperation.htm" />
+          <HelpTOCNode Title="Password Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Password.htm" />
+          <HelpTOCNode Id="1dcee14b-71f4-45b2-bfd7-0d2df26d3614" Title="Put Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPClient_Put.htm">
+            <HelpTOCNode Title="Put Method (Byte[], String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put.htm" />
+            <HelpTOCNode Title="Put Method (Stream, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put_2.htm" />
+            <HelpTOCNode Title="Put Method (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put_4.htm" />
+            <HelpTOCNode Title="Put Method (Byte[], String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put_1.htm" />
+            <HelpTOCNode Title="Put Method (Stream, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put_3.htm" />
+            <HelpTOCNode Title="Put Method (String, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Put_5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Pwd Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Pwd.htm" />
+          <HelpTOCNode Title="Quit Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Quit.htm" />
+          <HelpTOCNode Title="QuitImmediately Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_QuitImmediately.htm" />
+          <HelpTOCNode Title="Quote Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Quote.htm" />
+          <HelpTOCNode Title="Rename Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Rename.htm" />
+          <HelpTOCNode Title="Restart Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Restart.htm" />
+          <HelpTOCNode Title="Resume Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Resume.htm" />
+          <HelpTOCNode Title="ResumeDownload Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_ResumeDownload.htm" />
+          <HelpTOCNode Title="RmDir Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_RmDir.htm" />
+          <HelpTOCNode Title="SetModTime Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_SetModTime.htm" />
+          <HelpTOCNode Title="Site Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Site.htm" />
+          <HelpTOCNode Title="Size Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_Size.htm" />
+          <HelpTOCNode Title="User Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_User.htm" />
+          <HelpTOCNode Title="ValidateTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_ValidateTransfer.htm" />
+          <HelpTOCNode Title="ValidateTransferOnError Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPClient_ValidateTransferOnError.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e5d4f3ad-131f-4805-8a88-a6033027ab72" Title="FTPClient Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPClient.htm">
+          <HelpTOCNode Title="ActiveIPAddress Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ActiveIPAddress.htm" />
+          <HelpTOCNode Title="ActivePortRange Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ActivePortRange.htm" />
+          <HelpTOCNode Title="AutoPassiveIPSubstitution Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_AutoPassiveIPSubstitution.htm" />
+          <HelpTOCNode Title="BuildTimestamp Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_BuildTimestamp.htm" />
+          <HelpTOCNode Title="CloseStreamsAfterTransfer Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_CloseStreamsAfterTransfer.htm" />
+          <HelpTOCNode Title="Connected Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_Connected.htm" />
+          <HelpTOCNode Title="ConnectMode Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ConnectMode.htm" />
+          <HelpTOCNode Title="ControlEncoding Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ControlEncoding.htm" />
+          <HelpTOCNode Title="ControlPort Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ControlPort.htm" />
+          <HelpTOCNode Title="DataEncoding Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_DataEncoding.htm" />
+          <HelpTOCNode Title="DeleteOnFailure Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_DeleteOnFailure.htm" />
+          <HelpTOCNode Title="DirectoryEmptyMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_DirectoryEmptyMessages.htm" />
+          <HelpTOCNode Title="FileNotFoundMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_FileNotFoundMessages.htm" />
+          <HelpTOCNode Title="FTPFileFactory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_FTPFileFactory.htm" />
+          <HelpTOCNode Title="IsConnected Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_IsConnected.htm" />
+          <HelpTOCNode Title="IsResuming Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_IsResuming.htm" />
+          <HelpTOCNode Title="LastBytesTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_LastBytesTransferred.htm" />
+          <HelpTOCNode Title="LastFileTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_LastFileTransferred.htm" />
+          <HelpTOCNode Title="LastValidReply Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_LastValidReply.htm" />
+          <HelpTOCNode Title="LogTag Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_LogTag.htm" />
+          <HelpTOCNode Title="ParsingCulture Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ParsingCulture.htm" />
+          <HelpTOCNode Title="RemoteHost Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_RemoteHost.htm" />
+          <HelpTOCNode Title="ServerWakeupInterval Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ServerWakeupInterval.htm" />
+          <HelpTOCNode Title="ShowHiddenFiles Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_ShowHiddenFiles.htm" />
+          <HelpTOCNode Title="StrictReturnCodes Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_StrictReturnCodes.htm" />
+          <HelpTOCNode Title="SynchronizePassiveConnections Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_SynchronizePassiveConnections.htm" />
+          <HelpTOCNode Title="TimeDifference Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TimeDifference.htm" />
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TimeIncludesSeconds.htm" />
+          <HelpTOCNode Title="Timeout Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_Timeout.htm" />
+          <HelpTOCNode Title="TransferBufferSize Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TransferBufferSize.htm" />
+          <HelpTOCNode Title="TransferCompleteMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TransferCompleteMessages.htm" />
+          <HelpTOCNode Title="TransferNotifyInterval Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TransferNotifyInterval.htm" />
+          <HelpTOCNode Title="TransferNotifyListings Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TransferNotifyListings.htm" />
+          <HelpTOCNode Title="TransferType Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_TransferType.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_Version.htm" />
+          <HelpTOCNode Title="WelcomeMessage Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPClient_WelcomeMessage.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="62c5fbd0-f719-45c4-8792-f6ec54bb2ad7" Title="FTPClient Events" Url="html/Events_T_EnterpriseDT_Net_Ftp_FTPClient.htm">
+          <HelpTOCNode Title="BytesTransferred Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_BytesTransferred.htm" />
+          <HelpTOCNode Title="CommandError Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_CommandError.htm" />
+          <HelpTOCNode Title="CommandSent Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_CommandSent.htm" />
+          <HelpTOCNode Title="ReplyReceived Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_ReplyReceived.htm" />
+          <HelpTOCNode Title="TransferComplete Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_TransferComplete.htm" />
+          <HelpTOCNode Title="TransferCompleteEx Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_TransferCompleteEx.htm" />
+          <HelpTOCNode Title="TransferStarted Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_TransferStarted.htm" />
+          <HelpTOCNode Title="TransferStartedEx Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPClient_TransferStartedEx.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a985e31-637d-4db0-a103-31767dfbed1b" Title="FTPConnection Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPConnection.htm">
+        <HelpTOCNode Title="FTPConnection Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPConnection.htm" />
+        <HelpTOCNode Id="4db7447e-2275-41bb-9753-a1c736bc5912" Title="FTPConnection Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection__ctor.htm">
+          <HelpTOCNode Title="FTPConnection Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection__ctor.htm" />
+          <HelpTOCNode Title="FTPConnection Constructor (IContainer)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection__ctor_2.htm" />
+          <HelpTOCNode Title="FTPConnection Constructor (FTPClient)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7ab2f4ae-0d9e-4172-818f-e19dc84fc7e0" Title="FTPConnection Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FTPConnection.htm">
+          <HelpTOCNode Title="accountInfoStr Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_accountInfoStr.htm" />
+          <HelpTOCNode Title="areEventsEnabled Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_areEventsEnabled.htm" />
+          <HelpTOCNode Title="clientLock Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_clientLock.htm" />
+          <HelpTOCNode Title="DEFAULT_WORKING_DIRECTORY Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_DEFAULT_WORKING_DIRECTORY.htm" />
+          <HelpTOCNode Title="fileTransferType Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_fileTransferType.htm" />
+          <HelpTOCNode Title="ftpClient Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_ftpClient.htm" />
+          <HelpTOCNode Title="ftpType Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_ftpType.htm" />
+          <HelpTOCNode Title="guiControl Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_guiControl.htm" />
+          <HelpTOCNode Title="haveQueriedForControl Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_haveQueriedForControl.htm" />
+          <HelpTOCNode Title="isTransferringData Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_isTransferringData.htm" />
+          <HelpTOCNode Title="lastTransferCancel Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_lastTransferCancel.htm" />
+          <HelpTOCNode Title="localDir Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_localDir.htm" />
+          <HelpTOCNode Title="loginPassword Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_loginPassword.htm" />
+          <HelpTOCNode Title="loginUserName Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_loginUserName.htm" />
+          <HelpTOCNode Title="logTag Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_logTag.htm" />
+          <HelpTOCNode Title="remoteDir Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_remoteDir.htm" />
+          <HelpTOCNode Title="useAutoFeatures Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_useAutoFeatures.htm" />
+          <HelpTOCNode Title="useAutoLogin Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_useAutoLogin.htm" />
+          <HelpTOCNode Title="useGuiThread Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPConnection_useGuiThread.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ccfd845e-3017-4b21-a349-5e833fd0af09" Title="FTPConnection Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPConnection.htm">
+          <HelpTOCNode Title="CancelResume Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_CancelResume.htm" />
+          <HelpTOCNode Title="CancelTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_CancelTransfer.htm" />
+          <HelpTOCNode Title="ChangeWorkingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ChangeWorkingDirectory.htm" />
+          <HelpTOCNode Title="ChangeWorkingDirectoryUp Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ChangeWorkingDirectoryUp.htm" />
+          <HelpTOCNode Title="CheckConnection Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_CheckConnection.htm" />
+          <HelpTOCNode Title="CheckFTPType Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_CheckFTPType.htm" />
+          <HelpTOCNode Id="eb146518-35b6-4219-b3d5-729e33e333da" Title="Close Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_Close.htm">
+            <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Close.htm" />
+            <HelpTOCNode Title="Close Method (Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Close_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Connect Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Connect.htm" />
+          <HelpTOCNode Title="CreateDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_CreateDirectory.htm" />
+          <HelpTOCNode Title="DeleteDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DeleteDirectory.htm" />
+          <HelpTOCNode Title="DeleteFile Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DeleteFile.htm" />
+          <HelpTOCNode Title="DirectoryExists Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryExists.htm" />
+          <HelpTOCNode Id="bb188012-ec84-48b1-a4df-b9be0bee017c" Title="Dispose Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_Dispose.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Dispose.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="DownloadByteArray Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DownloadByteArray.htm" />
+          <HelpTOCNode Title="DownloadFile Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DownloadFile.htm" />
+          <HelpTOCNode Title="DownloadStream Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_DownloadStream.htm" />
+          <HelpTOCNode Title="Exists Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Exists.htm" />
+          <HelpTOCNode Title="ftpClient_BytesTransferred Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ftpClient_BytesTransferred.htm" />
+          <HelpTOCNode Title="ftpClient_CommandSent Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ftpClient_CommandSent.htm" />
+          <HelpTOCNode Title="ftpClient_ReplyReceived Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ftpClient_ReplyReceived.htm" />
+          <HelpTOCNode Title="GetCommandHelp Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetCommandHelp.htm" />
+          <HelpTOCNode Title="GetFeatures Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFeatures.htm" />
+          <HelpTOCNode Id="8eebf7a2-f58b-4ce3-84f5-c2b2d2da7f77" Title="GetFileInfos Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_GetFileInfos.htm">
+            <HelpTOCNode Title="GetFileInfos Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFileInfos.htm" />
+            <HelpTOCNode Title="GetFileInfos Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFileInfos_1.htm" />
+            <HelpTOCNode Title="GetFileInfos Method (String, FTPFileCallback)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFileInfos_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="88a2505f-2334-4f45-b859-3be335a13fe5" Title="GetFiles Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_GetFiles.htm">
+            <HelpTOCNode Title="GetFiles Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFiles.htm" />
+            <HelpTOCNode Title="GetFiles Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFiles_1.htm" />
+            <HelpTOCNode Title="GetFiles Method (String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetFiles_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetHashCode Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetHashCode.htm" />
+          <HelpTOCNode Title="GetLastWriteTime Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetLastWriteTime.htm" />
+          <HelpTOCNode Title="GetSize Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetSize.htm" />
+          <HelpTOCNode Title="GetSystemType Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetSystemType.htm" />
+          <HelpTOCNode Id="3e6ed1ca-aa66-4d03-94bd-8a8ba5b32b18" Title="GetURL Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_GetURL.htm">
+            <HelpTOCNode Title="GetURL Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetURL.htm" />
+            <HelpTOCNode Title="GetURL Method (Boolean, Boolean, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetURL_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetWorkingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_GetWorkingDirectory.htm" />
+          <HelpTOCNode Title="InvokeDelegate Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeDelegate.htm" />
+          <HelpTOCNode Id="a0d80650-b63b-49cf-9f58-37fa03b955a5" Title="InvokeEventHandler Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_InvokeEventHandler.htm">
+            <HelpTOCNode Title="InvokeEventHandler Method (Delegate, Object, EventArgs)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeEventHandler_2.htm" />
+            <HelpTOCNode Title="InvokeEventHandler Method (Boolean, Delegate, Object, EventArgs)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeEventHandler_1.htm" />
+            <HelpTOCNode Title="InvokeEventHandler Method (Boolean, Boolean, Delegate, Object, EventArgs)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeEventHandler.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InvokeFTPCommand Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeFTPCommand.htm" />
+          <HelpTOCNode Title="InvokeSiteCommand Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_InvokeSiteCommand.htm" />
+          <HelpTOCNode Title="LinkComponent Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_LinkComponent.htm" />
+          <HelpTOCNode Title="Login Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_Login.htm" />
+          <HelpTOCNode Title="MemberwiseClone Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_MemberwiseClone.htm" />
+          <HelpTOCNode Title="OnBytesTransferred Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnBytesTransferred.htm" />
+          <HelpTOCNode Title="OnChangedLocalDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnChangedLocalDirectory.htm" />
+          <HelpTOCNode Title="OnChangedServerDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnChangedServerDirectory.htm" />
+          <HelpTOCNode Title="OnChangingLocalDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnChangingLocalDirectory.htm" />
+          <HelpTOCNode Title="OnChangingServerDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnChangingServerDirectory.htm" />
+          <HelpTOCNode Id="0d91666a-499d-42f6-b7e1-6ee6b2eb680d" Title="OnClosed Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnClosed.htm">
+            <HelpTOCNode Title="OnClosed Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnClosed.htm" />
+            <HelpTOCNode Title="OnClosed Method (Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnClosed_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="481d1193-5b33-486f-a005-e20d55e58955" Title="OnClosing Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnClosing.htm">
+            <HelpTOCNode Title="OnClosing Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnClosing.htm" />
+            <HelpTOCNode Title="OnClosing Method (Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnClosing_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="88cc05fb-1ff1-46ca-bc52-c358f2c79610" Title="OnConnected Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnConnected.htm">
+            <HelpTOCNode Title="OnConnected Method (Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnConnected.htm" />
+            <HelpTOCNode Title="OnConnected Method (Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnConnected_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="OnConnecting Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnConnecting.htm" />
+          <HelpTOCNode Title="OnCreatedDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnCreatedDirectory.htm" />
+          <HelpTOCNode Title="OnCreatingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnCreatingDirectory.htm" />
+          <HelpTOCNode Title="OnDeleted Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDeleted.htm" />
+          <HelpTOCNode Title="OnDeletedDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDeletedDirectory.htm" />
+          <HelpTOCNode Title="OnDeleting Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDeleting.htm" />
+          <HelpTOCNode Title="OnDeletingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDeletingDirectory.htm" />
+          <HelpTOCNode Title="OnDirectoryListed Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDirectoryListed.htm" />
+          <HelpTOCNode Title="OnDirectoryListing Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDirectoryListing.htm" />
+          <HelpTOCNode Id="b550661c-c067-40f1-8456-e1c0f1871085" Title="OnDownloaded Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloaded.htm">
+            <HelpTOCNode Title="OnDownloaded Method (Byte[], String, Int64, Exception, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloaded.htm" />
+            <HelpTOCNode Title="OnDownloaded Method (Stream, String, Int64, Exception, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloaded_1.htm" />
+            <HelpTOCNode Title="OnDownloaded Method (String, String, Int64, Boolean, Exception, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloaded_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="074f2f1c-b705-462d-86e7-29a0d00b90aa" Title="OnDownloading Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloading.htm">
+            <HelpTOCNode Title="OnDownloading Method (String, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloading_1.htm" />
+            <HelpTOCNode Title="OnDownloading Method (Stream, String, Int64, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloading.htm" />
+            <HelpTOCNode Title="OnDownloading Method (String, String, Boolean, Int64, DateTime)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnDownloading_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="OnLoggedIn Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnLoggedIn.htm" />
+          <HelpTOCNode Title="OnLoggingIn Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnLoggingIn.htm" />
+          <HelpTOCNode Title="OnPropertyChanged Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnPropertyChanged.htm" />
+          <HelpTOCNode Title="OnRenamed Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnRenamed.htm" />
+          <HelpTOCNode Title="OnRenaming Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnRenaming.htm" />
+          <HelpTOCNode Id="af172251-47cc-4383-a414-3c326cc8483e" Title="OnUploaded Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnUploaded.htm">
+            <HelpTOCNode Title="OnUploaded Method (Byte[], String, Int64, Boolean, Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploaded.htm" />
+            <HelpTOCNode Title="OnUploaded Method (Stream, Int64, String, Boolean, Exception, Int64)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploaded_1.htm" />
+            <HelpTOCNode Title="OnUploaded Method (String, String, Int64, Boolean, Boolean, Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploaded_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="09fa1f15-8bcd-4e8e-a417-e4561be128a9" Title="OnUploading Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_OnUploading.htm">
+            <HelpTOCNode Title="OnUploading Method (Byte[], String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploading.htm" />
+            <HelpTOCNode Title="OnUploading Method (Stream, String, Boolean, Int64)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploading_1.htm" />
+            <HelpTOCNode Title="OnUploading Method (String, String, Boolean, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_OnUploading_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PerformAutoLogin Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_PerformAutoLogin.htm" />
+          <HelpTOCNode Title="PostLogin Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_PostLogin.htm" />
+          <HelpTOCNode Title="RaiseBytesTransferred Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseBytesTransferred.htm" />
+          <HelpTOCNode Title="RaiseClosed Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseClosed.htm" />
+          <HelpTOCNode Title="RaiseClosing Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseClosing.htm" />
+          <HelpTOCNode Title="RaiseCommandSent Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseCommandSent.htm" />
+          <HelpTOCNode Title="RaiseConnected Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseConnected.htm" />
+          <HelpTOCNode Title="RaiseConnecting Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseConnecting.htm" />
+          <HelpTOCNode Title="RaiseCreatedDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseCreatedDirectory.htm" />
+          <HelpTOCNode Title="RaiseCreatingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseCreatingDirectory.htm" />
+          <HelpTOCNode Title="RaiseDeleted Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDeleted.htm" />
+          <HelpTOCNode Title="RaiseDeletedDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDeletedDirectory.htm" />
+          <HelpTOCNode Title="RaiseDeleting Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDeleting.htm" />
+          <HelpTOCNode Title="RaiseDeletingDirectory Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDeletingDirectory.htm" />
+          <HelpTOCNode Title="RaiseDirectoryChanged Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDirectoryChanged.htm" />
+          <HelpTOCNode Title="RaiseDirectoryChanging Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDirectoryChanging.htm" />
+          <HelpTOCNode Title="RaiseDirectoryListed Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDirectoryListed.htm" />
+          <HelpTOCNode Title="RaiseDirectoryListing Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDirectoryListing.htm" />
+          <HelpTOCNode Title="RaiseDownloaded Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDownloaded.htm" />
+          <HelpTOCNode Title="RaiseDownloading Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseDownloading.htm" />
+          <HelpTOCNode Title="RaiseLocalDirectoryChanged Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseLocalDirectoryChanged.htm" />
+          <HelpTOCNode Title="RaiseLocalDirectoryChanging Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseLocalDirectoryChanging.htm" />
+          <HelpTOCNode Title="RaiseLoggedIn Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseLoggedIn.htm" />
+          <HelpTOCNode Title="RaiseLoggingIn Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseLoggingIn.htm" />
+          <HelpTOCNode Title="RaisePropertyChanged Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaisePropertyChanged.htm" />
+          <HelpTOCNode Title="RaiseRenamedFile Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseRenamedFile.htm" />
+          <HelpTOCNode Title="RaiseRenamingFile Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseRenamingFile.htm" />
+          <HelpTOCNode Title="RaiseReplyReceived Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseReplyReceived.htm" />
+          <HelpTOCNode Title="RaiseServerDirectoryChanged Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseServerDirectoryChanged.htm" />
+          <HelpTOCNode Title="RaiseServerDirectoryChanging Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseServerDirectoryChanging.htm" />
+          <HelpTOCNode Title="RaiseUploaded Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseUploaded.htm" />
+          <HelpTOCNode Title="RaiseUploading Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RaiseUploading.htm" />
+          <HelpTOCNode Title="RelativePathToAbsolute Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RelativePathToAbsolute.htm" />
+          <HelpTOCNode Title="RenameFile Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_RenameFile.htm" />
+          <HelpTOCNode Title="ResumeNextDownload Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ResumeNextDownload.htm" />
+          <HelpTOCNode Title="ResumeNextTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ResumeNextTransfer.htm" />
+          <HelpTOCNode Title="ResumeTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ResumeTransfer.htm" />
+          <HelpTOCNode Title="SendAccountInfo Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_SendAccountInfo.htm" />
+          <HelpTOCNode Title="SendPassword Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_SendPassword.htm" />
+          <HelpTOCNode Title="SendUserName Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_SendUserName.htm" />
+          <HelpTOCNode Title="SetLastWriteTime Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_SetLastWriteTime.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_ToString.htm" />
+          <HelpTOCNode Id="544e35fa-8701-4502-a3b9-62e495de9b67" Title="UploadByteArray Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_UploadByteArray.htm">
+            <HelpTOCNode Title="UploadByteArray Method (Byte[], String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadByteArray.htm" />
+            <HelpTOCNode Title="UploadByteArray Method (Byte[], String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadByteArray_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9a5948ad-b70c-4c00-89c9-bcf39d2c5b7e" Title="UploadFile Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_UploadFile.htm">
+            <HelpTOCNode Title="UploadFile Method (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadFile.htm" />
+            <HelpTOCNode Title="UploadFile Method (String, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadFile_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c14a6c82-4c6c-4402-8a34-1b20cfb39d9a" Title="UploadStream Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPConnection_UploadStream.htm">
+            <HelpTOCNode Title="UploadStream Method (Stream, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadStream.htm" />
+            <HelpTOCNode Title="UploadStream Method (Stream, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPConnection_UploadStream_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="9c60cf27-0fa6-4fac-9b4a-a0c28f5a27f3" Title="FTPConnection Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPConnection.htm">
+          <HelpTOCNode Title="AccountInfo Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_AccountInfo.htm" />
+          <HelpTOCNode Title="ActiveClient Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ActiveClient.htm" />
+          <HelpTOCNode Title="ActivePortRange Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ActivePortRange.htm" />
+          <HelpTOCNode Title="AutoFeatures Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_AutoFeatures.htm" />
+          <HelpTOCNode Title="AutoLogin Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_AutoLogin.htm" />
+          <HelpTOCNode Title="AutoPassiveIPSubstitution Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_AutoPassiveIPSubstitution.htm" />
+          <HelpTOCNode Title="BuildTimestamp Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_BuildTimestamp.htm" />
+          <HelpTOCNode Title="CloseStreamsAfterTransfer Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_CloseStreamsAfterTransfer.htm" />
+          <HelpTOCNode Title="CommandEncoding Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_CommandEncoding.htm" />
+          <HelpTOCNode Title="ConnectMode Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ConnectMode.htm" />
+          <HelpTOCNode Title="DataEncoding Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_DataEncoding.htm" />
+          <HelpTOCNode Title="DeleteOnFailure Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_DeleteOnFailure.htm" />
+          <HelpTOCNode Title="DirectoryEmptyMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryEmptyMessages.htm" />
+          <HelpTOCNode Title="EventsEnabled Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_EventsEnabled.htm" />
+          <HelpTOCNode Title="FileInfoParser Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_FileInfoParser.htm" />
+          <HelpTOCNode Title="FileNotFoundMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_FileNotFoundMessages.htm" />
+          <HelpTOCNode Title="FilePathEncoding Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_FilePathEncoding.htm" />
+          <HelpTOCNode Title="IsConnected Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_IsConnected.htm" />
+          <HelpTOCNode Title="IsTransferring Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_IsTransferring.htm" />
+          <HelpTOCNode Title="LastTransferCancelled Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LastTransferCancelled.htm" />
+          <HelpTOCNode Title="LastValidReply Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LastValidReply.htm" />
+          <HelpTOCNode Title="LocalDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LocalDirectory.htm" />
+          <HelpTOCNode Title="LogFile Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LogFile.htm" />
+          <HelpTOCNode Title="LogLevel Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LogLevel.htm" />
+          <HelpTOCNode Title="LogTag Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LogTag.htm" />
+          <HelpTOCNode Title="LogToConsole Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LogToConsole.htm" />
+          <HelpTOCNode Title="LogToTrace Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_LogToTrace.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Name.htm" />
+          <HelpTOCNode Title="ParentControl Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ParentControl.htm" />
+          <HelpTOCNode Title="ParsingCulture Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ParsingCulture.htm" />
+          <HelpTOCNode Title="Password Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Password.htm" />
+          <HelpTOCNode Title="Protocol Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Protocol.htm" />
+          <HelpTOCNode Title="PublicIPAddress Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_PublicIPAddress.htm" />
+          <HelpTOCNode Title="ServerAddress Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ServerAddress.htm" />
+          <HelpTOCNode Title="ServerDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ServerDirectory.htm" />
+          <HelpTOCNode Title="ServerPort Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ServerPort.htm" />
+          <HelpTOCNode Title="ShowHiddenFiles Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_ShowHiddenFiles.htm" />
+          <HelpTOCNode Title="Site Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Site.htm" />
+          <HelpTOCNode Title="StrictReturnCodes Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_StrictReturnCodes.htm" />
+          <HelpTOCNode Title="SynchronizePassiveConnections Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_SynchronizePassiveConnections.htm" />
+          <HelpTOCNode Title="TimeDifference Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TimeDifference.htm" />
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TimeIncludesSeconds.htm" />
+          <HelpTOCNode Title="Timeout Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Timeout.htm" />
+          <HelpTOCNode Title="TransferBufferSize Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TransferBufferSize.htm" />
+          <HelpTOCNode Title="TransferCompleteMessages Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TransferCompleteMessages.htm" />
+          <HelpTOCNode Title="TransferNotifyInterval Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TransferNotifyInterval.htm" />
+          <HelpTOCNode Title="TransferNotifyListings Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TransferNotifyListings.htm" />
+          <HelpTOCNode Title="TransferType Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_TransferType.htm" />
+          <HelpTOCNode Title="UseGuiThreadIfAvailable Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_UseGuiThreadIfAvailable.htm" />
+          <HelpTOCNode Title="UserName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_UserName.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_Version.htm" />
+          <HelpTOCNode Title="WelcomeMessage Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_WelcomeMessage.htm" />
+          <HelpTOCNode Title="WorkingDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnection_WorkingDirectory.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ecc8c441-a09c-48c6-afd6-e3ac26fae882" Title="FTPConnection Events" Url="html/Events_T_EnterpriseDT_Net_Ftp_FTPConnection.htm">
+          <HelpTOCNode Title="BytesTransferred Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_BytesTransferred.htm" />
+          <HelpTOCNode Title="Closed Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Closed.htm" />
+          <HelpTOCNode Title="Closing Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Closing.htm" />
+          <HelpTOCNode Title="CommandSent Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_CommandSent.htm" />
+          <HelpTOCNode Title="Connected Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Connected.htm" />
+          <HelpTOCNode Title="Connecting Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Connecting.htm" />
+          <HelpTOCNode Title="CreatedDirectory Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_CreatedDirectory.htm" />
+          <HelpTOCNode Title="CreatingDirectory Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_CreatingDirectory.htm" />
+          <HelpTOCNode Title="Deleted Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Deleted.htm" />
+          <HelpTOCNode Title="DeletedDirectory Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DeletedDirectory.htm" />
+          <HelpTOCNode Title="Deleting Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Deleting.htm" />
+          <HelpTOCNode Title="DeletingDirectory Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DeletingDirectory.htm" />
+          <HelpTOCNode Title="DirectoryChanged Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryChanged.htm" />
+          <HelpTOCNode Title="DirectoryChanging Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryChanging.htm" />
+          <HelpTOCNode Title="DirectoryListed Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryListed.htm" />
+          <HelpTOCNode Title="DirectoryListing Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_DirectoryListing.htm" />
+          <HelpTOCNode Title="Downloaded Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Downloaded.htm" />
+          <HelpTOCNode Title="Downloading Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Downloading.htm" />
+          <HelpTOCNode Title="LocalDirectoryChanged Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_LocalDirectoryChanged.htm" />
+          <HelpTOCNode Title="LocalDirectoryChanging Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_LocalDirectoryChanging.htm" />
+          <HelpTOCNode Title="LoggedIn Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_LoggedIn.htm" />
+          <HelpTOCNode Title="LoggingIn Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_LoggingIn.htm" />
+          <HelpTOCNode Title="PropertyChanged Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_PropertyChanged.htm" />
+          <HelpTOCNode Title="RenamedFile Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_RenamedFile.htm" />
+          <HelpTOCNode Title="RenamingFile Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_RenamingFile.htm" />
+          <HelpTOCNode Title="ReplyReceived Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_ReplyReceived.htm" />
+          <HelpTOCNode Title="ServerDirectoryChanged Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_ServerDirectoryChanged.htm" />
+          <HelpTOCNode Title="ServerDirectoryChanging Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_ServerDirectoryChanging.htm" />
+          <HelpTOCNode Title="Uploaded Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Uploaded.htm" />
+          <HelpTOCNode Title="Uploading Event" Url="html/E_EnterpriseDT_Net_Ftp_FTPConnection_Uploading.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8322b609-8a0d-4498-b907-8bff5edba132" Title="FTPConnectionClosedException Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPConnectionClosedException.htm">
+        <HelpTOCNode Title="FTPConnectionClosedException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPConnectionClosedException.htm" />
+        <HelpTOCNode Title="FTPConnectionClosedException Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPConnectionClosedException__ctor.htm" />
+        <HelpTOCNode Title="FTPConnectionClosedException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPConnectionClosedException.htm" />
+        <HelpTOCNode Title="FTPConnectionClosedException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPConnectionClosedException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="98daa48b-0da5-4be9-bda6-385a3f6a8761" Title="FTPConnectionEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs.htm">
+        <HelpTOCNode Title="FTPConnectionEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs.htm" />
+        <HelpTOCNode Title="FTPConnectionEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs.htm" />
+        <HelpTOCNode Id="17896767-757a-4df3-837a-d1b8580e1e85" Title="FTPConnectionEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs.htm">
+          <HelpTOCNode Title="Exception Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs_Exception.htm" />
+          <HelpTOCNode Title="IsConnected Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs_IsConnected.htm" />
+          <HelpTOCNode Title="ServerAddress Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs_ServerAddress.htm" />
+          <HelpTOCNode Title="ServerPort Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPConnectionEventArgs_ServerPort.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPConnectionEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPConnectionEventHandler.htm" />
+      <HelpTOCNode Title="FTPConnectMode Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_FTPConnectMode.htm" />
+      <HelpTOCNode Id="6e6f009e-aacd-41d3-a5db-08cb0e48307d" Title="FTPControlSocket Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPControlSocket.htm">
+        <HelpTOCNode Title="FTPControlSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPControlSocket.htm" />
+        <HelpTOCNode Id="3ab34c98-0572-4872-93ff-9ad75a2ae2cc" Title="FTPControlSocket Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FTPControlSocket.htm">
+          <HelpTOCNode Title="activeIPAddress Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_activeIPAddress.htm" />
+          <HelpTOCNode Title="CONTROL_PORT Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_CONTROL_PORT.htm" />
+          <HelpTOCNode Title="controlPort Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_controlPort.htm" />
+          <HelpTOCNode Title="controlSock Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_controlSock.htm" />
+          <HelpTOCNode Title="logTag Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_logTag.htm" />
+          <HelpTOCNode Title="reader Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_reader.htm" />
+          <HelpTOCNode Title="remoteAddr Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_remoteAddr.htm" />
+          <HelpTOCNode Title="remoteHost Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_remoteHost.htm" />
+          <HelpTOCNode Title="timeout Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_timeout.htm" />
+          <HelpTOCNode Title="writer Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPControlSocket_writer.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9d410836-bb34-4c40-84a4-3df540a81a3a" Title="FTPControlSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPControlSocket.htm">
+          <HelpTOCNode Title="CreateDataSocketPASVInternal Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPControlSocket_CreateDataSocketPASVInternal.htm" />
+          <HelpTOCNode Title="SendCommand Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPControlSocket_SendCommand.htm" />
+          <HelpTOCNode Title="ValidateReply Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPControlSocket_ValidateReply.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="0e3c7615-c1f5-4af1-8d3c-8c470c98768e" Title="FTPControlSocket Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPControlSocket.htm">
+          <HelpTOCNode Title="Connected Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPControlSocket_Connected.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="2247d21e-de30-4e5b-9e81-2324b922d222" Title="FTPDataSocket Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPDataSocket.htm">
+        <HelpTOCNode Title="FTPDataSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPDataSocket.htm" />
+        <HelpTOCNode Title="FTPDataSocket Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPDataSocket__ctor.htm" />
+        <HelpTOCNode Title="FTPDataSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPDataSocket.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="124118b2-5d20-47bb-83d1-9969d0c575e7" Title="FTPDirectoryEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs.htm">
+        <HelpTOCNode Title="FTPDirectoryEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs.htm" />
+        <HelpTOCNode Title="FTPDirectoryEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs.htm" />
+        <HelpTOCNode Id="cbc4c839-8720-424b-be44-a7e25b581b73" Title="FTPDirectoryEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs.htm">
+          <HelpTOCNode Title="CreationTime Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_CreationTime.htm" />
+          <HelpTOCNode Title="NewDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_NewDirectory.htm" />
+          <HelpTOCNode Title="NewDirectoryName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_NewDirectoryName.htm" />
+          <HelpTOCNode Title="NewDirectoryPath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_NewDirectoryPath.htm" />
+          <HelpTOCNode Title="OldDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_OldDirectory.htm" />
+          <HelpTOCNode Title="OldDirectoryName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_OldDirectoryName.htm" />
+          <HelpTOCNode Title="OldDirectoryPath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryEventArgs_OldDirectoryPath.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPDirectoryEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPDirectoryEventHandler.htm" />
+      <HelpTOCNode Id="91e74b2c-3e1f-4561-9811-5175a39d20aa" Title="FTPDirectoryListEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs.htm">
+        <HelpTOCNode Title="FTPDirectoryListEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs.htm" />
+        <HelpTOCNode Title="FTPDirectoryListEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs.htm" />
+        <HelpTOCNode Id="fe7d4140-915a-4010-a646-77fc50adb978" Title="FTPDirectoryListEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs.htm">
+          <HelpTOCNode Title="Directory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_Directory.htm" />
+          <HelpTOCNode Title="DirectoryName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_DirectoryName.htm" />
+          <HelpTOCNode Title="DirectoryPath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_DirectoryPath.htm" />
+          <HelpTOCNode Title="Exception Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_Exception.htm" />
+          <HelpTOCNode Title="FileInfos Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_FileInfos.htm" />
+          <HelpTOCNode Title="Succeeded Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPDirectoryListEventArgs_Succeeded.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPDirectoryListEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPDirectoryListEventHandler.htm" />
+      <HelpTOCNode Id="f0296fc0-b33e-4aa9-bf1d-717aeffad83f" Title="FTPErrorEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPErrorEventArgs.htm">
+        <HelpTOCNode Title="FTPErrorEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPErrorEventArgs.htm" />
+        <HelpTOCNode Id="8b890ac8-3803-4225-9557-61bb77731f34" Title="FTPErrorEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPErrorEventArgs.htm">
+          <HelpTOCNode Id="5a288541-7d06-4610-bbf4-53a8fa2c26f9" Title="ShowMessageBox Method " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_ShowMessageBox.htm">
+            <HelpTOCNode Title="ShowMessageBox Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_ShowMessageBox.htm" />
+            <HelpTOCNode Title="ShowMessageBox Method (Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_ShowMessageBox_1.htm" />
+            <HelpTOCNode Title="ShowMessageBox Method (IWin32Window)" Url="html/M_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_ShowMessageBox_2.htm" />
+            <HelpTOCNode Title="ShowMessageBox Method (IWin32Window, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_ShowMessageBox_3.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="48a4254d-fa7b-4fb7-ae6d-c4d8ab530439" Title="FTPErrorEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPErrorEventArgs.htm">
+          <HelpTOCNode Title="Arguments Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_Arguments.htm" />
+          <HelpTOCNode Title="Exception Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_Exception.htm" />
+          <HelpTOCNode Title="SyncMethodName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPErrorEventArgs_SyncMethodName.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPErrorEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPErrorEventHandler.htm" />
+      <HelpTOCNode Id="895fe475-776b-490c-ad20-77e1a7900a07" Title="FTPEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPEventArgs.htm">
+        <HelpTOCNode Title="FTPEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPEventArgs.htm" />
+        <HelpTOCNode Title="FTPEventArgs Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPEventArgs__ctor.htm" />
+        <HelpTOCNode Title="FTPEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPEventArgs.htm" />
+        <HelpTOCNode Id="fd5a1443-2219-4a0d-9c74-03903160addc" Title="FTPEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPEventArgs.htm">
+          <HelpTOCNode Title="ConnectionInstanceNumber Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPEventArgs_ConnectionInstanceNumber.htm" />
+          <HelpTOCNode Title="IsGuiThread Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPEventArgs_IsGuiThread.htm" />
+          <HelpTOCNode Title="TaskID Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPEventArgs_TaskID.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="521e32d4-49ca-483a-aa46-632aca8d26ea" Title="FTPException Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPException.htm">
+        <HelpTOCNode Title="FTPException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPException.htm" />
+        <HelpTOCNode Id="e4134793-6490-4dad-bf1a-9ae56164e267" Title="FTPException Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPException__ctor.htm">
+          <HelpTOCNode Title="FTPException Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPException__ctor_1.htm" />
+          <HelpTOCNode Title="FTPException Constructor (FTPReply)" Url="html/M_EnterpriseDT_Net_Ftp_FTPException__ctor.htm" />
+          <HelpTOCNode Title="FTPException Constructor (String, Exception)" Url="html/M_EnterpriseDT_Net_Ftp_FTPException__ctor_2.htm" />
+          <HelpTOCNode Title="FTPException Constructor (String, Int32)" Url="html/M_EnterpriseDT_Net_Ftp_FTPException__ctor_3.htm" />
+          <HelpTOCNode Title="FTPException Constructor (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPException__ctor_4.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FTPException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPException.htm" />
+        <HelpTOCNode Title="FTPException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c08322d6-f3c9-4fea-9d03-8c9bfb2e4b73" Title="FTPFile Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPFile.htm">
+        <HelpTOCNode Title="FTPFile Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPFile.htm" />
+        <HelpTOCNode Title="FTPFile Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPFile__ctor.htm" />
+        <HelpTOCNode Id="4c2cde10-4575-4b2a-9128-3071671caddc" Title="FTPFile Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FTPFile.htm">
+          <HelpTOCNode Title="fileName Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_fileName.htm" />
+          <HelpTOCNode Title="fileOwner Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_fileOwner.htm" />
+          <HelpTOCNode Title="filePath Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_filePath.htm" />
+          <HelpTOCNode Title="filePermissions Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_filePermissions.htm" />
+          <HelpTOCNode Title="fileSize Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_fileSize.htm" />
+          <HelpTOCNode Title="isDir Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_isDir.htm" />
+          <HelpTOCNode Title="isLink Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_isLink.htm" />
+          <HelpTOCNode Title="kids Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_kids.htm" />
+          <HelpTOCNode Title="lastModifiedTime Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_lastModifiedTime.htm" />
+          <HelpTOCNode Title="linkedFileName Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_linkedFileName.htm" />
+          <HelpTOCNode Title="linkNum Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_linkNum.htm" />
+          <HelpTOCNode Title="OS400 Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_OS400.htm" />
+          <HelpTOCNode Title="rawRep Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_rawRep.htm" />
+          <HelpTOCNode Title="UNIX Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_UNIX.htm" />
+          <HelpTOCNode Title="UNKNOWN Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_UNKNOWN.htm" />
+          <HelpTOCNode Title="userGroup Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_userGroup.htm" />
+          <HelpTOCNode Title="VMS Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_VMS.htm" />
+          <HelpTOCNode Title="WINDOWS Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFile_WINDOWS.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="478367cf-0a78-49dc-b5e8-65f37b35afa7" Title="FTPFile Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPFile.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFile_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="db640619-e77d-4eaa-b01c-d88e765b97ff" Title="FTPFile Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPFile.htm">
+          <HelpTOCNode Title="Children Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Children.htm" />
+          <HelpTOCNode Title="Dir Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Dir.htm" />
+          <HelpTOCNode Title="Group Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Group.htm" />
+          <HelpTOCNode Title="Identifier Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Identifier.htm" />
+          <HelpTOCNode Title="LastModified Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_LastModified.htm" />
+          <HelpTOCNode Title="Link Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Link.htm" />
+          <HelpTOCNode Title="LinkCount Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_LinkCount.htm" />
+          <HelpTOCNode Title="LinkedName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_LinkedName.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Name.htm" />
+          <HelpTOCNode Title="Owner Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Owner.htm" />
+          <HelpTOCNode Title="Path Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Path.htm" />
+          <HelpTOCNode Title="Permissions Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Permissions.htm" />
+          <HelpTOCNode Title="Raw Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Raw.htm" />
+          <HelpTOCNode Title="Size Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Size.htm" />
+          <HelpTOCNode Title="Type Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFile_Type.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPFileCallback Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileCallback.htm" />
+      <HelpTOCNode Id="17f1aa4b-8f3a-46e1-80db-30f6334b9640" Title="FTPFileFactory Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileFactory.htm">
+        <HelpTOCNode Title="FTPFileFactory Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPFileFactory.htm" />
+        <HelpTOCNode Id="a3baebc1-7a48-4f56-b1f6-e1e6eb36f07f" Title="FTPFileFactory Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPFileFactory__ctor.htm">
+          <HelpTOCNode Title="FTPFileFactory Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory__ctor.htm" />
+          <HelpTOCNode Title="FTPFileFactory Constructor (String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory__ctor_2.htm" />
+          <HelpTOCNode Title="FTPFileFactory Constructor (FTPFileParser)" Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="456d066d-0096-4e83-ae10-6fa7eb2dd8b2" Title="FTPFileFactory Fields" Url="html/Fields_T_EnterpriseDT_Net_Ftp_FTPFileFactory.htm">
+          <HelpTOCNode Title="timeDiff Field" Url="html/F_EnterpriseDT_Net_Ftp_FTPFileFactory_timeDiff.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2f3ff5c3-f605-4c66-9ccc-8af2d8ec6b62" Title="FTPFileFactory Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPFileFactory.htm">
+          <HelpTOCNode Title="AddParser Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory_AddParser.htm" />
+          <HelpTOCNode Title="GetSystem Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory_GetSystem.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory_Parse.htm" />
+          <HelpTOCNode Title="PartialParse Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory_PartialParse.htm" />
+          <HelpTOCNode Title="SetParser Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileFactory_SetParser.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2b609823-34c8-4844-80b5-bf12ad0c91ff" Title="FTPFileFactory Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPFileFactory.htm">
+          <HelpTOCNode Title="FileParser Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_FileParser.htm" />
+          <HelpTOCNode Title="ParserSetExplicitly Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_ParserSetExplicitly.htm" />
+          <HelpTOCNode Title="ParsingCulture Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_ParsingCulture.htm" />
+          <HelpTOCNode Title="System Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_System.htm" />
+          <HelpTOCNode Title="TimeDifference Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_TimeDifference.htm" />
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_TimeIncludesSeconds.htm" />
+          <HelpTOCNode Title="VMSParser Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileFactory_VMSParser.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="10d3b07f-782b-4e70-80e2-237842eba5d9" Title="FTPFileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileParser.htm">
+        <HelpTOCNode Title="FTPFileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPFileParser.htm" />
+        <HelpTOCNode Title="FTPFileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileParser__ctor.htm" />
+        <HelpTOCNode Id="5f7b3eec-86f7-4998-838b-9ae65f522e6f" Title="FTPFileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPFileParser.htm">
+          <HelpTOCNode Title="IsMultiLine Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileParser_IsMultiLine.htm" />
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_FTPFileParser_Parse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3ce269cf-e059-440c-81fc-c2c4e6789af7" Title="FTPFileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPFileParser.htm">
+          <HelpTOCNode Title="ParsingCulture Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileParser_ParsingCulture.htm" />
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileParser_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="74af7be0-0c16-46fb-9d22-2d7481e08a33" Title="FTPFileRenameEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs.htm">
+        <HelpTOCNode Title="FTPFileRenameEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs.htm" />
+        <HelpTOCNode Title="FTPFileRenameEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs.htm" />
+        <HelpTOCNode Id="950ced77-71a6-4799-bdd6-392b1c0bc808" Title="FTPFileRenameEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs.htm">
+          <HelpTOCNode Title="NewDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_NewDirectory.htm" />
+          <HelpTOCNode Title="NewFileName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_NewFileName.htm" />
+          <HelpTOCNode Title="NewFilePath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_NewFilePath.htm" />
+          <HelpTOCNode Title="OldDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_OldDirectory.htm" />
+          <HelpTOCNode Title="OldFileName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_OldFileName.htm" />
+          <HelpTOCNode Title="OldFilePath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_OldFilePath.htm" />
+          <HelpTOCNode Title="RenameCompleted Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileRenameEventArgs_RenameCompleted.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPFileRenameEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileRenameEventHandler.htm" />
+      <HelpTOCNode Id="0429816d-ec05-4f56-adfb-98f84e5e3f3f" Title="FTPFileTransferEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs.htm">
+        <HelpTOCNode Title="FTPFileTransferEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs.htm" />
+        <HelpTOCNode Title="FTPFileTransferEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs.htm" />
+        <HelpTOCNode Id="6805a623-9179-4ec4-94e7-8df0c6f5932b" Title="FTPFileTransferEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs.htm">
+          <HelpTOCNode Title="Append Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Append.htm" />
+          <HelpTOCNode Title="Appended Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Appended.htm" />
+          <HelpTOCNode Title="Bytes Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Bytes.htm" />
+          <HelpTOCNode Title="BytesTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_BytesTransferred.htm" />
+          <HelpTOCNode Title="Cancel Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Cancel.htm" />
+          <HelpTOCNode Title="FileSize Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_FileSize.htm" />
+          <HelpTOCNode Title="LastWriteTime Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LastWriteTime.htm" />
+          <HelpTOCNode Title="LocalDataType Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LocalDataType.htm" />
+          <HelpTOCNode Title="LocalDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LocalDirectory.htm" />
+          <HelpTOCNode Title="LocalFile Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LocalFile.htm" />
+          <HelpTOCNode Title="LocalFileSize Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LocalFileSize.htm" />
+          <HelpTOCNode Title="LocalPath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_LocalPath.htm" />
+          <HelpTOCNode Title="RemoteDirectory Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_RemoteDirectory.htm" />
+          <HelpTOCNode Title="RemoteFile Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_RemoteFile.htm" />
+          <HelpTOCNode Title="RemoteFileName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_RemoteFileName.htm" />
+          <HelpTOCNode Title="RemoteFileSize Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_RemoteFileSize.htm" />
+          <HelpTOCNode Title="RemotePath Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_RemotePath.htm" />
+          <HelpTOCNode Title="Resume Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Resume.htm" />
+          <HelpTOCNode Title="Stream Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_Stream.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPFileTransferEventArgs.DataType Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileTransferEventArgs_DataType.htm" />
+      <HelpTOCNode Title="FTPFileTransferEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPFileTransferEventHandler.htm" />
+      <HelpTOCNode Title="FTPFilterType Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_FTPFilterType.htm" />
+      <HelpTOCNode Id="21baeb8d-c056-49c2-868b-a068810bcdd3" Title="FTPLogInEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPLogInEventArgs.htm">
+        <HelpTOCNode Title="FTPLogInEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPLogInEventArgs.htm" />
+        <HelpTOCNode Title="FTPLogInEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPLogInEventArgs.htm" />
+        <HelpTOCNode Id="aa96f8ad-1f11-471a-95f8-025c496995bc" Title="FTPLogInEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPLogInEventArgs.htm">
+          <HelpTOCNode Title="HasLoggedIn Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPLogInEventArgs_HasLoggedIn.htm" />
+          <HelpTOCNode Title="Password Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPLogInEventArgs_Password.htm" />
+          <HelpTOCNode Title="UserName Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPLogInEventArgs_UserName.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPLogInEventHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPLogInEventHandler.htm" />
+      <HelpTOCNode Id="55779412-f10f-4bc6-bde3-7060309e29bb" Title="FTPMessageEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPMessageEventArgs.htm">
+        <HelpTOCNode Title="FTPMessageEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPMessageEventArgs.htm" />
+        <HelpTOCNode Title="FTPMessageEventArgs Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPMessageEventArgs__ctor.htm" />
+        <HelpTOCNode Title="FTPMessageEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPMessageEventArgs.htm" />
+        <HelpTOCNode Id="10665549-714d-4d35-bc2e-c6261a956195" Title="FTPMessageEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPMessageEventArgs.htm">
+          <HelpTOCNode Title="Message Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPMessageEventArgs_Message.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPMessageHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_FTPMessageHandler.htm" />
+      <HelpTOCNode Id="e4f593b0-49a7-495c-b383-5912757190e9" Title="FTPPassiveDataSocket Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPPassiveDataSocket.htm">
+        <HelpTOCNode Title="FTPPassiveDataSocket Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPPassiveDataSocket.htm" />
+        <HelpTOCNode Title="FTPPassiveDataSocket Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPPassiveDataSocket.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7746182e-4cba-43c1-94b6-8b3187178b54" Title="FTPReply Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPReply.htm">
+        <HelpTOCNode Title="FTPReply Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPReply.htm" />
+        <HelpTOCNode Id="60eb1006-4a87-40e1-a85d-f7df6c30325d" Title="FTPReply Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_FTPReply__ctor.htm">
+          <HelpTOCNode Title="FTPReply Constructor (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_FTPReply__ctor.htm" />
+          <HelpTOCNode Title="FTPReply Constructor (String, String, String[])" Url="html/M_EnterpriseDT_Net_Ftp_FTPReply__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FTPReply Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPReply.htm" />
+        <HelpTOCNode Id="987b8022-1f14-41a8-9bc8-49f2361a6e2d" Title="FTPReply Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPReply.htm">
+          <HelpTOCNode Title="ReplyCode Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPReply_ReplyCode.htm" />
+          <HelpTOCNode Title="ReplyData Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPReply_ReplyData.htm" />
+          <HelpTOCNode Title="ReplyText Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPReply_ReplyText.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f3a98340-b80a-4cbf-b53c-325efe1f2edb" Title="FTPTransferCancelledException Class" Url="html/T_EnterpriseDT_Net_Ftp_FTPTransferCancelledException.htm">
+        <HelpTOCNode Title="FTPTransferCancelledException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_FTPTransferCancelledException.htm" />
+        <HelpTOCNode Title="FTPTransferCancelledException Constructor " Url="html/M_EnterpriseDT_Net_Ftp_FTPTransferCancelledException__ctor.htm" />
+        <HelpTOCNode Title="FTPTransferCancelledException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_FTPTransferCancelledException.htm" />
+        <HelpTOCNode Id="c55f40f8-73b7-42d7-9149-87ad6facd10b" Title="FTPTransferCancelledException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_FTPTransferCancelledException.htm">
+          <HelpTOCNode Title="BytesTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_FTPTransferCancelledException_BytesTransferred.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="FTPTransferType Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_FTPTransferType.htm" />
+      <HelpTOCNode Id="13e1bad0-7125-4779-8178-29b717bb5c83" Title="IFileTransferClient Interface" Url="html/T_EnterpriseDT_Net_Ftp_IFileTransferClient.htm">
+        <HelpTOCNode Title="IFileTransferClient Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_IFileTransferClient.htm" />
+        <HelpTOCNode Id="952491ab-0b87-4395-a839-4bc220e9da8b" Title="IFileTransferClient Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_IFileTransferClient.htm">
+          <HelpTOCNode Title="CancelResume Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_CancelResume.htm" />
+          <HelpTOCNode Title="CancelTransfer Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_CancelTransfer.htm" />
+          <HelpTOCNode Title="CdUp Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_CdUp.htm" />
+          <HelpTOCNode Title="ChDir Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_ChDir.htm" />
+          <HelpTOCNode Title="Connect Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Connect.htm" />
+          <HelpTOCNode Title="Delete Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Delete.htm" />
+          <HelpTOCNode Id="f3b8dea1-5f0a-446c-8093-36bcbc262556" Title="Dir Method " Url="html/Overload_EnterpriseDT_Net_Ftp_IFileTransferClient_Dir.htm">
+            <HelpTOCNode Title="Dir Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Dir.htm" />
+            <HelpTOCNode Title="Dir Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Dir_1.htm" />
+            <HelpTOCNode Title="Dir Method (String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Dir_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5f5a98ec-76e5-4454-a77e-7e7fc51c7468" Title="DirDetails Method " Url="html/Overload_EnterpriseDT_Net_Ftp_IFileTransferClient_DirDetails.htm">
+            <HelpTOCNode Title="DirDetails Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_DirDetails.htm" />
+            <HelpTOCNode Title="DirDetails Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_DirDetails_1.htm" />
+            <HelpTOCNode Title="DirDetails Method (String, FTPFileCallback)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_DirDetails_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Exists Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Exists.htm" />
+          <HelpTOCNode Id="f45feead-061c-4522-b14d-32bb4d6e42de" Title="Get Method " Url="html/Overload_EnterpriseDT_Net_Ftp_IFileTransferClient_Get.htm">
+            <HelpTOCNode Title="Get Method (String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Get_1.htm" />
+            <HelpTOCNode Title="Get Method (Stream, String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Get.htm" />
+            <HelpTOCNode Title="Get Method (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Get_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MkDir Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_MkDir.htm" />
+          <HelpTOCNode Title="ModTime Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_ModTime.htm" />
+          <HelpTOCNode Id="2ac7b472-4665-463f-acbd-b491ddcc3343" Title="Put Method " Url="html/Overload_EnterpriseDT_Net_Ftp_IFileTransferClient_Put.htm">
+            <HelpTOCNode Title="Put Method (Byte[], String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put.htm" />
+            <HelpTOCNode Title="Put Method (Stream, String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put_2.htm" />
+            <HelpTOCNode Title="Put Method (String, String)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put_4.htm" />
+            <HelpTOCNode Title="Put Method (Byte[], String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put_1.htm" />
+            <HelpTOCNode Title="Put Method (Stream, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put_3.htm" />
+            <HelpTOCNode Title="Put Method (String, String, Boolean)" Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Put_5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Pwd Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Pwd.htm" />
+          <HelpTOCNode Title="Quit Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Quit.htm" />
+          <HelpTOCNode Title="QuitImmediately Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_QuitImmediately.htm" />
+          <HelpTOCNode Title="Rename Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Rename.htm" />
+          <HelpTOCNode Title="Resume Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Resume.htm" />
+          <HelpTOCNode Title="ResumeDownload Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_ResumeDownload.htm" />
+          <HelpTOCNode Title="RmDir Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_RmDir.htm" />
+          <HelpTOCNode Title="SetModTime Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_SetModTime.htm" />
+          <HelpTOCNode Title="Size Method " Url="html/M_EnterpriseDT_Net_Ftp_IFileTransferClient_Size.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="707b254e-516e-4d39-898c-a1714538fbc7" Title="IFileTransferClient Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_IFileTransferClient.htm">
+          <HelpTOCNode Title="CloseStreamsAfterTransfer Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_CloseStreamsAfterTransfer.htm" />
+          <HelpTOCNode Title="ControlPort Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_ControlPort.htm" />
+          <HelpTOCNode Title="DeleteOnFailure Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_DeleteOnFailure.htm" />
+          <HelpTOCNode Title="IsConnected Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_IsConnected.htm" />
+          <HelpTOCNode Title="IsResuming Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_IsResuming.htm" />
+          <HelpTOCNode Title="LastBytesTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_LastBytesTransferred.htm" />
+          <HelpTOCNode Title="LastFileTransferred Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_LastFileTransferred.htm" />
+          <HelpTOCNode Title="RemoteHost Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_RemoteHost.htm" />
+          <HelpTOCNode Title="ShowHiddenFiles Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_ShowHiddenFiles.htm" />
+          <HelpTOCNode Title="Timeout Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_Timeout.htm" />
+          <HelpTOCNode Title="TransferBufferSize Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferBufferSize.htm" />
+          <HelpTOCNode Title="TransferNotifyInterval Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferNotifyInterval.htm" />
+          <HelpTOCNode Title="TransferNotifyListings Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferNotifyListings.htm" />
+          <HelpTOCNode Title="TransferType Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferType.htm" />
+          <HelpTOCNode Title="WelcomeMessage Property " Url="html/P_EnterpriseDT_Net_Ftp_IFileTransferClient_WelcomeMessage.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="30554665-6b5c-428a-8e44-e15fbd8be712" Title="IFileTransferClient Events" Url="html/Events_T_EnterpriseDT_Net_Ftp_IFileTransferClient.htm">
+          <HelpTOCNode Title="BytesTransferred Event" Url="html/E_EnterpriseDT_Net_Ftp_IFileTransferClient_BytesTransferred.htm" />
+          <HelpTOCNode Title="TransferCompleteEx Event" Url="html/E_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferCompleteEx.htm" />
+          <HelpTOCNode Title="TransferStartedEx Event" Url="html/E_EnterpriseDT_Net_Ftp_IFileTransferClient_TransferStartedEx.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="29117ce8-f307-4368-a060-9d506dd30276" Title="IFTPComponent Interface" Url="html/T_EnterpriseDT_Net_Ftp_IFTPComponent.htm">
+        <HelpTOCNode Title="IFTPComponent Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_IFTPComponent.htm" />
+        <HelpTOCNode Id="9fba1ccf-da1f-44a2-974e-2d0851802a96" Title="IFTPComponent Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_IFTPComponent.htm">
+          <HelpTOCNode Title="LinkComponent Method " Url="html/M_EnterpriseDT_Net_Ftp_IFTPComponent_LinkComponent.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="LineTerminatorType Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_LineTerminatorType.htm" />
+      <HelpTOCNode Id="2654ecd8-7e14-4c74-a8eb-8f699874732a" Title="MalformedReplyException Class" Url="html/T_EnterpriseDT_Net_Ftp_MalformedReplyException.htm">
+        <HelpTOCNode Title="MalformedReplyException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_MalformedReplyException.htm" />
+        <HelpTOCNode Title="MalformedReplyException Constructor " Url="html/M_EnterpriseDT_Net_Ftp_MalformedReplyException__ctor.htm" />
+        <HelpTOCNode Title="MalformedReplyException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_MalformedReplyException.htm" />
+        <HelpTOCNode Title="MalformedReplyException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_MalformedReplyException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b08090fe-fd77-48a7-b13c-343f1767c19f" Title="OS400FileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_OS400FileParser.htm">
+        <HelpTOCNode Title="OS400FileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_OS400FileParser.htm" />
+        <HelpTOCNode Title="OS400FileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_OS400FileParser__ctor.htm" />
+        <HelpTOCNode Id="23a7bf52-2023-4678-bfc6-a8be40572208" Title="OS400FileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_OS400FileParser.htm">
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_OS400FileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_OS400FileParser_Parse.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_OS400FileParser_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a8ac65f0-8972-4464-8bbb-38369640a67d" Title="OS400FileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_OS400FileParser.htm">
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_OS400FileParser_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5335b8aa-a047-40cb-b706-443ab689f860" Title="PortRange Class" Url="html/T_EnterpriseDT_Net_Ftp_PortRange.htm">
+        <HelpTOCNode Title="PortRange Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_PortRange.htm" />
+        <HelpTOCNode Id="3d6f8a96-c694-4f90-9ee2-a4f0cb90b3a5" Title="PortRange Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_PortRange.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_PortRange_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8f5b0ebc-a0c7-4d35-a156-974375dcefef" Title="PortRange Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_PortRange.htm">
+          <HelpTOCNode Title="HighPort Property " Url="html/P_EnterpriseDT_Net_Ftp_PortRange_HighPort.htm" />
+          <HelpTOCNode Title="LowPort Property " Url="html/P_EnterpriseDT_Net_Ftp_PortRange_LowPort.htm" />
+          <HelpTOCNode Title="UseOSAssignment Property " Url="html/P_EnterpriseDT_Net_Ftp_PortRange_UseOSAssignment.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="3828b34a-4500-4d37-9926-23ceb52a7b2f" Title="PropertyOrderAttribute Class" Url="html/T_EnterpriseDT_Net_Ftp_PropertyOrderAttribute.htm">
+        <HelpTOCNode Title="PropertyOrderAttribute Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_PropertyOrderAttribute.htm" />
+        <HelpTOCNode Title="PropertyOrderAttribute Constructor " Url="html/M_EnterpriseDT_Net_Ftp_PropertyOrderAttribute__ctor.htm" />
+        <HelpTOCNode Title="PropertyOrderAttribute Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_PropertyOrderAttribute.htm" />
+        <HelpTOCNode Id="d1fe9d0a-ae2d-472f-8e61-aac2bb004434" Title="PropertyOrderAttribute Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_PropertyOrderAttribute.htm">
+          <HelpTOCNode Title="Order Property " Url="html/P_EnterpriseDT_Net_Ftp_PropertyOrderAttribute_Order.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a92816e4-c4c9-4eab-ad35-2d1cd5f3b6bd" Title="RestartParsingException Class" Url="html/T_EnterpriseDT_Net_Ftp_RestartParsingException.htm">
+        <HelpTOCNode Title="RestartParsingException Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_RestartParsingException.htm" />
+        <HelpTOCNode Title="RestartParsingException Constructor " Url="html/M_EnterpriseDT_Net_Ftp_RestartParsingException__ctor.htm" />
+        <HelpTOCNode Title="RestartParsingException Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_RestartParsingException.htm" />
+        <HelpTOCNode Title="RestartParsingException Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_RestartParsingException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cd583ee5-deb0-49fd-ba66-91ce0391b278" Title="ServerStrings Class" Url="html/T_EnterpriseDT_Net_Ftp_ServerStrings.htm">
+        <HelpTOCNode Title="ServerStrings Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_ServerStrings.htm" />
+        <HelpTOCNode Title="ServerStrings Constructor " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings__ctor.htm" />
+        <HelpTOCNode Id="d0960a97-8b8d-4ade-8f13-1b87bf013119" Title="ServerStrings Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_ServerStrings.htm">
+          <HelpTOCNode Title="Add Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_Add.htm" />
+          <HelpTOCNode Title="AddRange Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_AddRange.htm" />
+          <HelpTOCNode Title="Contains Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_Contains.htm" />
+          <HelpTOCNode Title="CopyTo Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_CopyTo.htm" />
+          <HelpTOCNode Title="IndexOf Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_IndexOf.htm" />
+          <HelpTOCNode Title="Insert Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_Insert.htm" />
+          <HelpTOCNode Title="Matches Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_Matches.htm" />
+          <HelpTOCNode Title="Remove Method " Url="html/M_EnterpriseDT_Net_Ftp_ServerStrings_Remove.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d28d1fc3-416f-48f9-a6b0-3d8580d082e9" Title="ServerStrings Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_ServerStrings.htm">
+          <HelpTOCNode Title="Item Property " Url="html/P_EnterpriseDT_Net_Ftp_ServerStrings_Item.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="09fa6ff1-4b8e-4876-966b-7fa9c311d6be" Title="TandemFileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_TandemFileParser.htm">
+        <HelpTOCNode Title="TandemFileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_TandemFileParser.htm" />
+        <HelpTOCNode Title="TandemFileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_TandemFileParser__ctor.htm" />
+        <HelpTOCNode Id="9a3e9515-2134-42a2-81c4-2fe456e6c957" Title="TandemFileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_TandemFileParser.htm">
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_TandemFileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_TandemFileParser_Parse.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_TandemFileParser_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="60dda58a-4ea4-45c7-a768-a867602bbf8c" Title="TandemFileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_TandemFileParser.htm">
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_TandemFileParser_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8447c72d-83f7-4ab5-8d3c-6a282342f0a3" Title="TransferCompleteStrings Class" Url="html/T_EnterpriseDT_Net_Ftp_TransferCompleteStrings.htm">
+        <HelpTOCNode Title="TransferCompleteStrings Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_TransferCompleteStrings.htm" />
+        <HelpTOCNode Title="TransferCompleteStrings Constructor " Url="html/M_EnterpriseDT_Net_Ftp_TransferCompleteStrings__ctor.htm" />
+        <HelpTOCNode Title="TransferCompleteStrings Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_TransferCompleteStrings.htm" />
+        <HelpTOCNode Title="TransferCompleteStrings Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_TransferCompleteStrings.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="TransferDirection Enumeration" Url="html/T_EnterpriseDT_Net_Ftp_TransferDirection.htm" />
+      <HelpTOCNode Id="c80f8cbb-cbe3-49be-be21-e356cb95e874" Title="TransferEventArgs Class" Url="html/T_EnterpriseDT_Net_Ftp_TransferEventArgs.htm">
+        <HelpTOCNode Title="TransferEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_TransferEventArgs.htm" />
+        <HelpTOCNode Id="5d92f7b6-c58d-431f-bb5e-15be5ee9c1e1" Title="TransferEventArgs Constructor " Url="html/Overload_EnterpriseDT_Net_Ftp_TransferEventArgs__ctor.htm">
+          <HelpTOCNode Title="TransferEventArgs Constructor (Byte[], String, TransferDirection, FTPTransferType)" Url="html/M_EnterpriseDT_Net_Ftp_TransferEventArgs__ctor.htm" />
+          <HelpTOCNode Title="TransferEventArgs Constructor (Stream, String, TransferDirection, FTPTransferType)" Url="html/M_EnterpriseDT_Net_Ftp_TransferEventArgs__ctor_1.htm" />
+          <HelpTOCNode Title="TransferEventArgs Constructor (String, String, TransferDirection, FTPTransferType)" Url="html/M_EnterpriseDT_Net_Ftp_TransferEventArgs__ctor_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="TransferEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_TransferEventArgs.htm" />
+        <HelpTOCNode Id="c66d4bac-b3f2-495e-aa27-5fa2e1190cd0" Title="TransferEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_TransferEventArgs.htm">
+          <HelpTOCNode Title="Direction Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_Direction.htm" />
+          <HelpTOCNode Title="LocalByteArray Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_LocalByteArray.htm" />
+          <HelpTOCNode Title="LocalFilePath Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_LocalFilePath.htm" />
+          <HelpTOCNode Title="LocalStream Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_LocalStream.htm" />
+          <HelpTOCNode Title="RemoteFilename Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_RemoteFilename.htm" />
+          <HelpTOCNode Title="TransferType Property " Url="html/P_EnterpriseDT_Net_Ftp_TransferEventArgs_TransferType.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="TransferHandler Delegate" Url="html/T_EnterpriseDT_Net_Ftp_TransferHandler.htm" />
+      <HelpTOCNode Id="17f3680b-ad51-4ba3-a62e-d68562c9c7a7" Title="UnixFileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_UnixFileParser.htm">
+        <HelpTOCNode Title="UnixFileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_UnixFileParser.htm" />
+        <HelpTOCNode Title="UnixFileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser__ctor.htm" />
+        <HelpTOCNode Id="129b0894-3589-4467-8b94-39206b0e81d6" Title="UnixFileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_UnixFileParser.htm">
+          <HelpTOCNode Title="IsUnix Method " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser_IsUnix.htm" />
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser_Parse.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b141e00a-4a69-47e3-aabb-5a9134d3bfdf" Title="UnixFileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_UnixFileParser.htm">
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_UnixFileParser_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c78a7031-44a7-4a10-9ad8-453581c54643" Title="UnixFileParser2 Class" Url="html/T_EnterpriseDT_Net_Ftp_UnixFileParser2.htm">
+        <HelpTOCNode Title="UnixFileParser2 Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_UnixFileParser2.htm" />
+        <HelpTOCNode Title="UnixFileParser2 Constructor " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser2__ctor.htm" />
+        <HelpTOCNode Id="8c199f28-4078-4960-b6e4-4d88af1b515e" Title="UnixFileParser2 Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_UnixFileParser2.htm">
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_UnixFileParser2_Parse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="70ec8101-90ba-4c9d-a6c9-897b2c820fa3" Title="UnixFileParser2 Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_UnixFileParser2.htm">
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_UnixFileParser2_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="efd5f9b6-462f-4394-9aea-3fe2674e6140" Title="VMSFileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_VMSFileParser.htm">
+        <HelpTOCNode Title="VMSFileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_VMSFileParser.htm" />
+        <HelpTOCNode Title="VMSFileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_VMSFileParser__ctor.htm" />
+        <HelpTOCNode Id="c51bd8d7-8951-41ae-b2b6-bb47178d0737" Title="VMSFileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_VMSFileParser.htm">
+          <HelpTOCNode Title="IsMultiLine Method " Url="html/M_EnterpriseDT_Net_Ftp_VMSFileParser_IsMultiLine.htm" />
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_VMSFileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_VMSFileParser_Parse.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_VMSFileParser_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8bd0fbdb-5694-40b0-9a1a-7fe0acecdc84" Title="VMSFileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_VMSFileParser.htm">
+          <HelpTOCNode Title="BlockSize Property " Url="html/P_EnterpriseDT_Net_Ftp_VMSFileParser_BlockSize.htm" />
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_VMSFileParser_TimeIncludesSeconds.htm" />
+          <HelpTOCNode Title="VersionInName Property " Url="html/P_EnterpriseDT_Net_Ftp_VMSFileParser_VersionInName.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="0ecfd140-082f-44a3-9b62-ef0e570942d6" Title="WindowsFileParser Class" Url="html/T_EnterpriseDT_Net_Ftp_WindowsFileParser.htm">
+        <HelpTOCNode Title="WindowsFileParser Members" Url="html/AllMembers_T_EnterpriseDT_Net_Ftp_WindowsFileParser.htm" />
+        <HelpTOCNode Title="WindowsFileParser Constructor " Url="html/M_EnterpriseDT_Net_Ftp_WindowsFileParser__ctor.htm" />
+        <HelpTOCNode Id="89c49456-e267-4e01-8bec-cc83d48bc9a1" Title="WindowsFileParser Methods" Url="html/Methods_T_EnterpriseDT_Net_Ftp_WindowsFileParser.htm">
+          <HelpTOCNode Title="IsValidFormat Method " Url="html/M_EnterpriseDT_Net_Ftp_WindowsFileParser_IsValidFormat.htm" />
+          <HelpTOCNode Title="Parse Method " Url="html/M_EnterpriseDT_Net_Ftp_WindowsFileParser_Parse.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Net_Ftp_WindowsFileParser_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3897b1ca-4f62-4d9b-95ce-23239c516026" Title="WindowsFileParser Properties" Url="html/Properties_T_EnterpriseDT_Net_Ftp_WindowsFileParser.htm">
+          <HelpTOCNode Title="TimeIncludesSeconds Property " Url="html/P_EnterpriseDT_Net_Ftp_WindowsFileParser_TimeIncludesSeconds.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7067359c-dc74-47a2-b9a2-81f092ca08b2" Title="EnterpriseDT.Util Namespace" Url="html/N_EnterpriseDT_Util.htm">
+      <HelpTOCNode Id="95ee6bd7-9818-47b1-ada2-b11dfb7ed970" Title="PathUtil Class" Url="html/T_EnterpriseDT_Util_PathUtil.htm">
+        <HelpTOCNode Title="PathUtil Members" Url="html/AllMembers_T_EnterpriseDT_Util_PathUtil.htm" />
+        <HelpTOCNode Title="PathUtil Constructor " Url="html/M_EnterpriseDT_Util_PathUtil__ctor.htm" />
+        <HelpTOCNode Id="f461b0c8-36ba-43b4-97ac-2e0c50a73b57" Title="PathUtil Methods" Url="html/Methods_T_EnterpriseDT_Util_PathUtil.htm">
+          <HelpTOCNode Id="429c2136-1245-4339-acd5-e6cd17008176" Title="Combine Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_Combine.htm">
+            <HelpTOCNode Title="Combine Method (String, String)" Url="html/M_EnterpriseDT_Util_PathUtil_Combine_2.htm" />
+            <HelpTOCNode Title="Combine Method (Char, String, String)" Url="html/M_EnterpriseDT_Util_PathUtil_Combine.htm" />
+            <HelpTOCNode Title="Combine Method (String, String, String[])" Url="html/M_EnterpriseDT_Util_PathUtil_Combine_3.htm" />
+            <HelpTOCNode Title="Combine Method (Char, String, String, String[])" Url="html/M_EnterpriseDT_Util_PathUtil_Combine_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5f0dbdce-fed1-44ec-b10d-574d195ff21d" Title="EnsureTrailingSeparator Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_EnsureTrailingSeparator.htm">
+            <HelpTOCNode Title="EnsureTrailingSeparator Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_EnsureTrailingSeparator_1.htm" />
+            <HelpTOCNode Title="EnsureTrailingSeparator Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_EnsureTrailingSeparator.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4217c0a1-3c86-4e96-8195-27a02133d5fb" Title="Explode Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_Explode.htm">
+            <HelpTOCNode Title="Explode Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_Explode_1.htm" />
+            <HelpTOCNode Title="Explode Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_Explode.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c0b1f473-cd19-436d-a970-6c046388200c" Title="Fix Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_Fix.htm">
+            <HelpTOCNode Title="Fix Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_Fix_2.htm" />
+            <HelpTOCNode Title="Fix Method (String[])" Url="html/M_EnterpriseDT_Util_PathUtil_Fix_3.htm" />
+            <HelpTOCNode Title="Fix Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_Fix.htm" />
+            <HelpTOCNode Title="Fix Method (Char, String[])" Url="html/M_EnterpriseDT_Util_PathUtil_Fix_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="29502f17-a303-42ad-a4ec-f7fdef209de3" Title="GetAbsolutePath Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_GetAbsolutePath.htm">
+            <HelpTOCNode Title="GetAbsolutePath Method (String, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetAbsolutePath_1.htm" />
+            <HelpTOCNode Title="GetAbsolutePath Method (Char, String, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetAbsolutePath.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3b221dc1-38cb-4774-8919-222d21c41cbf" Title="GetExtension Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_GetExtension.htm">
+            <HelpTOCNode Title="GetExtension Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetExtension_1.htm" />
+            <HelpTOCNode Title="GetExtension Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetExtension.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="948717e2-183d-4fd7-a45f-69d957311153" Title="GetFileName Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_GetFileName.htm">
+            <HelpTOCNode Title="GetFileName Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFileName_1.htm" />
+            <HelpTOCNode Title="GetFileName Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFileName.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8c0e120f-6333-45df-bd69-456579c24570" Title="GetFileNameWithoutExtension Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_GetFileNameWithoutExtension.htm">
+            <HelpTOCNode Title="GetFileNameWithoutExtension Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFileNameWithoutExtension_1.htm" />
+            <HelpTOCNode Title="GetFileNameWithoutExtension Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFileNameWithoutExtension.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="018424ec-3475-476c-9a56-75a80d145b21" Title="GetFolderPath Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_GetFolderPath.htm">
+            <HelpTOCNode Title="GetFolderPath Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFolderPath_1.htm" />
+            <HelpTOCNode Title="GetFolderPath Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_GetFolderPath.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1612cec7-3fcd-451a-b326-3d1709ec8a5c" Title="Implode Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_Implode.htm">
+            <HelpTOCNode Title="Implode Method (String[])" Url="html/M_EnterpriseDT_Util_PathUtil_Implode.htm" />
+            <HelpTOCNode Title="Implode Method (String[], Int32)" Url="html/M_EnterpriseDT_Util_PathUtil_Implode_1.htm" />
+            <HelpTOCNode Title="Implode Method (String[], Int32, Int32)" Url="html/M_EnterpriseDT_Util_PathUtil_Implode_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2b52cd51-7636-4a24-995e-b420fff5eb55" Title="IsAbsolute Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_IsAbsolute.htm">
+            <HelpTOCNode Title="IsAbsolute Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_IsAbsolute_1.htm" />
+            <HelpTOCNode Title="IsAbsolute Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_IsAbsolute.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d1263381-ddaa-403d-bc17-ccdf1623ff8f" Title="IsRelative Method " Url="html/Overload_EnterpriseDT_Util_PathUtil_IsRelative.htm">
+            <HelpTOCNode Title="IsRelative Method (String)" Url="html/M_EnterpriseDT_Util_PathUtil_IsRelative_1.htm" />
+            <HelpTOCNode Title="IsRelative Method (Char, String)" Url="html/M_EnterpriseDT_Util_PathUtil_IsRelative.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="88dd7715-b786-41fe-b563-5675bb9fde87" Title="PathUtil Properties" Url="html/Properties_T_EnterpriseDT_Util_PathUtil.htm">
+          <HelpTOCNode Title="DefaultSeparator Property " Url="html/P_EnterpriseDT_Util_PathUtil_DefaultSeparator.htm" />
+          <HelpTOCNode Title="DefaultSeparatorChar Property " Url="html/P_EnterpriseDT_Util_PathUtil_DefaultSeparatorChar.htm" />
+          <HelpTOCNode Title="WindowsSeparator Property " Url="html/P_EnterpriseDT_Util_PathUtil_WindowsSeparator.htm" />
+          <HelpTOCNode Title="WindowsSeparatorChar Property " Url="html/P_EnterpriseDT_Util_PathUtil_WindowsSeparatorChar.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="35acfa6d-a7b1-460d-aeb2-866465a9d000" Title="VersionDetails Class" Url="html/T_EnterpriseDT_Util_VersionDetails.htm">
+        <HelpTOCNode Title="VersionDetails Members" Url="html/AllMembers_T_EnterpriseDT_Util_VersionDetails.htm" />
+        <HelpTOCNode Title="VersionDetails Constructor " Url="html/M_EnterpriseDT_Util_VersionDetails__ctor.htm" />
+        <HelpTOCNode Title="VersionDetails Methods" Url="html/Methods_T_EnterpriseDT_Util_VersionDetails.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7259fb0b-c9e4-4754-91f8-509c30c7de0d" Title="EnterpriseDT.Util.Debug Namespace" Url="html/N_EnterpriseDT_Util_Debug.htm">
+      <HelpTOCNode Id="1eb3e909-1349-4303-9b0f-000aa31208c8" Title="Appender Interface" Url="html/T_EnterpriseDT_Util_Debug_Appender.htm">
+        <HelpTOCNode Title="Appender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_Appender.htm" />
+        <HelpTOCNode Id="789ca075-f9b3-4161-befe-9906826a67b5" Title="Appender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_Appender.htm">
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Util_Debug_Appender_Close.htm" />
+          <HelpTOCNode Id="9e9e1f44-a4d6-4459-a2f4-00101845a17e" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_Appender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_Appender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Appender_Log_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a7eada44-2746-411f-8ebc-ed385e81e1bd" Title="CustomLogLevelAppender Interface" Url="html/T_EnterpriseDT_Util_Debug_CustomLogLevelAppender.htm">
+        <HelpTOCNode Title="CustomLogLevelAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_CustomLogLevelAppender.htm" />
+        <HelpTOCNode Id="3fd47562-c0c2-485f-a4fc-8731276642b2" Title="CustomLogLevelAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_CustomLogLevelAppender.htm">
+          <HelpTOCNode Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_CustomLogLevelAppender_Log.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ced41394-d1ea-42d0-bd5d-47e7628ebb43" Title="CustomLogLevelAppender Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_CustomLogLevelAppender.htm">
+          <HelpTOCNode Title="CurrentLevel Property " Url="html/P_EnterpriseDT_Util_Debug_CustomLogLevelAppender_CurrentLevel.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="827cf8a8-5191-4737-aabb-f29e10ab63e4" Title="FileAppender Class" Url="html/T_EnterpriseDT_Util_Debug_FileAppender.htm">
+        <HelpTOCNode Title="FileAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_FileAppender.htm" />
+        <HelpTOCNode Title="FileAppender Constructor " Url="html/M_EnterpriseDT_Util_Debug_FileAppender__ctor.htm" />
+        <HelpTOCNode Id="56b906ba-941e-43e1-a23b-734feb24cf61" Title="FileAppender Fields" Url="html/Fields_T_EnterpriseDT_Util_Debug_FileAppender.htm">
+          <HelpTOCNode Title="closed Field" Url="html/F_EnterpriseDT_Util_Debug_FileAppender_closed.htm" />
+          <HelpTOCNode Title="fileStream Field" Url="html/F_EnterpriseDT_Util_Debug_FileAppender_fileStream.htm" />
+          <HelpTOCNode Title="logger Field" Url="html/F_EnterpriseDT_Util_Debug_FileAppender_logger.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="1f053899-f1f5-4f99-a396-3fd0bc474b7e" Title="FileAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_FileAppender.htm">
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Util_Debug_FileAppender_Close.htm" />
+          <HelpTOCNode Id="174359a6-b169-473c-878b-808fc2b3c19a" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_FileAppender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_FileAppender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_FileAppender_Log_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Open Method " Url="html/M_EnterpriseDT_Util_Debug_FileAppender_Open.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a0a5601b-c630-4d3a-bd1c-f78ead91bab2" Title="FileAppender Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_FileAppender.htm">
+          <HelpTOCNode Title="FileName Property " Url="html/P_EnterpriseDT_Util_Debug_FileAppender_FileName.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="844fecfc-aa6b-4d69-a95f-9ae6afd75feb" Title="ILogTag Interface" Url="html/T_EnterpriseDT_Util_Debug_ILogTag.htm">
+        <HelpTOCNode Title="ILogTag Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_ILogTag.htm" />
+        <HelpTOCNode Id="1a76dc6b-9a9a-4a1e-9380-df57ba637d0b" Title="ILogTag Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_ILogTag.htm">
+          <HelpTOCNode Title="GetLogTag Method " Url="html/M_EnterpriseDT_Util_Debug_ILogTag_GetLogTag.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="75de126f-4409-411b-94a0-829f082c7adb" Title="Level Class" Url="html/T_EnterpriseDT_Util_Debug_Level.htm">
+        <HelpTOCNode Title="Level Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_Level.htm" />
+        <HelpTOCNode Id="aa276c77-1e7c-4af7-827d-bfe75c746201" Title="Level Fields" Url="html/Fields_T_EnterpriseDT_Util_Debug_Level.htm">
+          <HelpTOCNode Title="ALL Field" Url="html/F_EnterpriseDT_Util_Debug_Level_ALL.htm" />
+          <HelpTOCNode Title="DEBUG Field" Url="html/F_EnterpriseDT_Util_Debug_Level_DEBUG.htm" />
+          <HelpTOCNode Title="ERROR Field" Url="html/F_EnterpriseDT_Util_Debug_Level_ERROR.htm" />
+          <HelpTOCNode Title="FATAL Field" Url="html/F_EnterpriseDT_Util_Debug_Level_FATAL.htm" />
+          <HelpTOCNode Title="INFO Field" Url="html/F_EnterpriseDT_Util_Debug_Level_INFO.htm" />
+          <HelpTOCNode Title="OFF Field" Url="html/F_EnterpriseDT_Util_Debug_Level_OFF.htm" />
+          <HelpTOCNode Title="WARN Field" Url="html/F_EnterpriseDT_Util_Debug_Level_WARN.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9dd0a0d1-f1bf-48e5-a2b6-0a5e5365658a" Title="Level Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_Level.htm">
+          <HelpTOCNode Id="c5d1e1f2-2d1f-434c-b633-640535df5a80" Title="GetLevel Method " Url="html/Overload_EnterpriseDT_Util_Debug_Level_GetLevel.htm">
+            <HelpTOCNode Title="GetLevel Method " Url="html/M_EnterpriseDT_Util_Debug_Level_GetLevel.htm" />
+            <HelpTOCNode Title="GetLevel Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Level_GetLevel_2.htm" />
+            <HelpTOCNode Title="GetLevel Method (LogLevel)" Url="html/M_EnterpriseDT_Util_Debug_Level_GetLevel_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="IsGreaterOrEqual Method " Url="html/M_EnterpriseDT_Util_Debug_Level_IsGreaterOrEqual.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_EnterpriseDT_Util_Debug_Level_ToString.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1a2baf71-fab5-43a2-8529-07970a5647ba" Title="Lock Class" Url="html/T_EnterpriseDT_Util_Debug_Lock.htm">
+        <HelpTOCNode Title="Lock Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_Lock.htm" />
+        <HelpTOCNode Title="Lock Constructor " Url="html/M_EnterpriseDT_Util_Debug_Lock__ctor.htm" />
+        <HelpTOCNode Id="988ebeb9-0f36-4c98-a4fd-c640e0f492c1" Title="Lock Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_Lock.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/M_EnterpriseDT_Util_Debug_Lock_Dispose.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4d1786e0-f8f2-42aa-ad49-ffe10d2eeba6" Title="Logger Class" Url="html/T_EnterpriseDT_Util_Debug_Logger.htm">
+        <HelpTOCNode Title="Logger Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_Logger.htm" />
+        <HelpTOCNode Id="a1d0716f-2d7d-4977-9809-dd495fdcd4d4" Title="Logger Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_Logger.htm">
+          <HelpTOCNode Title="AddAppender Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_AddAppender.htm" />
+          <HelpTOCNode Title="ClearAppenders Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_ClearAppenders.htm" />
+          <HelpTOCNode Title="ClearTag Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_ClearTag.htm" />
+          <HelpTOCNode Id="cc91c0a3-c1a8-4cfc-bbd6-64b4b16b6d24" Title="Debug Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_Debug.htm">
+            <HelpTOCNode Title="Debug Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Debug.htm" />
+            <HelpTOCNode Title="Debug Method (String, Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Debug_1.htm" />
+            <HelpTOCNode Title="Debug Method (String, Object[])" Url="html/M_EnterpriseDT_Util_Debug_Logger_Debug_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5e0e6c94-c6cc-48a8-b820-10ff993b292d" Title="Error Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_Error.htm">
+            <HelpTOCNode Title="Error Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Error.htm" />
+            <HelpTOCNode Title="Error Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Error_1.htm" />
+            <HelpTOCNode Title="Error Method (String, Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Error_2.htm" />
+            <HelpTOCNode Title="Error Method (String, Exception, Object[])" Url="html/M_EnterpriseDT_Util_Debug_Logger_Error_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d6bdd233-3174-48c6-820a-03529bcf2d78" Title="Fatal Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_Fatal.htm">
+            <HelpTOCNode Title="Fatal Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Fatal.htm" />
+            <HelpTOCNode Title="Fatal Method (String, Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Fatal_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f5b0949b-c7fe-488a-bf35-d10a88bc8aaa" Title="GetLogger Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_GetLogger.htm">
+            <HelpTOCNode Title="GetLogger Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_GetLogger.htm" />
+            <HelpTOCNode Title="GetLogger Method (Type)" Url="html/M_EnterpriseDT_Util_Debug_Logger_GetLogger_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b23df16a-de03-454b-896b-29e5578bfaf1" Title="Info Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_Info.htm">
+            <HelpTOCNode Title="Info Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Info.htm" />
+            <HelpTOCNode Title="Info Method (String, Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Info_1.htm" />
+            <HelpTOCNode Title="Info Method (String, Object[])" Url="html/M_EnterpriseDT_Util_Debug_Logger_Info_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="IsEnabledFor Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_IsEnabledFor.htm" />
+          <HelpTOCNode Title="Log Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_Log.htm" />
+          <HelpTOCNode Title="LogObject Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_LogObject.htm" />
+          <HelpTOCNode Title="RemoveAppender Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_RemoveAppender.htm" />
+          <HelpTOCNode Title="SetTag Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_SetTag.htm" />
+          <HelpTOCNode Title="Shutdown Method " Url="html/M_EnterpriseDT_Util_Debug_Logger_Shutdown.htm" />
+          <HelpTOCNode Id="11f8ec85-2614-4baf-9adb-472e0b5a546b" Title="Warn Method " Url="html/Overload_EnterpriseDT_Util_Debug_Logger_Warn.htm">
+            <HelpTOCNode Title="Warn Method (String)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Warn.htm" />
+            <HelpTOCNode Title="Warn Method (String, Exception)" Url="html/M_EnterpriseDT_Util_Debug_Logger_Warn_1.htm" />
+            <HelpTOCNode Title="Warn Method (String, Exception, Object[])" Url="html/M_EnterpriseDT_Util_Debug_Logger_Warn_2.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3e852744-9879-4a0c-9d72-bc83899c888e" Title="Logger Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_Logger.htm">
+          <HelpTOCNode Title="CurrentLevel Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_CurrentLevel.htm" />
+          <HelpTOCNode Title="DebugEnabled Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_DebugEnabled.htm" />
+          <HelpTOCNode Title="ErrorEnabled Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_ErrorEnabled.htm" />
+          <HelpTOCNode Title="InfoEnabled Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_InfoEnabled.htm" />
+          <HelpTOCNode Title="LogToConsole Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_LogToConsole.htm" />
+          <HelpTOCNode Title="LogToTrace Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_LogToTrace.htm" />
+          <HelpTOCNode Title="PrimaryLogFile Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_PrimaryLogFile.htm" />
+          <HelpTOCNode Title="ShowClassNames Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_ShowClassNames.htm" />
+          <HelpTOCNode Title="ShowTimestamp Property " Url="html/P_EnterpriseDT_Util_Debug_Logger_ShowTimestamp.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3464dc94-b34a-43ab-bc58-00ec8337e341" Title="Logger Events" Url="html/Events_T_EnterpriseDT_Util_Debug_Logger.htm">
+          <HelpTOCNode Title="LogMessageReceived Event" Url="html/E_EnterpriseDT_Util_Debug_Logger_LogMessageReceived.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="LogLevel Enumeration" Url="html/T_EnterpriseDT_Util_Debug_LogLevel.htm" />
+      <HelpTOCNode Id="6dd8f345-c588-4275-8c80-8807e8aff99d" Title="LogLevelHelper Class" Url="html/T_EnterpriseDT_Util_Debug_LogLevelHelper.htm">
+        <HelpTOCNode Title="LogLevelHelper Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_LogLevelHelper.htm" />
+        <HelpTOCNode Title="LogLevelHelper Constructor " Url="html/M_EnterpriseDT_Util_Debug_LogLevelHelper__ctor.htm" />
+        <HelpTOCNode Id="cee939ad-e580-4cd3-9174-040ceba4d3f5" Title="LogLevelHelper Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_LogLevelHelper.htm">
+          <HelpTOCNode Title="GetLogLevel Method " Url="html/M_EnterpriseDT_Util_Debug_LogLevelHelper_GetLogLevel.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5b6b382e-1be7-4fe0-915a-de4273443b81" Title="LogMessageEventArgs Class" Url="html/T_EnterpriseDT_Util_Debug_LogMessageEventArgs.htm">
+        <HelpTOCNode Title="LogMessageEventArgs Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_LogMessageEventArgs.htm" />
+        <HelpTOCNode Title="LogMessageEventArgs Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_LogMessageEventArgs.htm" />
+        <HelpTOCNode Id="4d0e03f8-88f6-4b03-831a-323f78324284" Title="LogMessageEventArgs Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_LogMessageEventArgs.htm">
+          <HelpTOCNode Title="Arguments Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_Arguments.htm" />
+          <HelpTOCNode Title="Exception Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_Exception.htm" />
+          <HelpTOCNode Title="FormattedText Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_FormattedText.htm" />
+          <HelpTOCNode Title="LoggerName Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_LoggerName.htm" />
+          <HelpTOCNode Title="LogLevel Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_LogLevel.htm" />
+          <HelpTOCNode Title="Text Property " Url="html/P_EnterpriseDT_Util_Debug_LogMessageEventArgs_Text.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="LogMessageHandler Delegate" Url="html/T_EnterpriseDT_Util_Debug_LogMessageHandler.htm" />
+      <HelpTOCNode Id="8fc05a13-cf31-4d4a-8c29-0c59994d92f1" Title="LogTag Class" Url="html/T_EnterpriseDT_Util_Debug_LogTag.htm">
+        <HelpTOCNode Title="LogTag Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_LogTag.htm" />
+        <HelpTOCNode Title="LogTag Constructor " Url="html/M_EnterpriseDT_Util_Debug_LogTag__ctor.htm" />
+        <HelpTOCNode Id="86eb06b4-8cc8-4b5e-9777-2a9466084d7c" Title="LogTag Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_LogTag.htm">
+          <HelpTOCNode Title="GetLogTag Method " Url="html/M_EnterpriseDT_Util_Debug_LogTag_GetLogTag.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="c603d5e1-1834-4680-af65-df0d94306969" Title="LogTag Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_LogTag.htm">
+          <HelpTOCNode Title="Id Property " Url="html/P_EnterpriseDT_Util_Debug_LogTag_Id.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/P_EnterpriseDT_Util_Debug_LogTag_Name.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="367d3705-fd1e-4a90-a767-59f8d8d1915e" Title="MemoryAppender Class" Url="html/T_EnterpriseDT_Util_Debug_MemoryAppender.htm">
+        <HelpTOCNode Title="MemoryAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_MemoryAppender.htm" />
+        <HelpTOCNode Id="cd5783ff-8409-4691-9440-ee3f4281a95e" Title="MemoryAppender Constructor " Url="html/Overload_EnterpriseDT_Util_Debug_MemoryAppender__ctor.htm">
+          <HelpTOCNode Title="MemoryAppender Constructor " Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender__ctor.htm" />
+          <HelpTOCNode Title="MemoryAppender Constructor (Int32)" Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b15a6340-2717-446b-8362-70d5df95b625" Title="MemoryAppender Fields" Url="html/Fields_T_EnterpriseDT_Util_Debug_MemoryAppender.htm">
+          <HelpTOCNode Title="DEFAULT_MAX_MESSAGES Field" Url="html/F_EnterpriseDT_Util_Debug_MemoryAppender_DEFAULT_MAX_MESSAGES.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="eb51aae7-8cc8-42ca-a7a3-ab3790284702" Title="MemoryAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_MemoryAppender.htm">
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender_Close.htm" />
+          <HelpTOCNode Id="bb0ea68a-2c11-4db0-96ee-51996795092e" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_MemoryAppender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender_Log_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="36883dbf-bc96-4c61-a2b0-d3c9444d4af2" Title="Write Method " Url="html/Overload_EnterpriseDT_Util_Debug_MemoryAppender_Write.htm">
+            <HelpTOCNode Title="Write Method (StreamWriter)" Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender_Write.htm" />
+            <HelpTOCNode Title="Write Method (String)" Url="html/M_EnterpriseDT_Util_Debug_MemoryAppender_Write_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="2f50ef6a-b47b-4aee-918d-aab24421df5f" Title="MemoryAppender Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_MemoryAppender.htm">
+          <HelpTOCNode Title="MaxMessages Property " Url="html/P_EnterpriseDT_Util_Debug_MemoryAppender_MaxMessages.htm" />
+          <HelpTOCNode Title="Messages Property " Url="html/P_EnterpriseDT_Util_Debug_MemoryAppender_Messages.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b6c28b89-b0e1-4107-a752-c0cc3620e60c" Title="RollingFileAppender Class" Url="html/T_EnterpriseDT_Util_Debug_RollingFileAppender.htm">
+        <HelpTOCNode Title="RollingFileAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_RollingFileAppender.htm" />
+        <HelpTOCNode Id="23400958-d315-4aa7-b75e-f4efceaa36f2" Title="RollingFileAppender Constructor " Url="html/Overload_EnterpriseDT_Util_Debug_RollingFileAppender__ctor.htm">
+          <HelpTOCNode Title="RollingFileAppender Constructor (String)" Url="html/M_EnterpriseDT_Util_Debug_RollingFileAppender__ctor.htm" />
+          <HelpTOCNode Title="RollingFileAppender Constructor (String, Int64)" Url="html/M_EnterpriseDT_Util_Debug_RollingFileAppender__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="RollingFileAppender Fields" Url="html/Fields_T_EnterpriseDT_Util_Debug_RollingFileAppender.htm" />
+        <HelpTOCNode Id="96b10ece-dcc0-407f-8154-ca341b447377" Title="RollingFileAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_RollingFileAppender.htm">
+          <HelpTOCNode Id="b5b19dd4-ea4e-478b-8e67-e9eba4e5e445" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_RollingFileAppender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_RollingFileAppender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_RollingFileAppender_Log_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="44972500-282d-4844-a350-eb4b59ce5d45" Title="RollingFileAppender Properties" Url="html/Properties_T_EnterpriseDT_Util_Debug_RollingFileAppender.htm">
+          <HelpTOCNode Title="MaxFileSize Property " Url="html/P_EnterpriseDT_Util_Debug_RollingFileAppender_MaxFileSize.htm" />
+          <HelpTOCNode Title="MaxSizeRollBackups Property " Url="html/P_EnterpriseDT_Util_Debug_RollingFileAppender_MaxSizeRollBackups.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d2c7003-645d-4a97-9edb-7d3635f704ee" Title="StandardOutputAppender Class" Url="html/T_EnterpriseDT_Util_Debug_StandardOutputAppender.htm">
+        <HelpTOCNode Title="StandardOutputAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_StandardOutputAppender.htm" />
+        <HelpTOCNode Title="StandardOutputAppender Constructor " Url="html/M_EnterpriseDT_Util_Debug_StandardOutputAppender__ctor.htm" />
+        <HelpTOCNode Id="b444ac51-f091-46d8-94b3-b0125292c571" Title="StandardOutputAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_StandardOutputAppender.htm">
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Util_Debug_StandardOutputAppender_Close.htm" />
+          <HelpTOCNode Id="945aeb2b-52d7-48c9-8969-3d2f5472d811" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_StandardOutputAppender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_StandardOutputAppender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_StandardOutputAppender_Log_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="7e3c48ef-2bf8-40c2-95b0-df93cb8e7528" Title="TraceAppender Class" Url="html/T_EnterpriseDT_Util_Debug_TraceAppender.htm">
+        <HelpTOCNode Title="TraceAppender Members" Url="html/AllMembers_T_EnterpriseDT_Util_Debug_TraceAppender.htm" />
+        <HelpTOCNode Title="TraceAppender Constructor " Url="html/M_EnterpriseDT_Util_Debug_TraceAppender__ctor.htm" />
+        <HelpTOCNode Id="e8b27a70-1fc3-4899-84d6-bc883ae29cd0" Title="TraceAppender Methods" Url="html/Methods_T_EnterpriseDT_Util_Debug_TraceAppender.htm">
+          <HelpTOCNode Title="Close Method " Url="html/M_EnterpriseDT_Util_Debug_TraceAppender_Close.htm" />
+          <HelpTOCNode Id="71dcfce5-cf54-4345-be8f-1638dde5f50a" Title="Log Method " Url="html/Overload_EnterpriseDT_Util_Debug_TraceAppender_Log.htm">
+            <HelpTOCNode Title="Log Method (Exception)" Url="html/M_EnterpriseDT_Util_Debug_TraceAppender_Log.htm" />
+            <HelpTOCNode Title="Log Method (String)" Url="html/M_EnterpriseDT_Util_Debug_TraceAppender_Log_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

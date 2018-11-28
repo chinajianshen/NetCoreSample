@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenBook.Bee.Entity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace OpenBook.Bee.Database
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <returns></returns>
-        DataTable ExcuteSqlForDataTable(string querySql, string startTime, string endTime);
+        DataTable ExcuteSqlForDataTable(string querySql, DateTime startTime, DateTime endTime);
 
         /// <summary>
         /// 得到数据表结构
@@ -27,7 +28,7 @@ namespace OpenBook.Bee.Database
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <returns></returns>
-        DataTable GetTableStructure(string querySql, string startTime, string endTime);
+        DataTable GetTableStructure(string querySql, DateTime startTime, DateTime endTime);
 
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace OpenBook.Bee.Database
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <returns></returns>
-        object ExcuteScalarSql(string querySql, string startTime, string endTime);
+        object ExcuteScalarSql(string querySql, DateTime startTime, DateTime endTime);
 
         /// <summary>
         /// 获取 DataReader对象
@@ -46,7 +47,7 @@ namespace OpenBook.Bee.Database
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <returns></returns>
-        IDataReader ExecuteReader(string querySql, string startTime, string endTime);
+        IDataReader ExecuteReader(string querySql, DateTime startTime, DateTime endTime);
 
 
         /// <summary>
@@ -56,7 +57,7 @@ namespace OpenBook.Bee.Database
         /// <param name="querySql"></param>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
-        void ExecuteDataToAccess(string accessFileFullpath, string querySql, string startTime, string endTime);
+        void ExecuteDataToAccess(string accessFileFullpath, string querySql, DateTime startTime, DateTime endTime);
 
         /// <summary>
         /// 创建SQLite文件并添加数据
@@ -65,7 +66,17 @@ namespace OpenBook.Bee.Database
         /// <param name="querySql"></param>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
-        void ExecuteDataToSQLite(string sqliteFileFullpath, string querySql, string startTime, string endTime);
+        void ExecuteDataToSQLite(string sqliteFileFullpath, string querySql, DateTime startTime, DateTime endTime);
+
+        /// <summary>
+        /// 生成数据库文件
+        /// </summary>
+        /// <param name="dbFileType"></param>
+        /// <param name="dbFileFullpath"></param>
+        /// <param name="querySql"></param>
+        /// <param name="startTime"></param>
+        /// <param name="endTime"></param>
+        void ExecuteDataToDBFile(DbFileType dbFileType, string dbFileFullpath, string querySql, DateTime startTime, DateTime endTime);
 
     }
 }

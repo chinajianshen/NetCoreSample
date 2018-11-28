@@ -38,7 +38,7 @@ namespace OpenBook.Bee.Entity
         public DateTime CompleteTime { get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 任务状态 （状态随着执行要更新对应状态）
         /// </summary>
          public T8TaskStatus T8TaskStatus { get; set; }        
 
@@ -47,12 +47,12 @@ namespace OpenBook.Bee.Entity
         public TaskSourceType TaskSourceType { get; set; }
 
         /// <summary>
-        /// 执行失败的次数
+        /// 执行失败的次数 （任务失败要累加次数）
         /// </summary>
         public int ExecFailureTime { get; set; }
 
         /// <summary>
-        /// 记录附加信息 如上传成功备份过程中出现错误，并不影响功能可以忽略
+        /// 记录附加信息 （任务失败时附加上异步信息）
         /// </summary>
         public string Content { get; set; }
 
