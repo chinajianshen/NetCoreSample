@@ -31,7 +31,7 @@ namespace JobSchedule.VoidUnPaidOrderJob
                 using (IDbConnection conn = DBConnection.CreateConnection())
                 {
                     var sql = @"Update order_salesorder
-                                  SET OrderStatus = -10,EditUser = 99999,EditDate=now()
+                                  SET OrderStatus = -10,EditUser = 99999,EditDate=getdate()
                                   WHERE OrderCode='{0}'";
                     var execsql = string.Format(sql, item.OrderCode);
                     var result = Dapper.SqlMapper.Execute(conn, execsql);
@@ -66,7 +66,7 @@ namespace JobSchedule.VoidUnPaidOrderJob
                                  ,{1}-- ActionType - INT(11)
                                  ,{2}-- SourceStatus - INT(11)
                                  ,{3}-- TargetStatus - INT(11)
-                                 ,NOW() -- InDate - DATETIME
+                                 ,getdate() -- InDate - DATETIME
                                  ,99999-- InUser - INT(11)
                                 );";
                 var execSql = string.Format(sql, item.OrderCode, (int)ActionType.AutoVoidOrder, (int)OrderStatus.AutoVoid, item.OrderStatus);

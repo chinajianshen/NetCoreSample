@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,22 +11,22 @@ namespace JobSchedule.DBHelper
 {
     public class DBConnection
     {
-        private static MySqlConnection _conn;
+        private static SqlConnection _conn;
 
-        public static MySqlConnection Conn
+        public static SqlConnection Conn
         {
             get
             {
-                if (_conn == null)
-                {
-                    MySqlConnection connection = new MySqlConnection(ConstValue.DBConnectionString);
+                if (_conn == null || string.IsNullOrEmpty( _conn.ConnectionString))
+                { 
+                    SqlConnection connection = new SqlConnection(ConstValue.DBConnectionString);
                     _conn = connection;
                 }
                 return _conn;
             }
         }
         
-        public static MySqlConnection CreateConnection()
+        public static SqlConnection CreateConnection()
         {
             return Conn;
         }

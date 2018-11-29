@@ -1,7 +1,5 @@
 ﻿using JobSchedule.FlashItemOffline;
 using JobSchedule.VoidUnPaidOrderJob;
-using Quartz;
-using Quartz.Impl;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -16,11 +14,11 @@ namespace JobSchedule
     {
         static void Main(string[] args)
         {
-            // var servicesToRun = new ServiceBase[]
-            //{
-            //       new JobManager()
-            //};
-            // ServiceBase.Run(servicesToRun);
+            var servicesToRun = new ServiceBase[]
+           {
+                   new JobManager()
+           };
+            ServiceBase.Run(servicesToRun);
 
             //test　Code
             AutoVoidUnPaidOrderJob job = new AutoVoidUnPaidOrderJob();
@@ -28,6 +26,8 @@ namespace JobSchedule
 
             FlashItemOfflineJob job1 = new FlashItemOfflineJob();
             job1.Execute(null);
+
+            Console.ReadKey();
         }
     }
 }

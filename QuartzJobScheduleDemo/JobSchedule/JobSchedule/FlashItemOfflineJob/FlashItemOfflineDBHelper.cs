@@ -31,7 +31,7 @@ namespace JobSchedule.FlashItemOffline
             using (IDbConnection conn = DBConnection.CreateConnection())   
             {
                 string sql = @"UPDATE flashsalepromotion
-                                      SET Status = {0},EditUser = 99999,EditDate=now()
+                                      SET Status = {0},EditUser = 99999,EditDate=getdate()
                                       where sysNo = {1}";
                 Dapper.SqlMapper.Execute(conn, string.Format(sql, status, sysNo));
             }
