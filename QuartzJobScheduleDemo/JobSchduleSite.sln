@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JobSchduleSite", "JobSchduleSite", "{BC5463EC-D3FC-419F-97AC-5EDC3104FD3E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_16906"
+		Debug.AspNetCompiler.PhysicalPath = "E:\GitSourceCode\NetCoreSample\QuartzJobScheduleDemo\JobSchduleSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16906\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_16906"
+		Release.AspNetCompiler.PhysicalPath = "E:\GitSourceCode\NetCoreSample\QuartzJobScheduleDemo\JobSchduleSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16906\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "16906"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC5463EC-D3FC-419F-97AC-5EDC3104FD3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5463EC-D3FC-419F-97AC-5EDC3104FD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {103C37CF-2E27-414A-BC94-6C195339BB79}
+	EndGlobalSection
+EndGlobal

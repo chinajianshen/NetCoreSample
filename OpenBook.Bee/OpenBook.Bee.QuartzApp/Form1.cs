@@ -27,33 +27,35 @@ namespace OpenBook.Bee.QuartzApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Task.FromResult(SchedulerJob());
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MyScheduler.Shutdown();
+           
         }
 
+
+        #region Quartz 3.x版本
         private async Task CreateScheduler()
         {
-            //1创建一个调度器
-            NameValueCollection props = new NameValueCollection
-                {
-                    { "quartz.serializer.type", "binary" }
-                };
-            StdSchedulerFactory factory = new StdSchedulerFactory(props);
-            MyScheduler = await factory.GetScheduler();
-            await MyScheduler.Start();
+            ////1创建一个调度器
+            //NameValueCollection props = new NameValueCollection
+            //    {
+            //        { "quartz.serializer.type", "binary" }
+            //    };
+            //StdSchedulerFactory factory = new StdSchedulerFactory(props);
+            //MyScheduler = await factory.GetScheduler();
+            //await MyScheduler.Start();
         }
 
 
         private async Task SchedulerJob()
         {           
-            if (MyScheduler.IsShutdown)
-            {
-                await MyScheduler.Start();
-            }
+            //if (MyScheduler.IsShutdown)
+            //{
+            //    await MyScheduler.Start();
+            //}
             //2创建一个任务
             IJobDetail job = JobBuilder.Create<TimeJob>().WithIdentity("job1", "group1").Build();
 
@@ -73,14 +75,14 @@ namespace OpenBook.Bee.QuartzApp
 
 
             //4将任务与触发器添加到调度器中
-            await MyScheduler.ScheduleJob(job, trigger);
+            //await MyScheduler.ScheduleJob(job, trigger);
 
             //await Task.Delay(TimeSpan.FromSeconds(60));
 
             //await scheduler.Shutdown();
 
         }
-
+        #endregion
 
     }
 }
