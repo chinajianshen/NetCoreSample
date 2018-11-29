@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Install\InstallUtil.exe" />
+    <Content Include="Install\安装说明.txt" />
     <Content Include="quartz_jobs.xml" />
     <None Include="App.config" />
     <None Include="Install\Installer.bat" />
