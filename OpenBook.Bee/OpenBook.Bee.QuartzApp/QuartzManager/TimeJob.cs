@@ -22,11 +22,10 @@ namespace OpenBook.Bee.QuartzApp.QuartzManager
             }
         }
 
-        public Task Execute(IJobExecutionContext context)
+        public void Execute(IJobExecutionContext context)
         {
             string filefullpath = Path.Combine(quartzPath, "Quartz.txt");
-            File.AppendAllText(filefullpath, $"{DateTime.Now}{Environment.NewLine}");
-            return Task.CompletedTask;
+            File.AppendAllText(filefullpath, $"{DateTime.Now}{Environment.NewLine}");            
         }
     }
 }
