@@ -76,7 +76,22 @@ namespace OpenBook.Bee.Entity
         /// <summary>
         /// 上传文件备份信息
         /// </summary>
-        public T8FileInfoEntity UploadBackFileInfo { get; set; }             
+        public T8FileInfoEntity UploadBackFileInfo { get; set; }
+
+        /// <summary>
+        /// 作业名称
+        /// </summary>
+        public string JobName { get; set; }
+
+        /// <summary>
+        /// 组名称
+        /// </summary>
+        public string GroupName { get; set; }
+
+        /// <summary>
+        /// Quartz Cron表达式
+        /// </summary>
+        public string QuartzCronExpression { get; set; }
     }
 
     /// <summary>

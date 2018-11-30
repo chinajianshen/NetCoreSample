@@ -105,6 +105,21 @@ namespace OpenBook.Bee.Entity
         public string SqlString { get; set; }
 
         /// <summary>
+        /// 作业名称
+        /// </summary>
+        public string JobName { get; set; }
+
+        /// <summary>
+        /// 组名称
+        /// </summary>
+        public string GroupName { get; set; }
+
+        /// <summary>
+        /// Quartz Cron表达式
+        /// </summary>
+        public string QuartzCronExpression { get; set; }
+
+        /// <summary>
         /// 定时开始日期点
         /// 如 月 15 当月15号
         ///    周 1周一（计算当周具体日期）

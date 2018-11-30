@@ -51,7 +51,16 @@ namespace Openbook.Bee.Core
         //token.ThrowIfCancellationRequested();
         //cts.IsCancellationRequested
 
-        public TaskManager()
+        public TaskManager():this(1)
+        {
+           
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type">1普通轮询执行 2 Quartz调度作业</param>
+        public TaskManager(int type)
         {
             Task.Factory.StartNew(() =>
             {
@@ -62,8 +71,20 @@ namespace Openbook.Bee.Core
                 }
             });
 
-            //初始化任务队列
-            InitTaskQueue();
+            if (type == 1)
+            {
+                //初始化任务队列
+                InitTaskQueue();
+            }
+
+            else
+            {
+                T8ConfigItemDic = T8ConfigHelper.CloneT8ConfigItem();
+                if (T8ConfigItemDic == null)
+                {
+                    T8ConfigItemDic = new ConcurrentDictionary<string, T8ConfigItemEntity>();
+                }
+            }
         }
 
         /// <summary>

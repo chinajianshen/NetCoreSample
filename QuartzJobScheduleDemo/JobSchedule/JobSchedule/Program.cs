@@ -14,20 +14,20 @@ namespace JobSchedule
     {
         static void Main(string[] args)
         {
-            var servicesToRun = new ServiceBase[]
-           {
-                   new JobManager()
-           };
-            ServiceBase.Run(servicesToRun);
+            //var servicesToRun = new ServiceBase[]
+           //{
+           //        new JobManager()
+           //};
+           // ServiceBase.Run(servicesToRun);
 
-            ////test　Code
-            //AutoVoidUnPaidOrderJob job = new AutoVoidUnPaidOrderJob();
-            //job.Execute(null);
+            //test　Code
+            AutoVoidUnPaidOrderJob job = new AutoVoidUnPaidOrderJob();
+            job.Execute(null);
 
-            //FlashItemOfflineJob job1 = new FlashItemOfflineJob();
-            //job1.Execute(null);
+            FlashItemOfflineJob job1 = new FlashItemOfflineJob();
+            job1.Execute(null);
 
-           // Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

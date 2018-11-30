@@ -15,6 +15,7 @@ namespace OpenBook.Bee.Tester
     {
 
         private static T8ConfigSetting t8ConfigSetting = new T8ConfigSetting();
+        
 
         static Program()
         {
@@ -23,23 +24,26 @@ namespace OpenBook.Bee.Tester
         }
         static void Main(string[] args)
         {
+            NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
+            log.Info("测试日志");
+
             #region T8业务测试
             //生成配置文件
             //t8ConfigSetting.CreateConfig(true);          
 
             //获取配置文件
-            T8ConfigEntity t8Config =   T8ConfigHelper.T8Config;
+            //T8ConfigEntity t8Config =   T8ConfigHelper.T8Config;
 
-            T8ServiceTest t8test = new T8ServiceTest();
+            //T8ServiceTest t8test = new T8ServiceTest();
             //t8test.SqlQueryTimeStragety_Test();
             //t8test.TimingQueryTimeStragety_Test();
             //t8test.T8ConfigMapperT8FileEntity_Test();
-            t8test.CreateTaskEntity_Test();
+            //t8test.CreateTaskEntity_Test();
             #endregion
 
 
             #region AutoMapper测试
-            MapperTest mapperTest = new MapperTest();
+            //MapperTest mapperTest = new MapperTest();
             //mapperTest.Test1();
             //mapperTest.Test2();
             //mapperTest.Test3();
@@ -48,6 +52,11 @@ namespace OpenBook.Bee.Tester
             #region AutoFac测试
             //AutoFacTest autoFacTest = new AutoFacTest();
             //autoFacTest.Test1();
+            #endregion
+
+            #region Quartz测试
+            QuartzTest quartzTest = new QuartzTest();
+            quartzTest.Test1();
             #endregion
 
             Console.Read();
