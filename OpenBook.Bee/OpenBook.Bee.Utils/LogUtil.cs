@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -121,6 +122,7 @@ namespace OpenBook.Bee.Utils
 
 
     }
+   
 
     [Obsolete]
     public class LogUtil_Old

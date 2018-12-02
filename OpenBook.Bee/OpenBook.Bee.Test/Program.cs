@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 using OpenBook.Bee.Entity;
 using Openbook.Bee.Core.AutoFac;
 using Openbook.Bee.Core.AutoMapper;
+using System.Reflection;
+using Common.Logging;
+using OpenBook.Bee.Test.QuartzStudy;
 
 namespace OpenBook.Bee.Tester
 {
     class Program
-    {
+    { 
 
         private static T8ConfigSetting t8ConfigSetting = new T8ConfigSetting();
         
@@ -24,9 +27,11 @@ namespace OpenBook.Bee.Tester
         }
         static void Main(string[] args)
         {
-            NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
-            log.Info("测试日志");
-
+            //NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
+            //log.Info("测试日志");
+            //ILog logger = LogManager.GetLogger(Assembly.GetExecutingAssembly().GetName().Name);
+            //logger.Info("测试日志");
+            //logger.Error("错误日志");
             #region T8业务测试
             //生成配置文件
             //t8ConfigSetting.CreateConfig(true);          
@@ -55,8 +60,15 @@ namespace OpenBook.Bee.Tester
             #endregion
 
             #region Quartz测试
-            QuartzTest quartzTest = new QuartzTest();
-            quartzTest.Test1();
+            //QuartzTest quartzTest = new QuartzTest();
+            //quartzTest.Test1();
+
+            //Chaper1 chaper1 = new Chaper1();
+            //chaper1.test();
+
+
+            Chaper2 chaper2 = new Chaper2();
+            chaper2.Test();
             #endregion
 
             Console.Read();
