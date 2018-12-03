@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.Database", "Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.QuartzApp", "OpenBook.Bee.QuartzApp\OpenBook.Bee.QuartzApp.csproj", "{72EDED4F-8047-4C2F-972E-791A5196AC5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBook.Bee.QuartzTopshelf", "OpenBook.Bee.QuartzTopshelf\OpenBook.Bee.QuartzTopshelf.csproj", "{C4491545-D161-40BB-AC58-9404FEC8E68B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{72EDED4F-8047-4C2F-972E-791A5196AC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72EDED4F-8047-4C2F-972E-791A5196AC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72EDED4F-8047-4C2F-972E-791A5196AC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4491545-D161-40BB-AC58-9404FEC8E68B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4491545-D161-40BB-AC58-9404FEC8E68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4491545-D161-40BB-AC58-9404FEC8E68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4491545-D161-40BB-AC58-9404FEC8E68B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

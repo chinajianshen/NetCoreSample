@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -9,6 +10,8 @@ using Openbook.Bee.Core.QuartzSchedule;
 using Openbook.Bee.Core.QuartzSchedule.TaskJob;
 using OpenBook.Bee.Entity;
 using OpenBook.Bee.Utils;
+using Quartz;
+using Quartz.Impl;
 
 namespace OpenBook.Bee.Test
 {
@@ -38,6 +41,49 @@ namespace OpenBook.Bee.Test
             ScheduleBase.AddSchedule(jobService);
 
             Thread.Sleep(TimeSpan.FromSeconds(120));
+        }
+
+        private static IScheduler scheduler = null;
+        public void InitRemoteScheduler()
+        {
+            try
+            {
+                NameValueCollection properties = new NameValueCollection();
+                properties["quartz.scheduler.instanceName"] = "schedMaintenanceService";
+                properties["quartz.scheduler.proxy"] = "true";
+                properties["quartz.scheduler.proxy.address"] = string.Format("{0}://{1}:{2}/QuartzScheduler", "tcp", "localhost", "8008");
+                ISchedulerFactory sf = new StdSchedulerFactory(properties);
+
+                scheduler = sf.GetScheduler();
+                QuartzPauseJob("月数据采集作业");
+            }
+            catch (Exception ex)
+            {
+                //LogHelper.WriteLog("初始化远程任务管理器失败" + ex.StackTrace);//
+                Console.WriteLine("初始化远程任务管理器失败" + ex.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// 暂停任务
+        /// </summary>
+        /// <param name="JobKey"></param>
+        private void QuartzPauseJob(string JobKey)
+        {
+            try
+            {
+                JobKey jk = new JobKey(JobKey);
+                if (scheduler.CheckExists(jk))
+                {
+                    //任务已经存在则暂停任务
+                    scheduler.PauseJob(jk);
+                    //LogHelper.WriteLog(string.Format("任务“{0}”已经暂停", JobKey));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Openbook.Bee.Core.QuartzSchedule
         /// </summary>
         /// <returns></returns>
         protected virtual IJobDetail GetJobDetail()
-        {
+        {           
             JobDataMap jobDataMap = new JobDataMap();
             jobDataMap.Add("prms", this.T8TaskEntity);
 

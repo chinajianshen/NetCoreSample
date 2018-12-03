@@ -60,15 +60,16 @@ namespace OpenBook.Bee.Tester
             #endregion
 
             #region Quartz测试
-            //QuartzTest quartzTest = new QuartzTest();
+            QuartzTest quartzTest = new QuartzTest();
             //quartzTest.Test1();
+            quartzTest.InitRemoteScheduler();
 
             //Chaper1 chaper1 = new Chaper1();
             //chaper1.test();
 
 
-            Chaper2 chaper2 = new Chaper2();
-            chaper2.Test();
+            //Chaper2 chaper2 = new Chaper2();
+            //chaper2.Test();
             #endregion
 
             Console.Read();
