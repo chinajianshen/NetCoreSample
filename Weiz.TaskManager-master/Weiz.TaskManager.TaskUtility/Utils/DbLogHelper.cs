@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Weiz.TaskManager.BLL;
 using Weiz.TaskManager.Common;
+using Weiz.TaskManager.Common.LogUtility;
 
 namespace Weiz.TaskManager.TaskUtility
 {

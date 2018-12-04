@@ -14,6 +14,7 @@ using System.Reflection;
 using Quartz.Impl.Matchers;
 using Weiz.TaskManager.Common;
 using Weiz.TaskManager.Models;
+using Weiz.TaskManager.Common.LogUtility;
 
 namespace Weiz.TaskManager.TaskUtility
 {

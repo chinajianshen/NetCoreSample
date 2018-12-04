@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Diagnostics;
+using Weiz.TaskManager.Common.LogUtility;
 
 namespace Weiz.TaskManager.Common
 {

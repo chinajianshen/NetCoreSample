@@ -9,6 +9,7 @@ using Weiz.TaskManager.Models;
 using Weiz.TaskManager.TaskUtility;
 using Weiz.TaskManager.Common;
 using Quartz;
+using Weiz.TaskManager.Common.LogUtility;
 
 namespace Weiz.TaskManager.TaskSet
 {

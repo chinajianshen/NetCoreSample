@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Weiz.TaskManager.Common;
+using Weiz.TaskManager.Common.LogUtility;
 using Weiz.TaskManager.Models;
 using Weiz.TaskManager.TaskUtility;
 
