@@ -10,7 +10,7 @@ namespace OpenBook.Bee.Entity.AutoMapper
     public class EntityAutoMapperProfile : Profile
     {
         public EntityAutoMapperProfile()
-        {
+        {            
             InitMapperEntities();
         }
 
@@ -40,7 +40,7 @@ namespace OpenBook.Bee.Entity.AutoMapper
 
             //映射T8配置类到数据文件类
             CreateMap<T8ConfigEntity, T8FileEntity>();         
-            CreateMap<T8ConfigItemEntity, T8FileEntity>();
+            CreateMap<T8ConfigItemEntity, T8FileEntity>();            
         }
     }
 
