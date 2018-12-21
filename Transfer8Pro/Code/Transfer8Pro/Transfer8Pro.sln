@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.Entity", "Transfer8Pro.Entity\Transfer8Pro.Entity.csproj", "{8388D33A-F0BE-451B-A4C1-D8A1D31CEC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.Utils", "Transfer8Pro.Utils\Transfer8Pro.Utils.csproj", "{6E2680D5-39E9-4AB4-A0B3-F9BD6E4C6055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.DAO", "Transfer8Pro.DAO\Transfer8Pro.DAO.csproj", "{05CB7600-CC28-45FB-9D0B-907B9A86832B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.Client", "Transfer8Pro.Client\Transfer8Pro.Client.csproj", "{A10361C9-C649-427F-A73E-288EF042756C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.WebApp", "Transfer8Pro.WebApp\Transfer8Pro.WebApp.csproj", "{4EDDA057-3C64-4BDB-8063-2B0E9724543A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.Core", "Transfer8Pro.Core\Transfer8Pro.Core.csproj", "{637552D5-689B-455E-9FD7-99DFC08746AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transfer8Pro.Test", "Transfer8Pro.Test\Transfer8Pro.Test.csproj", "{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 8
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Transfer8Pro.Client\\Transfer8Pro.Client.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Transfer8Pro.Client\\
+		SccProjectUniqueName2 = Transfer8Pro.Core\\Transfer8Pro.Core.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Transfer8Pro.Core\\
+		SccProjectUniqueName3 = Transfer8Pro.DAO\\Transfer8Pro.DAO.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Transfer8Pro.DAO\\
+		SccProjectUniqueName4 = Transfer8Pro.Entity\\Transfer8Pro.Entity.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Transfer8Pro.Entity\\
+		SccProjectUniqueName5 = Transfer8Pro.Utils\\Transfer8Pro.Utils.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = Transfer8Pro.Utils\\
+		SccProjectUniqueName6 = Transfer8Pro.WebApp\\Transfer8Pro.WebApp.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = Transfer8Pro.WebApp\\
+		SccProjectUniqueName7 = Transfer8Pro.Test\\Transfer8Pro.Test.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = Transfer8Pro.Test\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8388D33A-F0BE-451B-A4C1-D8A1D31CEC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8388D33A-F0BE-451B-A4C1-D8A1D31CEC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8388D33A-F0BE-451B-A4C1-D8A1D31CEC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8388D33A-F0BE-451B-A4C1-D8A1D31CEC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2680D5-39E9-4AB4-A0B3-F9BD6E4C6055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2680D5-39E9-4AB4-A0B3-F9BD6E4C6055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2680D5-39E9-4AB4-A0B3-F9BD6E4C6055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2680D5-39E9-4AB4-A0B3-F9BD6E4C6055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CB7600-CC28-45FB-9D0B-907B9A86832B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CB7600-CC28-45FB-9D0B-907B9A86832B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CB7600-CC28-45FB-9D0B-907B9A86832B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CB7600-CC28-45FB-9D0B-907B9A86832B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10361C9-C649-427F-A73E-288EF042756C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10361C9-C649-427F-A73E-288EF042756C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10361C9-C649-427F-A73E-288EF042756C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10361C9-C649-427F-A73E-288EF042756C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDDA057-3C64-4BDB-8063-2B0E9724543A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDDA057-3C64-4BDB-8063-2B0E9724543A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDDA057-3C64-4BDB-8063-2B0E9724543A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDDA057-3C64-4BDB-8063-2B0E9724543A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637552D5-689B-455E-9FD7-99DFC08746AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637552D5-689B-455E-9FD7-99DFC08746AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637552D5-689B-455E-9FD7-99DFC08746AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637552D5-689B-455E-9FD7-99DFC08746AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

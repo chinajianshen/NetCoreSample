@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A10361C9-C649-427F-A73E-288EF042756C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Transfer8Pro.Client</RootNamespace>
+    <AssemblyName>Transfer8Pro.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTaskFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTaskFrm.Designer.cs">
+      <DependentUpon>AddTaskFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrm.Designer.cs">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadingCtrl.Designer.cs">
+      <DependentUpon>LoadingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PagerCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PagerCtrl.Designer.cs">
+      <DependentUpon>PagerCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskPlanDayCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskPlanDayCtrl.Designer.cs">
+      <DependentUpon>TaskPlanDayCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskPlanMonthCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskPlanMonthCtrl.Designer.cs">
+      <DependentUpon>TaskPlanMonthCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskPlanWeekCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskPlanWeekCtrl.Designer.cs">
+      <DependentUpon>TaskPlanWeekCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\BindControl.cs" />
+    <Compile Include="Core\ITaskPlanBase.cs" />
+    <Compile Include="EncryptKeyConfigFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptKeyConfigFrm.Designer.cs">
+      <DependentUpon>EncryptKeyConfigFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpConfigFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FtpConfigFrm.Designer.cs">
+      <DependentUpon>FtpConfigFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpUploadListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FtpUploadListFrm.Designer.cs">
+      <DependentUpon>FtpUploadListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewDataFrm.Designer.cs">
+      <DependentUpon>PreviewDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewPalnExcuteTimeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewPalnExcuteTimeFrm.Designer.cs">
+      <DependentUpon>PreviewPalnExcuteTimeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceManagerFrm.Designer.cs">
+      <DependentUpon>ServiceManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskHistoryListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskHistoryListFrm.Designer.cs">
+      <DependentUpon>TaskHistoryListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskListFrm.Designer.cs">
+      <DependentUpon>TaskListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskMainFrm.Designer.cs">
+      <DependentUpon>TaskMainFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTaskFrm.resx">
+      <DependentUpon>AddTaskFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoadingCtrl.resx">
+      <DependentUpon>LoadingCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PagerCtrl.resx">
+      <DependentUpon>PagerCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TaskPlanDayCtrl.resx">
+      <DependentUpon>TaskPlanDayCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TaskPlanMonthCtrl.resx">
+      <DependentUpon>TaskPlanMonthCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TaskPlanWeekCtrl.resx">
+      <DependentUpon>TaskPlanWeekCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptKeyConfigFrm.resx">
+      <DependentUpon>EncryptKeyConfigFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FtpConfigFrm.resx">
+      <DependentUpon>FtpConfigFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FtpUploadListFrm.resx">
+      <DependentUpon>FtpUploadListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviewDataFrm.resx">
+      <DependentUpon>PreviewDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviewPalnExcuteTimeFrm.resx">
+      <DependentUpon>PreviewPalnExcuteTimeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ServiceManagerFrm.resx">
+      <DependentUpon>ServiceManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskHistoryListFrm.resx">
+      <DependentUpon>TaskHistoryListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskListFrm.resx">
+      <DependentUpon>TaskListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskMainFrm.resx">
+      <DependentUpon>TaskMainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Transfer8Pro.Core\Transfer8Pro.Core.csproj">
+      <Project>{637552d5-689b-455e-9fd7-99dfc08746aa}</Project>
+      <Name>Transfer8Pro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transfer8Pro.Entity\Transfer8Pro.Entity.csproj">
+      <Project>{8388d33a-f0be-451b-a4c1-d8a1d31cec49}</Project>
+      <Name>Transfer8Pro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transfer8Pro.Utils\Transfer8Pro.Utils.csproj">
+      <Project>{6e2680d5-39e9-4ab4-a0b3-f9bd6e4c6055}</Project>
+      <Name>Transfer8Pro.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)x64" md "$(TargetDir)x64"
+if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+if Exist "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x64\SQLite.Interop.dll" copy /V "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x64\SQLite.Interop.dll" "$(TargetDir)\x64\"
+if Exist "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x86\SQLite.Interop.dll" copy /V "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x86\SQLite.Interop.dll" "$(TargetDir)\x86\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

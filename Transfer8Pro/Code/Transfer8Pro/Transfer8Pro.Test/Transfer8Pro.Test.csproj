@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF2B63B0-8E94-45C2-ACF6-8F5246232C62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Transfer8Pro.Test</RootNamespace>
+    <AssemblyName>Transfer8Pro.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EncryptFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptFrm.Designer.cs">
+      <DependentUpon>EncryptFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateFileNameFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateFileNameFrm.Designer.cs">
+      <DependentUpon>GenerateFileNameFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobFrm.Designer.cs">
+      <DependentUpon>JobFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EncryptFrm.resx">
+      <DependentUpon>EncryptFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateFileNameFrm.resx">
+      <DependentUpon>GenerateFileNameFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobFrm.resx">
+      <DependentUpon>JobFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Transfer8Pro.Core\Transfer8Pro.Core.csproj">
+      <Project>{637552d5-689b-455e-9fd7-99dfc08746aa}</Project>
+      <Name>Transfer8Pro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transfer8Pro.Entity\Transfer8Pro.Entity.csproj">
+      <Project>{8388d33a-f0be-451b-a4c1-d8a1d31cec49}</Project>
+      <Name>Transfer8Pro.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transfer8Pro.Utils\Transfer8Pro.Utils.csproj">
+      <Project>{6e2680d5-39e9-4ab4-a0b3-f9bd6e4c6055}</Project>
+      <Name>Transfer8Pro.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)x64" md "$(TargetDir)x64"
+if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+if Exist "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x64\SQLite.Interop.dll" copy /V "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x64\SQLite.Interop.dll" "$(TargetDir)\x64\"
+if Exist "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x86\SQLite.Interop.dll" copy /V "$(SolutionDir)Transfer8Pro.DAO\$(OutDir)x86\SQLite.Interop.dll" "$(TargetDir)\x86\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
