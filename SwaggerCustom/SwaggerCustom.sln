@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerCustom.Test", "SwaggerCustom.Test\SwaggerCustom.Test.csproj", "{633222AD-544C-44F9-B341-30A3D16E64FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swashbuckle.Core", "Swashbuckle.Core\Swashbuckle.Core.csproj", "{D50A26FF-02C6-4C16-BA94-4CD7D43EFBB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{302BB211-7113-40E9-BE4F-3B39DA69E2BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{633222AD-544C-44F9-B341-30A3D16E64FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633222AD-544C-44F9-B341-30A3D16E64FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633222AD-544C-44F9-B341-30A3D16E64FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633222AD-544C-44F9-B341-30A3D16E64FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50A26FF-02C6-4C16-BA94-4CD7D43EFBB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50A26FF-02C6-4C16-BA94-4CD7D43EFBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50A26FF-02C6-4C16-BA94-4CD7D43EFBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50A26FF-02C6-4C16-BA94-4CD7D43EFBB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302BB211-7113-40E9-BE4F-3B39DA69E2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302BB211-7113-40E9-BE4F-3B39DA69E2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302BB211-7113-40E9-BE4F-3B39DA69E2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302BB211-7113-40E9-BE4F-3B39DA69E2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
