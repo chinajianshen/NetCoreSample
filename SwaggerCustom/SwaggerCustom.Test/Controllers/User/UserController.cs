@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Routing;
+using SwaggerCustom.Test.Filters;
 using SwaggerCustom.Test.Models;
 using Swashbuckle.Swagger.Annotations;
 
@@ -38,5 +39,20 @@ namespace SwaggerCustom.Test.Controllers
         {
             return "post user success";
         }
+
+        /// <summary>
+        /// 批量新增用户
+        /// </summary>
+        /// <param name="users"></param>
+        /// <returns></returns>
+        [Route("PostUsers")]
+        public IHttpActionResult PostUsers(List<Models.User> users)
+        {
+           // System.Collections.Generic.HashSet<string>
+            List<Models.User> userList = new List<Models.User>();
+            userList.Add(new Models.User { Name="张三", UserId=1 });
+            userList.Add(new Models.User { Name = "张四", UserId = 2 });
+            return Ok(userList);
+        }
     }
-}
+    }
