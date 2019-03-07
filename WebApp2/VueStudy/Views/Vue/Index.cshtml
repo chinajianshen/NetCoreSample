@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@section styles{ 
+    <style>
+        .class1 {
+            font-size: x-large;
+            color: red;
+        }
+    </style>
+}
+
+<div id="vue_det">
+    <h1>site : {{site}}</h1>
+    <h1 v-html="url"></h1>
+    <h1>{{url}}</h1>
+    <h1>{{details()}}</h1>
+</div>
+<hr />
+<div id="app1">
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+    <br><br>
+        <div v-bind:class="{'class1':use}">
+            v-bind:class 指令
+        </div>
+</div>
+
+<hr />
+<div id="app2">
+    {{5+5}}<br>
+    {{ ok ? 'YES' : 'NO' }}<br>
+    {{ message.split('').reverse().join('') }}  
+    <div v-bind:id="'list-'+id">菜鸟教程</div>
+</div>
+<hr />
+<div id="app3">
+    <h2>app3DOM</h2>
+    <p v-if="seen">现在你看到我了</p>
+</div>
+<hr />
+<div id="app4">
+    <div onclick="javascript:alert('点击父节点Div');">
+        <a v-on:click.prevent="clkSomething">点击事件</a>
+    </div>    
+</div>
+<hr />
+<div id="app5">
+    <p>{{message}}</p>
+    <input v-model="message" />
+</div>
+<hr />
+<div id="app6">
+    <h2>过滤器</h2>
+    {{ message | capitalize(' study') }}
+</div>
+<hr />
+
+
+@section scripts{ 
+<script src="~/lib/vue/vue.min.js"></script>   
+
+    <script>
+        var data = {
+            site: "菜鸟教程",
+            url: "<h1>www.runoob.com</h1>",
+            alexa: "10000"
+            };
+        var vm = new Vue({
+            el: '#vue_det',
+            data: data,
+            methods: {
+                details: function () {
+                    return this.site + " - 学的不仅是技术，更是梦想！";
+                }
+            }
+        })
+
+        //console.log(vm.site === data.site);//true
+        //vm.site = "Runoob";
+        //console.log(data.site);//Runoob
+
+        //data.alexa = "1234";
+        //console.log(vm.alexa);//1234
+
+        //console.log(vm.$data === data); //true
+        //console.log(vm.$el === $("#vue_det")[0]);//true
+    </script>
+
+    <script>
+        var vm1 = new Vue({
+            el: "#app1",
+            data: {
+                use: false
+            }
+        });
+    </script>
+
+    <script>
+        var vm2 = new Vue({
+            el: "#app2",
+            data: {
+                ok: true, message:"RUNOOB",id:2
+            }
+        });
+
+        var vm3 = new Vue({
+            el: "#app3",
+            data: { seen: true }
+        });
+
+        var vm4 = new Vue({
+            el: "#app4",
+            methods: {
+                clkSomething: function (e) {
+                    alert("点击了");
+                    e.preventDefault();
+                }
+            }
+        });
+
+        var vm5 = new Vue({
+            el: "#app5",
+            data: {
+                message: "Runoob!"
+            }
+        });
+
+        var vm6 = new Vue({
+            el: "#app6",
+            data: { message: "runoob" },
+            filters: {
+                capitalize: function (value,prms2) {
+                    if (!value) return "";
+                    value = value.toString() + prms2.toString();
+                    return value.charAt(0).toUpperCase() + value.slice(1);
+                }
+            }
+        });
+    </script>
+
+   
+}
+
