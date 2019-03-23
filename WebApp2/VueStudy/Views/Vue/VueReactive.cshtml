@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "VueReactive";
+}
+<hr />
+<div id="app1">
+    <p v-bind:style="styleObj">计数器：{{ counter }}</p>
+    <button @@click="counter++" v-bind:style="styleObj">点我</button>
+    <br />
+    <div>{{ message }}</div>
+</div>
+<hr />
+<div id="app2">
+    <p style="font-size:25px;">计数器: {{ products.id }}</p>
+    <button v-on:click="products.id++" style="font-size:25px;">点我</button>
+
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                styleObj: {
+                    "font-size": "25px",
+                    "color":"red"
+                },
+                counter: 1,
+                message:''
+            }
+        })
+        vue1.$watch('counter', function (nval, oval) {
+            this.message = '计数器值的变化 :' + oval + ' 变为 ' + nval + '!'
+        })
+
+        setTimeout(function () {
+            vue1.counter += 20;
+        }, 5000)
+
+        //
+        var myproduct = { id: 1, name: "book", price: "20.00" };
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                counter: 1,
+                products: myproduct
+            }
+        })
+        vue2.products.qty = "1";
+        console.log(vue2);
+    </script>
+
+}
+

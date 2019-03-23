@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewData["Title"] = "VueMinin";
+}
+
+<hr />
+<div id="app1">
+
+</div>
+
+<div id="app2"></div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+
+            },
+            methods: {
+
+            }
+        })
+        // 定义一个混入对象
+        //var myMixin = {
+        //    created: function () {
+        //        this.startmixin()
+        //    },
+        //    methods: {
+        //        startmixin: function () {
+        //            document.write("欢迎来到混入实例")
+        //        }
+        //    }
+        //}
+        //var Component = Vue.extend({
+        //    mixins: [myMixin]
+        //})
+
+        //var component = new Component();
+
+        //数据对象在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先。
+        //var mixin = {
+        //    created: function () {
+        //        document.write("混入调用' + '<br>");
+        //    }
+        //}
+        //var vue2 = new Vue({
+        //    el:"#app2",
+        //    mixins: [mixin],
+        //    created: function () {
+        //        document.write('组件调用' + '<br>')
+        //    }
+        //});
+
+        //如果 methods 选项中有相同的函数名，则 Vue 实例优先级会较高。如下实例，Vue 实例与混入对象的 methods 选项都包含了相同的函数：
+        //var mixin2 = {
+        //    methods: {
+        //        helloWord: function () {
+        //            document.write("'HelloWorld 方法' + '<br>")
+        //        },
+        //        sameMethod: function () {
+        //            document.write('Mixin：相同方法名' + '<br>');
+
+        //        }
+        //    }
+        //}
+        //var vue3 = new Vue({
+        //    mixins: [mixin2],
+        //    methods: {
+        //        start: function () {
+        //            document.write('start 方法' + '<br>');
+        //        },
+        //        sameMethod: function () {
+        //            document.write('Main：相同方法名' + '<br>');
+        //        }
+        //    }
+        //})
+
+        //vue3.helloWord();
+        //vue3.start();
+        //vue3.sameMethod();
+
+        //全局混入
+        //也可以全局注册混入对象。注意使用！ 一旦使用全局混入对象，将会影响到 所有 之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。
+        //// 为自定义的选项 'myOption' 注入一个处理器。
+        Vue.mixin({
+            created: function () {
+                var myOption = this.$options.myOption
+                if (myOption) {
+                    console.log(myOption);
+                }
+            }
+        })
+        var vue4 = new Vue({
+            myOption:'hello'
+        })
+    </script>
+}

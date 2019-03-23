@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "VueCustomDirective";
+}
+
+<hr />
+<div id="app1">
+    <p>页面载入时，input 元素自动获取焦点：</p>
+    <input v-focus />
+</div>
+<hr />
+<div id="app2">
+    <p>页面载入时，input 元素自动获取焦点：</p>
+    <input v-cusfocus>
+</div>
+<hr />
+<div id="app3">
+     <div v-runoob:hello.a.b="message"></div>
+</div>
+<hr />
+<div id="app4">
+    <div v-runoob2="{color:'green',text:'菜鸟教程'}"></div>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>      
+      
+        //全局注册 自定义指令
+        Vue.directive('focus', {
+            //定元素插入到 DOM 中。
+            inserted: function (el) {
+                el.focus();
+            }
+        })
+
+        var vue1 = new Vue({
+            el:"#app1"
+        })
+
+        //局部 自定义指令
+        var vue2 = new Vue({
+            el: "#app2",
+            directives: {
+                cusfocus: {
+                    inserted: function (el) {
+                        el.focus();
+                    }
+                }
+            }
+        })
+
+        //钩子函数
+        Vue.directive('runoob', {
+            //bind: 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作。
+            bind: function (el, binding, vnode) {
+                var s = JSON.stringify;
+                //el.style.backgroundColor = 'red';
+                $(el).css('backgroundColor','red');
+                el.innerHTML =
+                    'name:' + s(binding.name) + '<br>' +
+                   'value:' + s(binding.value) + '<br>' +
+                'expression:' + s(binding.expression) + '<br>' +
+                'argument:' + s(binding.arg) + '<br>' +
+                'modifiers:' + s(binding.modifiers) + '<br>' +
+                'vnode keys:' + Object.keys(vnode).join(',')
+            }
+        })
+        var vue3 = new Vue({
+            el: "#app3",
+            data: {
+                message:'菜鸟教程'
+            }
+        })
+
+        //
+        Vue.directive('runoob2', function (el, binding) {
+            el.innerHTML = binding.value.text;
+            el.style.backgroundColor = binding.value.color;
+        })
+        var vue4 = new Vue({
+            el: "#app4"        
+        })
+    </script>
+}

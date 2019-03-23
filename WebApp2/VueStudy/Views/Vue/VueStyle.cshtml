@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewData["Title"] = "VueStyle";
+}
+
+@section styles{
+    <style>
+        .active {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        .text-danger {
+            background: red;
+        }
+
+        .base{
+            width:100px;
+            height:100px;
+        }
+    </style>
+}
+
+<hr />
+<div id="app1">
+    <div v-bind:class="{ active:isActive}">123</div>
+</div>
+<hr />
+<div id="app2">
+    <div class="static" v-bind:class="{active:isActive,'text-danger':hasError }">456</div>
+</div>
+<hr />
+<div id="app3">
+    <div v-bind:class="classObject">789</div>
+</div>
+<hr />
+<div id="app4">
+    <div v-bind:class="classObject">000</div>
+</div>
+<hr />
+<div id="app5">
+    <div v-bind:class="[activeClass,errorClass]">111</div>
+</div>
+<hr />
+<div id="app6">
+    <div :class="[errorClass,isActive ? activeClass:'']">222</div>
+</div>
+<hr />
+<div id="app7">
+    <div v-bind:style="{ color:activeColor,fonSize:fontSize+'px'}">333</div>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                isActive: true
+            }
+        });
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                isActive: true,
+                hasError: true
+            }
+        });
+
+        var vue3 = new Vue({
+            el: "#app3",
+            data: {
+                classObject: {
+                    active: true,
+                    'text-danger': true
+                }
+            }
+        });
+
+        var vue4 = new Vue({
+            el: "#app4",
+            data: {
+                isActive: true,
+                error: {
+                    value: false,
+                    type:'fatal'
+                }
+            },
+            computed: {
+                classObject: function () {
+                    return {
+                        base: true,
+                        active: this.isActive && !this.error.value,
+                        'text-danger': this.error.value && this.error.type === 'fatal'
+                    }
+                }
+            }
+        });
+
+        var vue5 = new Vue({
+            el: "#app5",
+            data: {
+                activeClass: 'active',
+                errorClass:'text-danger'
+            }
+        });
+
+        var vue6 = new Vue({
+            el: "#app6",
+            data: {
+                isActive: true,
+                activeClass: 'active',
+                errorClass:'text-danger'
+            }
+        });
+
+        var vue7 = new Vue({
+            el: "#app7",
+            data: {
+                activeColor: 'green',
+                fontSize:30
+            }
+        });
+    </script>
+}

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "VueTransition";
+}
+
+@section styles{ 
+    <style>
+        .fade1-enter-active,.fade1-leave-active{
+            transition:opacity 2s
+        }
+
+        .fade1-enter,.fade1-leave-to{
+            opacity:0
+        }
+    </style>
+}
+
+<hr />
+<div id="app1">
+     <button v-on:click="show = !show">点我</button>
+     <transition name="fade1">
+            <p v-show="show" v-bind:style="styleobj">动画实例</p>
+     </transition>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                show: true,
+                styleobj: {
+                    fontSize: '30px',
+                    color:'red'
+                }
+            }
+        })
+    </script>
+}
+

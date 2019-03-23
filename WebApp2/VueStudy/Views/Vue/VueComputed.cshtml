@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "VueComputed";
+}
+
+<hr />
+<div id="app1">
+     {{ message.split('').reverse().join('') }}
+</div>
+<hr />
+<div id="app2">
+    <p>原始字符串: {{ message }}</p>
+    <p>计算后反转字符串: {{ reversedMessage }}</p>
+</div>
+<hr />
+<div id="app3">
+     {{name}}-{{url}}
+</div>
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                message:"nas gnahz"
+            }
+        });
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                message:"Runoob"
+            },
+            computed: {
+                reversedMessage: function () {
+                    return this.message.split('').reverse().join('');
+                }
+            }
+        });
+
+        var vue3 = new Vue({
+            el: "#app3",
+            data: {
+                name: "Baidu",
+                url:"http://www.baidu.com"
+            },
+            computed: {
+                site: {
+                    get: function () { return this.name + ' ' + this.url },
+                    set: function (newValue) {
+                        var names = newValue.split(' ');
+                        this.name = names[0];
+                        this.url = names[names.length-1]
+                    }
+                }
+            }
+        });
+    </script>
+}
+

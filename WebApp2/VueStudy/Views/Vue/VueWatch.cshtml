@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "VueWatch";
+}
+<hr />
+<div id="app1">
+     <p style="font-size:25px;">计数器：{{ counter }}</p>
+    <button @@click="counter++" style="font-size:25px;">点击+1</button>
+</div>
+<hr />
+<div id="app2">
+       千米：<input type="text" v-model="kilometers" /><br />
+       米：<input type="text"  v-model="meters"/><br />
+      <span id="info" style="font-size:16px;"></span>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: { counter: 1 }
+        });
+        vue1.$watch('counter', function (nval, oval) {
+            console.log('计数器值的变化 :' + oval + ' 变为 ' + nval + '!');
+        })
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: { kilometers: 0, meters: 0 },
+            methods: {},
+            computed: {},
+            watch: {
+                kilometers: function (val) {
+                    this.kilometers = val;
+                    this.meters = this.kilometers * 1000;
+                },
+                meters: function (val) {
+                    this.kilometers = val / 1000;
+                    this.meters = val;
+                }
+            }
+        });
+        // $watch 是一个实例方法
+        vue2.$watch("kilometers", function (newValue, oldValue) {
+            $("#info").text("修改前值为: " + oldValue + "，修改后值为: " + newValue);
+        });
+
+    </script>
+}
+

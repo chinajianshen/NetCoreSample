@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "VueAajx";
+}
+
+<hr />
+<div id="app1">
+    <input type="button" @@click="get()" value="点我异步获取数据(Get)" />
+    <br />
+    <div>
+        {{message}}
+    </div>
+</div>
+<hr />
+<div id="app2">
+    <input type="button" @@click="post('123')" value="点我异步获取数据(Post)" />
+    <br />
+    <div>
+        {{message}}
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script src="~/lib/vue/vue-resource.min.js"></script>
+    <script>
+        // 基于全局Vue对象使用http
+        //Vue.http.get('/someUrl', [options]).then(successCallback, errorCallback);
+        //Vue.http.post('/someUrl', [body], [options]).then(successCallback, errorCallback);
+
+        //// 在一个Vue实例内使用$http
+        //this.$http.get('/someUrl', [options]).then(successCallback, errorCallback);
+        //this.$http.post('/someUrl', [body], [options]).then(successCallback, errorCallback);
+
+        window.onload = function () {
+            var vue1 = new Vue({
+                el: "#app1",
+                data: {
+                    message: ''
+                },
+                methods: {
+                    get: function () {
+                        //发送get请求
+                        this.$http.get('/vue/getdata', { params: { prm1: 1, prm2: '456a' } }).then(function (res) {//{ params: { prm1:1,prm2:'456a'}}
+                            this.message = JSON.stringify(res);
+                        }, function (res) {
+                            this.message = JSON.stringify(res.status);
+                        })
+                    }
+                }
+            })
+        }
+
+        //POST
+        //post 发送数据到后端，需要第三个参数 { emulateJSON: true } 。
+        //emulateJSON 的作用： 如果Web服务器无法处理编码为 application / json 的请求，你可以启用 emulateJSON 选项。
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                message:''
+            },
+            methods: {
+                post: function (msg) {
+                    alert(msg);
+                    this.$http.post('/vue/postdata', { prm1: 25, prm2: 'post提交' }, { emulateJSON: true }).then(function (res) {
+                        this.message = JSON.stringify(res);
+                    }, function (res) {
+                        this.message = JSON.stringify(res);
+                    });
+                }
+            }
+        })
+    </script>
+}

@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewData["Title"] = "VueComponent";
+}
+@*prop 是父组件用来传递数据的一个自定义属性。
+父组件的数据需要通过 props 把数据传给子组件，子组件需要显式地用 props 选项声明 "prop"：*@
+
+
+<hr />
+<div id="app1">
+    <runoob></runoob>
+</div>
+<hr />
+<div id="app2">
+    <childrun></childrun>
+</div>
+<hr />
+<div id="app3">
+    <child message="Hello"></child>
+</div>
+<hr />
+<div id="app4">
+     <input v-model="parentMsg" /><br />
+    <child2 v-bind:message="parentMsg"></child2>
+</div>
+<hr />
+<div id="app5">
+    <ol>
+        <todo-item v-for="item in sites" v-bind:todo="item"></todo-item>
+    </ol>
+</div>
+<hr />
+<div id="app6">
+    <p>{{total}}</p>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+<hr />
+<div id="app7">
+    <div id="components-demo3" class="demo">
+        <button-counter2></button-counter2>
+        <button-counter2></button-counter2>
+        <button-counter2></button-counter2>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        //注册 全局组件 必须在实例之前
+        Vue.component("runoob", {
+            template: '<h1>自定义组件！</h1>'
+        })
+
+        var vue1 = new Vue({
+            el: "#app1"
+        });
+
+        //局部组件
+        var localChild = {
+            template: '<h1>自定义子组件1</h1>'
+        }
+        var vue2 = new Vue({
+            el: "#app2",
+            components: {
+                'childrun': localChild
+            }
+        })
+
+        //prop传值
+        Vue.component('child', {
+            //声明props
+            props: ['message'],
+            template:'<span>prop传值子组件：{{ message }}</span>'
+        })
+
+        var vue3 = new Vue({
+            el: "#app3"           
+        })
+
+        //动态prop传值
+        Vue.component('child2', {
+            props: ['message'],
+            template: '<span>prop传值子组件2：{{ message }}</span>'
+        })
+
+        var vue4 = new Vue({
+            el: "#app4",
+            data: {
+                parentMsg:'父组件内容'
+            }
+        })
+
+        //
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template:'<li>{{ todo.text }}</li>'
+        })
+
+        var vue5 = new Vue({
+            el: "#app5",
+            data: {
+                sites: [
+                    { text: 'Runoob' },
+                    { text: 'Google' },
+                    { text: 'Taobao' }
+
+                ]
+            }
+        })
+
+        //自定义事件 父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，就需要使用自定义事件
+        //使用 $on(eventName) 监听事件
+        //使用 $emit(eventName) 触发事件
+
+        Vue.component("button-counter", {
+            template: '<button v-on:click="incrementHandler">{{counter}}</button>',
+            data: function () {
+                return {
+                    counter:0
+                }
+            },
+            //组件中这种写法错误 data必须是一个函数
+            //data: {
+            //    counter:0
+            //},
+            methods: {
+                incrementHandler: function () {
+                    this.counter += 1;
+                    this.$emit('increment')
+                }
+            }
+        })
+
+        var vue6 = new Vue({
+            el: "#app6",
+            data: {
+                total:0
+            },
+            methods: {
+                incrementTotal: function () {
+                    this.total += 1;
+                }
+            }
+        })
+
+        //data 选项是一个对象，会影响到其他实例
+        var buttonCounter2Data = {
+            count: 0
+        }
+        Vue.component('button-counter2', {
+            
+            //data: function () {
+            //     //data选项是一个函数，组件不相互影响
+            //    return {
+            //        count: 0
+            //    }
+            //},
+            
+            data: function () {
+                // data 选项是一个对象，会影响到其他实例
+                return buttonCounter2Data
+            },
+            template: '<button v-on:click="count++">点击了 {{ count }} 次。</button>'
+        })
+       var vue= new Vue({ el: '#app7' })
+
+    </script>
+}

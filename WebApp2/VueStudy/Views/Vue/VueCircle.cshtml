@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "VueCircle";
+}
+<hr />
+<div id="app1">
+    <ol>
+        <li v-for="site in sites">
+            {{site.name}}
+        </li>
+    </ol>
+</div>
+<hr />
+<div id="app2">
+    <ul>
+        <template v-for="site in sites">
+            <li>{{ site.name }}</li>
+            <li>--------------</li>
+        </template>
+    </ul>
+</div>
+<hr />
+<div id="app3">
+    <ul>
+        <li v-for="value in object">
+            {{ value }}
+        </li>
+    </ul>
+</div>
+<hr />
+<div id="app4">
+       <ul>
+           <li v-for="(value,key) in object">
+               {{ key }}:{{value}}
+           </li>
+       </ul>
+</div>
+<hr />
+<div id="app5">
+    <ul>
+        <li v-for="(value,key,index) in object">
+            {{index}}.{{ key }}:{{value}}
+        </li>
+    </ul>
+</div>
+
+<div id="app6">
+    <ul>
+        <li v-for="n in 10">
+            {{ n }}
+        </li>
+    </ul>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                sites: [
+                    { name: 'Runoob' },
+                    { name: 'Google' },
+                    { name: 'Taobao' }
+                ]
+            }
+        });
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                sites: [
+                    { name: 'Runoob' },
+                    { name: 'Google' },
+                    { name: 'Taobao' }
+                ]
+            }
+        });
+
+        var vue3 = new Vue({
+            el: "#app3",
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        });
+
+        var vue4 = new Vue({
+            el: "#app4",
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        });
+
+        var vue5 = new Vue({
+            el: "#app5",
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        });
+
+        var vue6 = new Vue({
+            el:"#app6"
+        });
+    </script>
+}

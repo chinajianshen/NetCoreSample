@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "VueIf";
+}
+
+<hr />
+<div id="app1">
+    <p v-if="seen">现在你看到我了</p>
+    <template v-if="ok">
+        <h1>菜鸟教程</h1>
+        <p>学的不仅是技术，更是梦想！</p>
+        <p>哈哈哈，打字辛苦啊！！！</p>
+    </template>
+    @*<Handlebars>
+        {{#if ok}}
+        <h1>yes</h1>
+        {{/if}}
+    </Handlebars>*@  
+</div>
+<hr />
+<div id="app2">
+       <div v-if="Math.random()>0.5">
+           sorry
+       </div>
+       <div v-else>
+           Not sorry
+       </div>
+</div>
+
+<hr />
+<div id="app3">
+    <div v-if="type === 'A'">A</div>
+    <div v-else-if="type === 'B'">B</div>
+    <div v-else-if="type == 'C'">C</div>
+    <div v-else> Not A/B/C</div>
+</div>
+<hr />
+<div id="app4">
+    <h1 v-show="ok">Hello v-show</h1>
+</div>
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>   
+
+    <script>
+        var vm1 = new Vue({
+            el: "#app1",
+            data: {
+                seen: true,
+                ok: true
+            }
+        });
+
+        var vm2 = new Vue({
+            el:"#app2"
+        });
+
+        var vm3 = new Vue({
+            el: "#app3",
+            data: { type:"D"}
+        });
+
+        var vm4 = new Vue({
+            el: "#app4",
+            data: { ok: true }
+        });
+    </script>
+}

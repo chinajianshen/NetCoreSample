@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "VueEvent";
+}
+@*<!-- 阻止单击事件冒泡 -->
+    <a v-on:click.stop="doThis"></a>
+    <!-- 提交事件不再重载页面 -->
+    <form v-on:submit.prevent="onSubmit"></form>
+    <!-- 修饰符可以串联  -->
+    <a v-on:click.stop.prevent="doThat"></a>
+    <!-- 只有修饰符 -->
+    <form v-on:submit.prevent></form>
+    <!-- 添加事件侦听器时使用事件捕获模式 -->
+    <div v-on:click.capture="doThis">...</div>
+    <!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 -->
+    <div v-on:click.self="doThat">...</div>
+
+    <!-- click 事件只能点击一次，2.1.4版本新增 -->
+    <a v-on:click.once="doThis"></a>*@
+
+@*全部的按键别名：
+
+.enter
+.tab
+.delete (捕获 "删除" 和 "退格" 键)
+.esc
+.space
+.up
+.down
+.left
+.right
+.ctrl
+.alt
+.shift
+.meta*@
+
+<hr />
+<div id="app1">
+    <button v-on:click="counter +=1">增加1</button>
+    <p>这个按钮被点击了{{ counter }} 次</p>
+</div>
+<hr />
+<div id="app2">
+    <button v-on:click="greet">Greet</button>
+</div>
+<hr />
+<div id="app3">
+    <button v-on:click="say('hi')">Say Hi</button><br />
+    <button @@click="say('what')">Say What</button>
+</div>
+<hr />
+<div id="app4">
+    <form v-on:submit.prevent="onSubmit">
+        <button type="submit">提交</button>
+    </form>
+</div>
+<hr />
+<div id="app5">
+    按回车键1 <input v-on:keyup.enter="submit" />
+    <br />
+    按回车键2 <input v-on:keyup.13="submit" />
+</div>
+<hr />
+
+
+@section scripts{
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: "#app1",
+            data: {
+                counter: 0
+            }
+        });
+
+        var vue2 = new Vue({
+            el: "#app2",
+            data: {
+                name: 'Vue.js'
+            },
+            methods: {
+                greet: function (event) {
+                    alert('Hello' + this.name + "!");
+                    if (event) {
+                        alert(JSON.stringify(event));
+                    }
+                }
+            }
+        });
+
+        var vue3 = new Vue({
+            el: "#app3",
+            methods: {
+                say: function (message) {
+                    alert(message);
+                }
+            }
+        });
+
+        var vue4 = new Vue({
+            el: "#app4",
+            methods: {
+                onSubmit: function (event) {
+                    alert("点击Submit事件");
+                }
+            }
+        });
+
+        var vue5 = new Vue({
+            el: "#app5",
+            methods: {
+                submit: function (event) {
+                    alert("按回车键")
+                }
+            }
+        });
+    </script>
+}
